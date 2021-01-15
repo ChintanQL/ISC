@@ -52,6 +52,7 @@ class HomeSection3 extends Component {
 										{camp.smallDesc}
                                     </Card.Text>
                                     <Link className="" to={camp.link.link}>Read More</Link>
+                                    <Link className="" to={"/camp/"+camp.link.title.toLowerCase().replace(/\s+/g, '-')}>Read More</Link>
                                 </Card.Body>
                             </Card>
 						)}
