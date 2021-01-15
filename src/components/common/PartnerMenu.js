@@ -24,7 +24,7 @@ class PartnerMenu extends Component {
 			<StaticQuery
 					query={graphql`
 						query MyQuery4 {
-							wordpressMenusMenusItems(slug: {eq: "gatsby-menu-sports"}) {
+							wordpressMenusMenusItems(slug: {eq: "gatsby-menu-partner"}) {
 								id
 								items {
 									title
