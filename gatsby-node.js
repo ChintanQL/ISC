@@ -23,7 +23,7 @@ const getData = async () => {
 						title
 						content
 						sliderImage {
-						  sourceUrl(size: LARGE)
+						  sourceUrl(size: _1536X1536)
 						}
 					  }
 					   bottomKidsReview {
