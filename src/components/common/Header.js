@@ -112,7 +112,11 @@ class Header extends Component {
 												to="/" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
-													return (<li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("http://", '')}>{child.title}</Link></li> )
+													return (
+														<>
+														{(child.title == 'Home' ? (<li  key={i} ><Link className="dropdown-item"   to={"/"}>{child.title}</Link></li>) : (<li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("http://", '')}>{child.title}</Link></li>) )}
+														</>
+													)
 												})}
 											</ul>
 										</li>
@@ -181,11 +185,24 @@ class Header extends Component {
 												</div>
 											
 											) : (
-												<div>
-													<li className="nav-item">
-														<Link className="nav-link" to={"/"+prop.title.toLowerCase().replace(/\s+/g, '-')}>{prop.title}</Link>
-													</li>
-												</div>
+												<>
+													{(prop.title == 'Home' ? 
+													(
+														<div>
+															<li className="nav-item">
+															<Link className="nav-link" to={"/"}>{prop.title}</Link>
+															</li>
+														</div>
+													) : (
+														<div>
+															<li className="nav-item">
+																<Link className="nav-link" to={"/"+prop.title.toLowerCase().replace(/\s+/g, '-')}>{prop.title}</Link>
+															</li>
+														</div>
+													))}
+												</>
+											
+												
 											
 											))}
 											</>
