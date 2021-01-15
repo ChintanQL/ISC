@@ -48,7 +48,7 @@ class PartnerMenu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
-										<Image src={icon1} fluid className="icon" /><Link to={"/camps/"+innerprop.title.toLowerCase().replace(/\s+/g, '')} className="">{innerprop.title}</Link>
+										<Image src={icon1} fluid className="icon" /><Link to={"/camps/"+innerprop.title.toLowerCase().replace(/\s+/g, '-')} className="">{innerprop.title}</Link>
 									</ListGroup.Item>	
 								</>
 								)}
