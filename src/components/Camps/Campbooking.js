@@ -43,7 +43,7 @@ class Campbooking extends React.Component{
 									<ul>
 										<li className="main-price">${prop.price}</li>
 									</ul>
-									<Link className="nav-link uppercase btn-sm btn-orange text-center" to="/">More info / Book Now</Link>
+									<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://staging-ascstaging.kinsta.cloud/book/"+prop.Slug}>More info / Book Now</Link>
 								</Card.Body>
 							</Card>
 						</Col>
