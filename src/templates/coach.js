@@ -39,31 +39,40 @@ class coach extends Component {
                 <Container>
                     <div className="Blog-Section-2-data">
                         <Row>
-                            <Col xl={8} lg={8} md={12} className="lg-mb-2">
+                           
                                 
 								{blog && blog.edges.map( prop => {
 									return (
-										<Card className="blog-card mb-30">
+										<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
+										<Card className="book-card">
 											<div className="card-img">
-												<Image src={prop.node.acf.featured_image} fluid />
+												<Image variant="top" src={prop.node.acf.featured_image} fluid alt="card"/>
+												
 											</div>
 											<Card.Body>
-												<Card.Title dangerouslySetInnerHTML={{ __html: prop.node.title}} as="h5" />
+												<Card.Title as="h5">
+													{prop.node.title}
+												</Card.Title>
 												
-												<Card.Text as="div" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
-												<Link className="btn btn-orange-border uppercase" to={"/the-asc-heroes/"+prop.node.slug}>Read More</Link>
+												<Card.Text  dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 200)+"...."}} />
+													
+												
+												<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"/the-asc-heroes/"+prop.node.slug}>Read More</Link>
 											</Card.Body>
-										</Card>						
+										</Card>
+										
+												
+										</Col>						
 									)
 								})}
-								
+								<Col xl={12} lg={12} md={12} sm={12} xs={12} >
 								{(this.props.pageContext.previousPagePath !== "") ? (<Link className="btn btn-primary"  to={this.props.pageContext.previousPagePath}>Previous</Link>) : (<Link className="btn btn-primary invisible"  to={this.props.pageContext.previousPagePath}>Previous</Link>)}
 			
 			
 								{(this.props.pageContext.nextPagePath !== "") ? (<Link className="btn btn-primary" to={this.props.pageContext.nextPagePath}>Next</Link>) : (<Link className="btn btn-primary invisible" to={this.props.pageContext.nextPagePath}>Next</Link>)}
 								
-								
-							</Col>
+								</Col>	
+							
 										
 						</Row>
 					</div>	
