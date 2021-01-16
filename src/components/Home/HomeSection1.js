@@ -3,6 +3,7 @@ import { Container,Image,Row,Col,Button,ListGroup,Form } from 'react-bootstrap';
 import Slider from "react-slick";
 import slider1 from '../../images/slider-1.png'
 import slider2 from '../../images/modal-section-bg.png'
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -40,6 +41,9 @@ class HomeSection1 extends Component {
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />
           };
+		  
+		
+		  
         return (
             <>
             
@@ -72,13 +76,17 @@ class HomeSection1 extends Component {
                   <Container>
                     <div className="pos-absolute-form">
                         <Form className="align-items-center justify-content-center">
-                              <div className="home-form">
+                             
+							  <div className="home-form">
                                 <div className="first-control">
-                                  <Form.Control
-                                      className="mb-0 full"
-                                      id="inlineFormInput"
-                                      placeholder="Location"
-                                  />
+                                  <GooglePlacesAutocomplete
+									apiKey="AIzaSyA-w1yIFUC5apNzpwsAGIxmhPQ2enVHfTE"
+									autocompletionRequest={{
+									  types: ['(regions)'],
+									  componentRestrictions: {country: 'au'}
+									  
+									}}
+									/>
                                 </div>
                                 <div className="second-control">
                                   <Form.Control as="select" defaultValue="Please Select" className="mb-0 full">

@@ -44,7 +44,7 @@ class CoachDetails extends Component {
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.title}} />
 										
 										<div className="card-img mb-3">
-											<Image src={prop.node.acf.featured_image} fluid />
+											<Image src={coach.edges[0].node.acf.featured_image} fluid />
 										</div>
 										<Card.Text as="div" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.content}} />
 									</Card>
