@@ -27,6 +27,7 @@ class ProdDetails extends Component {
   
   render() {
 	const prod = this.props.data.allWcProducts
+	const id = this.props.data.allWcProducts.edges[0].node.wordpress_id;
       return (
           <Layout>
             <>
@@ -70,21 +71,8 @@ class ProdDetails extends Component {
                                    
 
 
-                                    <ul className="mb-0 pl-0">
-                                            <li>
-                                                <div className="d-flex align-items-center">
-                                                    <h2 className="font-18 font-medium">Quantity :</h2> 
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="d-flex title quantity-data align-items-center">
-                                                    <Button onClick={this.DecreaseItem}>-</Button>
-                                                    <h2 className="mx-3 mb-0 main-h2 font-medium">{ this.state.clicks }</h2> 
-                                                    <Button onClick={this.IncrementItem}>+</Button>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    <Button className=" uppercase btn-sm btn-orange" to={$BACK_URL}>BUY Now</Button>
+                                   
+                                    <Link className=" uppercase btn-sm btn-orange" to={$BACK_URL+"?add-to-cart="+id+"&quantity=1"}>BUY Now</Link>
                                 </div>
                             </Col>
                         </Row>

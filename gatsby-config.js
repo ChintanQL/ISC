@@ -34,7 +34,7 @@ module.exports = {
         }
       }
     },
-	/*{       
+	{       
 		resolve: '@pasdo501/gatsby-source-woocommerce',
 		options: {
 			api: 'staging-ascstaging.kinsta.cloud',
@@ -54,7 +54,7 @@ module.exports = {
 		   
 			}
 		}
-	},*/
+	},
 	
 	{
     resolve: `gatsby-transformer-remark`,
