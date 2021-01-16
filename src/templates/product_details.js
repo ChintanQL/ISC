@@ -84,7 +84,7 @@ class ProdDetails extends Component {
                                                 </div>
                                             </li>
                                         </ul>
-                                    <Button className=" uppercase btn-sm btn-orange" to="">BUY Now</Button>
+                                    <Button className=" uppercase btn-sm btn-orange" to={$BACK_URL}>BUY Now</Button>
                                 </div>
                             </Col>
                         </Row>

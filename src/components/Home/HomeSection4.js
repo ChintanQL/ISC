@@ -30,7 +30,7 @@ class HomeSection4 extends Component {
 										<div className="trainer-card">
 											<h4>{str.name}</h4>
 											<p>{str.description}</p>
-											<Link to="" className="nav-link p-0">Read More</Link>
+											<Link to={"/the-asc-heroes/"+str.name.toLowerCase().replace(/\s+/g, '-')} className="nav-link p-0">Read More</Link>
 										</div>
 									</div>
 								</div>

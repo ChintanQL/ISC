@@ -26,7 +26,15 @@ module.exports = {
 		],
       },
     },
-	{       
+	{
+      resolve: 'gatsby-plugin-global-context',
+      options: {
+        context: {
+          BACK_URL: "https://staging-ascstaging.kinsta.cloud"
+        }
+      }
+    },
+	/*{       
 		resolve: '@pasdo501/gatsby-source-woocommerce',
 		options: {
 			api: 'staging-ascstaging.kinsta.cloud',
@@ -46,7 +54,7 @@ module.exports = {
 		   
 			}
 		}
-	},
+	},*/
 	
 	{
     resolve: `gatsby-transformer-remark`,

@@ -134,8 +134,46 @@ const getData = async () => {
   
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage } = actions
+	/* Coach */
+	const coach = await graphql(`
+		{
+			allWordpressWpAscHeroes {
+				edges {
+					node {
+						id
+						slug
+						title
+						content
+					}
+				}
+			}
+		}
+	`)
+	const CoachDetailTemplate = path.resolve(`./src/templates/coach_details.js`);
+	coach.data.allWordpressWpAscHeroes.edges.forEach((edge,index) => {
+		  createPage({
+		  path: `/the-asc-heroes/${edge.node.slug}/`,
+		  component: slash(CoachDetailTemplate),
+		  context: {
+			id: edge.node.id
+		  },
+		})			  
+	})
+	const CoachTemplate = path.resolve(`./src/templates/blog.js`);
+	const Coachs = coach.data.allWordpressWpAscHeroes.edges;
+	paginate({
+		createPage,
+		items: Coachs,
+		itemsPerPage: 10,
+		pathPrefix: '/the-asc-heroes',
+		component: CoachTemplate,
+	});
 	
-	/* BLOG */
+	
+	
+	
+	
+	
 	const allWordpressPost = await graphql(`
 		{
 			allWordpressPost{
@@ -177,7 +215,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	});
 	
 	
-	/* GUIDE */
+	
 	const allWordpressguide = await graphql(`
 		{
 			allWordpressWpCpt150461 {
@@ -221,7 +259,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	});
 	
 	
-	/* FLYER */
+	
 	const allWordpressflyer = await graphql(`
 		{
 			allWordpressWpCpt150963 {
@@ -263,7 +301,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		component: flyerlistTemplate,
 	});
 	
-	/* PRODUCT */
+	
 	const products = await graphql(`
 		{
 			allWcProducts(filter: {categories: {elemMatch: {name: {eq: "Shop"}}}}) {
@@ -306,7 +344,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		component: ProductList,
 	});
 	
-	/* CATEGORY */
+	
 	const Category = await graphql(`
 		{
 			allWordpressCategory {
@@ -331,7 +369,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		})			  
 	})
 	
-	/* TAGS */
+	
 	const tags = await graphql(`
 		{
 			allWordpressTag {
@@ -356,7 +394,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		})			  
 	})
 	
-	/* CAMPS */
+	
 	const Camps = await graphql(`
 		{
 			allWordpressWpCpt151986 {
@@ -386,7 +424,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	})
 	
 	
-	/* CITY */
+	
 	const City = await graphql(`
 		{
 			allWordpressWpCpt152600 {
@@ -412,7 +450,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	})
 	
 	
-	/* HOME PAGE */
+	
 	let Data = await getData();
 	let HomeData = Data.data;
 	const HomeComponent = require.resolve('./src/templates/home.js');
@@ -423,6 +461,8 @@ exports.createPages = async ({ actions, graphql }) => {
 			HomeData: HomeData,
 		}
 	});
+	
+	
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
