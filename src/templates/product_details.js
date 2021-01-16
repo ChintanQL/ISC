@@ -72,7 +72,7 @@ class ProdDetails extends Component {
 
 
                                    
-                                    <Link className=" uppercase btn-sm btn-orange" to={BACK_URL+"?add-to-cart="+id+"&quantity=1"}>BUY Now</Link>
+                                    <Link className=" uppercase btn-sm btn-orange" to={"https://staging-ascstaging.kinsta.cloud/?add-to-cart="+id+"&quantity=1"}>BUY Now</Link>
                                 </div>
                             </Col>
                         </Row>
