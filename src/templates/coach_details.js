@@ -8,7 +8,9 @@ import { Link } from 'gatsby'
 import card1 from '../images/blog-card-1.png'
 import PropTypes from "prop-types"
 
+
 class CoachDetails extends Component {
+	
   render() {
   
 	const coach = this.props.data.allWordpressWpAscHeroes
@@ -42,7 +44,7 @@ class CoachDetails extends Component {
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.title}} />
 										
 										<div className="card-img mb-3">
-											<Image src={card1} fluid />
+											<Image src={prop.node.acf.featured_image} fluid />
 										</div>
 										<Card.Text as="div" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.content}} />
 									</Card>
@@ -77,6 +79,9 @@ export const pageQuery = graphql`
 		edges {
 			node {
 				id
+				acf {
+					featured_image
+				}
 				slug
 				title
 				content

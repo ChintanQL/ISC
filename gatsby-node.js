@@ -159,7 +159,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		  },
 		})			  
 	})
-	const CoachTemplate = path.resolve(`./src/templates/blog.js`);
+	const CoachTemplate = path.resolve(`./src/templates/coach.js`);
 	const Coachs = coach.data.allWordpressWpAscHeroes.edges;
 	paginate({
 		createPage,
