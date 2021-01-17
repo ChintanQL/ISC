@@ -4,6 +4,9 @@ import Slider from "react-slick";
 import slider1 from '../../images/slider-1.png'
 import slider2 from '../../images/modal-section-bg.png'
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+import Select from 'react-select'
+import axios from 'axios';
+
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -26,8 +29,47 @@ function SamplePrevArrow(props) {
   );
 }
 class HomeSection1 extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			multiValue: [],
+			selectOptions : [],
+			id: "",
+			name: ''
+		}
+		this.handleMultiChange = this.handleMultiChange.bind(this);
+	}
+	
+	async getOptions(){
+    const res = await axios.get('https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/all-cat')
+    const data = res.data.ResponseData
 
-		
+    const options = data.map(d => ({
+      "value" : d.id,
+      "label" : d.value
+
+    }))
+
+    this.setState({selectOptions: options})
+
+  }
+
+  handleChange(e){
+   this.setState({id:e.value, name:e.label})
+  }
+
+  componentDidMount(){
+      this.getOptions()
+  }
+	
+	handleMultiChange(option) {
+    this.setState(state => {
+      return {
+        multiValue: option
+      };
+    });
+  }
+	
     render() {
 		console.log(this.props.data);
         const settings1 = {
@@ -81,6 +123,9 @@ class HomeSection1 extends Component {
                                 <div className="first-control">
                                   <GooglePlacesAutocomplete
 									apiKey="AIzaSyA-w1yIFUC5apNzpwsAGIxmhPQ2enVHfTE"
+									  selectProps={{
+											placeholder: 'Enter Suburb / Postcode',
+										  }}
 									autocompletionRequest={{
 									  types: ['(regions)'],
 									  componentRestrictions: {country: 'au'}
@@ -89,10 +134,9 @@ class HomeSection1 extends Component {
 									/>
                                 </div>
                                 <div className="second-control">
-                                  <Form.Control as="select" defaultValue="Please Select" className="mb-0 full">
-                                      <option>Please Select</option>
-                                      <option>...</option>
-                                  </Form.Control>
+                                  <Select placeholder="Select Camps" value={this.state.multiValue} options={this.state.selectOptions}  isMulti onChange={this.handleMultiChange} />
+								  
+								  
                                 </div>
                                 <div className="third-control">
                                   <Button type="button" className="uppercase btn-sm btn-orange mb-0">

@@ -10,10 +10,12 @@ import SocialMenu from './SocialMenu'
 import SportMenu from './SportMenu'
 import PartnerMenu from './PartnerMenu'
 import "../../components/style.css"
+import axios from 'axios';
 class Header extends Component {
     
     state = {
         isTop: true,
+		cart: ''
       };
     
       componentDidMount() {
@@ -23,7 +25,16 @@ class Header extends Component {
               this.setState({ isTop })
           }
         });
+		this.getCart()
       } 
+	async getCart(){
+		const res = await axios.get('https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/cart')
+		const data = res.data.ResponseData
+		this.setState({cart: data})
+
+	}
+	
+	  
     render() {
 
         return (
@@ -51,17 +62,17 @@ class Header extends Component {
                             |
                         </ListGroup.Item>
                         <ListGroup.Item as="li">
-                        <Link to="/Login">LOGIN</Link>
+                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">LOGIN</Link>
                         <span>OR</span>
-                        <Link to="/Signup">REGISTER</Link>
+                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">REGISTER</Link>
                         </ListGroup.Item>
                     </ListGroup>
 
                     <ListGroup horizontal as="ul" className="d-md-none d-flex">
                         <ListGroup.Item as="li">
-                        <Link to="/Login">LOGIN</Link>
+                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">LOGIN</Link>
                         <span>OR</span>
-                        <Link to="/Signup">REGISTER</Link>
+                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">REGISTER</Link>
                         </ListGroup.Item>
                     </ListGroup>
                 </div>
@@ -233,7 +244,9 @@ class Header extends Component {
 
                             <div>
                                 <li className="nav-item pr-0">
-                                    <Link className="nav-link uppercase " to="/"><Image src={cart} className="img-fluid" alt="" width=""/></Link>
+                                    <Link className="nav-link uppercase " to="/"><Image src={cart} className="img-fluid" alt="" width=""/>
+									<span className="badge badge-blue">{this.state.cart}</span>
+									</Link>
                                 </li>
                             </div>
                         </ul>

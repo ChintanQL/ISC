@@ -1,8 +1,51 @@
 import React, { Component  } from 'react';
-import {  Container,Col,Form,Row } from 'react-bootstrap'
+import {  Container,Col,Form,Row,Button } from 'react-bootstrap'
 import { Link } from 'gatsby'
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+import Select from 'react-select'
+import axios from 'axios';
 class BottomForm extends Component {
- 
+	constructor(props){
+		super(props)
+		this.state = {
+			multiValue: [],
+			selectOptions : [],
+			id: "",
+			name: ''
+		}
+		this.handleMultiChange = this.handleMultiChange.bind(this);
+	}
+	
+	async getOptions(){
+		const res = await axios.get('https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/all-cat')
+		const data = res.data.ResponseData
+
+		const options = data.map(d => ({
+		  "value" : d.id,
+		  "label" : d.value
+
+		}))
+
+		this.setState({selectOptions: options})
+
+	}
+
+	handleChange(e){
+		this.setState({id:e.value, name:e.label})
+	}
+
+	componentDidMount(){
+		this.getOptions()
+	}
+	
+	handleMultiChange(option) {
+		this.setState(state => {
+		  return {
+			multiValue: option
+		  };
+		});
+	}
+	
     render() {      
         return (
             <>
@@ -16,25 +59,26 @@ class BottomForm extends Component {
                             </Form.Label>
                         </Col>
                         <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2">
-                            <Form.Control
-                                className="mb-0 full"
-                                id="inlineFormInput"
-                                placeholder="Enter Suburb / Postcode"
-                            />
+                            <GooglePlacesAutocomplete
+									apiKey="AIzaSyA-w1yIFUC5apNzpwsAGIxmhPQ2enVHfTE"
+									  selectProps={{
+											placeholder: 'Enter Suburb / Postcode',
+										  }}
+									autocompletionRequest={{
+									  types: ['(regions)'],
+									  componentRestrictions: {country: 'au'}
+									  
+									}}
+									/>
                         </Col>
                         <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2">
-                            <Form.Control as="select" defaultValue="Select Sport" className="mb-0 full">
-                                <option>Select Sport</option>
-                                <option>...</option>
-                            </Form.Control>
+                            <Select placeholder="Select Camps" value={this.state.multiValue} options={this.state.selectOptions}  isMulti onChange={this.handleMultiChange} />
                         </Col>
                         <Col  xs="12" xl={2} lg={2} md={4} sm="4">
-                            <Link to="/Camp" className="uppercase btn btn-orange mb-0">
+                            <Button type="button" className="uppercase btn-sm btn-orange mb-0">
                                 Find Camps
-                            </Link>
-                            {/* <Button type="button" className="uppercase btn-sm btn-orange mb-0">
-                                Find Camps
-                            </Button> */}
+                            </Button>
+                           
                         </Col>
                     </Row>
                     </Form>

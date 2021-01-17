@@ -11,7 +11,7 @@ class KidSection extends Component {
                     <Container>
                         <Row className="align-items-center">
                             <Col xl={6} lg={6} className="kid-image">
-                                <div className="d-lg-none d-inline">
+                                <div className="">
                                     <Image src={this.props.data.image.sourceUrl} fluid alt="cardhover" />
                                 </div>
                             </Col>

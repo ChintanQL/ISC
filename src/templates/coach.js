@@ -54,7 +54,7 @@ class coach extends Component {
 													{prop.node.title}
 												</Card.Title>
 												
-												<Card.Text  dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 200)+"...."}} />
+												<Card.Text as="div"  dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 200)+"...."}} />
 													
 												
 												<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"/the-asc-heroes/"+prop.node.slug}>Read More</Link>

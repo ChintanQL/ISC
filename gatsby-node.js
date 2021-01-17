@@ -134,7 +134,8 @@ const getData = async () => {
   
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage } = actions
-	/* Coach */
+	
+	
 	const coach = await graphql(`
 		{
 			allWordpressWpAscHeroes {
@@ -164,7 +165,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	paginate({
 		createPage,
 		items: Coachs,
-		itemsPerPage: 10,
+		itemsPerPage: 18,
 		pathPrefix: '/the-asc-heroes',
 		component: CoachTemplate,
 	});
