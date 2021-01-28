@@ -13,6 +13,7 @@ import imgbox2 from '../images/blog-imgbox-2.png'
 import imgbox3 from '../images/blog-imgbox-3.png'
 import imgbox4 from '../images/blog-imgbox-4.png'
 import sidebaradd1 from '../images/sidebar-add-1.png'
+import cardhover from '../images/card-hover-img.png'
 import sidebaradd2 from '../images/sidebar-add-2.png'
 import { FaSearch } from "react-icons/fa";
 class coach extends Component {
