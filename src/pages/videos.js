@@ -17,7 +17,8 @@ class TNC extends Component {
     }
 	
 	state = {
-		PageData: []
+		PageData: [],
+		Done:0
 	}
 	
 	componentDidMount() {
@@ -40,6 +41,7 @@ class TNC extends Component {
 			}
 		}).then(res => {
 			this.setState({PageData: res.data.data.page.videos})
+			this.setState({Done: 1})
 		})
 	}
 	
@@ -65,7 +67,7 @@ class TNC extends Component {
 					<Container>
 						<div className="Blog-Section-2-data">
 							<Row>
-								{(this.state.PageData !== "") ? (
+								{(this.state.Done !== 0) ? (
 									<>
 										{this.state.PageData.youtubeVideoLinks.map((str,i) => 
 											<Col xl={6} lg={6} md={12} className="lg-mb-2 mb-3">
