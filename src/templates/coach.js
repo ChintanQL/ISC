@@ -47,10 +47,10 @@ class coach extends Component {
 											<div className="inner-card ">
 												<Image src={cardhover} fluid alt="cardhover"/>
 											</div>
-											<Image variant="top" src={prop.acf.featured_image} fluid alt="card"/>
+											<Image variant="top" src={prop.node.acf.featured_image} fluid alt="card"/>
 										</div>
 										<Card.Body>
-											<Link to={"/the-asc-heroes/"+prop.slug}>{prop.title}</Link>
+											<Link to={"/the-asc-heroes/"+prop.node.slug}>{prop.node.title}</Link>
 										</Card.Body>
 									</Card>
 								</Col>	
