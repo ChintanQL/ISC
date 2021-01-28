@@ -13,7 +13,8 @@ class Membership extends Component {
     }
 	
 	state = {
-		PageData: []
+		PageData: [],
+		Done: 0
 	}
 	handleToggle = (id) => {
         document.querySelectorAll('.card:not(.id'+id+')').forEach(function(button) {	
@@ -76,6 +77,7 @@ class Membership extends Component {
 			}
 		}).then(res => {
 			this.setState({PageData: res.data.data.page.Membership})
+			this.setState({Done:1})
 			console.log(res);
 		})
 	}
@@ -120,7 +122,7 @@ class Membership extends Component {
 							<div className="Membership-section-3-data">
 								<Row className="justify-content-center">
 									
-									{(this.state.PageData !== "") ? (
+									{(this.state.Done !== 0) ? (
 										<>
 											{this.state.PageData.memberships.map((str,i) => 
 												<>
@@ -177,7 +179,7 @@ class Membership extends Component {
 							<div className="Membership-section-6-data">
 								<Row>
 									
-									{(this.state.PageData !== "") ? (
+									{(this.state.Done !== 0) ? (
 										<>
 											{this.state.PageData.steps.map((str,i) => 
 												<>
@@ -204,7 +206,7 @@ class Membership extends Component {
 
 								<Accordion defaultActiveKey="1">
 									
-									{(this.state.PageData !== "") ? (
+									{(this.state.Done !== 0) ? (
 									<>
 									{this.state.PageData.faq.map((str,i) => 
 										<>
