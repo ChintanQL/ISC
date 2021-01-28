@@ -10,7 +10,7 @@ const getOnlyPublished = edges =>
 
 const getData = async () => {
   var a =  axios({
-		url: 'https://staging-ascstaging.kinsta.cloud/graphql',
+		url: 'https://shop.australiansportscamps.com.au/graphql',
 		method: 'post',
 		data: {
 			query: `
@@ -134,6 +134,7 @@ const getData = async () => {
   
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage } = actions
+	
 	
 	
 	const coach = await graphql(`
@@ -405,7 +406,9 @@ exports.createPages = async ({ actions, graphql }) => {
 						title
 						content
 						acf {
-						  product_category
+							image	
+							product_category
+							featured_image
 						}
 						slug
 					}

@@ -1,6 +1,5 @@
 import React, { Component  } from 'react';
 import {Container,Row,Col,Image} from 'react-bootstrap'
-import { Link } from 'gatsby'
 import icon1 from '../../images/contact-card-1.png'
 import icon2 from '../../images/contact-card-2.png'
 import icon3 from '../../images/contact-card-3.png'

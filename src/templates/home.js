@@ -11,7 +11,7 @@ import ModalSection from "../components/common/ModalSection"
 import IncludedSection from "../components/common/IncludedSection"
 import KidSection from "../components/common/KidSection"
 import LazyLoad from 'react-lazyload';
-import $ from "jquery";
+
 class HomePage extends Component {
 	
 	

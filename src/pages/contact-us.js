@@ -5,7 +5,6 @@ import ContactusSection2 from "../components/ContactUs/ContactusSection2"
 import ContactusSection3 from "../components/ContactUs/ContactusSection3"
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
- import { useStaticQuery, graphql } from 'gatsby'
 class ConatctUs extends Component {
   
 

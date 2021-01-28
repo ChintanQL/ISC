@@ -49,11 +49,14 @@
     "react-icons": "^3.11.0",
     "react-iframe": "^1.8.0",
     "react-lazyload": "^3.1.0",
+    "react-native": "^0.63.4",
+    "react-native-gravityform": "^1.0.15",
     "react-native-input-spinner": "^1.3.2",
     "react-pure-render": "^1.0.2",
     "react-select": "^3.2.0",
     "react-slick": "^0.27.13",
     "styled-components": "^5.2.1",
+    "universal-cookie": "^4.0.4",
     "use-dynamic-refs": "^1.0.0"
   },
   "devDependencies": {

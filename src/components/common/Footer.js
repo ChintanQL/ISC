@@ -8,7 +8,7 @@ import footer3 from '../../images/footer-3.png'
 import footer4 from '../../images/footer-4.png'
 import footer5 from '../../images/footer-5.png'
 import footer6 from '../../images/footer-6.png'
-
+import SocialMenu from './SocialMenu'
 import F1Menu from './F1Menu'
 import F2Menu from './F2Menu'
 
@@ -78,31 +78,7 @@ class Footer extends Component {
                                 </ListGroup>   
                                 <div className="social-footer-li">
                                     <ListGroup horizontal as="ul">
-                                        <ListGroup.Item as="li">
-                                            <Link className="nav-link p-0" to="/">
-                                                <i className="fa fa-facebook"></i>
-                                            </Link>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item as="li">
-                                            <Link className="nav-link p-0" to="/">
-                                                <i className="fa fa-twitter"></i>
-                                            </Link>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item as="li">
-                                            <Link className="nav-link p-0" to="/">
-                                                <i className="fa fa-instagram"></i>
-                                            </Link>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item as="li">
-                                            <Link className="nav-link p-0" to="/">
-                                                <i className="fa fa-linkedin"></i>
-                                            </Link>
-                                        </ListGroup.Item>
-                                        <ListGroup.Item as="li">
-                                            <Link className="nav-link p-0" to="/">
-                                                <i className="fa fa-youtube"></i>
-                                            </Link>
-                                        </ListGroup.Item>
+                                        <SocialMenu />
                                     </ListGroup>
                                 </div>
                             </div>
@@ -117,7 +93,7 @@ class Footer extends Component {
                         <Image src={logo} className="img-fluid" alt="" width="120px"/>
                     </div>
                     <div>
-                        <p className="mb-0">Australian Sports Camps © 2020. All Rights Reserved.</p>
+                        <p className="mb-0">Australian Sports Camps © 2021. All Rights Reserved.</p>
                     </div>
                     <div className="mb-0">
                         <ul className="pl-0 mb-0 list-style-none">

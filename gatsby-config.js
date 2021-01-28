@@ -12,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'staging-ascstaging.kinsta.cloud',
+        baseUrl: 'shop.australiansportscamps.com.au',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
@@ -23,6 +23,7 @@ module.exports = {
         verboseOutput: false,
 		excludedRoutes: [
 		  '/*/*/media',
+		  '/*/*/connect/stripe',
 		],
       },
     },
@@ -30,14 +31,14 @@ module.exports = {
       resolve: 'gatsby-plugin-global-context',
       options: {
         context: {
-          BACK_URL: "https://staging-ascstaging.kinsta.cloud"
+          BACK_URL: "https://shop.australiansportscamps.com.au"
         }
       }
     },
 	{       
 		resolve: '@pasdo501/gatsby-source-woocommerce',
 		options: {
-			api: 'staging-ascstaging.kinsta.cloud',
+			api: 'shop.australiansportscamps.com.au',
 			verbose: true,
 			https: true,
 			api_keys: {

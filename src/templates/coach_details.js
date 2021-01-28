@@ -4,7 +4,7 @@ import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import {Container,Breadcrumb} from 'react-bootstrap'
 import {Row,Col,Card,Image,Form,ListGroup,Button} from 'react-bootstrap'
-import { Link } from 'gatsby'
+import { Link,graphql } from 'gatsby'
 import card1 from '../images/blog-card-1.png'
 import PropTypes from "prop-types"
 
@@ -31,29 +31,34 @@ class CoachDetails extends Component {
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href="" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.title}} className="" />
 							</Breadcrumb>
-							<h2 className="heading-banner">Coach</h2>
+							<h2 className="heading-banner">{coach.edges[0].node.title}</h2>
 						</div>
 					</Container>
 				</section>
-				<section className="Blog-details-Section-2">
-					<Container>
-						<div className="Blog-details-Section-2-data">
-							<Row>
-								<Col xl={8} lg={8} md={12} className="lg-mb-2">
-									<Card className="blog-details-card mb-30">
-										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.title}} />
-										
-										<div className="card-img mb-3">
-											<Image src={coach.edges[0].node.acf.featured_image} fluid />
-										</div>
-										<Card.Text as="div" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.content}} />
-									</Card>
+				<section className="Hero-Details-Section-2">
+                <Container>
+						<div className="Hero-Details-Section-2-data">
+							<div className="title">
+								<h2 className="uppercase">SHORT BIOGRAPHY</h2>
+								<h3 className="uppercase font-22 font-bold color-3b">ABOUT Heroes</h3>
+							</div>
+							<Row className="align-items-center justify-content-center mb-2">
+								<Col xl={4} lg={4} className="lg-mb-4">
+									<div class="hero-image text-center">
+									<Image src={coach.edges[0].node.acf.featured_image} fluid alt="" />
+									</div>
+								</Col>
+								<Col xl={8} lg={8}>
+									<p className="font-18 font-medium">
+									<Card.Text as="div" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.content}} />
+									</p>
 								</Col>
 							</Row>
+							
 						</div>
-						
 					</Container>
 				</section>
+				
 
 				
 				

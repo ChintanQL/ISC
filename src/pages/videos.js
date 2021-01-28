@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types'
-import { Link, StaticQuery, graphql } from 'gatsby'
+
+import { Link } from 'gatsby'
 import Layout from "../components/layout"
-import LazyLoad from 'react-lazyload';
-import $ from "jquery";
+
 import axios from 'axios';
 import {Container,Breadcrumb} from 'react-bootstrap'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
-import {Row,Col,Card} from 'react-bootstrap'
+import {Row,Col} from 'react-bootstrap'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 class TNC extends Component {
@@ -23,7 +22,7 @@ class TNC extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://staging-ascstaging.kinsta.cloud/graphql',
+			url: 'https://shop.australiansportscamps.com.au/graphql',
 			method: 'post',
 			data: {
 				query: `
@@ -66,7 +65,7 @@ class TNC extends Component {
 					<Container>
 						<div className="Blog-Section-2-data">
 							<Row>
-								{(this.state.PageData != "") ? (
+								{(this.state.PageData !== "") ? (
 									<>
 										{this.state.PageData.youtubeVideoLinks.map((str,i) => 
 											<Col xl={6} lg={6} md={12} className="lg-mb-2 mb-3">

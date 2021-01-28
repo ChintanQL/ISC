@@ -4,12 +4,6 @@ import { Link } from 'gatsby'
 import Layout from "../components/layout"
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
-import card1 from '../images/member-icon-1.png'
-import card2 from '../images/member-icon-2.png'
-import card3 from '../images/member-icon-3.png'
-import icon1 from '../images/step-1-icon.png'
-import icon2 from '../images/step-2-icon.png'
-import icon3 from '../images/step-3-icon.png'
 import axios from 'axios';
 
 class Membership extends Component {
@@ -35,7 +29,7 @@ class Membership extends Component {
     } 
 	componentDidMount() {
 		axios({
-			url: 'https://staging-ascstaging.kinsta.cloud/graphql',
+			url: 'https://shop.australiansportscamps.com.au/graphql',
 			method: 'post',
 			data: {
 				query: `
@@ -126,7 +120,7 @@ class Membership extends Component {
 							<div className="Membership-section-3-data">
 								<Row className="justify-content-center">
 									
-									{(this.state.PageData != "") ? (
+									{(this.state.PageData !== "") ? (
 										<>
 											{this.state.PageData.memberships.map((str,i) => 
 												<>
@@ -183,7 +177,7 @@ class Membership extends Component {
 							<div className="Membership-section-6-data">
 								<Row>
 									
-									{(this.state.PageData != "") ? (
+									{(this.state.PageData !== "") ? (
 										<>
 											{this.state.PageData.steps.map((str,i) => 
 												<>
@@ -210,7 +204,7 @@ class Membership extends Component {
 
 								<Accordion defaultActiveKey="1">
 									
-									{(this.state.PageData != "") ? (
+									{(this.state.PageData !== "") ? (
 									<>
 									{this.state.PageData.faq.map((str,i) => 
 										<>

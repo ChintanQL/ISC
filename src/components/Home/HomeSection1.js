@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-import { Container,Image,Row,Col,Button,ListGroup,Form } from 'react-bootstrap';
+import React, { Component,useState } from 'react';
+import { Container,Image,Row,Col,Button,Form } from 'react-bootstrap';
 import Slider from "react-slick";
-import slider1 from '../../images/slider-1.png'
-import slider2 from '../../images/modal-section-bg.png'
-import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+import Cookies from 'universal-cookie';
 import Select from 'react-select'
+import SearchLocationInput from './SearchLocationInput'
+import credentials from './credentials'
 import axios from 'axios';
-
+import $ from "jquery";
+//https://github.com/sethcwhiting/react-native-gravityform
+//https://github.com/reactivestack/cookies/tree/master/packages/universal-cookie
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -18,6 +20,9 @@ function SampleNextArrow(props) {
       </div>
   );
 }
+
+
+
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -38,12 +43,14 @@ class HomeSection1 extends Component {
 			name: ''
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
+		this.Campred = this.Campred.bind(this);	
+  
 	}
 	
 	async getOptions(){
-    const res = await axios.get('https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/all-cat')
+    const res = await axios.get('https://shop.australiansportscamps.com.au/wp-json/newasc/v1/all-cat')
     const data = res.data.ResponseData
-
+	
     const options = data.map(d => ({
       "value" : d.id,
       "label" : d.value
@@ -54,9 +61,26 @@ class HomeSection1 extends Component {
 
   }
 
-  handleChange(e){
-   this.setState({id:e.value, name:e.label})
-  }
+	handleChange(e){
+		this.setState({id:e.value, name:e.label})
+	}
+  
+	Campred(){
+		const cookies = new Cookies();
+		var lat =  cookies.get('lat');
+		var lng =  cookies.get('lng');
+		var loc =  cookies.get('loc');
+		var locationName =  cookies.get('locationName');
+		var multu =  this.state.multiValue;
+		var str = '';
+		console.log(this.state.multiValue);
+		$.each(multu, function (i,val) {
+			str +=val.value+",";
+		});
+		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
+		window.location = URL;
+		
+	}
 
   componentDidMount(){
       this.getOptions()
@@ -114,6 +138,7 @@ class HomeSection1 extends Component {
                     
                 </Slider>
 				
+				
 				<div className="bg-ef">
                   <Container>
                     <div className="pos-absolute-form">
@@ -121,17 +146,7 @@ class HomeSection1 extends Component {
                              
 							  <div className="home-form">
                                 <div className="first-control">
-                                  <GooglePlacesAutocomplete
-									apiKey="AIzaSyA-w1yIFUC5apNzpwsAGIxmhPQ2enVHfTE"
-									  selectProps={{
-											placeholder: 'Enter Suburb / Postcode',
-										  }}
-									autocompletionRequest={{
-									  types: ['(regions)'],
-									  componentRestrictions: {country: 'au'}
-									  
-									}}
-									/>
+                                  <SearchLocationInput/>
                                 </div>
                                 <div className="second-control">
                                   <Select placeholder="Select Camps" value={this.state.multiValue} options={this.state.selectOptions}  isMulti onChange={this.handleMultiChange} />
@@ -139,7 +154,7 @@ class HomeSection1 extends Component {
 								  
                                 </div>
                                 <div className="third-control">
-                                  <Button type="button" className="uppercase btn-sm btn-orange mb-0">
+                                  <Button type="button" onClick={this.Campred} className="uppercase btn-sm btn-orange mb-0">
                                       Find Camps
                                   </Button>
                                 </div>

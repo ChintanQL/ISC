@@ -12,7 +12,7 @@ class Campbooking extends React.Component{
     };
 	componentDidMount() {
 		var cat = this.props.category;
-		var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/cat-products/"+cat;
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
 		axios.get(url).then(e => this.setState({pagedata: e.data.ResponseData}))
     }
 

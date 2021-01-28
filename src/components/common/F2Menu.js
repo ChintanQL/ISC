@@ -48,7 +48,7 @@ class F2Menu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
-										<Image src={icon1} fluid className="icon" /><Link to={"/"+innerprop.title.toLowerCase().replace(/\s+/g, '')} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />
+										<Link to={"/"+innerprop.title.toLowerCase().replace(/\s+/g, '-')} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />
 									</ListGroup.Item>	
 								</>
 								)}

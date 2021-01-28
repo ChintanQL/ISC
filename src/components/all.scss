@@ -2,6 +2,9 @@
 
 // font
 
+@media(max-width:767px){
+section.Sport-details-section-2 img { width: 100%; }
+}
 
 .text-white p{
     color: #fff !important;
@@ -995,7 +998,7 @@ section.Home-section-1 .home-form .form-control
 section.Home-section-1 .home-form .first-control
 {
   padding: 20px 20px 20px 30px;
-  width:300px;
+
 }
 section.Home-section-1 .home-form .second-control
 {

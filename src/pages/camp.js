@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import Layout from "../components/layout"
 import PropTypes from 'prop-types';
 import isEmpty from 'lodash.isempty';
-import {Container,Breadcrumb,Row,Col,Card,ListGroup} from 'react-bootstrap'
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import {Container,Breadcrumb,Row,Col,Card} from 'react-bootstrap'
 import { Link } from 'gatsby'
 import queryString from 'query-string'
 import GoogleMap from '../components/Map/GoogleMap';
-import styled from 'styled-components';
-import { keyframes } from 'styled-components'
-import styles from '../components/Map/map.module.css'; 
+
+
+	
 import $ from "jquery";
 
 // InfoWindow component
@@ -92,12 +91,10 @@ class MarkerInfoWindow extends Component {
 	
 	
 	if(!$.isEmptyObject(values)){
-		//console.log(values.filter);
-		var prod = 'PRODUCT144611';
-		//this.refs.prod.props.onClick();
+		
 	}
   
-    fetch('https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/all-products')
+    fetch('https://shop.australiansportscamps.com.au/wp-json/newasc/v1/all-products')
       .then((response) => response.json())
       .then((data) => {
         console.log(data.ResponseData);
@@ -118,7 +115,7 @@ class MarkerInfoWindow extends Component {
 		  return { places: state.places };
 		});
 		
-		return false;
+		
 		var places = this.state.places;
 		places.forEach((result,i) => {
 			if(result.ID !== key){
@@ -147,7 +144,7 @@ class MarkerInfoWindow extends Component {
 			if(result.ID !== id){
 				result.show = false; // eslint-disable-line no-param-reassign
 			}
-			if(result.ID == id){
+			if(result.ID === id){
 				this.setState({ center: [result.lat,result.lng] });
 				this.setState({ zoom: 15 });
 			}
@@ -184,8 +181,8 @@ class MarkerInfoWindow extends Component {
 						<ul>
 							{places.map((place,i) => (
 								<>
-								{(place.lat != "") ? (
-									<li ref={place.ID} key={i} id={place.ID} onClick={() => {this.handleToggle(place.ID)}}>
+								{(place.lat !== "") ? (
+									<li ref={place.ID} key={i} id={place.ID} >
 										<Card className="book-card p-0">
 											<Card.Body className="p-0">
 												<Card.Title as="h5">{place.Name}</Card.Title>
@@ -218,7 +215,7 @@ class MarkerInfoWindow extends Component {
 							>
 								{places.map((place,i) => (
 									
-									(place.lat != "") ? (
+									(place.lat !== "") ? (
 										
 										<Marker 
 											key={place.ID}

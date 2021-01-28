@@ -35,49 +35,38 @@ class coach extends Component {
                     </div>
                 </Container>
             </section> 
-			<section className="Blog-Section-2">
+			 <section className="Hero-section-2">
                 <Container>
-                    <div className="Blog-Section-2-data">
+                    <div className="Hero-Section-2-data">
                         <Row>
-                           
-                                
-								{blog && blog.edges.map( prop => {
-									return (
-										<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
-										<Card className="book-card">
-											<div className="card-img">
-												<Image variant="top" src={prop.node.acf.featured_image} fluid alt="card"/>
-												
+                            {blog && blog.edges.map( prop => { return (
+								<Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-listed-card">
+									<Card  className="listed-card mb-0">
+										<div className="card-img">
+											<div className="inner-card ">
+												<Image src={cardhover} fluid alt="cardhover"/>
 											</div>
-											<Card.Body>
-												<Card.Title as="h5">
-													{prop.node.title}
-												</Card.Title>
-												
-												<Card.Text as="div"  dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 200)+"...."}} />
-													
-												
-												<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"/the-asc-heroes/"+prop.node.slug}>Read More</Link>
-											</Card.Body>
-										</Card>
-										
-												
-										</Col>						
-									)
-								})}
-								<Col xl={12} lg={12} md={12} sm={12} xs={12} >
+											<Image variant="top" src={hero1} fluid alt="card"/>
+										</div>
+										<Card.Body>
+											<Link to="/Herodetails">ANGE POSTECOGLOU</Link>
+										</Card.Body>
+									</Card>
+								</Col>	
+							)})}
+							
+							<Col xl={12} lg={12} md={12} sm={12} xs={12} >
 								{(this.props.pageContext.previousPagePath !== "") ? (<Link className="btn btn-primary"  to={this.props.pageContext.previousPagePath}>Previous</Link>) : (<Link className="btn btn-primary invisible"  to={this.props.pageContext.previousPagePath}>Previous</Link>)}
 			
 			
 								{(this.props.pageContext.nextPagePath !== "") ? (<Link className="btn btn-primary" to={this.props.pageContext.nextPagePath}>Next</Link>) : (<Link className="btn btn-primary invisible" to={this.props.pageContext.nextPagePath}>Next</Link>)}
 								
-								</Col>	
-							
-										
+							</Col>	
+								
 						</Row>
-					</div>	
-				</Container>
-			</section>
+					</div>		
+				</Container>		
+			</section>		
 			<BottomForm/>
 			<Footer/>
 			 

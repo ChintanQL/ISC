@@ -23,7 +23,7 @@ class SportMenu extends Component {
             
 			<StaticQuery
 					query={graphql`
-						query MyQuery3 {
+						query MyQuery34 {
 							wordpressMenusMenusItems(slug: {eq: "gatsby-menu-sports"}) {
 								id
 								items {

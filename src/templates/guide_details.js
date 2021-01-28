@@ -4,7 +4,7 @@ import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import {Container,Breadcrumb} from 'react-bootstrap'
 import {Row,Col,Card,Image} from 'react-bootstrap'
-import { Link } from 'gatsby'
+import { Link,graphql } from 'gatsby'
 import PropTypes from "prop-types"
 import { Disqus } from 'gatsby-plugin-disqus'
 class BlogDetails extends Component {

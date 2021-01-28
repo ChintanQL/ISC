@@ -8,10 +8,7 @@ import axios from 'axios';
 class FAQ extends Component {
 	
 	
-	constructor(props) {
-		super(props);
-		
-    }
+	
 	
 	state = {
 		PageData: [],
@@ -20,7 +17,7 @@ class FAQ extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://staging-ascstaging.kinsta.cloud/graphql',
+			url: 'https://shop.australiansportscamps.com.au/graphql',
 			method: 'post',
 			data: {
 				query: `
@@ -82,7 +79,7 @@ class FAQ extends Component {
 					<Container>
 						<div className="Faq-Section-2-data accordian-div">
 							<Accordion defaultActiveKey="1">
-								{(this.state.result == 1) ? (
+								{(this.state.result === 1) ? (
 									<>
 									{this.state.PageData.faq.map((str,i) => 
 										<>

@@ -28,9 +28,11 @@ class F1Menu extends Component {
 								id
 								items {
 									title
+									slug
 									child_items {
 										title
 										url
+										
 									}
 									url
 								}
@@ -48,7 +50,12 @@ class F1Menu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
-										<Link to={"/"+innerprop.title.toLowerCase().replace(/\s+/g, '')} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />
+									{(innerprop.slug == 'my-account') ? 
+									(<Link to={"https://shop.australiansportscamps.com.au/"+innerprop.slug} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
+									(<Link to={"/"+innerprop.slug
+									} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}
+										
+										
 										
                                     </ListGroup.Item>
 									

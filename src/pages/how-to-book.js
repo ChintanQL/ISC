@@ -19,7 +19,7 @@ class HowToBook extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://staging-ascstaging.kinsta.cloud/graphql',
+			url: 'https://shop.australiansportscamps.com.au/graphql',
 			method: 'post',
 			data: {
 				query: `

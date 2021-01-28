@@ -25,14 +25,29 @@ class Header extends Component {
               this.setState({ isTop })
           }
         });
-		this.getCart()
+		
+		fetch("https://shop.australiansportscamps.com.au/cart-data.php")
+      .then(response => response.text())
+      .then(data => {
+		var d = data.split('class="badge badge-blue"');
+		var str = d[1];
+		str = str.replace('">', "");	
+		str = str.replace('</span>', "");	
+		str = str.replace('>', "");	
+		this.setState({cart: str});
+      })
+      .catch(error => {
+        //this.setState({ error: error });
+		this.setState({cart: '0'});
+	  });
+		
+		
+		//const res =  axios.get('https://shop.australiansportscamps.com.au/cart-data.php');
+		//console.log(res);
+		//const data = res;
+		//this.setState({cart: data})
       } 
-	async getCart(){
-		const res = await axios.get('https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/cart')
-		const data = res.data.ResponseData
-		this.setState({cart: data})
-
-	}
+	
 	
 	  
     render() {
@@ -62,17 +77,17 @@ class Header extends Component {
                             |
                         </ListGroup.Item>
                         <ListGroup.Item as="li">
-                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">LOGIN</Link>
+                        <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
                         <span>OR</span>
-                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">REGISTER</Link>
+                        <Link to="https://shop.australiansportscamps.com.au/my-account/">REGISTER</Link>
                         </ListGroup.Item>
                     </ListGroup>
 
                     <ListGroup horizontal as="ul" className="d-md-none d-flex">
                         <ListGroup.Item as="li">
-                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">LOGIN</Link>
+                        <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
                         <span>OR</span>
-                        <Link to="https://staging-ascstaging.kinsta.cloud/my-account/">REGISTER</Link>
+                        <Link to="https://shop.australiansportscamps.com.au/my-account/">REGISTER</Link>
                         </ListGroup.Item>
                     </ListGroup>
                 </div>
@@ -148,6 +163,7 @@ class Header extends Component {
 																	<div className="mb-3 menu-heading">
 																		<Link to="/Sport" className="">ASC Sports</Link>
 																	</div>
+																	qewredf
 																	<ListGroup as="ul">
 																		<SportMenu />
 																	</ListGroup>
@@ -244,7 +260,7 @@ class Header extends Component {
 
                             <div>
                                 <li className="nav-item pr-0">
-                                    <Link className="nav-link uppercase " to="/"><Image src={cart} className="img-fluid" alt="" width=""/>
+                                    <Link className="nav-link uppercase " to="https://shop.australiansportscamps.com.au/cart/"><Image src={cart} className="img-fluid" alt="" width=""/>
 									<span className="badge badge-blue">{this.state.cart}</span>
 									</Link>
                                 </li>
