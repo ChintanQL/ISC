@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { graphql,Link } from "gatsby"
 import PropTypes from "prop-types"
 import {Container,Breadcrumb} from 'react-bootstrap'
-import {Image,ListGroup,Form,InputGroup,FormControl,Button} from 'react-bootstrap'
+import {Image,ListGroup,Form,InputGroup,FormControl,Button,Tab,Nav} from 'react-bootstrap'
 import {Row,Col,Card} from 'react-bootstrap'
 import Layout from "../components/layout"
 import Footer from "../components/common/Footer"
@@ -29,199 +29,75 @@ class demopage extends Component {
                     <Breadcrumb>
                         <Breadcrumb.Item className="">
                             <Link className="nav-link p-0" to="/">Home</Link>
-                        </Breadcrumb.Item>
-                        <Breadcrumb.Item active href=""className="">Flyer</Breadcrumb.Item>
+                            </Breadcrumb.Item>
+                        <Breadcrumb.Item active href=""className="">Resources</Breadcrumb.Item>
                     </Breadcrumb>
-                    <h2 className="heading-banner">Flyer</h2>
+                    <h2 className="heading-banner">Resources</h2>
                     </div>
                 </Container>
-            </section> 
-			<section className="Blog-Section-2">
+            </section>
+			<section className="Resource-section-2">
                 <Container>
-                    <div className="Blog-Section-2-data">
-                        <Row>
-                            <Col xl={8} lg={8} md={12} className="lg-mb-2">
-                                
-								{blog && blog.edges.map( prop => {
-									return (
-										<Card className="blog-card mb-30">
-											<div className="card-img">
-												<Image src={prop.node.acf.featured_image} fluid />
+                    <div className="Resource-Section-2-data">
+						<Tab.Container id="left-tabs-example" defaultActiveKey="Blog">
+							<div className="p-0 border-0 justify-content-center d-flex mb-30">
+								<Nav variant="pills" className="">
+									 <Nav.Item>
+										<Nav.Link  href="/blog" className="uppercase font-bold">Blogs</Nav.Link>
+									</Nav.Item>
+									<Nav.Item>
+										<Nav.Link href="/videos" className="uppercase font-bold">Videos</Nav.Link>
+									</Nav.Item>
+									<Nav.Item>
+										<Nav.Link href="/guide" className="uppercase font-bold nav-link active">Guides</Nav.Link>
+									</Nav.Item>
+									<Nav.Item>
+										<Nav.Link href="/flyer" className="uppercase font-bold">Camp flyer</Nav.Link>
+									</Nav.Item>
+								</Nav>
+							</div>
+							<Tab.Content className="text-left">
+								<Tab.Pane eventKey="Blog">
+									<section className="Resource-guides">
+										<Container>
+											<div className="Resource-guides-data">
+												<Row className="">
+													
+													{blog && blog.edges.map( prop => {
+														return (
+															<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
+																<Card className="resource-card mb-0 all">
+																	<div className="card-img">
+																		<Image src={prop.node.acf.featured_image} fluid alt="" className="" />
+																	</div>
+																	<Card.Body>
+																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title}}  />
+																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
+																		<Link className="nav-link p-0 d-flex align-items-center" to={"/flyer/"+prop.node.slug}>Read more 
+																			<i className="fa fa-chevron-right ml-2"></i> 
+																		</Link>
+																	</Card.Body>
+																</Card>
+															</Col>	
+														)
+													})}
+												</Row>
+												<Row className="">
+													{(this.props.pageContext.previousPagePath !== "") ? (<Link className="btn btn-primary"  to={this.props.pageContext.previousPagePath}>Previous</Link>) : (<Link className="btn btn-primary invisible"  to={this.props.pageContext.previousPagePath}>Previous</Link>)}
+				
+				
+													{(this.props.pageContext.nextPagePath !== "") ? (<Link className="btn btn-primary" to={this.props.pageContext.nextPagePath}>Next</Link>) : (<Link className="btn btn-primary invisible" to={this.props.pageContext.nextPagePath}>Next</Link>)}
+												</Row>
 											</div>
-											<Card.Body>
-												<Card.Title dangerouslySetInnerHTML={{ __html: prop.node.title}} as="h5" />
-												<span> by {prop.node.author.name} / {prop.node.date}</span>
-												<Card.Text as="div" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
-												<Link className="btn btn-orange-border uppercase" to={"/flyer/"+prop.node.slug}>Read More</Link>
-											</Card.Body>
-										</Card>						
-									)
-								})}
-								
-								{(this.props.pageContext.previousPagePath != "") ? (<Link className="btn btn-primary"  to={this.props.pageContext.previousPagePath}>Previous</Link>) : (<Link className="btn btn-primary invisible"  to={this.props.pageContext.previousPagePath}>Previous</Link>)}
-			
-			
-								{(this.props.pageContext.nextPagePath != "") ? (<Link className="btn btn-primary" to={this.props.pageContext.nextPagePath}>Next</Link>) : (<Link className="btn btn-primary invisible" to={this.props.pageContext.nextPagePath}>Next</Link>)}
-								
-								
-							</Col>
-							<Col xl={4} lg={4} md={12}>
-                                <div className="side-sticky">
-                                    <Form>
-										{/*  */}
-										<div className="mb-4 search">
-											<h3 className="font-20 mb-2 font-medium">Search</h3> 
-											<Form>
-												<Form.Group controlId="" className="mb-0">
-													<InputGroup className="mb-3">
-														<FormControl className="master border-right-0"
-														placeholder="Search in Flyer" />
-														<InputGroup.Append className="border-left-0">
-															<InputGroup.Text id="basic-addon2">
-																<Button className="btn-orange btn"><FaSearch/></Button>
-															</InputGroup.Text>
-														</InputGroup.Append>
-													</InputGroup>
-												</Form.Group>
-											</Form>
-										</div>
-										{/*  */}
-										
-										<div className="inner-sidebar mb-4">
-												<h3 className="font-20 mb-2 font-medium">Categories</h3>
-													<ListGroup as="ul" className="categaries">
-														
-														{category && category.edges.map( (propd,i) => {
-															return (
-																
-																(propd.node.name != 'Uncategorised') ? (<ListGroup.Item key={i} as="li" className="font-18 justify-content-between d-flex align-items-center">
-																	<Link to={"/category/"+propd.node.slug+"/"} className="mr-1 color-70 font-regular decoration-none">{propd.node.name}</Link> <p className="mb-0 color-70 font-regular">{propd.node.count}</p>
-																</ListGroup.Item>) : ("") 
-															)
-														})}
-													</ListGroup>
-										</div>
-										{/*  */}
-										<div className="inner-media-sidebar mb-4">
-											<h3 className="font-20 mb-2 font-medium">Popular Posts</h3>
-											<ListGroup as="ul">
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox1} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">August 14, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">10 USEFUL TIPS FROM EXPERIENCED CRICKET PLAYERS & COACHESs</h2>
-														</div>
-												</ListGroup.Item> 
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox2} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">August 6, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">HOW HAVE TECHNOLOGICAL CHANGES AFFECTED JUNIOR NETBALL?</h2>
-														</div>
-												</ListGroup.Item> 
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox3} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">February 27, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">BULLYING IN YOUTH SPORTS</h2>
-														</div>
-												</ListGroup.Item> 
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox4} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">February 27, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">PARENT SIDELINE BEHAVIOUR</h2>
-														</div>
-												</ListGroup.Item> 
-											</ListGroup>
-										</div>
-										{/*  */}
-										<div className="mb-4 text-center">
-											<Link to="">
-												<Image src={sidebaradd1} fluid />
-											</Link>
-										</div>
-										{/*  */}
-										<div className="inner-sidebar mb-4">
-											<h3 className="font-20 mb-2 font-medium">Browse Tags</h3>
-											<Form.Group className="mb-0 font-16 font-regular tagsList">
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags1"
-													label="sports"
-												/>
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags2"
-													label="sportsnews"
-												/>
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags3"
-													label="football"
-												/>
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags4"
-													label="basketball"
-												/>
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags5"
-													label="sportslover"
-												/>
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags6"
-													label="soccer"
-												/>
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags7"
-													label="tennis"
-												/>
-												<Form.Check
-													inline
-													type="checkbox"
-													id="tags8"
-													label="cricket "
-												/>
-											</Form.Group>
-										</div>
-										{/*  */}
-										<div className="mb-4">
-											<h3 className="font-20 mb-2 font-medium">About Blog</h3>
-											<p className="font-16 font-medium color-70">Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, pulvinar nunc sapien ornare nisl.</p>
-										</div>
-										{/*  */}
-										<div className="mb-4 text-center">
-											<Link to="">
-												<Image src={sidebaradd2} fluid />
-											</Link>
-										</div>
-										{/*  */}
-									</Form>
-                                </div>
-                            </Col>			
-						</Row>
-					</div>	
-				</Container>
-			</section>
+										</Container>
+									</section>
+								</Tab.Pane>
+							</Tab.Content>
+						</Tab.Container>
+                    </div>
+                </Container>
+            </section>
+			<BottomForm/>
 			<Footer/>
 			 
 		 
