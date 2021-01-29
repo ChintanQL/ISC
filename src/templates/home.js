@@ -21,10 +21,11 @@ class HomePage extends Component {
 		return (
 			<Layout>
             <>
+				
 				<LazyLoad height={200} >
 				{(this.props.pageContext.HomeData.data.page.home) ? (<HomeSection1 data = {this.props.pageContext.HomeData.data.page.home.homeSlider} />) : ("")}
 				</LazyLoad>
-				
+				 
 				<LazyLoad height={200} >
 				{(this.props.pageContext.HomeData.data.page.home) ? (<HomeSection2 data = {this.props.pageContext.HomeData.data.page.home.asSeenOn} />) : ("")}
 				</LazyLoad>
