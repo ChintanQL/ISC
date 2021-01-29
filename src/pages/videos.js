@@ -4,9 +4,8 @@ import { Link } from 'gatsby'
 import Layout from "../components/layout"
 
 import axios from 'axios';
-import {Container,Breadcrumb} from 'react-bootstrap'
+import {Container,Breadcrumb,Tab,Nav,Col,Card,Image} from 'react-bootstrap'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
-import {Row,Col} from 'react-bootstrap'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 class TNC extends Component {
@@ -53,16 +52,47 @@ class TNC extends Component {
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">
-							<Breadcrumb>
-								<Breadcrumb.Item className="">
-									<Link className="nav-link p-0" to="/">Home</Link>
+						<Breadcrumb>
+							<Breadcrumb.Item className="">
+								<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
-								<Breadcrumb.Item active href=""className="">Videos</Breadcrumb.Item>
-							</Breadcrumb>
-							<h2 className="heading-banner">Videos</h2>
+							<Breadcrumb.Item active href=""className="">Resources</Breadcrumb.Item>
+						</Breadcrumb>
+						<h2 className="heading-banner">Resources</h2>
 						</div>
 					</Container>
 				</section>
+				<section className="Resource-section-2">
+                <Container>
+                    <div className="Resource-Section-2-data">
+                    <Tab.Container id="left-tabs-example" defaultActiveKey="All">
+                        <div className="p-0 border-0 justify-content-center d-flex mb-30">
+							<Nav variant="pills" className="">
+								 <Nav.Item>
+									<Nav.Link  href="/blog" className="uppercase font-bold">Blogs</Nav.Link>
+								</Nav.Item>
+								<Nav.Item>
+									<Nav.Link href="/videos" className="uppercase font-bold nav-link active">Videos</Nav.Link>
+								</Nav.Item>
+								<Nav.Item>
+									<Nav.Link href="/guide" className="uppercase font-bold">Guides</Nav.Link>
+								</Nav.Item>
+								<Nav.Item>
+									<Nav.Link href="/flyer" className="uppercase font-bold">Camp flyer</Nav.Link>
+								</Nav.Item>
+							</Nav>
+                        </div>
+                        <Tab.Content className="text-left">
+                            <Tab.Pane eventKey="All">
+                                
+                            </Tab.Pane>
+                           
+                        </Tab.Content>
+                    </Tab.Container>
+                
+                    </div>
+                </Container>
+            </section>
 				<section className="Blog-Section-2">
 					<Container>
 						<div className="Blog-Section-2-data">
