@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Layout from "../components/layout"
 
 import axios from 'axios';
-import {Container,Breadcrumb,Tab,Nav,Col,Card,Image} from 'react-bootstrap'
+import {Container,Breadcrumb,Tab,Nav,Col,Card,Image,Row} from 'react-bootstrap'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
