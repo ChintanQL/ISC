@@ -14,7 +14,8 @@ class HowToBook extends Component {
     }
 	
 	state = {
-		PageData: []
+		PageData: [],
+		showInfo: 0
 	}
 	
 	componentDidMount() {
@@ -35,6 +36,7 @@ class HowToBook extends Component {
 			}
 		}).then(res => {
 			this.setState({PageData: res.data.data.page})
+			this.setState({showInfo: 1})
 		})
 	}
   
@@ -47,6 +49,11 @@ class HowToBook extends Component {
 		return (
 			<Layout>
             <>
+				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
+					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+					</div>
+				</div>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

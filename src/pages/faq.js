@@ -12,7 +12,8 @@ class FAQ extends Component {
 	
 	state = {
 		PageData: [],
-		result: 0
+		result: 0,
+		showInfo: 0
 	}
 	
 	componentDidMount() {
@@ -37,6 +38,7 @@ class FAQ extends Component {
 		}).then(res => {
 			this.setState({PageData: res.data.data.page.faq})
 			this.setState({result: 1})
+			this.setState({showInfo: 1})
 			console.log(res.data.data);
 		})
 	}
@@ -62,6 +64,11 @@ class FAQ extends Component {
 		return (
 			<Layout>
             <>
+				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
+					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+					</div>
+				</div>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

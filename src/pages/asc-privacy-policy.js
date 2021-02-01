@@ -16,7 +16,8 @@ class PP extends Component {
     }
 	
 	state = {
-		PageData: []
+		PageData: [],
+		showInfo: 0
 	}
 	
 	componentDidMount() {
@@ -37,6 +38,7 @@ class PP extends Component {
 			}
 		}).then(res => {
 			this.setState({PageData: res.data.data.page})
+			this.setState({showInfo: 1})
 		})
 	}
 	
@@ -45,6 +47,11 @@ class PP extends Component {
 		return (
 			<Layout>
             <>
+				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
+					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+					</div>
+				</div>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">
@@ -62,7 +69,7 @@ class PP extends Component {
 					<Container>
 						<div className="Blog-Section-2-data">
 							<Row>
-								<Col xl={8} lg={8} md={12} className="lg-mb-2">
+								<Col xl={10} lg={10} md={12} className="lg-mb-2">
 								{(this.state.PageData) ? (<div dangerouslySetInnerHTML={{ __html: this.state.PageData.content}} ></div>) : ("")}
 								</Col>
 							</Row>
