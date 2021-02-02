@@ -254,7 +254,7 @@ class Header extends Component {
                             
                             <div>
                                 <li className="nav-item">
-                                    <Link className="nav-link uppercase btn-sm btn-orange" to="/">book a camp</Link>
+                                    <Link className="nav-link uppercase btn-sm btn-orange" to="/book-a-camp">book a camp</Link>
                                 </li>
                             </div>
 
