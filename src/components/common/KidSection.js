@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container,Row,Col,Button,Image } from 'react-bootstrap';
+import { Link,StaticQuery, graphql } from 'gatsby'
 
 class KidSection extends Component {
     render() {
@@ -29,7 +30,7 @@ class KidSection extends Component {
                             <h2 className="uppercase">{this.props.data.subTitle2}</h2>
                         </div>
                         <div className="text-center">
-                            <Button className=" uppercase btn-sm btn-orange-large" to="">BOOK A CAMP TODAY</Button>
+                            <Link className=" uppercase btn-sm btn-orange-large" to="/book-a-camp" >BOOK A CAMP TODAY</Link>
                         </div>
                     </Container>
                 </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container,Row,Col,Card,Image,Button } from 'react-bootstrap';
-
+import { Link,StaticQuery, graphql } from 'gatsby'
 class IncludedSection extends Component {
     render() {
         return (
@@ -38,7 +38,7 @@ class IncludedSection extends Component {
                     </Row>
 
                     <div className="text-center">
-                        <Button className=" uppercase btn-sm btn-orange-large" to="">BOOK A CAMP TODAY</Button>
+                        <Link className=" uppercase btn-sm btn-orange-large" to="/book-a-camp">BOOK A CAMP TODAY</Link>
                     </div>
                 </Container>
             </section>

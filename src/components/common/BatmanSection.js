@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container,Image,Row,Col,Button } from 'react-bootstrap';
 import batman from '../../images/bat-man.png'
-
+import { Link,StaticQuery, graphql } from 'gatsby'
 class BatmanSection extends Component {
 
     render() {
@@ -29,7 +29,7 @@ class BatmanSection extends Component {
                                     
                                 
                                 
-                                <Button className=" uppercase btn-sm btn-orange-large" to="">BOOK A CAMP TODAY</Button>
+                                <Link className=" uppercase btn-sm btn-orange-large" to="/book-a-camp" >BOOK A CAMP TODAY</Link>
                             </div>                        
                         </Col>
                     </Row>
