@@ -68,11 +68,11 @@ class demopage extends Component {
 															<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
 																<Card className="resource-card mb-0 all">
 																	<div className="card-img">
-																		<Image src={card1} fluid alt="" className="" />
+																		<Image src={ prop.node.acf.feature_image2} fluid alt="" className="" />
 																	</div>
 																	<Card.Body>
 																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title}}  />
-																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
+																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 250)+"...."}} />
 																		<Link className="nav-link p-0 d-flex align-items-center" to={"/blog/"+prop.node.slug}>Read more 
 																			<i className="fa fa-chevron-right ml-2"></i> 
 																		</Link>
@@ -119,6 +119,9 @@ export const pageQuery = graphql`
 				id
 				slug
 				title
+				acf {
+					feature_image2
+				}
 				date(formatString: "D MMMM, Y")
 				content
 				author {

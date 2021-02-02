@@ -49,10 +49,10 @@ class demopage extends Component {
 										<Nav.Link href="/videos" className="uppercase font-bold">Videos</Nav.Link>
 									</Nav.Item>
 									<Nav.Item>
-										<Nav.Link href="/guide" className="uppercase font-bold nav-link active">Guides</Nav.Link>
+										<Nav.Link href="/guide" className="uppercase font-bold ">Guides</Nav.Link>
 									</Nav.Item>
 									<Nav.Item>
-										<Nav.Link href="/flyer" className="uppercase font-bold">Camp flyer</Nav.Link>
+										<Nav.Link href="/flyer" className="uppercase font-bold nav-link active">Camp flyer</Nav.Link>
 									</Nav.Item>
 								</Nav>
 							</div>
@@ -72,7 +72,7 @@ class demopage extends Component {
 																	</div>
 																	<Card.Body>
 																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title}}  />
-																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
+																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 250)+"...."}} />
 																		<Link className="nav-link p-0 d-flex align-items-center" to={"/flyer/"+prop.node.slug}>Read more 
 																			<i className="fa fa-chevron-right ml-2"></i> 
 																		</Link>

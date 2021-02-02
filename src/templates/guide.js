@@ -71,7 +71,7 @@ class demopage extends Component {
 																	</div>
 																	<Card.Body>
 																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title}}  />
-																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
+																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 250)+"...."}} />
 																		<Link className="nav-link p-0 d-flex align-items-center" to={"/guide/"+prop.node.slug}>Read more 
 																			<i className="fa fa-chevron-right ml-2"></i> 
 																		</Link>
