@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import Cookies from 'universal-cookie';
 import Select from 'react-select'
 import SearchLocationInput from './SearchLocationInput'
-import credentials from './credentials'
 import axios from 'axios';
 import $ from "jquery";
 //https://github.com/sethcwhiting/react-native-gravityform
