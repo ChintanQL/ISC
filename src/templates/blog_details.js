@@ -42,7 +42,7 @@ class BlogDetails extends Component {
 					<Container>
 						<div className="Blog-details-Section-2-data">
 							<Row>
-								<Col xl={8} lg={8} md={12} className="lg-mb-2">
+								<Col xl={12} lg={12} md={12} className="lg-mb-2">
 									<Card className="blog-details-card mb-30">
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.title}} />
 										<span>In {blog.edges[0].node.categories[0].name} by {blog.edges[0].node.author.name} / { blog.edges[0].node.date}</span>

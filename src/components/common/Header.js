@@ -163,7 +163,7 @@ class Header extends Component {
 																	<div className="mb-3 menu-heading">
 																		<Link to="/Sport" className="">ASC Sports</Link>
 																	</div>
-																	qewredf
+																	
 																	<ListGroup as="ul">
 																		<SportMenu />
 																	</ListGroup>

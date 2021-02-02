@@ -213,7 +213,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	paginate({
 		createPage,
 		items: posts,
-		itemsPerPage: 10,
+		itemsPerPage: 18,
 		pathPrefix: '/blog',
 		component: blogTemplate,
 	});
@@ -257,7 +257,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	paginate({
 		createPage,
 		items: guides,
-		itemsPerPage: 10,
+		itemsPerPage: 18,
 		pathPrefix: '/guide',
 		component: guidelistTemplate,
 	});
@@ -300,7 +300,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	paginate({
 		createPage,
 		items: flyers,
-		itemsPerPage: 10,
+		itemsPerPage: 18,
 		pathPrefix: '/flyer',
 		component: flyerlistTemplate,
 	});
@@ -343,7 +343,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	paginate({
 		createPage,
 		items: productsdata,
-		itemsPerPage: 10,
+		itemsPerPage: 18,
 		pathPrefix: '/product',
 		component: ProductList,
 	});
