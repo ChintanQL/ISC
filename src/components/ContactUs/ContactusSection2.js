@@ -13,7 +13,7 @@ class ContactusSection2 extends Component {
                 <Container>
                     <div className="Contactus-Section-2-data">
                         <div className="title">
-                            <p className="font-bold text-left mb-3">If you’d like to get in touch with ASC, please fill in this form. We’ll get back to you as soon as we can!</p>
+                            <p className="font-bold text-center mb-3">If you’d like to get in touch with ASC, please fill in this form. We’ll get back to you as soon as we can!</p>
                         </div>
                         <div className="title">
                             <h2 className="mb-3">Australian Sports Camps Pty Ltd</h2>
