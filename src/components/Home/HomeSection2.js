@@ -50,7 +50,7 @@ class HomeSection2 extends Component {
                 <Slider {...settings}  >
 					{this.props.data.map((str) => 
 						<div className="slider-data">
-							<Image src={str.image.sourceUrl} className="img-fluid lazyload" />
+							<a href={str.url}><Image src={str.image.sourceUrl} className="img-fluid lazyload" /></a>
 						</div>
 					)}
 				</Slider>
