@@ -43,12 +43,8 @@ class CoachDetails extends Component {
 								<h3 className="uppercase font-22 font-bold color-3b">ABOUT Heroes</h3>
 							</div>
 							<Row className="align-items-center justify-content-center mb-2">
-								<Col xl={4} lg={4} className="lg-mb-4">
-									<div class="hero-image text-center">
-									<Image src={coach.edges[0].node.acf.featured_image} fluid alt="" />
-									</div>
-								</Col>
-								<Col xl={8} lg={8}>
+								
+								<Col xl={12} lg={12}>
 									<p className="font-18 font-medium">
 									<Card.Text as="div" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.content}} />
 									</p>
