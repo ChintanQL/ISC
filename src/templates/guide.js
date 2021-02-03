@@ -70,7 +70,7 @@ class demopage extends Component {
 																		<Image src={prop.node.acf.featured_image} fluid alt="" className="" />
 																	</div>
 																	<Card.Body>
-																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title}}  />
+																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title.substring(0, 60)+"...."}}  />
 																		<Card.Text as="div" className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 250)+"...."}} />
 																		<Link className="nav-link p-0 d-flex align-items-center" to={"/guide/"+prop.node.slug}>Read more 
 																			<i className="fa fa-chevron-right ml-2"></i> 
