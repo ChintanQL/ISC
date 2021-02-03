@@ -82,12 +82,12 @@ class demopage extends Component {
 														)
 													})}
 												</Row>
-												<Row className="">
+												<Col xl={12} lg={12} md={12} sm={12}  className="">
 													{(this.props.pageContext.previousPagePath !== "") ? (<Link className="btn btn-primary"  to={this.props.pageContext.previousPagePath}>Previous</Link>) : (<Link className="btn btn-primary invisible"  to={this.props.pageContext.previousPagePath}>Previous</Link>)}
 				
 				
 													{(this.props.pageContext.nextPagePath !== "") ? (<Link className="btn btn-primary" to={this.props.pageContext.nextPagePath}>Next</Link>) : (<Link className="btn btn-primary invisible" to={this.props.pageContext.nextPagePath}>Next</Link>)}
-												</Row>
+												</Col>
 											</div>
 										</Container>
 									</section>
