@@ -28,6 +28,7 @@ class SportMenu extends Component {
 								id
 								items {
 									title
+									attr_title
 									child_items {
 										title
 										url
@@ -48,7 +49,7 @@ class SportMenu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
-										<Image src={icon1} fluid className="icon" /><Link to={"/camps/"+innerprop.title.toLowerCase().replace(/\s+/g, '-')} className="">{innerprop.title}</Link>
+										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.title.toLowerCase().replace(/\s+/g, '-')} className="">{innerprop.title}</Link>
 									</ListGroup.Item>	
 								</>
 								)}
