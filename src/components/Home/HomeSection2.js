@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container,Image } from 'react-bootstrap';
+import { Link } from 'gatsby'
 import Slider from "react-slick";
 import icon1 from '../../images/slide-icon-1.png'
 import icon2 from '../../images/slide-icon-2.png'
@@ -50,7 +51,7 @@ class HomeSection2 extends Component {
                 <Slider {...settings}  >
 					{this.props.data.map((str) => 
 						<div className="slider-data">
-							<a href={str.url}><Image src={str.image.sourceUrl} className="img-fluid lazyload" /></a>
+							<Link to={str.url}><Image src={str.image.sourceUrl} className="img-fluid lazyload" /></Link>
 						</div>
 					)}
 				</Slider>

@@ -8,27 +8,33 @@ class Campbooking extends React.Component{
 		super(props);
 	}
 	state = {
-            pagedata: [],
+        pagedata: [],
+		showInfo: 0	
     };
 	componentDidMount() {
 		var cat = this.props.category;
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
-		axios.get(url).then(e => this.setState({pagedata: e.data.ResponseData}))
+		axios.get(url).then(e => {
+			this.setState({pagedata: e.data.ResponseData})
+			this.setState({showInfo: 1})
+		})
     }
 
 	render (){
 		return(
 			<>
+			<div className="laoder2" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
+				<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+					<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+				</div>
+			</div>
 			{(this.state.pagedata != "") ? (
 				<>
 					{this.state.pagedata.map((prop,i) => {return (
 						<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
 							<Card className="book-card">
 								<div className="card-img">
-									<Image variant="top" src={prop.Image} fluid alt="card"/>
-									<div className="tag blue">
-										New
-									</div>
+									<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
 								</div>
 								<Card.Body>
 									<Card.Title as="h5">
