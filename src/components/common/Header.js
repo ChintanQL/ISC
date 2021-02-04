@@ -29,6 +29,7 @@ class Header extends Component {
 		fetch("https://shop.australiansportscamps.com.au/cart-data.php")
       .then(response => response.text())
       .then(data => {
+		  console.log(data);
 		var d = data.split('class="badge badge-blue"');
 		var str = d[1];
 		str = str.replace('">', "");	
