@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 
 import { Link } from 'gatsby'
 import Layout from "../components/layout"
-
+import card1 from '../images/resource-all-video-card.png'
+import cardguide from '../images/resource-video-card-2.png'
 import axios from 'axios';
 import {Container,Breadcrumb,Tab,Nav,Col,Card,Image,Row} from 'react-bootstrap'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
