@@ -97,7 +97,7 @@ class resources extends Component {
 												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
 												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
 													
-												<Link className="nav-link p-0 d-flex align-items-center" to=to={"/blog/"+prop.slug}>Read more 
+												<Link className="nav-link p-0 d-flex align-items-center" to={"/blog/"+prop.slug}>Read more 
 													<i className="fa fa-chevron-right ml-2"></i> 
 												</Link>
 											</Card.Body>
@@ -120,7 +120,7 @@ class resources extends Component {
 												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
 												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
 													
-												<Link className="nav-link p-0 d-flex align-items-center" to=to={"/guide/"+prop.slug}>Read more 
+												<Link className="nav-link p-0 d-flex align-items-center" to={"/guide/"+prop.slug}>Read more 
 													<i className="fa fa-chevron-right ml-2"></i> 
 												</Link>
 											</Card.Body>
@@ -143,7 +143,7 @@ class resources extends Component {
 												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
 												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
 													
-												<Link className="nav-link p-0 d-flex align-items-center" to=to={"/flyer/"+prop.slug}>Read more 
+												<Link className="nav-link p-0 d-flex align-items-center" to={"/flyer/"+prop.slug}>Read more 
 													<i className="fa fa-chevron-right ml-2"></i> 
 												</Link>
 											</Card.Body>
