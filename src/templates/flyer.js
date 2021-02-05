@@ -42,6 +42,9 @@ class demopage extends Component {
 						<Tab.Container id="left-tabs-example" defaultActiveKey="Blog">
 							<div className="p-0 border-0 justify-content-center d-flex mb-30">
 								<Nav variant="pills" className="">
+									<Nav.Item>
+										<Nav.Link  href="/resources" className="uppercase font-bold">Resources</Nav.Link>
+									</Nav.Item>
 									 <Nav.Item>
 										<Nav.Link  href="/blog" className="uppercase font-bold">Blogs</Nav.Link>
 									</Nav.Item>
