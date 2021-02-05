@@ -407,11 +407,7 @@ exports.createPages = async ({ actions, graphql }) => {
 						id
 						title
 						content
-						acf {
-							image	
-							product_category
-							featured_image
-						}
+						
 						slug
 					}
 				}
