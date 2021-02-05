@@ -508,7 +508,9 @@ body.yith-wcbm-theme-basel .container-image-and-badge *:not(.yith-wcbm-badge) im
 	width:100%;
 }
 
-
+.container-image-and-badge img {
+    height: auto;
+}
 
 
 a.uppercase.btn-sm.btn-orange-large {
