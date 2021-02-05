@@ -18,31 +18,20 @@ class resources extends Component {
 	
 	state = {
 		PageData: [],
+		blog: [],
+		guide: [],
+		flyer: [],
 		Done:0,
 		showInfo: 0
 	}
 	
 	componentDidMount() {
-		axios({
-			url: 'https://shop.australiansportscamps.com.au/graphql',
-			method: 'post',
-			data: {
-				query: `
-					query MyQuery {
-						page(id: "150264", idType: DATABASE_ID) {
-							videos {
-								youtubeVideoLinks {
-									fieldGroupName
-									link
-								}
-							}
-						}
-					}
-				`
-			}
-		}).then(res => {
-			this.setState({PageData: res.data.data.page.videos})
-			this.setState({Done: 1})
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
+		axios.get(url).then(e => {
+			this.setState({pagedata: e.data.ResponseData})
+			this.setState({blog: e.data.ResponseData.Blog})
+			this.setState({guide: e.data.ResponseData.Guide})
+			this.setState({flyer: e.data.ResponseData.Flyer})
 			this.setState({showInfo: 1})
 		})
 	}
@@ -74,7 +63,7 @@ class resources extends Component {
 							<Nav variant="pills" className="">
 							
 								<Nav.Item>
-									<Nav.Link  href="/resources" className="uppercase font-bold nav-link active">Resources</Nav.Link>
+									<Nav.Link  href="/resources" className="uppercase font-bold nav-link active">All</Nav.Link>
 								</Nav.Item>
 								<Nav.Item>
 									<Nav.Link  href="/blog" className="uppercase font-bold">Blogs</Nav.Link>
@@ -96,19 +85,75 @@ class resources extends Component {
                 <Container>
                     <div className="Resource-all-data">
 
-                        {/* videos */}
                         <Row className="">
-                            <Col xl={12} className="mb-30 resource-card-col">
-                                <Card className="resource-card mb-0 video">
-                                    <div className="card-img">
-                                        <Image src={card1} fluid alt="" className="" />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title as="h5" className="mb-0">Australian Sports Camps Soccer Home Training</Card.Title>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
+						   {(this.state.blog != "") ? (<>
+								{this.state.blog.map((prop,i) => {return (
+									<Col xl={12} lg={12} md={12} className="mb-30 resource-card-col">
+										<Card className="resource-card mb-0 all">
+											<div className="card-img">
+												<Image src={prop.image} fluid alt="" className="" />
+											</div>
+											<Card.Body>
+												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
+												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
+													
+												<Link className="nav-link p-0 d-flex align-items-center" to=to={"/blog/"+prop.slug}>Read more 
+													<i className="fa fa-chevron-right ml-2"></i> 
+												</Link>
+											</Card.Body>
+										</Card>
+									</Col>	
+								)})}
+							
+						   </>) : ("")}		
                         </Row>
+						
+						<Row className="">
+						   {(this.state.guide != "") ? (<>
+								{this.state.guide.map((prop,i) => {return (
+									<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
+										<Card className="resource-card mb-0 all">
+											<div className="card-img">
+												<Image src={prop.image} fluid alt="" className="" />
+											</div>
+											<Card.Body>
+												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
+												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
+													
+												<Link className="nav-link p-0 d-flex align-items-center" to=to={"/guide/"+prop.slug}>Read more 
+													<i className="fa fa-chevron-right ml-2"></i> 
+												</Link>
+											</Card.Body>
+										</Card>
+									</Col>	
+								)})}
+							
+						   </>) : ("")}		
+                        </Row>
+						
+						<Row className="">
+						   {(this.state.flyer != "") ? (<>
+								{this.state.flyer.map((prop,i) => {return (
+									<Col xl={6} lg={6} md={6} className="mb-30 resource-card-col">
+										<Card className="resource-card mb-0 all">
+											<div className="card-img">
+												<Image src={prop.image} fluid alt="" className="" />
+											</div>
+											<Card.Body>
+												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
+												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
+													
+												<Link className="nav-link p-0 d-flex align-items-center" to=to={"/flyer/"+prop.slug}>Read more 
+													<i className="fa fa-chevron-right ml-2"></i> 
+												</Link>
+											</Card.Body>
+										</Card>
+									</Col>	
+								)})}
+							
+						   </>) : ("")}		
+                        </Row>
+						
 
                         {/* guides */}
                         <Row className="">
