@@ -28,6 +28,7 @@ class PartnerMenu extends Component {
 								id
 								items {
 									title
+									slug
 									attr_title
 									child_items {
 										title
@@ -49,7 +50,7 @@ class PartnerMenu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
-										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.title.toLowerCase().replace(/\s+/g, '-')} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
+										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
 									</ListGroup.Item>	
 								</>
 								)}
