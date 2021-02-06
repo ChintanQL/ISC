@@ -50,7 +50,7 @@ class CityMenu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
-										<Link to={"/city/"+innerprop.title.toLowerCase().replace(/\s+/g, '')} className="">{innerprop.title}</Link>
+										<Link to={"/city/"+innerprop.title.toLowerCase().replace(/\s+/g, '')} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
 									</ListGroup.Item>	
 								</>
 								)}

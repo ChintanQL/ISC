@@ -49,7 +49,7 @@ class PartnerMenu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
-										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.title.toLowerCase().replace(/\s+/g, '-')} className="">{innerprop.title}</Link>
+										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.title.toLowerCase().replace(/\s+/g, '-')} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
 									</ListGroup.Item>	
 								</>
 								)}
