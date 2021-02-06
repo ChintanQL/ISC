@@ -25,9 +25,7 @@ class IncludedSection extends Component {
 									</div>
 									<Card.Body>
 										<Card.Title as="h5">{inc.title}</Card.Title>
-										<Card.Text className="line-break-3">
-										Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.
-										</Card.Text>
+										<Card.Text className="" dangerouslySetInnerHTML={{ __html: inc.desc}} />
 									</Card.Body>
 								</Card>
 							</Col>
