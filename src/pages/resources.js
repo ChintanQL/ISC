@@ -26,7 +26,7 @@ class resources extends Component {
 	}
 	
 	componentDidMount() {
-		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/latest";
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData})
 			this.setState({blog: e.data.ResponseData.Blog})
@@ -155,95 +155,7 @@ class resources extends Component {
                         </Row>
 						
 
-                        {/* guides */}
-                        <Row className="">
-                            <Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
-                                <Card className="resource-card mb-0 all">
-                                    <div className="card-img">
-                                        <Image src={cardguide} fluid alt="" className="" />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title as="h5">Cricket drills that parents and kids can practice together</Card.Title>
-                                        <Card.Text as="p" className="line-break-3">
-                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor inviduntant and complete
-                                        </Card.Text>
-                                        <Link className="nav-link p-0 d-flex align-items-center" to="/Resourcesdetails">Read more 
-                                            <i className="fa fa-chevron-right ml-2"></i> 
-                                        </Link>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            <Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
-                                <Card className="resource-card mb-0 all">
-                                    <div className="card-img">
-                                        <Image src={cardguide} fluid alt="" className="" />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title as="h5">Cricket drills that parents and kids can practice together</Card.Title>
-                                        <Card.Text as="p" className="line-break-3">
-                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor inviduntant and complete
-                                        </Card.Text>
-                                        <Link className="nav-link p-0 d-flex align-items-center" to="/Resourcesdetails">Read more 
-                                            <i className="fa fa-chevron-right ml-2"></i> 
-                                        </Link>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            <Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
-                                <Card className="resource-card mb-0 all">
-                                    <div className="card-img">
-                                        <Image src={cardguide} fluid alt="" className="" />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title as="h5">Cricket drills that parents and kids can practice together</Card.Title>
-                                        <Card.Text as="p" className="line-break-3">
-                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor inviduntant and complete
-                                        </Card.Text>
-                                        <Link className="nav-link p-0 d-flex align-items-center" to="/Resourcesdetails">Read more 
-                                            <i className="fa fa-chevron-right ml-2"></i> 
-                                        </Link>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        </Row>
-
-                        
-
-                        {/* flyers */}
-                        <Row className="">
-                            <Col xl={6} lg={6} md={6} className="mb-30 resource-card-col">
-                                <Card className="resource-card mb-0 all">
-                                    <div className="card-img">
-                                        <Image src={cardguide} fluid alt="" className="" />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title as="h5">Cricket drills that parents and kids can practice together</Card.Title>
-                                        <Card.Text as="p" className="line-break-3">
-                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor inviduntant and complete
-                                        </Card.Text>
-                                        <Link className="nav-link p-0 d-flex align-items-center" to="/Resourcesdetails">Read more 
-                                            <i className="fa fa-chevron-right ml-2"></i> 
-                                        </Link>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                            <Col xl={6} lg={6} md={6} className="mb-30 resource-card-col">
-                                <Card className="resource-card mb-0 all">
-                                    <div className="card-img">
-                                        <Image src={cardguide} fluid alt="" className="" />
-                                    </div>
-                                    <Card.Body>
-                                        <Card.Title as="h5">Cricket drills that parents and kids can practice together</Card.Title>
-                                        <Card.Text as="p" className="line-break-3">
-                                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor inviduntant and complete
-                                        </Card.Text>
-                                        <Link className="nav-link p-0 d-flex align-items-center" to="/Resourcesdetails">Read more 
-                                            <i className="fa fa-chevron-right ml-2"></i> 
-                                        </Link>
-                                    </Card.Body>
-                                </Card>
-                            </Col>
-                        </Row>
+                       
                     </div>
                 </Container>
             </section>
