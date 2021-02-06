@@ -28,7 +28,7 @@ class About extends Component {
 			data: {
 				query: `
 					query MyQuery {
-						page(id: "150245", idType: DATABASE_ID) {
+						page(id: "17", idType: DATABASE_ID) {
 							id
 							slug
 							title
