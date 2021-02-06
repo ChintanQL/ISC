@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import { Link } from 'gatsby'
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 
 import axios from 'axios';
 import {Container,Breadcrumb} from 'react-bootstrap'
