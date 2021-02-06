@@ -136,7 +136,7 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<div>
 										<li className="nav-item dropdown uppercase"><Link className="nav-link dropdown-toggle" data-toggle="dropdown"
-												to="/" aria-expanded="false">{prop.title}</Link>
+												to={prop.title} aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (

@@ -149,7 +149,7 @@ class Membership extends Component {
 															<p className="points font-16 font-medium mb-20">{str.title3}</p>
 															<Card.Title as="h5">${str.price}</Card.Title>
 															<p className="price color-3b font-18 font-medium">${str.strikePrice}</p>
-															<Link className=" uppercase btn-sm btn-orange" to={str.url}>BOOK Now</Link>
+															<Link className=" uppercase btn-sm btn-orange btnpadding" to={str.url}>BOOK Now</Link>
 														</Card.Body>
 													</Card>
 												</Col>
