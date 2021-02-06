@@ -6,6 +6,29 @@
     width: auto !important;
 }
 
+.wp-caption, .gallery-item {
+    max-width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.alignright {
+    float: right;
+    margin: 0.35em 0 0.35em 2.15em;
+}
+.wp-caption > .gallery-caption, .wp-caption > .wp-caption-text, .wp-caption > .wp-caption-text:last-child, .gallery-item > .gallery-caption, .gallery-item > .wp-caption-text, .gallery-item > .wp-caption-text:last-child {
+    display: block;
+    margin: 9px 0 5px;
+    padding: 0 5%;
+    font-size: 10px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.wp-caption img, .gallery-item img {
+    border-radius: 2px;
+}
 
 .yith-wcbm-badge-109554{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 0.9; }.yith-wcbm-badge-109554 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109554 .yith-wcbm-badge__wrap
         {
