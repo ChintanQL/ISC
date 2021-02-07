@@ -70,8 +70,13 @@ class ACS extends Component {
 						<div className="Blog-Section-2-data">
 							<Row>
 								<Col xl={10} lg={10} md={12} className="lg-mb-2">
-								
+								{(this.state.PageData) ? (<div dangerouslySetInnerHTML={{ __html: this.state.PageData.content}} ></div>) : ("")}
 								</Col>
+							</Row>
+						</div>
+						<div className="Blog-Section-2-data">
+							<Row>
+								<iframe height="1200" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-page-coach/" title="description" />
 							</Row>
 						</div>
 					</Container>

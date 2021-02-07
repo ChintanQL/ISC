@@ -75,6 +75,11 @@ class About extends Component {
 								</Col>
 							</Row>
 						</div>
+						<div className="Blog-Section-2-data">
+							<Row>
+								<iframe height="700" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-about-us/" title="description" />
+							</Row>
+						</div>
 					</Container>
 				</section>
 				<BottomForm/>
