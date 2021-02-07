@@ -2,6 +2,7 @@ import React from "react"
 import {Container,Breadcrumb} from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Link } from 'gatsby'
 
 const NotFoundPage = () => (
   <Layout>
