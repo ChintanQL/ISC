@@ -69,7 +69,7 @@ class SP extends Component {
 					<Container>
 						<div className="Blog-Section-2-data">
 							<Row>
-								<Col xl={10} lg={10} md={12} className="lg-mb-2">
+								<Col xl={12} lg={12} md={12} className="lg-mb-2">
 								{(this.state.PageData) ? (<div dangerouslySetInnerHTML={{ __html: this.state.PageData.content}} ></div>) : ("")}
 								</Col>
 							</Row>
