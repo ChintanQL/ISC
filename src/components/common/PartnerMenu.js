@@ -2,6 +2,7 @@ import React, { Component  } from 'react';
 import {  Image,ListGroup } from 'react-bootstrap'
 import { Link,StaticQuery, graphql } from 'gatsby'
 import icon1 from '../../images/icon1.png'
+import PartnerMenu2 from './PartnerMenu2'
 class PartnerMenu extends Component {
     
     state = {
@@ -20,7 +21,11 @@ class PartnerMenu extends Component {
 
         return (
             <>
-            
+            <div className="inner-menu">
+																<div className="mb-3 menu-heading">
+																	<Link to="/Partnerprograms" className="">Partner Programs</Link>
+																</div>
+																<ListGroup as="ul" className="no-br">
 			<StaticQuery
 					query={graphql`
 						query MyQuery4 {
@@ -49,9 +54,10 @@ class PartnerMenu extends Component {
 						(innerprop,i) => {	
 							return (
 								<>
-									<ListGroup.Item as="li">
+								{((data.wordpressMenusMenusItems.items.length/2) <= i ) ? (<ListGroup.Item as="li">
 										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
-									</ListGroup.Item>	
+									</ListGroup.Item>) : ("")} 
+										
 								</>
 								)}
 							)	
@@ -60,6 +66,9 @@ class PartnerMenu extends Component {
 				</>
 			)}
 		  />
+		  </ListGroup>
+		  </div>
+		  <PartnerMenu2/>
             </>
         );
     }

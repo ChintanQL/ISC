@@ -2,8 +2,7 @@ import React, { Component  } from 'react';
 import {  Image,ListGroup } from 'react-bootstrap'
 import { Link,StaticQuery, graphql } from 'gatsby'
 import icon1 from '../../images/icon1.png'
-import SportMenu2 from './SportMenu2'
-class SportMenu extends Component {
+class SportMenu2 extends Component {
     
     state = {
         isTop: true,
@@ -21,14 +20,15 @@ class SportMenu extends Component {
 
         return (
             <>
-			<div className="inner-menu">
-				<div className="mb-3 menu-heading">
-					<Link to="/Sport" className="">ASC Sports</Link>
-				</div>
-            <ListGroup as="ul">
-			<StaticQuery
+			
+		  <div className="inner-menu">
+			<div className="mb-3 menu-heading">
+				<h3 className="font-16 font-semibold color-333 uppercase mb-3">&nbsp;</h3>
+			</div>
+			<ListGroup as="ul">
+				<StaticQuery
 					query={graphql`
-						query MyQuery34 {
+						query MyQuery35 {
 							wordpressMenusMenusItems(slug: {eq: "gatsby-menu-sports"}) {
 								id
 								items {
@@ -52,9 +52,11 @@ class SportMenu extends Component {
 					data.wordpressMenusMenusItems.items &&
 					data.wordpressMenusMenusItems.items.map(
 						(innerprop,i) => {
+							console.log(i);	
+							console.log(data.wordpressMenusMenusItems.items.length/2);	
 							return (
 								<>
-								{((data.wordpressMenusMenusItems.items.length/2) > i ) ? (<ListGroup.Item as="li">
+								{((data.wordpressMenusMenusItems.items.length/2) <= i ) ? (<ListGroup.Item as="li">
 									<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.slug}  dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
 									</ListGroup.Item>) : ("") }
 										
@@ -66,12 +68,11 @@ class SportMenu extends Component {
 				</>
 			)}
 		  />
-		  </ListGroup>
-		  </div>
-		  <SportMenu2/>
+			</ListGroup>
+		</div>
             </>
         );
     }
 }
 
-export default SportMenu;
+export default SportMenu2;

@@ -160,23 +160,13 @@ class Header extends Component {
 													<ul className="dropdown-menu main-menu">
 														<div className="w-100 d-flex main-box d-xl-block">
 															<div className="first-box">
-																<div className="inner-menu">
-																	<div className="mb-3 menu-heading">
-																		<Link to="/Sport" className="">ASC Sports</Link>
-																	</div>
+																
 																	
-																	<ListGroup as="ul">
+																	
 																		<SportMenu />
-																	</ListGroup>
-																</div>
-																<div className="inner-menu">
-																	<div className="mb-3 menu-heading">
-																		<h3 className="font-16 font-semibold color-333 uppercase mb-3">&nbsp;</h3>
-																	</div>
-																	<ListGroup as="ul">
-																		
-																	</ListGroup>
-																</div>
+																	
+																
+																
 																<div className="inner-menu">
 																	<div className="mb-3 menu-heading">
 																		<Link to="/City" className="">Cities</Link>
@@ -186,14 +176,10 @@ class Header extends Component {
 																		
 																	</ListGroup>
 																</div>
-																<div className="inner-menu">
-																<div className="mb-3 menu-heading">
-																	<Link to="/Partnerprograms" className="">Partner Programs</Link>
-																</div>
-																<ListGroup as="ul" className="no-br">
+																
 																	<PartnerMenu />
-																</ListGroup>
-															</div>
+																
+															
 															</div>
 															<div className="second-box">
 																<Image src={navimage} fluid width="200" />

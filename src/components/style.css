@@ -129,7 +129,7 @@ header .navbar-light .navbar-nav
 
 .dropdown-menu.main-menu .inner-menu {
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 25px;
 }
 
 .dropdown-menu.main-menu .inner-menu ul{
@@ -173,11 +173,11 @@ header .navbar-light .navbar-nav
 }
 .dropdown-menu.main-menu .inner-menu ul li img.icon
 {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .first-box
 {
-    width: 755px;
+    width: 855px;
     display: inline-block;
     vertical-align: top;
     padding: 15px 0px 15px 25px;
@@ -186,7 +186,7 @@ header .navbar-light .navbar-nav
 }
 .second-box
 {
-    width: calc(100% - 760px);
+    width: calc(100% - 860px);
     display: inline-block;
     vertical-align: top;
     text-align: center;
