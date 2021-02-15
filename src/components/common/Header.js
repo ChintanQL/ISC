@@ -169,7 +169,7 @@ class Header extends Component {
 																
 																<div className="inner-menu">
 																	<div className="mb-3 menu-heading">
-																		<Link to="/City" className="">Cities</Link>
+																		<Link to="" className="">Cities</Link>
 																	</div>
 																	<ListGroup as="ul">
 																		<CityMenu />

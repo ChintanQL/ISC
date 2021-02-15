@@ -23,7 +23,7 @@ class SportMenu extends Component {
             <>
 			<div className="inner-menu">
 				<div className="mb-3 menu-heading">
-					<Link to="/Sport" className="">ASC Sports</Link>
+					<Link to="" className="">ASC Sports</Link>
 				</div>
             <ListGroup as="ul">
 			<StaticQuery

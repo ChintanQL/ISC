@@ -23,7 +23,7 @@ class PartnerMenu extends Component {
             <>
             <div className="inner-menu">
 																<div className="mb-3 menu-heading">
-																	<Link to="/Partnerprograms" className="">Partner Programs</Link>
+																	<Link to="" className="">Partner Programs</Link>
 																</div>
 																<ListGroup as="ul" className="no-br">
 			<StaticQuery
