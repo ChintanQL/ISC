@@ -6,6 +6,7 @@ import HomeSection1 from "../components/Home/HomeSection1"
 import HomeSection2 from "../components/Home/HomeSection2"
 import HomeSection3 from "../components/Home/HomeSection3"
 import HomeSection4 from "../components/Home/HomeSection4"
+import HomeSection5 from "../components/Home/HomeSection5"
 import BatmanSection from "../components/common/BatmanSection"
 import ModalSection from "../components/common/ModalSection"
 import IncludedSection from "../components/common/IncludedSection"
@@ -21,6 +22,7 @@ class HomePage extends Component {
 		return (
 			<Layout>
             <>
+			<HomeSection5/>
 				
 				<LazyLoad height={200} >
 				{(this.props.pageContext.HomeData.data.page.home) ? (<HomeSection1 data = {this.props.pageContext.HomeData.data.page.home.homeSlider} />) : ("")}
