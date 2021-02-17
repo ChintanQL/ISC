@@ -6,6 +6,7 @@ import {Image,ListGroup,Form,InputGroup,FormControl,Button} from 'react-bootstra
 import {Row,Col,Card} from 'react-bootstrap'
 import Layout from "../components/layout"
 import Footer from "../components/common/Footer"
+import Coachbanner from "../components/common/Coachbanner"
 import BottomForm from "../components/common/BottomForm"
 import card1 from '../images/blog-card-1.png'
 import imgbox1 from '../images/blog-imgbox-1.png'
@@ -36,6 +37,7 @@ class coach extends Component {
                     </div>
                 </Container>
             </section> 
+			<Coachbanner/>
 			 <section className="Hero-section-2">
                 <Container>
                     <div className="Hero-Section-2-data">

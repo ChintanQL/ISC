@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import addbanner from '../images/add-banner.png'
 import axios from 'axios';
 import Footer from "../components/common/Footer"
+import Howtobanner from "../components/common/Howtobanner"
 import BottomForm from "../components/common/BottomForm"
 
 class HowToBook extends Component {
@@ -67,9 +68,7 @@ class HowToBook extends Component {
 						</div>
 					</Container>
 				</section>
-				<div className="advertise-main">
-					<Image src={addbanner} fluid alt="banner" />
-				</div>
+				<Howtobanner />
 				<section className="How-to-book-Section-1">
 					<Container>
 						<div className="How-to-book-Section-1-data text-left">
