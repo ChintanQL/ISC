@@ -38,7 +38,7 @@ class Campbanner extends Component {
 	render() {      
         return (
             <>
-           <div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
+           <div className="sticky" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
 			<Image src={this.state.PageData} alt=""/>
 		   </div>
             </>
