@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import { Link } from 'gatsby'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
+import Campbanner from "../components/common/Campbanner"
 import card1 from '../images/card1.png'
 import cardhover from '../images/card-hover-img.png'
 import axios from 'axios';
@@ -57,6 +58,7 @@ class Sport extends Component {
 						</div>
 					</Container>
 				</section>
+				<Campbanner/>
 				<section className="Sport-section-2">
 					<Container>
 						<div className="title-main mb-0">
