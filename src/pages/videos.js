@@ -109,11 +109,14 @@ class TNC extends Component {
 									<>
 										{this.state.PageData.youtubeVideoLinks.map((str,i) => 
 											<Col xl={6} lg={6} md={12} className="lg-mb-2 mb-3  mt-3">
-												
+											<Card className="resource-card mb-0 all">	
 												<ResponsiveEmbed aspectRatio="16by9">
 												<embed  src={str.link} />
 											  </ResponsiveEmbed>
-											  <h3 className="mt-1" >{str.title}</h3>
+											  <Card.Body>
+											 <Card.Title as="h5" dangerouslySetInnerHTML={{ __html: str.title}} />
+											  </Card.Body>
+											  <Card/>
 											</Col>
 										)}
 									</>
