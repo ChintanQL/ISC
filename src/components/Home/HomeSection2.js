@@ -48,6 +48,13 @@ class HomeSection2 extends Component {
             <>
             <section className="Home-section-3">
                 <Container>
+				<div className="title">
+					<div className="justify-content-center row">
+						<div className="col-xl-9 col-lg-11">
+							<h2>As seen on</h2>
+						</div>
+					</div>
+				</div>
                 <Slider {...settings}  >
 					{this.props.data.map((str) => 
 						
