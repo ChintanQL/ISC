@@ -12,6 +12,9 @@ import SportMenu from './SportMenu'
 import PartnerMenu from './PartnerMenu'
 import "../../components/style.css"
 import axios from 'axios';
+import Cookies from 'universal-cookie';
+ 
+
 class Header extends Component {
     
     state = {
@@ -27,33 +30,13 @@ class Header extends Component {
           }
         });
 		
-		fetch("https://shop.australiansportscamps.com.au/cart-data.php")
-      .then(response => response.text())
-      .then(data => {
-		  console.log(data);
-		var d = data.split('class="badge badge-blue"');
-		var str = d[1];
-		str = str.replace('">', "");	
-		str = str.replace('</span>', "");	
-		str = str.replace('>', "");	
-		this.setState({cart: str});
-      })
-      .catch(error => {
-        //this.setState({ error: error });
-		this.setState({cart: '0'});
-	  });
 		
-		
-		//const res =  axios.get('https://shop.australiansportscamps.com.au/cart-data.php');
-		//console.log(res);
-		//const data = res;
-		//this.setState({cart: data})
       } 
 	
 	
 	  
     render() {
-
+		const cookies = new Cookies();
         return (
             <>
             
@@ -246,7 +229,7 @@ class Header extends Component {
                             <div>
                                 <li className="nav-item pr-0">
                                     <Link className="nav-link uppercase " to="https://shop.australiansportscamps.com.au/cart/"><Image src={cart} className="img-fluid" alt="" width=""/>
-									<span className="badge badge-blue">{this.state.cart}</span>
+									<span className="badge badge-blue">{cookies.get('CART')}</span>
 									</Link>
                                 </li>
                             </div>
