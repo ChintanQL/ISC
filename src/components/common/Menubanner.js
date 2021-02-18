@@ -38,7 +38,7 @@ class Menubanner extends Component {
 	render() {      
         return (
             <>
-           <div className="second-box" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} dangerouslySetInnerHTML={{ __html: this.state.PageData}} />
+           <div className="second-box" style={{ display: this.state.Isbanner == 0 ? "none" : "initial" }} dangerouslySetInnerHTML={{ __html: this.state.PageData}} />
             </>
         );
     }
