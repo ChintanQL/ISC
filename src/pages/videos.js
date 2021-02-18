@@ -116,7 +116,7 @@ class TNC extends Component {
 											  <Card.Body>
 											 <Card.Title as="h5" dangerouslySetInnerHTML={{ __html: str.title}} />
 											  </Card.Body>
-											  <Card/>
+											  </Card>
 											</Col>
 										)}
 									</>
