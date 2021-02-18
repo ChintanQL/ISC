@@ -33,6 +33,7 @@ class TNC extends Component {
 								youtubeVideoLinks {
 									fieldGroupName
 									link
+									title
 								}
 							}
 						}
@@ -101,20 +102,18 @@ class TNC extends Component {
                     </Tab.Container>
                 
                     </div>
-                </Container>
-            </section>
-				<section className="Blog-Section-2">
-					<Container>
+                
 						<div className="Blog-Section-2-data">
 							<Row>
 								{(this.state.Done !== 0) ? (
 									<>
 										{this.state.PageData.youtubeVideoLinks.map((str,i) => 
-											<Col xl={6} lg={6} md={12} className="lg-mb-2 mb-3">
+											<Col xl={6} lg={6} md={12} className="lg-mb-2 mb-3  mt-3">
 												
 												<ResponsiveEmbed aspectRatio="16by9">
 												<embed  src={str.link} />
 											  </ResponsiveEmbed>
+											  <h3 className="mt-1" >{str.title}</h3>
 											</Col>
 										)}
 									</>
