@@ -7,6 +7,7 @@ import icon1 from '../../images/icon1.png'
 import cart from '../../images/cart.png'
 import CityMenu from './CityMenu'
 import SocialMenu from './SocialMenu'
+import Menubanner from './Menubanner'
 import SportMenu from './SportMenu'
 import PartnerMenu from './PartnerMenu'
 import "../../components/style.css"
@@ -181,10 +182,7 @@ class Header extends Component {
 																
 															
 															</div>
-															<div className="second-box">
-																<Image src={navimage} fluid width="200" />
-																<p className="font-16 font-regular">Want to save up to <span className="font-bold">$141.75?</span> Checkout<br></br> our <Link to="/membership">Membership Passes</Link></p>
-															</div>
+															<Menubanner />
 														</div>
 													</ul>
 												</li>
