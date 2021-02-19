@@ -13,6 +13,27 @@
     width: 83%;
 }
 
+@media(max-width:991px){
+.kid-image > div {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.kid-image.col-xl-6.col-lg-6 {
+    position: relative;
+}
+.kid-image > div img {
+    width: auto;
+}
+}
+
+@media(max-width:1024px){
+.kid-image > div img {
+    width: 60%;
+}
+}
+
+
 .closebtn {
     right: 0px;
     position: absolute;
