@@ -106,6 +106,7 @@ const getData = async () => {
 							image {
 							  sourceUrl(size: LARGE)
 							}
+							desc
 						  }
 						}
 						... on Page_Home_Panels_HallOfFame {
