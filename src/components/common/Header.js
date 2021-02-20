@@ -64,7 +64,7 @@ class Header extends Component {
                         <ListGroup.Item as="li">
                         <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
                         <span>OR</span>
-                        <Link to="https://shop.australiansportscamps.com.au/my-account/">REGISTER</Link>
+                        <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
                         </ListGroup.Item>
                     </ListGroup>
 
@@ -72,7 +72,7 @@ class Header extends Component {
                         <ListGroup.Item as="li">
                         <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
                         <span>OR</span>
-                        <Link to="https://shop.australiansportscamps.com.au/my-account/">REGISTER</Link>
+                        <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
                         </ListGroup.Item>
                     </ListGroup>
                 </div>
