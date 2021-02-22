@@ -2,6 +2,7 @@ import React, { Component  } from 'react';
 import {  Image,ListGroup } from 'react-bootstrap'
 import { Link,StaticQuery, graphql } from 'gatsby'
 import icon1 from '../../images/icon1.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class F1Menu extends Component {
     
     state = {
@@ -50,6 +51,7 @@ class F1Menu extends Component {
 							return (
 								<>
 									<ListGroup.Item as="li">
+									<FontAwesomeIcon icon="angle-right" />
 									{(innerprop.slug == 'my-account') ? 
 									(<Link to={"https://shop.australiansportscamps.com.au/"+innerprop.slug} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
 									(<Link to={"/"+innerprop.slug
