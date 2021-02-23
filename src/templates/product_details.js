@@ -9,7 +9,7 @@ class ProdDetails extends Component {
 	constructor(props) {
         super(props);
         this.state = {
-          clicks: 0,
+          clicks: 1,
           show: true
         };
         this.IncrementItem = this.IncrementItem.bind(this);
@@ -67,12 +67,28 @@ class ProdDetails extends Component {
                                     <div className="title text-left mb-0">
                                         <h2>{ prod.edges[0].node.name}</h2>
                                     </div>
-                                    <h3 class="font-22 color-blue font-bold">${ prod.edges[0].node.price}</h3>
-                                   
+                                    <h3 className="font-22 color-blue font-bold">${ prod.edges[0].node.price}</h3>
+                                    <div className="mb-30">
+										<span className="font-medium font-16 color-3b text-left" dangerouslySetInnerHTML={{ __html: prod.edges[0].node.description.substring(0, 200)}} />
+									</div>
+									<ul className="mb-0 pl-0">
+                                            <li>
+                                                <div className="d-flex align-items-center">
+                                                    <h2 className="font-18 font-medium">Quantity :</h2> 
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div className="d-flex title quantity-data align-items-center">
+                                                    <Button onClick={this.DecreaseItem}>-</Button>
+                                                    <h2 className="mx-3 mb-0 main-h2 font-medium">{ this.state.clicks }</h2> 
+                                                    <Button onClick={this.IncrementItem}>+</Button>
+                                                </div>
+                                            </li>
+                                        </ul>
 
 
                                    
-                                    <Link className=" uppercase btn-sm btn-orange btnpadding" to={"https://shop.australiansportscamps.com.au/cart/?add-to-cart="+id+"&quantity=1"}>BUY Now</Link>
+                                    <Link className=" uppercase btn-sm btn-orange btnpadding" to={"https://shop.australiansportscamps.com.au/cart/?add-to-cart="+id+"&quantity="+this.state.clicks}>BUY Now</Link>
                                 </div>
                             </Col>
                         </Row>
