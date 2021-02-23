@@ -19,6 +19,15 @@ const getData = async () => {
 					id
 					home {
 					  fieldGroupName
+					   campsData {
+						campDesc
+						campTitle
+						campUrl
+						campImage {
+						  link
+						  sourceUrl
+						}
+					  }
 					  homeSlider {
 						title
 						content

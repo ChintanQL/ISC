@@ -33,7 +33,7 @@ class HomePage extends Component {
 				</LazyLoad>
 				
 				<LazyLoad height={200} >
-				{(this.props.pageContext.HomeData.data.page.home) ? (<HomeSection3 data = {this.props.pageContext.HomeData.data.page.home.panels[2]} />) : ("")}
+				{(this.props.pageContext.HomeData.data.page.home) ? (<HomeSection3 data = {this.props.pageContext.HomeData.data.page.home.campsData} />) : ("")}
 				</LazyLoad>
 				
 				<LazyLoad height={200} >

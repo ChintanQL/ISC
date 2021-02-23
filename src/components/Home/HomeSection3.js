@@ -19,7 +19,7 @@ class HomeSection3 extends Component {
 	
 	render() {    
 		const chunkSize = 3;
-		const arr = this.props.data.camp;
+		const arr = this.props.data;
 		const groups = arr.map((e, i) => { 
 			 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
 		}).filter(e => { return e; });
@@ -52,7 +52,7 @@ class HomeSection3 extends Component {
 										{camp.smallDesc}
                                     </Card.Text>
                                     
-                                    <Link className="" to={"/camps/"+camp.link.title.toLowerCase().replace(/\s+/g, '-')}>Read More</Link>
+                                    <Link className="" to={"/camps/"+camp.image.slug}>Read More</Link>
                                 </Card.Body>
                             </Card>
 						)}
