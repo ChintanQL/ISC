@@ -44,15 +44,15 @@ class HomeSection3 extends Component {
                                     <div className="inner-card ">
                                         <Image src={cardhover} fluid alt="cardhover"/>
                                     </div>
-                                    <Image className="lazyload" variant="top" src={camp.image.sourceUrl} fluid alt="card"/>
+                                    <Image className="lazyload" variant="top" src={camp.campImage.sourceUrl} fluid alt="card"/>
                                 </div>
                                 <Card.Body>
-                                    <Card.Title as="h5">{camp.link.title}</Card.Title>
+                                    <Card.Title as="h5">{camp.campTitle}</Card.Title>
                                     <Card.Text>
-										{camp.smallDesc}
+										{camp.campDesc}
                                     </Card.Text>
                                     
-                                    <Link className="" to={"/camps/"+camp.image.slug}>Read More</Link>
+                                    <Link className="" to={"/camps/"+camp.campUrl}>Read More</Link>
                                 </Card.Body>
                             </Card>
 						)}
