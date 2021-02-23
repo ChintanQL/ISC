@@ -195,6 +195,14 @@ class City extends Component {
 										</Card>
 									</Col>
 								)})}
+							</Row>
+							<Row>
+								<Col xl={12} lg={12} md={12}>
+									<div className="pl-3 pr-2">
+							
+										<Link className=" uppercase btn-sm btn-orange-large" to="/book-a-camp" >BOOK A CAMP TODAY</Link>
+									</div>                        
+								</Col>
 							</Row> 
 						</Container> 
 					</section>	
