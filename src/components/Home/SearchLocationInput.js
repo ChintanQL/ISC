@@ -75,7 +75,7 @@ function SearchLocationInput() {
                                       className="mb-0 full"
                                       ref={autoCompleteRef}
         onChange={event => setQuery(event.target.value)}
-                                      placeholder="Location"
+                                      placeholder="Enter Suburb / Postcode"
 									  value={query}
                                   />
 	  
