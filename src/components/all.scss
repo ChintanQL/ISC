@@ -78,6 +78,7 @@
     float: left !important;
     margin: .35em 2.15em .35em 0 !important;
     width: auto !important;
+	margin-bottom: 3% !important;
 }
 
 .wp-caption, .gallery-item {
@@ -91,6 +92,7 @@
 .alignright {
     float: right;
     margin: 0.35em 0 0.35em 2.15em;
+	margin-bottom: 3% !important;
 }
 .wp-caption > .gallery-caption, .wp-caption > .wp-caption-text, .wp-caption > .wp-caption-text:last-child, .gallery-item > .gallery-caption, .gallery-item > .wp-caption-text, .gallery-item > .wp-caption-text:last-child {
     display: block;

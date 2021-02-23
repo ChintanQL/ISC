@@ -50,8 +50,8 @@ class F2Menu extends Component {
 								<>
 									<ListGroup.Item as="li">
 									<i className="fa fa-angle-right"></i>
-									{(innerprop.slug == 'my-account') ? 
-									(<Link to={"https://shop.australiansportscamps.com.au/"+innerprop.slug} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
+									{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'sponsors-and-partners') ? 
+									(<Link to={"/about-asc/"+innerprop.slug} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
 									(<Link to={"/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
 									} className="uppercase" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}
 										
