@@ -41,7 +41,7 @@ class Shop extends Component {
 												<Card.Title as="h5">
 													{prop.node.name}
 												</Card.Title>
-												<ul>
+												<ul className="pro" >
 													<li className="main-price">${prop.node.price}</li>
 												</ul>
 												<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"/product/"+prop.node.slug}>More info / Book Now</Link>
