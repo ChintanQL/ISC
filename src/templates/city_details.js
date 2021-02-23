@@ -118,7 +118,7 @@ class City extends Component {
 								<Table striped responsive>
 									<thead>
 										<tr>
-											<th>Period</th>
+											<th className="first-td">Period</th>
 											<th>Dates</th>
 											<th>Length</th>
 										</tr>
@@ -126,7 +126,7 @@ class City extends Component {
 									<tbody>
 										{ page.edges[0].node.acf.holiday_table.table.map( prop => { return (
 											<tr>
-												<td>{prop.period}</td>
+												<td className="first-td">{prop.period}</td>
 												<td>{prop.dates}</td>
 												<td>{prop.length}</td>
 											</tr>
