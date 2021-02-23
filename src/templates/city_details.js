@@ -103,7 +103,7 @@ class City extends Component {
 					</div>
 					</Container>
 				</section>
-				<section className="City-details-section-4">
+				<section className="City-details-section-4 tbl">
 					<Container>
 						<div className="mb-4">
 							<div className="title-main mb-0">
