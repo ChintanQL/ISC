@@ -93,13 +93,6 @@ const getData = async () => {
 						  sectionTitle
 						  camp {
 							fieldGroupName
-							link {
-							  ... on Page {
-								id
-								link
-								title(format: RENDERED)
-							  }
-							}
 							image {
 							  sourceUrl(size: LARGE)
 							}
