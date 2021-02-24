@@ -37,7 +37,7 @@ class Footer extends Component {
                         </Col>
                         <Col xl={2} lg={4} md={6} className="lg-mb-4">
                             <div className="footer-data">
-                                <h2 className="font-22 font-bold text-white mb-3">Menu</h2>
+                                <h2 className="font-22 font-bold text-white mb-3">Camps</h2>
                                 <ListGroup as="ul">
                                     <F1Menu />
                                 </ListGroup>
@@ -45,7 +45,7 @@ class Footer extends Component {
                         </Col>
                         <Col xl={3} lg={4} md={6} className="lg-mb-4">
                             <div className="footer-data">
-                                <h2 className="font-22 font-bold text-white mb-3">Menu</h2>
+                                <h2 className="font-22 font-bold text-white mb-3">Quick Links</h2>
                                 <ListGroup as="ul">
                                     <F2Menu />
                                 </ListGroup>
