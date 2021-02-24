@@ -13,6 +13,7 @@ class Partner extends Component {
 	
 	state = {
 		PageData: [],
+		PageDataOther: [],
 		result: 0,
 		showInfo: 0
 	}
@@ -22,7 +23,7 @@ class Partner extends Component {
 			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camp_partner',
 			method: 'get'}).then(res => {
 			const chunkSize = 3;
-			const arr = res.data.ResponseData;
+			const arr = res.data.ResponseData.camps;
 			const groups = arr.map((e, i) => { 
 				 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
 			}).filter(e => { return e; });
@@ -31,6 +32,7 @@ class Partner extends Component {
 				
 				
 			this.setState({PageData: groups})
+			this.setState({PageDataOther: res.data.ResponseData.camps_data[0]})
 			this.setState({result: 1})
 			this.setState({showInfo: 1})
 		})
@@ -62,13 +64,9 @@ class Partner extends Component {
 				<section className="Sport-section-2">
 					<Container>
 						<div className="title-main mb-0">
-							<h2>CAMPS & PROGRAMS</h2>
-							<p>
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
-							</p>
-							<p className="mb-0">
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-							</p>
+							{(this.state.result === 1) ? (<><h2>{this.state.PageDataOther.program.top_title}</h2></>) : ("")}
+							
+							{(this.state.result === 1) ? (<><p className="mb-2" dangerouslySetInnerHTML={{ __html: this.state.PageDataOther.program.top_desc}} /></>) : ("")}
 						</div>
 					</Container>
 				</section>
@@ -104,15 +102,10 @@ class Partner extends Component {
 				<section className="Sport-section-4">
 					<Container>
 						<div className="title-main mb-0">
-							<h2>ABOUT AUSTRALIAN SPORTS CAMPS</h2>
+							{(this.state.result === 1) ? (<><h2>{this.state.PageDataOther.program.bottom_title}</h2></>) : ("")}
 						</div>
+						{(this.state.result === 1) ? (<><p className="font-15 font-medium color-3b" dangerouslySetInnerHTML={{ __html: this.state.PageDataOther.program.bottom_desc}} /></>) : ("")}
 						
-						<p className="font-15 font-medium color-3b">
-							ASC has been running holiday sports camps for kids aged 6-16 for over 35 years. We offer structured skill-improvement camps in Australia, ensuring that participants have fun in the school holidays, whilst developing a deeper love and enthusiasm for their chosen sport.
-						</p>
-						<p className="font-15 font-medium color-3b mb-0">
-							We have school holiday programs, for a wide variety of sports camps in Australia throughout the Summer, Autumn, Winter and  Spring school holiday breaks. Our kid's camps are suited to players of all abilities and we ensure everyone has fun in their school holiday activities. Also, ASC ensures your children receive quality coaching at top sporting facilities, plus have the chance to meet and be inspired by elite sports people, past and present.
-						</p>
 					</Container>
 				</section>	
 				 
