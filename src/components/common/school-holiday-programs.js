@@ -58,6 +58,7 @@ class SHP extends Component {
 				</div>
 			<div className="" style={{ display: this.state.showInfo == 0 ? "none" : "block" }} >
 			{(this.state.showInfo == 1) ? (
+				<>
 				<section className="Batman-Section">
 					<Container>
 					<div className="title mb-0">
@@ -208,7 +209,7 @@ class SHP extends Component {
                     </Container>
                 </div>
             </section>
-			
+			</>
 			) : ("")} 
 			 
 			</div>
