@@ -14,7 +14,7 @@ class BatmanSection extends Component {
                     <Row className="justify-content-center">
                         <Col xl={9} lg={11}>
                             <h2>{this.props.data.title}</h2>
-                            <p>{this.props.data.subTitle}</p>
+                           
                         </Col>
                     </Row>
                 </div>

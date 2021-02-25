@@ -84,7 +84,7 @@ class City extends Component {
 						<Row className="justify-content-center">
 							<Col xl={9} lg={11}>
 								<h2>{page.edges[0].node.acf.school_holiday_program.title}</h2>
-								<p>{page.edges[0].node.acf.school_holiday_program.sub_title}</p>
+								
 							</Col>
 						</Row>
 					</div>
@@ -284,7 +284,7 @@ export const pageQuery = graphql`
 				  school_holiday_program {
 					desc
 					image
-					sub_title
+					
 					title
 				  }
 				  included {

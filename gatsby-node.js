@@ -45,7 +45,7 @@ const getData = async () => {
 					  }
 					  schoolHolidayProgram {
 						desc
-						subTitle
+						
 						title
 						image {
 						  sourceUrl(size: LARGE)
