@@ -37,9 +37,10 @@ class SocialMenu extends Component {
 						(prop,i) => {	
 							return (
 								<ListGroup.Item as="li">
-									<Link className="nav-link p-0" to={prop.node.acf.social_link}>
+									<a className="nav-link p-0" target="_blank" href={prop.node.acf.social_link}>
 										<i className={"fa "+prop.node.acf.icon} ></i>
-									</Link>
+										
+									</a>
 								</ListGroup.Item>
 							)
 						})
