@@ -172,7 +172,7 @@ class City extends Component {
 				</Modal>
 				
 				{(page.edges[0].node.acf.included) ? (
-					<section className="Included-section">
+					<section style={{padding: "90px 0px !important"}} className="Included-section">
 						<Container>
 							<div className="title">
 								<Row className="justify-content-center">
