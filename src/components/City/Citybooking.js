@@ -9,16 +9,25 @@ class Citybooking extends React.Component{
 	}
 	state = {
             pagedata: [],
+			showInfo: 0	
     };
 	componentDidMount() {
 		var products = this.props.products;
 		var url = "https://ascstaging.temp312.kinsta.cloud/wp-json/newasc/v1/products";
-		axios.post(url,{ Prod: products}).then(e => this.setState({pagedata: e.data.ResponseData}))
+		axios.post(url,{ Prod: products}).then(e => {
+			this.setState({pagedata: e.data.ResponseData})
+			this.setState({showInfo: 1})
+		})
     }
 
 	render (){
 		return(
 			<>
+			<div className="laoder2" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
+				<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+					<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+				</div>
+			</div>
 			{(this.state.pagedata != "") ? (
 				<>
 					{this.state.pagedata.map((prop,i) => {return (
@@ -43,7 +52,7 @@ class Citybooking extends React.Component{
 									<ul>
 										<li className="main-price">${prop.price}</li>
 									</ul>
-									<Link className="nav-link uppercase btn-sm btn-orange text-center" to="/">More info / Book Now</Link>
+									<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug}>More info / Book Now</Link>
 								</Card.Body>
 							</Card>
 						</Col>
