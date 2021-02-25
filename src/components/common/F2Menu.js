@@ -53,10 +53,10 @@ class F2Menu extends Component {
 									{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'sponsors') ? 
 									(<Link to={"/about-asc/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
 									(
-										<>(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'work-with-us') ? (<Link to={"/asc-coaches-staff-enquiry"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
-										<>(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'forms-for-coaches-staff') ? (<Link to={"/asc-coaches-staff"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (<Link to={"/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
-									} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)</>
-										) </>
+										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'work-with-us') ? (<Link to={"/asc-coaches-staff-enquiry"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
+										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'forms-for-coaches-staff') ? (<Link to={"/asc-coaches-staff"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (<Link to={"/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
+										} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}</>
+										)} </>
 									)
 									
 									}
