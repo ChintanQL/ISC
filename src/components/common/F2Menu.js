@@ -51,11 +51,13 @@ class F2Menu extends Component {
 									<ListGroup.Item as="li">
 									<i className="fa fa-angle-right"></i>
 									{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'sponsors') ? 
-									(<Link to={"/about-asc/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
+									(<Link to={"/about-asc/sponsors-and-partners"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
 									(
 										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'work-with-us') ? (<Link to={"/asc-coaches-staff-enquiry"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
-										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'forms-for-coaches-staff') ? (<Link to={"/asc-coaches-staff"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (<Link to={"/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
-										} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}</>
+										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'forms-for-coaches-staff') ? (<Link to={"/asc-coaches-staff"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
+										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'asc-heroes') ? (<Link to={"/the-asc-heroes"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (<Link to={"/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
+										} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}</>	
+										)}</>
 										)} </>
 									)
 									
