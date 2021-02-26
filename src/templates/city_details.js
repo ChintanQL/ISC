@@ -190,7 +190,7 @@ class City extends Component {
 											</div>
 											<Card.Body>
 												<Card.Title as="h5">{prop.title}</Card.Title>
-												<Card.Text className="line-break-3" dangerouslySetInnerHTML={{ __html: prop.desc}} />	
+												<Card.Text className="" dangerouslySetInnerHTML={{ __html: prop.desc}} />	
 											</Card.Body>
 										</Card>
 									</Col>
