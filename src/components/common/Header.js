@@ -51,6 +51,7 @@ class Header extends Component {
                                 <i className="fa fa-phone"></i>
                             </a>
                         </ListGroup.Item>
+						<span className="httxt text-white text-uppercase">Australian sports camps ™</span>
                     </ListGroup>
                 </div>
                 <div className="second-li align-items-center d-sm-flex d-none">
