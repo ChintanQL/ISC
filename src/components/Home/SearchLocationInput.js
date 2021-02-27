@@ -44,13 +44,13 @@ async function handlePlaceSelect(updateQuery) {
 	cookies.set('lat', latitude, { path: '/' });
 	cookies.set('lng', longitude, { path: '/' });
 	if(!$.inArray( "postal_code", addressObject.types )){
-		console.log(addressObject.address_components[1].short_name);
-		cookies.set('loc', addressObject.address_components[1].short_name, { path: '/' });
+		console.log(addressObject.address_components[2].short_name);
+		cookies.set('loc', addressObject.address_components[2].short_name, { path: '/' });
 		
 	}
 	else{
-		console.log(addressObject.address_components[2].short_name);
-		cookies.set('loc', addressObject.address_components[2].short_name, { path: '/' });
+		console.log(addressObject.address_components[1].short_name);
+		cookies.set('loc', addressObject.address_components[1].short_name, { path: '/' });
 	}	
 	cookies.set('locationName', query, { path: '/' });	
 	
