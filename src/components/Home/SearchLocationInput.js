@@ -39,18 +39,26 @@ async function handlePlaceSelect(updateQuery) {
   const addressObject = autoComplete.getPlace();
   const query = addressObject.formatted_address;
   updateQuery(query);
+  var Arr = ["ACT","NSW","QLD","SA","TAS","VIC","WA"];
+			var f_add =  addressObject.formatted_address;
+			var pl = "";
+			jQuery.each(Arr, function( index, value ) {
+				if (f_add.indexOf(value) > -1) {
+					pl = value;
+				}
+			});
 	var latitude = addressObject.geometry.location.lat();
 	var longitude = addressObject.geometry.location.lng();
 	cookies.set('lat', latitude, { path: '/' });
 	cookies.set('lng', longitude, { path: '/' });
 	if(!$.inArray( "postal_code", addressObject.types )){
 		console.log(addressObject.address_components[2].short_name);
-		cookies.set('loc', addressObject.address_components[2].short_name, { path: '/' });
+		cookies.set('loc', pl, { path: '/' });
 		
 	}
 	else{
 		console.log(addressObject.address_components[1].short_name);
-		cookies.set('loc', addressObject.address_components[1].short_name, { path: '/' });
+		cookies.set('loc', pl, { path: '/' });
 	}	
 	cookies.set('locationName', query, { path: '/' });	
 	
