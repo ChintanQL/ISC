@@ -19,7 +19,8 @@ class Header extends Component {
     
     state = {
         isTop: true,
-		cart: ''
+		cart: '',
+		show:false
       };
     
       componentDidMount() {
@@ -62,11 +63,31 @@ class Header extends Component {
                         <ListGroup.Item as="li">
                             |
                         </ListGroup.Item>
-                        <ListGroup.Item as="li">
-                        <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
-                        <span>OR</span>
-                        <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
-                        </ListGroup.Item>
+						
+						<>{(cookies.get('LOGIN') == 1) ? (
+							
+							<li className="userdropdownbox">
+                            <i className="fa fa-user-circle"></i>{cookies.get('USER')}
+                            <ul className="htdropdown" style={{ display: show ? "block" : "none" }} onClick={()=>{this.setState({show:!this.state.show})}} >
+                                <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
+                                <li><a href={cookies.get('L_URL')}>logout</a></li>
+                            </ul>
+                       
+                        </li>
+							
+							
+						) : ( 
+							<ListGroup.Item as="li">
+								<Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
+									<span>OR</span>
+								<Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
+							</ListGroup.Item>
+						
+						) }</>
+						
+						
+						
+                        
                     </ListGroup>
 
                     <ListGroup horizontal as="ul" className="d-md-none d-flex">
