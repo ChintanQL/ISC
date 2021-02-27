@@ -66,9 +66,9 @@ class Header extends Component {
 						
 						<>{(cookies.get('LOGIN') == 1) ? (
 							
-							<li className="userdropdownbox">
+							<li className="userdropdownbox" onClick={()=>{this.setState({show:!this.state.show})}} >
                             <i className="fa fa-user-circle"></i>{cookies.get('USER')}
-                            <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }} onClick={()=>{this.setState({show:!this.state.show})}} >
+                            <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
                                 <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
                                 <li><a href={cookies.get('L_URL')}>logout</a></li>
                             </ul>
