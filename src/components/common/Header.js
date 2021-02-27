@@ -70,7 +70,7 @@ class Header extends Component {
                             <i className="fa fa-user-circle"></i>{cookies.get('USER')}
                             <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
                                 <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
-                                <li><a href={cookies.get('L_URL')}>logout</a></li>
+                                <li><a href={atob(cookies.get('L_URL'))}>logout</a></li>
                             </ul>
                        
                         </li>
