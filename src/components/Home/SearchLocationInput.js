@@ -39,7 +39,7 @@ async function handlePlaceSelect(updateQuery) {
   const addressObject = autoComplete.getPlace();
   const query = addressObject.formatted_address;
   updateQuery(query);
-  var Arr = ["ACT","NSW","QLD","SA","TAS","VIC","WA"];
+  var Arr = ["ACT","NSW","QLD","SA","TAS","VIC","WA","NT"];
 			var f_add =  addressObject.formatted_address;
 			var pl = "";
 			jQuery.each(Arr, function( index, value ) {

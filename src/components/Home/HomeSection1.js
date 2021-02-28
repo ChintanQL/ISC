@@ -148,7 +148,7 @@ class HomeSection1 extends Component {
                                   <SearchLocationInput/>
                                 </div>
                                 <div className="second-control">
-                                  <Select placeholder="Select Camps" value={this.state.multiValue} options={this.state.selectOptions}  isMulti onChange={this.handleMultiChange} />
+                                  <Select placeholder="Select Sports" value={this.state.multiValue} options={this.state.selectOptions}  isMulti onChange={this.handleMultiChange} />
 								  
 								  
                                 </div>
