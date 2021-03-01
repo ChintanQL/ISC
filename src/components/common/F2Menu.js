@@ -70,7 +70,7 @@ class F2Menu extends Component {
 									
 									}
 										
-										asc-coaches-staff
+									
 										
                                     </ListGroup.Item>	
 								</>
