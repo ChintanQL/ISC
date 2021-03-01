@@ -328,6 +328,37 @@ exports.createPages = async ({ actions, graphql }) => {
 			}
 		}
 	`)
+	
+	
+	const productcat = await graphql(`
+		{
+			allWcProductsCategories {
+			edges {
+			  node {
+				id
+				wordpress_id
+				name
+				slug
+			  }
+			}
+		  }
+		}
+	`)
+	const ProductcatTemplate = path.resolve(`./src/templates/cat_details.js`);
+	
+	productcat.data.allWcProductsCategories.edges.forEach((edge,index) => {
+		  createPage({
+		  path: `/sport/${edge.node.slug}/`,
+		  component: slash(ProductcatTemplate),
+		  context: {
+			id: edge.node.wordpress_id,
+			name: edge.node.name
+		  },
+		})			  
+	})
+	
+	
+	
 	const ProductTemplate = path.resolve(`./src/templates/product_details.js`);
 	const ProductList = path.resolve(`./src/templates/product.js`);
 	
@@ -340,6 +371,8 @@ exports.createPages = async ({ actions, graphql }) => {
 		  },
 		})			  
 	})
+	
+
 	
 	
 	const productsdata = products.data.allWcProducts.edges;

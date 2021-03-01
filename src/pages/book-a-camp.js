@@ -20,10 +20,11 @@ class Sport extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camps',
+			//url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camps',
+			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_category',
 			method: 'get'}).then(res => {
 			const chunkSize = 3;
-			const arr = res.data.ResponseData.camps;
+			const arr = res.data.ResponseData.cat;
 			const groups = arr.map((e, i) => { 
 				 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
 			}).filter(e => { return e; });
@@ -87,7 +88,7 @@ class Sport extends Component {
 													<Image variant="top" src={camp.image} fluid alt="card"/>
 												</div>
 												<Card.Body>
-													<Link to={"/camps/"+camp.slug}>{camp.title}</Link>
+													<Link to={"/sport/"+camp.name.replace(/\s+/g, '-').toLowerCase()}>{camp.name}</Link>
 												</Card.Body>
 											</Card>
 										)}
