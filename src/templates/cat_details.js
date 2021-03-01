@@ -24,7 +24,7 @@ class Cat extends Component {
 							<Breadcrumb.Item className="">
 								<Link className="nav-link p-0" to="/book-a-camp">Sport</Link>
 							</Breadcrumb.Item>
-							<Breadcrumb.Item active href=""className=""></Breadcrumb.Item>
+							<Breadcrumb.Item active href=""className="">{this.props.name}</Breadcrumb.Item>
 						</Breadcrumb>
 						<h2 className="heading-banner"></h2>
 						</div>
@@ -40,7 +40,7 @@ class Cat extends Component {
 							</Col>
 						</Row>
 						<Row className="">
-							
+							<Campbooking category={this.props.id} />
 						</Row>
                     </Container>
                 </section>

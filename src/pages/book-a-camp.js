@@ -80,7 +80,7 @@ class Sport extends Component {
 									{this.state.PageData.map((cmp) => 
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 										{cmp.map((camp) => 
-											 <Card  className="listed-card mb-0">
+											 <Link to={"/sport/"+camp.name.replace(/\s+/g, '-').toLowerCase()} className="listed-card mb-0">
 												<div className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
@@ -90,7 +90,7 @@ class Sport extends Component {
 												<Card.Body>
 													<Link to={"/sport/"+camp.name.replace(/\s+/g, '-').toLowerCase()}>{camp.name}</Link>
 												</Card.Body>
-											</Card>
+											</Link>
 										)}
 										</Col>		
 									)} 
