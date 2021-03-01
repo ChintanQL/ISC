@@ -9,6 +9,14 @@ import PropTypes from "prop-types"
 
 
 class Cat extends Component {
+	
+	constructor(props) {
+    super(props);
+ 
+   
+  }
+	
+	
 	render() {
 		console.log(this.props);
 		return (
@@ -24,7 +32,7 @@ class Cat extends Component {
 							<Breadcrumb.Item className="">
 								<Link className="nav-link p-0" to="/book-a-camp">Sport</Link>
 							</Breadcrumb.Item>
-							<Breadcrumb.Item active href=""className="">{this.props.name}</Breadcrumb.Item>
+							<Breadcrumb.Item active href=""className="">{this.props.pageContext.name}</Breadcrumb.Item>
 						</Breadcrumb>
 						<h2 className="heading-banner"></h2>
 						</div>
@@ -40,7 +48,7 @@ class Cat extends Component {
 							</Col>
 						</Row>
 						<Row className="">
-							<Campbooking category={this.props.id} />
+							<Campbooking category={this.props.pageContext.id} />
 						</Row>
                     </Container>
                 </section>
