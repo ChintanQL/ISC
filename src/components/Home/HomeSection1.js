@@ -120,7 +120,7 @@ class HomeSection1 extends Component {
 							<div className="slider-inner-data">
 							<Container>
 								<Row className="justify-content-center text-center">
-									<Col xl={12} lg={12} md={12}>
+									<Col xl={6} lg={6} md={12} sm={12}>
 										<h3 className="font-bold text-white">{str.title}</h3>
 										<div className="justify-content-center d-flex" dangerouslySetInnerHTML={{ __html: str.content}} />
 											
