@@ -150,7 +150,7 @@ class HomeSection1 extends Component {
                                   <SearchLocationInput/>
                                 </div>
                                 <div className="second-control">
-                                  <Select placeholder="Select Sports" value={this.state.multiValue} options={this.state.selectOptions}  isMulti onChange={this.handleMultiChange} />
+                                 
 								  
 								<ReactMultiSelectCheckboxes placeholder="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
                                 </div>
