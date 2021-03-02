@@ -3,7 +3,7 @@ import './index.css';
 import * as React from 'react';
 import { MultiSelectComponent, CheckBoxSelection, Inject } from '@syncfusion/ej2-react-dropdowns';
 import { SampleBase } from './sample-base';
-import { PropertyPane } from './property-pane';
+
 import { CheckBoxComponent } from '@syncfusion/ej2-react-buttons';
 
 export class CheckBox extends SampleBase {
