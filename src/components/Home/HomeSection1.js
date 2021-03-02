@@ -3,7 +3,7 @@ import { Container,Image,Row,Col,Button,Form } from 'react-bootstrap';
 import Slider from "react-slick";
 import Cookies from 'universal-cookie';
 import Select from 'react-select'
-import CheckBox from './checkBox'
+import CheckBox from './checkbox'
 import SampleBase from './sample-base';
 import axios from 'axios';
 import $ from "jquery";
