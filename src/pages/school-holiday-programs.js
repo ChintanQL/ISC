@@ -57,14 +57,27 @@ class SHP extends Component {
         return (
 		<Layout>
             <>
-			<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
+				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
 					</div>
 				</div>
-			<div className="" style={{ display: this.state.showInfo == 0 ? "none" : "block" }} >
+			
 			{(this.state.showInfo == 1) ? (
 				<>
+				<section className="Banner-Section">
+					<Container>
+						<div className="Banner-Section-data">
+						<Breadcrumb>
+							<Breadcrumb.Item className="">
+								<Link className="nav-link p-0" to="/">Home</Link>
+								</Breadcrumb.Item>
+							<Breadcrumb.Item active href="" className="">School Holiday Programs</Breadcrumb.Item>
+						</Breadcrumb>
+						<h2 className="heading-banner">School Holiday Programs</h2>
+						</div>
+					</Container>
+				</section>
 				<section className="Sport-section-3">
 					<Container>
 						<Row>
@@ -244,8 +257,6 @@ class SHP extends Component {
             </section>
 			</>
 			) : ("")} 
-			 
-			</div>
             </>
 			 </Layout>
         );
