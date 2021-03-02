@@ -100,8 +100,8 @@ class HomeSection1 extends Component {
             dots: false,
             infinite: true,
             autoplay: true,
-            autoplaySpeed: 3000,
-            speed: 500,
+            autoplaySpeed: 6000,
+            speed: 1200,
             slidesToShow: 1,
             slidesToScroll: 1,
             nextArrow: <SampleNextArrow />,
@@ -123,7 +123,7 @@ class HomeSection1 extends Component {
 								<Row className="">
 									<Col xl={7} lg={7} md={12} sm={12}>
 										<h3 className="font-bold text-white">{str.title}</h3>
-										<div className="justify-content-center d-flex" dangerouslySetInnerHTML={{ __html: str.content}} />
+										<div className="text-left" dangerouslySetInnerHTML={{ __html: str.content}} />
 											
 										
 									</Col>
