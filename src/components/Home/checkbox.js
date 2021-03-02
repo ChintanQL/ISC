@@ -65,4 +65,3 @@ export class CheckBox extends SampleBase {
     }
 }
 
-render(<CheckBox />, document.getElementById('sample'));
