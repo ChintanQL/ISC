@@ -112,14 +112,14 @@ class HomeSection1 extends Component {
         return (
             <>
             
-            <section className="Home-section-1 main-padding-header">
+            <section className="Home-section-1 main-padding-header Home_section_new">
                 <Slider {...settings1}>
                     {this.props.data.map((str) => 
 						<div className="slider-data">
 							<Image src={str.sliderImage.sourceUrl} className="img-fluid d-lg-inline d-none" />
 							<div className="slider-inner-data">
 							<Container>
-								<Row className="justify-content-center text-center">
+								<Row className="">
 									<Col xl={6} lg={6} md={12} sm={12}>
 										<h3 className="font-bold text-white">{str.title}</h3>
 										<div className="justify-content-center d-flex" dangerouslySetInnerHTML={{ __html: str.content}} />
