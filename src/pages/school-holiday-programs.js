@@ -50,6 +50,7 @@ class SHP extends Component {
 	
 	render() {      
         return (
+		<Layout>
             <>
 			<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
@@ -214,6 +215,7 @@ class SHP extends Component {
 			 
 			</div>
             </>
+			 </Layout>
         );
     }
 }
