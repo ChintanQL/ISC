@@ -6,9 +6,6 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@pasdo501/gatsby-source-woocommerce": "^0.14.2",
-    "@syncfusion/ej2-base": "^18.4.44",
-    "@syncfusion/ej2-react-buttons": "^18.4.44",
-    "@syncfusion/ej2-react-dropdowns": "^18.4.44",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "bootstrap-sass": "^3.4.1",
@@ -53,6 +50,7 @@
     "react-icons": "^3.11.0",
     "react-iframe": "^1.8.0",
     "react-lazyload": "^3.1.0",
+    "react-multiselect-checkboxes": "^0.1.1",
     "react-native": "^0.63.4",
     "react-native-gravityform": "^1.0.15",
     "react-native-input-spinner": "^1.3.2",

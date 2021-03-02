@@ -6,6 +6,8 @@ import Select from 'react-select'
 import SearchLocationInput from './SearchLocationInput'
 import axios from 'axios';
 import $ from "jquery";
+import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
+
 //https://github.com/sethcwhiting/react-native-gravityform
 //https://github.com/reactivestack/cookies/tree/master/packages/universal-cookie
 
@@ -106,7 +108,10 @@ class HomeSection1 extends Component {
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />
           };
-		  
+		  const options = [
+  { label: 'Thing 1', value: 1},
+  { label: 'Thing 2', value: 2},
+];
 		
 		  
         return (
@@ -150,7 +155,7 @@ class HomeSection1 extends Component {
                                 <div className="second-control">
                                   <Select placeholder="Select Sports" value={this.state.multiValue} options={this.state.selectOptions}  isMulti onChange={this.handleMultiChange} />
 								  
-								  
+								<ReactMultiSelectCheckboxes options={options} />  
                                 </div>
 								
                                 <div className="third-control">
