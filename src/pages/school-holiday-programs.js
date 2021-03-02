@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Container,Image,Row,Col,Button,Modal,Card } from 'react-bootstrap';
 import playbutton from '../images/play-button.png'
 import Iframe from 'react-iframe'
+import Layout from "../components/layout"
 class SHP extends Component {
     
 	constructor(props) {
