@@ -34,6 +34,7 @@ class SHP extends Component {
 	
 	state = {
 		PageData: [],
+		city: [],
 		Isbanner: 0,
 		showInfo: 0
 	}
@@ -43,7 +44,8 @@ class SHP extends Component {
 			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_data_program',
 			method: 'get'
 		}).then(res => {
-			this.setState({PageData: res.data.ResponseData[0]})
+			this.setState({PageData: res.data.ResponseData.data[0]})
+			this.setState({city: res.data.ResponseData.city})
 			this.setState({showInfo: 1})
 		})
 	}
@@ -61,6 +63,33 @@ class SHP extends Component {
 			<div className="" style={{ display: this.state.showInfo == 0 ? "none" : "block" }} >
 			{(this.state.showInfo == 1) ? (
 				<>
+				<section className="Sport-section-3">
+					<Container>
+						<Row>
+							{(this.state.showInfo === 1) ? (
+									<>
+									{this.state.city.map((cmp) => 
+										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
+										<Card  className="listed-card mb-0">
+												<Link to={"/city/"+cmp.slug} className="card-img">
+													<div className="inner-card ">
+														<Image src={cardhover} fluid alt="cardhover"/>
+													</div>
+													<Image variant="top" src={cmp.img} fluid alt="card"/>
+												</Link>
+												<Card.Body>
+													<Link to={"/city/"+cmp.slug}>{cmp.title}</Link>
+												</Card.Body>
+											</Card>
+										</Col>		
+									)} 
+									</>
+								) : ("")}
+						
+							
+						</Row>	
+					</Container>	
+				</section>
 				<section className="Batman-Section">
 					<Container>
 					<div className="title mb-0">
