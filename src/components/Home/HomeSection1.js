@@ -3,7 +3,8 @@ import { Container,Image,Row,Col,Button,Form } from 'react-bootstrap';
 import Slider from "react-slick";
 import Cookies from 'universal-cookie';
 import Select from 'react-select'
-import SearchLocationInput from './SearchLocationInput'
+import CheckBox from './checkBox'
+import SampleBase from './sample-base';
 import axios from 'axios';
 import $ from "jquery";
 //https://github.com/sethcwhiting/react-native-gravityform
@@ -152,6 +153,7 @@ class HomeSection1 extends Component {
 								  
 								  
                                 </div>
+								<CheckBox />
                                 <div className="third-control">
                                   <Button type="button" onClick={this.Campred} className="uppercase btn-sm btn-orange mb-0">
                                       Find Camps

@@ -6,6 +6,8 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@pasdo501/gatsby-source-woocommerce": "^0.14.2",
+    "@syncfusion/ej2-base": "^18.4.44",
+    "@syncfusion/ej2-react-dropdowns": "^18.4.44",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "bootstrap-sass": "^3.4.1",
