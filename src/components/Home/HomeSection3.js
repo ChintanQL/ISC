@@ -40,12 +40,12 @@ class HomeSection3 extends Component {
 						 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 						{cmp.map((camp) => 
 							<Card  className="styled-card">
-                                <div className="card-img">
+                                <Link to={"/camps/"+camp.campUrl} className="card-img">
                                     <div className="inner-card ">
                                         <Image src={cardhover} fluid alt="cardhover"/>
                                     </div>
                                     <Image className="lazyload" variant="top" src={camp.campImage.sourceUrl} fluid alt="card"/>
-                                </div>
+                                </Link>
                                 <Card.Body>
                                     <Card.Title as="h5">{camp.campTitle}</Card.Title>
                                     <Card.Text>

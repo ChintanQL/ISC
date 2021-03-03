@@ -94,9 +94,9 @@ class resources extends Component {
 								{this.state.blog.map((prop,i) => {return (
 									<Col xl={12} lg={12} md={12} className="mb-30 resource-card-col">
 										<Card className="resource-card mb-0 all">
-											<div className="card-img">
+											<Link to={"/blog/"+prop.slug} className="card-img">
 												<Image src={prop.image} fluid alt="" className="" />
-											</div>
+											</Link>
 											<Card.Body>
 												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
 												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
@@ -117,9 +117,9 @@ class resources extends Component {
 								{this.state.guide.map((prop,i) => {return (
 									<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
 										<Card className="resource-card mb-0 all">
-											<div className="card-img">
+											<Link  to={"/guide/"+prop.slug} className="card-img">
 												<Image src={prop.image} fluid alt="" className="" />
-											</div>
+											</Link>
 											<Card.Body>
 												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
 												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />
@@ -140,9 +140,9 @@ class resources extends Component {
 								{this.state.flyer.map((prop,i) => {return (
 									<Col xl={6} lg={6} md={6} className="mb-30 resource-card-col">
 										<Card className="resource-card mb-0 all">
-											<div className="card-img">
+											<Link to={"/flyer/"+prop.slug} className="card-img">
 												<Image src={prop.image} fluid alt="" className="" />
-											</div>
+											</Link>
 											<Card.Body>
 												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
 												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.substring(0, 250)+"...."}} />

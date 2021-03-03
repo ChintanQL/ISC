@@ -79,12 +79,12 @@ class Partner extends Component {
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 										{cmp.map((camp) => 
 											 <Card  className="listed-card mb-0">
-												<div className="card-img">
+												<Link  to={"/camps/"+camp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
 													</div>
 													<Image variant="top" src={camp.image} fluid alt="card"/>
-												</div>
+												</Link>
 												<Card.Body>
 													<Link to={"/camps/"+camp.slug}>{camp.title}</Link>
 												</Card.Body>

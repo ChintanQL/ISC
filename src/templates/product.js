@@ -34,9 +34,9 @@ class Shop extends Component {
 									return (
 									<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
 										<Card className="book-card">
-											<div className="card-img">
+											<Link to={"/product/"+prop.node.slug} className="card-img">
 												<Image variant="top" src={prop.node.images[0].src} fluid alt="card"/>
-											</div>
+											</Link>
 											<Card.Body>
 												<Card.Title as="h5">
 													{prop.node.name}

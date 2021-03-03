@@ -70,9 +70,9 @@ class demopage extends Component {
 														return (
 															<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
 																<Card className="resource-card mb-0 all">
-																	<div className="card-img">
+																	<Link to={"/blog/"+prop.node.slug} className="card-img">
 																		<Image src={ prop.node.acf.feature_image2} fluid alt="" className="" />
-																	</div>
+																	</Link>
 																	<Card.Body>
 																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title.substring(0, 50)+"...."}}  />
 																		<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 100)+"...."}} />

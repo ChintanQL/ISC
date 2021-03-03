@@ -45,12 +45,12 @@ class coach extends Component {
                             {blog && blog.edges.map( prop => { return (
 								<Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-listed-card">
 									<Card  className="listed-card mb-0">
-										<div className="card-img">
+										<Link to={"/the-asc-heroes/"+prop.node.slug} className="card-img">
 											<div className="inner-card ">
 												<Image src={cardhover} fluid alt="cardhover"/>
 											</div>
 											<Image variant="top" src={prop.node.acf.featured_image} fluid alt="card"/>
-										</div>
+										</Link>
 										<Card.Body>
 											<Link to={"/the-asc-heroes/"+prop.node.slug}>{prop.node.title}</Link>
 										</Card.Body>
