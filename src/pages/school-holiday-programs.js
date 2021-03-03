@@ -78,7 +78,7 @@ class SHP extends Component {
 						</div>
 					</Container>
 				</section>
-				<section className="Sport-section-3">
+				<section className="Sport-section-3 mt-5">
 					<Container>
 						<Row>
 							{(this.state.showInfo === 1) ? (

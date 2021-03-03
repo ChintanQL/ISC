@@ -53,7 +53,7 @@ class Footer extends Component {
                         </Col>
                         <Col xl={3} lg={4} md={12}>
                             <div className="footer-data-last">
-                                <h2 className="font-22 font-bold text-white mb-3">FOLLOWUS ON SOCIAL MEDIA</h2>
+                                <h2 className="font-22 font-bold text-white mb-3">FOLLOW US ON SOCIAL MEDIA</h2>
                                 <ListGroup as="ul" horizontal className="first">
                                     <ListGroup.Item as="li">
                                         <Image src={footer1} className="img-fluid" alt="icons1"/>
