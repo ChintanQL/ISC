@@ -23,7 +23,7 @@ class Footer extends Component {
                         <Col xl={4} lg={12} className="xl-mb-4">
                             <div className="footer-data">
                                 <h2 className="font-22 font-bold text-white uppercase mb-3">About ASC</h2>
-                                <p className="font-16 font-regular text-white">ASC provides the best sports coaching for Australian children and has done so for 38 years. We run structured skill-improvement camps in Australia ensuring that participants have fun whilst developing a deeper love and enthusiasm for their chosen sport.</p>
+                                <p className="font-16 font-regular text-white">ASC provides the best sports coaching for Australian children and has done so for over 38 years. We run structured skill-improvement sport camps in Australia ensuring that participants have fun whilst developing a deeper love and enthusiasm for their chosen sport.</p>
                                 
                                 <p className="d-flex align-items-center change-font">
                                     <a className="nav-link p-0 text-white font-16 font-regular pr-2" href="tel:1300914368"><i className="fa fa-phone font-16"></i></a><a className="nav-link p-0 text-white font-16 font-regular" href="tel:1300914368"> CALL US: 1300 914 368</a>
