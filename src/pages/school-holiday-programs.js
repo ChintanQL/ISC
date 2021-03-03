@@ -46,8 +46,17 @@ class SHP extends Component {
 			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_data_program',
 			method: 'get'
 		}).then(res => {
+			
+			const chunkSize = 4;
+			const arr = res.data.ResponseData.city;
+			const groups = arr.map((e, i) => { 
+				 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
+			}).filter(e => { return e; });
+			console.log({arr, groups});	
+			
+			
 			this.setState({PageData: res.data.ResponseData.data[0]})
-			this.setState({city: res.data.ResponseData.city})
+			this.setState({city: groups})
 			this.setState({showInfo: 1})
 		})
 	}
@@ -78,24 +87,27 @@ class SHP extends Component {
 						</div>
 					</Container>
 				</section>
-				<section className="Sport-section-3 mt-5">
+				
+				<section className="Sport-section-3">
 					<Container>
 						<Row>
-							{(this.state.showInfo === 1) ? (
+							{(this.state.result === 1) ? (
 									<>
 									{this.state.city.map((cmp) => 
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
-										<Card  className="listed-card mb-0">
-												<Link to={"/city/"+cmp.slug} className="card-img">
+										{cmp.map((camp) => 
+											 <div className="listed-card mb-0 card">
+												<Link to={"/sport/"+camp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
 													</div>
-													<Image variant="top" src={cmp.img} fluid alt="card"/>
+													<Image variant="top" src={camp.img} fluid alt="card"/>
 												</Link>
 												<Card.Body>
-													<Link to={"/city/"+cmp.slug}>{cmp.title}</Link>
+													<Link to={"/sport/"+camp.slug}>{camp.title}</Link>
 												</Card.Body>
-											</Card>
+											</div>
+										)}
 										</Col>		
 									)} 
 									</>
