@@ -44,6 +44,14 @@ section.Home-section-1.Home_section_new .home-form { background: transparent; ma
 section.Home-section-1 .slider-inner-data h3 br { display: none }
 }
 
+.How-to-book-Section-1-data h3 { font-size: 20px; line-height: 32px; font-weight: 700; color: #3b3b3b;  margin-bottom: 1rem; }
+.How-to-book-Section-1-data p {  color: #3b3b3b; font-weight: 500; font-size: 16px;  line-height: 30px; }
+
+.Contactus-Section-3-data .gform_footer.top_label input[type="submit"] { padding: 0px 13px !important; background: #FF6600; background-color: #FF6600 !important; color: #fff !important; border-radius: 0 !important; border: 2px solid #FF6600 !important; transition: 0.3s all ease-in-out; height: 42px !important; line-height: 38px !important; font-weight: 600; cursor: pointer; }
+.Contactus-Section-3-data .gform_footer.top_label input[type="submit"]:hover { background:#fff !important; color:#FF6600 !important }
+.Contactus-Section-3-data li#field_5_4, .Contactus-Section-3-data li#field_5_3 { width: 50%; display: inline-block;}
+.Contactus-Section-3-data li#field_5_4 select {  width: 100%; }
+
 .second-control button{
 	width:100% !important;
 }
