@@ -16,6 +16,7 @@ import sidebaradd1 from '../images/sidebar-add-1.png'
 import sidebaradd2 from '../images/sidebar-add-2.png'
 import { FaSearch } from "react-icons/fa";
 import Main from '../components/Search/Main';
+import Menubanner from '../components/common/Menubanner'
 class demopage extends Component {
   render() {
     const blog = this.props.data.allWordpressPost
@@ -163,9 +164,7 @@ class demopage extends Component {
 										</div>
 										{/*  */}
 										<div className="mb-4 text-center">
-											<Link to="">
-												<Image src={sidebaradd1} fluid />
-											</Link>
+											<Menubanner />
 										</div>
 										{/*  */}
 										<div className="inner-sidebar mb-4">
