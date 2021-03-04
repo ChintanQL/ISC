@@ -52,7 +52,7 @@ class coach extends Component {
 											<Image variant="top" src={prop.node.acf.featured_image} fluid alt="card"/>
 										</Link>
 										<Card.Body>
-											<Link to={"/the-asc-heroes/"+prop.node.slug}>{prop.node.title}</Link>
+											<Link to={"/the-asc-heroes/"+prop.node.slug} dangerouslySetInnerHTML={{ __html: prop.node.title}} />
 										</Card.Body>
 									</Card>
 								</Col>	

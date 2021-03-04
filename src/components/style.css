@@ -130,6 +130,7 @@ header .navbar-light .navbar-nav
 .dropdown-menu.main-menu .inner-menu {
     display: inline-block;
     padding-right: 18px;
+	 width: 25%; 
 }
 
 .dropdown-menu.main-menu .inner-menu ul{
@@ -139,8 +140,8 @@ header .navbar-light .navbar-nav
     content: "";
     position: absolute;
     height: 80%;
-    top: 10%;
-    right: -15px;
+    top: 0;
+    right: 0;
     width: 1px;
     background-color: #EEEEEE;
 }
