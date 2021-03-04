@@ -47,7 +47,7 @@ class SHP extends Component {
 			method: 'get'
 		}).then(res => {
 			
-			const chunkSize = 4;
+			const chunkSize = 2;
 			const arr = res.data.ResponseData.city;
 			const groups = arr.map((e, i) => { 
 				 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
@@ -91,7 +91,7 @@ class SHP extends Component {
 				<section className="Sport-section-3">
 					<Container>
 						<Row>
-							{(this.state.result === 1) ? (
+							{(this.state.showInfo === 1) ? (
 									<>
 									{this.state.city.map((cmp) => 
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">

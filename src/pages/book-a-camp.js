@@ -23,7 +23,7 @@ class Sport extends Component {
 			//url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camps',
 			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_category',
 			method: 'get'}).then(res => {
-			const chunkSize = 11;
+			const chunkSize = 10;
 			const arr = res.data.ResponseData.cat;
 			const groups = arr.map((e, i) => { 
 				 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
@@ -88,7 +88,7 @@ class Sport extends Component {
 													<Image variant="top" src={camp.image} fluid alt="card"/>
 												</Link>
 												<Card.Body>
-													<Link to={"/sport/"+camp.name.replace(/\s+/g, '-').toLowerCase()}>{camp.name}</Link>
+													<Link to={camp.slug}>{camp.name}</Link>
 												</Card.Body>
 											</div>
 										)}
