@@ -65,7 +65,7 @@ class demopage extends Component {
 										<Container>
 											<div className="Resource-guides-data">
 												<Row className="">
-													
+													 <Col xl={8} lg={8} md={12} className="lg-mb-2">
 													{blog && blog.edges.map( prop => {
 														return (
 															<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
@@ -84,6 +84,121 @@ class demopage extends Component {
 															</Col>	
 														)
 													})}
+													
+												</Col>	
+												<Col xl={4} lg={4} md={12}>
+                                <div className="side-sticky">
+                                    <Form>
+										{/*  */}
+										<div className="mb-4 search">
+											<h3 className="font-20 mb-2 font-medium">Search</h3> 
+											<Form>
+												<Form.Group controlId="" className="mb-0">
+													<InputGroup className="mb-3">
+														<FormControl className="master border-right-0"
+														placeholder="Search in blog" />
+														<InputGroup.Append className="border-left-0">
+															<InputGroup.Text id="basic-addon2">
+																<Button className="btn-orange btn"><FaSearch/></Button>
+															</InputGroup.Text>
+														</InputGroup.Append>
+													</InputGroup>
+												</Form.Group>
+											</Form>
+										</div>
+										{/*  */}
+										
+										<div className="inner-sidebar mb-4">
+												<h3 className="font-20 mb-2 font-medium">Categories</h3>
+													<ListGroup as="ul" className="categaries">
+														
+														{category && category.edges.map( (propd,i) => {
+															return (
+																
+																(propd.node.name !== 'Uncategorised') ? (<ListGroup.Item key={i} as="li" className="font-18 justify-content-between d-flex align-items-center">
+																	<Link to={"/category/"+propd.node.slug+"/"} className="mr-1 color-70 font-regular decoration-none">{propd.node.name}</Link> <p className="mb-0 color-70 font-regular">{propd.node.count}</p>
+																</ListGroup.Item>) : ("") 
+															)
+														})}
+													</ListGroup>
+										</div>
+										{/*  */}
+										<div className="inner-media-sidebar mb-4">
+											<h3 className="font-20 mb-2 font-medium">Popular Posts</h3>
+											<ListGroup as="ul">
+												<ListGroup.Item as="li" className="d-flex">
+														<div className="img-box-sidebar">
+														<Image src={imgbox1} className="img-fluid border-0"/>
+														</div>
+														<div className="content-box-sidebar ">
+															<span className="font-14 font-medium uppercase">August 14, 2019</span>
+															<h2 className="font-14 font-bold title-color mb-1 line-break-2">10 USEFUL TIPS FROM EXPERIENCED CRICKET PLAYERS & COACHESs</h2>
+														</div>
+												</ListGroup.Item> 
+												<ListGroup.Item as="li" className="d-flex">
+														<div className="img-box-sidebar">
+														<Image src={imgbox2} className="img-fluid border-0"/>
+														</div>
+														<div className="content-box-sidebar ">
+															<span className="font-14 font-medium uppercase">August 6, 2019</span>
+															<h2 className="font-14 font-bold title-color mb-1 line-break-2">HOW HAVE TECHNOLOGICAL CHANGES AFFECTED JUNIOR NETBALL?</h2>
+														</div>
+												</ListGroup.Item> 
+												<ListGroup.Item as="li" className="d-flex">
+														<div className="img-box-sidebar">
+														<Image src={imgbox3} className="img-fluid border-0"/>
+														</div>
+														<div className="content-box-sidebar ">
+															<span className="font-14 font-medium uppercase">February 27, 2019</span>
+															<h2 className="font-14 font-bold title-color mb-1 line-break-2">BULLYING IN YOUTH SPORTS</h2>
+														</div>
+												</ListGroup.Item> 
+												<ListGroup.Item as="li" className="d-flex">
+														<div className="img-box-sidebar">
+														<Image src={imgbox4} className="img-fluid border-0"/>
+														</div>
+														<div className="content-box-sidebar ">
+															<span className="font-14 font-medium uppercase">February 27, 2019</span>
+															<h2 className="font-14 font-bold title-color mb-1 line-break-2">PARENT SIDELINE BEHAVIOUR</h2>
+														</div>
+												</ListGroup.Item> 
+											</ListGroup>
+										</div>
+										{/*  */}
+										<div className="mb-4 text-center">
+											<Link to="">
+												<Image src={sidebaradd1} fluid />
+											</Link>
+										</div>
+										{/*  */}
+										<div className="inner-sidebar mb-4">
+											<h3 className="font-20 mb-2 font-medium">Browse Tags</h3>
+											{tags && tags.edges.map( (propd,i) => {
+															return (
+																
+																(propd.node.name !== 'Uncategorised') ? (
+																	<><Link to={"/tags/"+propd.node.slug+"/"} dangerouslySetInnerHTML={{ __html: propd.node.name+"("+propd.node.count+")"}}  className="tags" /> </>
+																) : ("") 
+															)
+														})}
+											
+											
+										</div>
+										{/*  */}
+										<div className="mb-4">
+											<h3 className="font-20 mb-2 font-medium">About Blog</h3>
+											<p className="font-16 font-medium color-70">Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, pulvinar nunc sapien ornare nisl.</p>
+										</div>
+										{/*  */}
+										<div className="mb-4 text-center">
+											<Link to="">
+												<Image src={sidebaradd2} fluid />
+											</Link>
+										</div>
+										{/*  */}
+									</Form>
+                                </div>
+                            </Col>			
 												</Row>
 												<Col xl={12} lg={12} md={12} sm={12}  className="">
 													{(this.props.pageContext.previousPagePath !== "") ? (<Link className="btn uppercase btn-sm btn-orange"  to={this.props.pageContext.previousPagePath}>Previous</Link>) : (<Link className="btn btn-primary invisible"  to={this.props.pageContext.previousPagePath}>Previous</Link>)}
