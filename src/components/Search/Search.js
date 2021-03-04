@@ -30,7 +30,7 @@ export default class Search extends Component {
         <ul className="lisearch" >
           {this.state.results.map(page => (
             <li key={page.node.id}>
-              <Link to={"/blog/" + page.node.slug)} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
+              <Link to={"/blog/" + page.node.url)} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
               
             </li>
           ))}

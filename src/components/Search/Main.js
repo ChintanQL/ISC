@@ -15,7 +15,6 @@ const Main = () => (
 				title
 				subtype
 				url
-				slug
 			  }
 			}
 		  }
