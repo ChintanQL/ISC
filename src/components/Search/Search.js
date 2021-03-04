@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Index } from "elasticlunr"
  import { Link, StaticQuery, graphql } from 'gatsby'
+ import {Image,ListGroup,Form,InputGroup,FormControl,Button,Tab,Nav} from 'react-bootstrap'
 // Search component
 export default class Search extends Component {
   constructor(props) {
@@ -15,7 +16,17 @@ export default class Search extends Component {
   render() {
     return (
       <>
-        <input type="text" className="form-control" placeholder="Search Here..." value={this.state.query} onChange={this.search} />
+		<Form.Group controlId="" className="mb-0">
+			<InputGroup className="mb-3">
+				<FormControl value={this.state.query} onChange={this.search} className="master border-right-0"
+				placeholder="Search in blog" />
+				<InputGroup.Append className="border-left-0">
+					<InputGroup.Text id="basic-addon2">
+						<Button className="btn-orange btn"><FaSearch/></Button>
+					</InputGroup.Text>
+				</InputGroup.Append>
+			</InputGroup>
+		</Form.Group>
         <ul className="lisearch" >
           {this.state.results.map(page => (
             <li key={page.node.id}>

@@ -93,25 +93,15 @@ class demopage extends Component {
 												<Col xl={4} lg={4} md={12}>
                                 <div className="side-sticky">
 								
-								 <Main />
+								 
 								
                                     <Form>
 										{/*  */}
 										<div className="mb-4 search">
 											<h3 className="font-20 mb-2 font-medium">Search</h3> 
-											<Form>
-												<Form.Group controlId="" className="mb-0">
-													<InputGroup className="mb-3">
-														<FormControl className="master border-right-0"
-														placeholder="Search in blog" />
-														<InputGroup.Append className="border-left-0">
-															<InputGroup.Text id="basic-addon2">
-																<Button className="btn-orange btn"><FaSearch/></Button>
-															</InputGroup.Text>
-														</InputGroup.Append>
-													</InputGroup>
-												</Form.Group>
-											</Form>
+												<Main />
+												
+											
 										</div>
 										{/*  */}
 										
