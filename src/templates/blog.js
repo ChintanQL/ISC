@@ -15,6 +15,7 @@ import imgbox4 from '../images/blog-imgbox-4.png'
 import sidebaradd1 from '../images/sidebar-add-1.png'
 import sidebaradd2 from '../images/sidebar-add-2.png'
 import { FaSearch } from "react-icons/fa";
+import Main from '../components/Search/Main';
 class demopage extends Component {
   render() {
     const blog = this.props.data.allWordpressPost
@@ -68,26 +69,27 @@ class demopage extends Component {
 													 <Col xl={8} lg={8} md={12} className="lg-mb-2">
 													{blog && blog.edges.map( prop => {
 														return (
-															<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
-																<Card className="resource-card mb-0 all">
-																	<Link to={"/blog/"+prop.node.slug} className="card-img">
-																		<Image src={ prop.node.acf.feature_image2} fluid alt="" className="" />
-																	</Link>
-																	<Card.Body>
-																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title.substring(0, 50)+"...."}}  />
-																		<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 100)+"...."}} />
-																		<Link className="nav-link p-0 d-flex align-items-center" to={"/blog/"+prop.node.slug}>Read more 
-																			<i className="fa fa-chevron-right ml-2"></i> 
-																		</Link>
-																	</Card.Body>
-																</Card>
-															</Col>	
+															<Card className="blog-card mb-30">
+																<div className="card-img">
+																	<Image src={ prop.node.acf.feature_image2}  fluid />
+																</div>
+																<Card.Body>
+																	<Card.Title dangerouslySetInnerHTML={{ __html: prop.node.title}} as="h5" />
+																	<span>In {prop.node.categories[0].name} by {prop.node.author.name} / {prop.node.date}</span>
+																	<Card.Text as="div" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
+																	<Link className="btn btn-orange-border uppercase" to={"/blog/"+prop.node.slug}>Read More</Link>
+																</Card.Body>
+															</Card>		
+															
 														)
 													})}
 													
 												</Col>	
 												<Col xl={4} lg={4} md={12}>
                                 <div className="side-sticky">
+								
+								 <Main />
+								
                                     <Form>
 										{/*  */}
 										<div className="mb-4 search">

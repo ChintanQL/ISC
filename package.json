@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.3.0",
     "@pasdo501/gatsby-source-woocommerce": "^0.14.2",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",

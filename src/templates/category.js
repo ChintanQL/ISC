@@ -46,7 +46,7 @@ class category extends Component {
 									return (
 										<Card className="blog-card mb-30">
 											<div className="card-img">
-												<Image src={card1} fluid />
+												<Image src={ prop.node.acf.feature_image2}  fluid />
 											</div>
 											<Card.Body>
 												<Card.Title dangerouslySetInnerHTML={{ __html: prop.node.title}} as="h5" />
@@ -243,6 +243,9 @@ export const pageQuery = graphql`
 				id
 				slug
 				title
+				acf {
+					feature_image2
+				}
 				date(formatString: "D MMMM, Y")
 				content
 				author {
