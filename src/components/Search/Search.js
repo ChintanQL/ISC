@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import { Index } from "elasticlunr"
  import { Link, StaticQuery, graphql } from 'gatsby'
- import {Image,ListGroup,Form,InputGroup,FormControl,Button,Tab,Nav} from 'react-bootstrap'
- import { FaSearch } from "react-icons/fa";
 // Search component
 export default class Search extends Component {
   constructor(props) {
@@ -17,11 +15,11 @@ export default class Search extends Component {
   render() {
     return (
       <>
-		<input type="text" className="form-control" placeholder="Search Here..." value={this.state.query} onChange={this.search} />
+        <input type="text" className="form-control" placeholder="Search Here..." value={this.state.query} onChange={this.search} />
         <ul className="lisearch" >
           {this.state.results.map(page => (
             <li key={page.node.id}>
-              <Link to={"/blog/" + page.node.url)} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
+              <Link to={"/" + page.node.url.replace('https://qltech.io/knowledge-article/','/hub/')+"/"} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
               
             </li>
           ))}
