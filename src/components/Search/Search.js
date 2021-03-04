@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Index } from "elasticlunr"
  import { Link, StaticQuery, graphql } from 'gatsby'
  import {Image,ListGroup,Form,InputGroup,FormControl,Button,Tab,Nav} from 'react-bootstrap'
+ import { FaSearch } from "react-icons/fa";
 // Search component
 export default class Search extends Component {
   constructor(props) {

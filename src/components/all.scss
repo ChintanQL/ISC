@@ -23,6 +23,34 @@ section.Camp-details-section-1 {
     text-transform: none !important;
 }
 
+ul.lisearch {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    background: #f0f0f0;
+    padding: 15px;
+}
+
+
+
+ul.lisearch li {
+    margin-left: 15px;
+}
+
+ul.lisearch li a {
+    color: #333;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 9px;
+    display: block;
+}
+ul.lisearch li a:hover {
+    text-decoration: none;
+    color: #2A74B6;
+}
+
+
 /*25/02/2021*/
 .Home_section_new .pos-absolute-form { left: auto; bottom: auto !important; top:143px; right: 10%; transform: translateX(-10%); }
 section.Home-section-1.Home_section_new .home-form { display: inline-block; background: rgba(255,255,255,.4); background-color: rgba(255,255,255,.4); padding: 20px;}
