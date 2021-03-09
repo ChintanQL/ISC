@@ -147,7 +147,7 @@ class Membership extends Component {
 															<Card.Text as="p" className="font-18 font-bold color-3b">{str.months}</Card.Text>
 															<p className="points font-16 font-medium">{str.title1} </p>
 															<p className="points font-16 font-medium">{str.title2}</p>
-															<p className="points font-16 font-medium mb-20">{str.title3}</p>
+															<p className="points font-16 font-medium">{str.title3}</p>
 															<p className="points font-16 font-medium mb-20">{str.title4}</p>
 															<Card.Title as="h5">${str.price}</Card.Title>
 															<p className="price color-3b font-18 font-medium">${str.strikePrice}</p>
