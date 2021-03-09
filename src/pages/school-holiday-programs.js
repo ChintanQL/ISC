@@ -97,14 +97,14 @@ class SHP extends Component {
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 										{cmp.map((camp) => 
 											 <div className="listed-card mb-0 card">
-												<Link to={"/sport/"+camp.slug} className="card-img">
+												<Link to={"/city/"+camp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
 													</div>
 													<Image variant="top" src={camp.img} fluid alt="card"/>
 												</Link>
 												<Card.Body>
-													<Link to={"/sport/"+camp.slug}>{camp.title}</Link>
+													<Link to={"/city/"+camp.slug}>{camp.title}</Link>
 												</Card.Body>
 											</div>
 										)}
