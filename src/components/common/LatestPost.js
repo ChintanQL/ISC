@@ -53,7 +53,7 @@ class LatestPost extends Component {
 								<h2 className="font-14 font-bold title-color mb-1 line-break-2"  dangerouslySetInnerHTML={{ __html: propd.title }} />
 							</div>
 						</ListGroup.Item>									
-															
+						)									
 					})}										
 				</>
 			
