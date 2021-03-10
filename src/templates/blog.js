@@ -17,6 +17,7 @@ import sidebaradd2 from '../images/sidebar-add-2.png'
 import { FaSearch } from "react-icons/fa";
 import Main from '../components/Search/Main';
 import Menubanner from '../components/common/Menubanner'
+import LatestPost from '../components/common/LatestPost'
 class demopage extends Component {
   render() {
     const blog = this.props.data.allWordpressPost
@@ -122,7 +123,8 @@ class demopage extends Component {
 										</div>
 										{/*  */}
 										<div className="inner-media-sidebar mb-4">
-											<h3 className="font-20 mb-2 font-medium">Popular Posts</h3>
+											<h3 className="font-20 mb-2 font-medium">Latest Posts</h3>
+											<LatestPost />
 											<ListGroup as="ul">
 												<ListGroup.Item as="li" className="d-flex">
 														<div className="img-box-sidebar">
