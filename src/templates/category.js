@@ -19,7 +19,7 @@ class category extends Component {
   render() {
     const blog = this.props.data.allWordpressPost
    	const category = this.props.data.allWordpressCategory
-   
+    console.log(this.props);
    
     return (
 		<Layout>
@@ -32,7 +32,7 @@ class category extends Component {
                         </Breadcrumb.Item>
                         <Breadcrumb.Item active href=""className="">Blog</Breadcrumb.Item>
                     </Breadcrumb>
-                    <h2 className="heading-banner">Blog</h2>
+                    <h2 className="heading-banner">category</h2>
                     </div>
                 </Container>
             </section> 

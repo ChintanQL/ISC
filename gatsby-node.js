@@ -404,7 +404,8 @@ exports.createPages = async ({ actions, graphql }) => {
 		  path: `/category/${edge.node.slug}/`,
 		  component: slash(CatTemplate),
 		  context: {
-			id: edge.node.id
+			id: edge.node.id,
+			name: edge.node.name
 		  },
 		})			  
 	})
