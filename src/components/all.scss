@@ -882,7 +882,7 @@ section.Sport-details-section-2 img { width: 100%; }
     border: 1px solid #CFCFCF !important;
     padding:15px;
     margin-right: 0px;
-    height: 38px;
+    height: auto;
     margin-bottom: 15px;
     border-radius: 0px;
     justify-content: center;
@@ -890,7 +890,9 @@ section.Sport-details-section-2 img { width: 100%; }
     cursor: pointer;
     color: #707070;
 	text-decoration:none !important;
-	line-height: 60px;
+	line-height: normal;
+	 display: inline-block;
+    vertical-align: middle;
 }
 .tags:hover {
     background: #2A74B6 !important;
