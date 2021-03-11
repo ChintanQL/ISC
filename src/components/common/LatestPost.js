@@ -45,6 +45,7 @@ class LatestPost extends Component {
 					{this.state.PageData.map( (propd,i) => {
 															return (
 						<ListGroup.Item as="li" className="d-flex">
+							<Link to={"blog/"+propd.slug+"/"} >
 							<div className="img-box-sidebar">
 							<Image src={propd.image} className="img-fluid border-0"/>
 							</div>
@@ -52,6 +53,7 @@ class LatestPost extends Component {
 								<span className="font-14 font-medium uppercase">{propd.Date}</span>
 								<h2 className="font-14 font-bold title-color mb-1 line-break-2"  dangerouslySetInnerHTML={{ __html: propd.title }} />
 							</div>
+							</Link>
 						</ListGroup.Item>									
 						)									
 					})}										
