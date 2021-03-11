@@ -37,7 +37,7 @@ class LatestPost extends Component {
 	render() {      
         return (
             <>
-           <div className="second-box" style={{ display: this.state.showInfo == 0 ? "none" : "inline-block" }} >
+           <div className="" style={{ display: this.state.showInfo == 0 ? "none" : "inline-block" }} >
 			<ListGroup as="ul">
 			
 			{(this.state.showInfo == 1) ? (

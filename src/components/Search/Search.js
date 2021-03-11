@@ -15,7 +15,7 @@ export default class Search extends Component {
   render() {
     return (
       <>
-        <input type="text" className="form-control" placeholder="Search Here..." value={this.state.query} onChange={this.search} />
+        <input type="text" className="form-control" placeholder="Search in Blog" value={this.state.query} onChange={this.search} />
         <ul className="lisearch" >
           {this.state.results.map(page => (
             <li key={page.node.id}>
