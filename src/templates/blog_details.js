@@ -8,6 +8,9 @@ import { Link,graphql } from 'gatsby'
 import card1 from '../images/blog-card-1.png'
 import PropTypes from "prop-types"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+import Main from '../components/Search/Main';
+import Menubannertwo from '../components/common/Menubannertwo'
+import LatestPost from '../components/common/LatestPost'
 class BlogDetails extends Component {
   render() {
   
@@ -42,7 +45,7 @@ class BlogDetails extends Component {
 					<Container>
 						<div className="Blog-details-Section-2-data">
 							<Row>
-								<Col xl={12} lg={12} md={12} className="lg-mb-2">
+								<Col xl={8} lg={8} md={12} className="lg-mb-2">
 									<Card className="blog-details-card mb-30">
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.title}} />
 										<span>In {blog.edges[0].node.categories[0].name} by {blog.edges[0].node.author.name} / { blog.edges[0].node.date}</span>
@@ -52,6 +55,74 @@ class BlogDetails extends Component {
 										<Card.Text as="div" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.content}} />
 									</Card>
 								</Col>
+								<Col xl={4} lg={4} md={12}>
+                                <div className="side-sticky">
+								
+								 
+								
+                                    <Form>
+										{/*  */}
+										<div className="mb-4 search">
+											<h3 className="font-20 mb-2 font-medium">Search</h3> 
+												<Main />
+												
+											
+										</div>
+										{/*  */}
+										
+										<div className="inner-sidebar mb-4">
+												<h3 className="font-20 mb-2 font-medium">Categories</h3>
+													<ListGroup as="ul" className="categaries">
+														
+														{category && category.edges.map( (propd,i) => {
+															return (
+																
+																(propd.node.name !== 'Uncategorised') ? (<ListGroup.Item key={i} as="li" className="font-18 justify-content-between d-flex align-items-center">
+																	<Link to={"/category/"+propd.node.slug+"/"} className="mr-1 color-70 font-regular decoration-none">{propd.node.name}</Link> <p className="mb-0 color-70 font-regular">{propd.node.count}</p>
+																</ListGroup.Item>) : ("") 
+															)
+														})}
+													</ListGroup>
+										</div>
+										{/*  */}
+										<div className="inner-media-sidebar mb-4">
+											<h3 className="font-20 mb-2 font-medium">Latest Posts</h3>
+											<LatestPost />
+											
+										</div>
+										{/*  */}
+										<div className="mb-4 text-center">
+											<Menubannertwo />
+										</div>
+										{/*  */}
+										<div className="inner-sidebar mb-4">
+											<h3 className="font-20 mb-2 font-medium">Browse Tags</h3>
+											{tags && tags.edges.map( (propd,i) => {
+															return (
+																
+																(propd.node.name !== 'Uncategorised') ? (
+																	<><Link to={"/tags/"+propd.node.slug+"/"} dangerouslySetInnerHTML={{ __html: propd.node.name+"("+propd.node.count+")"}}  className="tags" /> </>
+																) : ("") 
+															)
+														})}
+											
+											
+										</div>
+										{/*  */}
+										<div className="mb-4">
+											<h3 className="font-20 mb-2 font-medium">About Blog</h3>
+											<p className="font-16 font-medium color-70">Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, pulvinar nunc sapien ornare nisl.</p>
+										</div>
+										{/*  */}
+										<div className="mb-4 text-center">
+											<Link to="">
+												<Image src={sidebaradd2} fluid />
+											</Link>
+										</div>
+										{/*  */}
+									</Form>
+                                </div>
+                            </Col>			
 							</Row>
 						</div>
 						<div className="clearfix nav-controls border rounded mb-4">

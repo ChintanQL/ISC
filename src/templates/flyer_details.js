@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Layout from "../components/layout"
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
+import Guidebanner from "../components/common/Guidebanner"
 import {Container,Breadcrumb} from 'react-bootstrap'
 import {Row,Col,Card,Image} from 'react-bootstrap'
 import { Link,graphql } from 'gatsby'
@@ -42,7 +43,7 @@ class BlogDetails extends Component {
 					<Container>
 						<div className="Blog-details-Section-2-data">
 							<Row>
-								<Col xl={12} lg={12} md={12} className="lg-mb-2">
+								<Col xl={8} lg={8} md={8} className="lg-mb-2">
 									<Card className="blog-details-card mb-30">
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.title}} />
 										<span> by {blog.edges[0].node.author.name} / { blog.edges[0].node.date}</span>
@@ -51,6 +52,11 @@ class BlogDetails extends Component {
 										</div>
 										<Card.Text as="div" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.content}} />
 									</Card>
+								</Col>
+								<Col xl={4} lg={4} md={4} className="lg-mb-2">
+									<iframe height="500" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-guide/" title="description" />
+									
+									<Guidebanner />
 								</Col>
 							</Row>
 						</div>
@@ -70,7 +76,26 @@ class BlogDetails extends Component {
 	  
 					</Container>
 				</section>
-
+				{(blog.edges[0].node.acf.footer_title != "") ? (
+					<section className="Resource-details-section-2">
+						<Image src={ blog.edges[0].node.acf.footer_image} />
+						<div className="container">
+							<div className="Resource-details-Section-data">
+								<div className="row justify-content-end">
+									<div className="col-xl-5 col-lg-6 col-md-10">
+										<div className="title text-left">
+											<h2>{ blog.edges[0].node.acf.footer_title} </h2>
+											<div dangerouslySetInnerHTML={{ __html: blog.edges[0].node.acf.footer_desc}} />
+										</div>
+										<div className="text-center">
+											<button className=" uppercase btn-orange-border">{ blog.edges[0].node.acf.footer_button_text}</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				) : ("")}
 				
 				
       
@@ -105,6 +130,10 @@ export const pageQuery = graphql`
 				id
 				acf {
 					featured_image
+					footer_title
+					footer_desc
+					footer_image
+					footer_button_text
 				}
 				author {
 					name
