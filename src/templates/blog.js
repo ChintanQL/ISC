@@ -125,44 +125,7 @@ class demopage extends Component {
 										<div className="inner-media-sidebar mb-4">
 											<h3 className="font-20 mb-2 font-medium">Latest Posts</h3>
 											<LatestPost />
-											<ListGroup as="ul">
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox1} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">August 14, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">10 USEFUL TIPS FROM EXPERIENCED CRICKET PLAYERS & COACHESs</h2>
-														</div>
-												</ListGroup.Item> 
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox2} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">August 6, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">HOW HAVE TECHNOLOGICAL CHANGES AFFECTED JUNIOR NETBALL?</h2>
-														</div>
-												</ListGroup.Item> 
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox3} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">February 27, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">BULLYING IN YOUTH SPORTS</h2>
-														</div>
-												</ListGroup.Item> 
-												<ListGroup.Item as="li" className="d-flex">
-														<div className="img-box-sidebar">
-														<Image src={imgbox4} className="img-fluid border-0"/>
-														</div>
-														<div className="content-box-sidebar ">
-															<span className="font-14 font-medium uppercase">February 27, 2019</span>
-															<h2 className="font-14 font-bold title-color mb-1 line-break-2">PARENT SIDELINE BEHAVIOUR</h2>
-														</div>
-												</ListGroup.Item> 
-											</ListGroup>
+											
 										</div>
 										{/*  */}
 										<div className="mb-4 text-center">
