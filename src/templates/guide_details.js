@@ -53,6 +53,8 @@ class BlogDetails extends Component {
 									</Card>
 								</Col>
 								<Col xl={4} lg={4} md={4} className="lg-mb-2">
+									<iframe height="500" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-guide/" title="description" />
+									
 									<Guidebanner />
 								</Col>
 							</Row>
@@ -72,22 +74,27 @@ class BlogDetails extends Component {
 						<Disqus config={disqusConfig} />
 					</Container>
 				</section>
-				<section className="Resource-details-section-2">
-					<div className="container">
-						<div className="Resource-details-Section-data">
-							<div className="row justify-content-end">
-								<div className="col-xl-5 col-lg-6 col-md-10">
-									<div className="title text-left">
-										<h2>{ blog.edges[0].node.acf.footer_title} </h2>
-										<p dangerouslySetInnerHTML={{ __html: blog.edges[0].node.acf.footer_desc}} />
-									</div>
-									<div className="text-center">
-										<button className=" uppercase btn-orange-border">{ blog.edges[0].node.acf.footer_button_text}</button>
+				{(blog.edges[0].node.acf.footer_title != "") ? (
+					<section className="Resource-details-section-2">
+						<Image src={ blog.edges[0].node.acf.footer_image} />
+						<div className="container">
+							<div className="Resource-details-Section-data">
+								<div className="row justify-content-end">
+									<div className="col-xl-5 col-lg-6 col-md-10">
+										<div className="title text-left">
+											<h2>{ blog.edges[0].node.acf.footer_title} </h2>
+											<div dangerouslySetInnerHTML={{ __html: blog.edges[0].node.acf.footer_desc}} />
+										</div>
+										<div className="text-center">
+											<button className=" uppercase btn-orange-border">{ blog.edges[0].node.acf.footer_button_text}</button>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-				</div></section>
+					</section>
+				) : ("")}
+				
 				
 				
       

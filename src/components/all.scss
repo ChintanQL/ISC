@@ -29,13 +29,17 @@ ul.lisearch {
     vertical-align: middle;
     padding: 0;
     background: #f0f0f0;
-    padding: 15px;
 }
 
 
 
 ul.lisearch li {
-    margin-left: 15px;
+    padding: 15px;
+    list-style: none;
+    margin: 0;
+    border: 1px solid #ccc;
+    background: #ffff;
+    border-top: none;
 }
 
 ul.lisearch li a {
@@ -44,10 +48,11 @@ ul.lisearch li a {
     line-height: 26px;
     margin-bottom: 9px;
     display: block;
+    margin: 0;
 }
+
 ul.lisearch li a:hover {
-    text-decoration: none;
-    color: #2A74B6;
+    color: #f60;
 }
 
 
@@ -3098,15 +3103,19 @@ section.Resource-flyers
 // Resource-details-section-2
 
 section.Resource-details-section-2 {
-  background: url(../images/Resource-details-section-2-bg.png) no-repeat;
-  background-position: right !important;
-  background-size: cover;
   justify-content: center;
   align-items: center;
   display: flex;
   text-align: center;
-  padding: 80px 0px;
   margin-bottom: 50px;
+   position: relative;
+}
+.Resource-details-Section-data {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 @media all and (max-width: 575px)
