@@ -68,7 +68,22 @@ class BlogDetails extends Component {
 						<Disqus config={disqusConfig} />
 					</Container>
 				</section>
-
+				<section className="Resource-details-section-2">
+					<div className="container">
+						<div className="Resource-details-Section-data">
+							<div className="row justify-content-end">
+								<div className="col-xl-5 col-lg-6 col-md-10">
+									<div className="title text-left">
+										<h2>Lorem ipsum dolor sit </h2>
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+									</div>
+									<div className="text-center">
+										<button className=" uppercase btn-orange-border">Send My PDF!</button>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div></section>
 				
 				
       
