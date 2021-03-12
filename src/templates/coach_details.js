@@ -31,7 +31,7 @@ class CoachDetails extends Component {
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href="" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.title}} className="" />
 							</Breadcrumb>
-							<h2 className="heading-banner">{coach.edges[0].node.title}</h2>
+							<h2 className="heading-banner" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.title}} />
 						</div>
 					</Container>
 				</section>
