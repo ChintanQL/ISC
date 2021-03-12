@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import Main from '../components/Search/Main';
 import Menubannertwo from '../components/common/Menubannertwo'
+import sidebaradd1 from '../images/sidebar-add-1.png'
+import sidebaradd2 from '../images/sidebar-add-2.png'
 import LatestPost from '../components/common/LatestPost'
 class BlogDetails extends Component {
   render() {

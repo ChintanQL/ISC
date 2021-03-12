@@ -6,7 +6,8 @@ import Guidebanner from "../components/common/Guidebanner"
 import {Container,Breadcrumb} from 'react-bootstrap'
 import {Row,Col,Card,Image} from 'react-bootstrap'
 import { Link,graphql } from 'gatsby'
-
+import sidebaradd1 from '../images/sidebar-add-1.png'
+import sidebaradd2 from '../images/sidebar-add-2.png'
 import PropTypes from "prop-types"
 import { Disqus } from 'gatsby-plugin-disqus'
 class BlogDetails extends Component {
