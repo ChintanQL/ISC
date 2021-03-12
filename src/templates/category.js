@@ -17,6 +17,7 @@ import sidebaradd2 from '../images/sidebar-add-2.png'
 import { FaSearch } from "react-icons/fa";
 import Menubannertwo from '../components/common/Menubannertwo'
 import Main from '../components/Search/Main';
+import LatestPost from '../components/common/LatestPost'
 class category extends Component {
   render() {
     const blog = this.props.data.allWordpressPost
