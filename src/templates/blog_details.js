@@ -17,6 +17,8 @@ class BlogDetails extends Component {
 	const blog = this.props.data.allWordpressPost
 	const id = this.props.data.allWordpressPost.edges[0].node.wordpress_id
 	const title = this.props.data.allWordpressPost.edges[0].node.title
+	 	const category = this.props.data.allWordpressCategory
+   	const tags = this.props.data.allWordpressTag
 	let disqusConfig = {
 		url: "",
 		identifier: id,
@@ -190,6 +192,26 @@ export const pageQuery = graphql`
 			}
 		}
     }
+	allWordpressCategory {
+		edges {
+			node {
+				id
+				name
+				slug
+				count
+			}
+		}
+	}
+	allWordpressTag {
+		edges {
+			node {
+				id
+				name
+				count
+				slug
+			}
+		}
+	}
 	
 	
   }
