@@ -23,7 +23,8 @@ class category extends Component {
     const blog = this.props.data.allWordpressPost
    	const category = this.props.data.allWordpressCategory
     console.log(this.props);
-   
+  
+   	const tags = this.props.data.allWordpressTag
     return (
 		<Layout>
 			<section className="Banner-Section">
