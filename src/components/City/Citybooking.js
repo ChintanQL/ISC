@@ -13,7 +13,7 @@ class Citybooking extends React.Component{
     };
 	componentDidMount() {
 		var products = this.props.products;
-		var url = "https://ascstaging.temp312.kinsta.cloud/wp-json/newasc/v1/products";
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/products";
 		axios.post(url,{ Prod: products}).then(e => {
 			this.setState({pagedata: e.data.ResponseData})
 			this.setState({showInfo: 1})
@@ -34,10 +34,7 @@ class Citybooking extends React.Component{
 						<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
 							<Card className="book-card">
 								<div className="card-img">
-									<Image variant="top" src={prop.Image} fluid alt="card"/>
-									<div className="tag blue">
-										New
-									</div>
+									<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
 								</div>
 								<Card.Body>
 									<Card.Title as="h5">
