@@ -43,7 +43,7 @@ class HomeSection5 extends Component {
             <>
            <div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
 			<button className="closebtn" onClick={this.handleLoginClick} >x</button>
-			<Image src={this.state.PageData} alt=""/>
+			<Link to={"/book-a-camp"} ><Image src={this.state.PageData} alt=""/></Link>
 		   </div>
             </>
         );
