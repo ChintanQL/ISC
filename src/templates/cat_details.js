@@ -32,9 +32,9 @@ class Cat extends Component {
 							<Breadcrumb.Item className="">
 								<Link className="nav-link p-0" to="/book-a-camp">Sport</Link>
 							</Breadcrumb.Item>
-							<Breadcrumb.Item active href=""className="">{this.props.pageContext.name}</Breadcrumb.Item>
+							<Breadcrumb.Item active href="" dangerouslySetInnerHTML={{ __html: this.props.pageContext.name}} className="" />
 						</Breadcrumb>
-						<h2 className="heading-banner"></h2>
+						<h2 className="heading-banner" dangerouslySetInnerHTML={{ __html: this.props.pageContext.name}} ></h2>
 						</div>
 					</Container>
 				</section>	 
