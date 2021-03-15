@@ -24,9 +24,9 @@ class Camps extends Component {
 							<Breadcrumb.Item className="">
 								<Link className="nav-link p-0" to="/book-a-camp">Camp</Link>
 							</Breadcrumb.Item>
-							<Breadcrumb.Item active href=""className="">{page.edges[0].node.title}</Breadcrumb.Item>
+							<Breadcrumb.Item active href=""className="" dangerouslySetInnerHTML={{ __html: page.edges[0].node.title}} />
 						</Breadcrumb>
-						<h2 className="heading-banner">{page.edges[0].node.title}</h2>
+						<h2 className="heading-banner" dangerouslySetInnerHTML={{ __html: page.edges[0].node.title}} />
 						</div>
 					</Container>
 				</section>	
