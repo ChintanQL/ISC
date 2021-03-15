@@ -16,7 +16,7 @@ class HomeSection4 extends Component {
                         <Row className="justify-content-center">
                             <Col xl={9} lg={11}>
                                 <h2>ASC HALL OF FAME</h2>
-                                <p>Some of our past and current ASC heroes</p>
+                                <p>Current & previous talent at ASC camps</p>
                             </Col>
                         </Row>
                     </div>
