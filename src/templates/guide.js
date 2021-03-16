@@ -32,9 +32,14 @@ class demopage extends Component {
 						<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/resources">Resources</Link>
 								</Breadcrumb.Item>	
-                        <Breadcrumb.Item active href=""className="">Guide</Breadcrumb.Item>
+								<Breadcrumb.Item active className="">
+									<Link className="nav-link p-0" to="/guide">Guide</Link>
+								</Breadcrumb.Item>			
+							
+							
+						
                     </Breadcrumb>
-                    <h2 className="heading-banner">Guide</h2>
+                    <h2 className="heading-banner">Guides</h2>
                     </div>
                 </Container>
             </section>
