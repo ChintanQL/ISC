@@ -39,8 +39,8 @@ class CoachDetails extends Component {
                 <Container>
 						<div className="Hero-Details-Section-2-data">
 							<div className="title">
-								<h2 className="uppercase">SHORT BIOGRAPHY</h2>
-								<h3 className="uppercase font-22 font-bold color-3b">ABOUT Heroes</h3>
+								<h2 className="uppercase">ASC TALENT PROFILES</h2>
+								
 							</div>
 							<Row className="align-items-center justify-content-center mb-2">
 								
