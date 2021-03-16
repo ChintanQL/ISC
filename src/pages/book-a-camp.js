@@ -55,7 +55,7 @@ class Sport extends Component {
 							<Breadcrumb.Item className="">
 								<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
-							<Breadcrumb.Item active href=""className="">Sport</Breadcrumb.Item>
+							<Breadcrumb.Item active href=""className="">Book a camp</Breadcrumb.Item>
 						</Breadcrumb>
 						<h2 className="heading-banner">Sport</h2>
 						</div>
