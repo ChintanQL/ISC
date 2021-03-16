@@ -140,7 +140,21 @@ class Header extends Component {
 							return (
 								<>
 								{(prop.child_items ? (
-									<div>
+									<>
+									{(prop.title == 'Resources') ? (<div>
+										<li className="nav-item dropdown uppercase"><a className="nav-link dropdown-toggle" data-toggle="dropdown"
+												href="/resources" aria-expanded="false">{prop.title}</a>
+											<ul className="dropdown-menu common-menu">
+												{prop && prop.child_items && prop.child_items.map((child, i) => {
+													return (
+														<>
+														{(child.title == 'Home' ? (<li  key={i} ><Link className="dropdown-item"   to={"/"}>{child.title}</Link></li>) : (<li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("http://", '')}>{child.title}</Link></li>) )}
+														</>
+													)
+												})}
+											</ul>
+										</li>
+									</div>) : (<div>
 										<li className="nav-item dropdown uppercase"><a className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</a>
 											<ul className="dropdown-menu common-menu">
@@ -153,7 +167,11 @@ class Header extends Component {
 												})}
 											</ul>
 										</li>
-									</div>
+									</div>) }
+									</>
+									
+								
+									
 								
 								) : 
 								(
