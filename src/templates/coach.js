@@ -31,7 +31,7 @@ class coach extends Component {
                         <Breadcrumb.Item className="">
                             <Link className="nav-link p-0" to="/">Home</Link>
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item active href=""className="">Coach</Breadcrumb.Item>
+                        <Breadcrumb.Item active href=""className="">ASC Heroes</Breadcrumb.Item>
                     </Breadcrumb>
                     <h2 className="heading-banner">Meet the ASC Heroes</h2>
                     </div>
