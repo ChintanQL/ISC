@@ -69,7 +69,7 @@ class ProdDetails extends Component {
                                     </div>
                                     <h3 className="font-22 color-blue font-bold">${ prod.edges[0].node.price}</h3>
                                     <div className="mb-30">
-										<span className="font-medium font-16 color-3b text-left" dangerouslySetInnerHTML={{ __html: prod.edges[0].node.description.substring(0, 200)}} />
+										<span className="font-medium font-16 color-3b text-left" dangerouslySetInnerHTML={{ __html: prod.edges[0].node.short_description}} />
 									</div>
 									<ul className="mb-0 pl-0">
                                             <li>
@@ -135,6 +135,7 @@ export const pageQuery = graphql`
 			node {
 				id
 				description
+				short_description
 				wordpress_id
 				sale_price
 				price

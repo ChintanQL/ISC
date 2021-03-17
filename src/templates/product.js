@@ -33,7 +33,7 @@ class Shop extends Component {
 									{prod && prod.edges.map( prop => {
 									return (
 									<>
-									{(prop.wordpress_id != 146005) ? (
+									{(prop.status !== 'draft') ? (
 										<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
 											<Card className="book-card">
 												<Link to={"/product/"+prop.node.slug} className="card-img">
@@ -89,6 +89,7 @@ export const pageQuery = graphql`
 					id
 					wordpress_id
 					sale_price
+					status
 					price
 					name
 					images {
