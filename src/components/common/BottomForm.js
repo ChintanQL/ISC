@@ -16,6 +16,7 @@ class BottomForm extends Component {
 			name: ''
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
+		 this.Campred = this.Campred.bind(this);
 	}
 	
 	async getOptions(){
@@ -48,6 +49,7 @@ class BottomForm extends Component {
 		window.location = URL;
 		
 	}
+	
 	
 
 	handleChange(e){
