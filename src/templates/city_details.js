@@ -56,6 +56,7 @@ class City extends Component {
 						</div>
 					</Container>
 				</section>
+				<BottomForm/>
 				<section className="City-details-section-2">
 					<Container>
 						<div className="">
