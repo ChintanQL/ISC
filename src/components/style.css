@@ -130,7 +130,7 @@ header .navbar-light .navbar-nav
 .dropdown-menu.main-menu .inner-menu {
     display: inline-block;
     padding-right: 18px;
-	 width: 25%; 
+	vertical-align: top;
 }
 
 .dropdown-menu.main-menu .inner-menu ul{
