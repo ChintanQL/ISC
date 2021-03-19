@@ -38,6 +38,9 @@ class HomeSection4 extends Component {
 							
 						)}    
                     </Row>
+					<div className="text-center">
+                        <Link className=" uppercase btn-sm btn-orange-large" to="/the-asc-heroes">More ASC Talent</Link>
+                    </div>
                 </Container>
             </section>
             </>
