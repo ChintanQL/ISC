@@ -27,7 +27,7 @@ class CoachDetails extends Component {
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item className="">
-									<Link className="nav-link p-0" to="">ASC Heroes</Link>
+									<Link className="nav-link p-0" to="/the-asc-heroes">ASC Heroes</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href="" dangerouslySetInnerHTML={{ __html: coach.edges[0].node.title}} className="" />
 							</Breadcrumb>
