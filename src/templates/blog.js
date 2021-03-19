@@ -84,7 +84,7 @@ class demopage extends Component {
 																<Card.Body>
 																	<Card.Title dangerouslySetInnerHTML={{ __html: prop.node.title}} as="h5" />
 																	<span>In {prop.node.categories[0].name} by {prop.node.author.name} / {prop.node.date}</span>
-																	<Card.Text as="div" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
+																	<Card.Text as="div" dangerouslySetInnerHTML={{ __html: prop.node.acf.short_desc.substring(0, 500)+"...."}} />
 																	<Link className="btn btn-orange-border uppercase" to={"/blog/"+prop.node.slug}>Read More</Link>
 																</Card.Body>
 															</Card>		
@@ -201,6 +201,7 @@ export const pageQuery = graphql`
 				title
 				acf {
 					feature_image2
+					short_desc
 				}
 				date(formatString: "D MMMM, Y")
 				content
