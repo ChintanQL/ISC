@@ -127,7 +127,7 @@ class SHP extends Component {
 							</Col>
 						</Row>
 					</div>
-					<div className="Batman-Section-data">
+					<div className="Batman-Section-data mt-0">
 						<Row className="justify-content-center align-items-center">
 							<Col xl={4} lg={4} md={12} className="justify-content-center d-flex lg-mb-2">
 								<Image src={this.state.PageData.school_holiday_program.image} fluid alt="cardhover" className="batman" />
@@ -155,7 +155,7 @@ class SHP extends Component {
 							</Col>
 						</Row>
 					</div>
-					<div className="Batman-Section-data">
+					<div className="Batman-Section-data mt-0">
 						<Row className="justify-content-center align-items-center">
 							<Col xl={4} lg={4} md={12} className="justify-content-center d-flex lg-mb-2">
 								<Image src={this.state.PageData.upcoming.image} fluid alt="cardhover" className="batman" />
