@@ -17,6 +17,7 @@ import sidebaradd1 from '../images/sidebar-add-1.png'
 import cardhover from '../images/card-hover-img.png'
 import sidebaradd2 from '../images/sidebar-add-2.png'
 import { FaSearch } from "react-icons/fa";
+import { Helmet } from "react-helmet"
 class coach extends Component {
   render() {
     const blog = this.props.data.allWordpressWpAscHeroes
@@ -24,6 +25,9 @@ class coach extends Component {
    
     return (
 		<Layout>
+		<Helmet>
+				<title>ASC Heroes - Australian Sports Camps</title>
+			</Helmet>
 			<section className="Banner-Section">
                 <Container>
                     <div className="Banner-Section-data">

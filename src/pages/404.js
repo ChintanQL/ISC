@@ -3,9 +3,12 @@ import {Container,Breadcrumb,Row,Col} from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link } from 'gatsby'
-
+import { Helmet } from "react-helmet"
 const NotFoundPage = () => (
   <Layout>
+  <Helmet>
+				<title>404 Error - Australian Sports Camps</title>
+			</Helmet>
     <section className="Banner-Section">
 		<Container>
 			<div className="Banner-Section-data">

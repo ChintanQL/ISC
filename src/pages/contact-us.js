@@ -5,6 +5,7 @@ import ContactusSection2 from "../components/ContactUs/ContactusSection2"
 import ContactusSection3 from "../components/ContactUs/ContactusSection3"
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
+import { Helmet } from "react-helmet"
 class ConatctUs extends Component {
   
 
@@ -17,7 +18,9 @@ class ConatctUs extends Component {
       return (
           <Layout>
             <>
-			
+			<Helmet>
+				<title>Contact Us - Australian Sports Camps</title>
+			</Helmet>
 			
 			
               <ContactusSection1/>

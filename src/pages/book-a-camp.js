@@ -8,6 +8,7 @@ import Campbanner from "../components/common/Campbanner"
 import card1 from '../images/card1.png'
 import cardhover from '../images/card-hover-img.png'
 import axios from 'axios';
+import { Helmet } from "react-helmet"
 
 class Sport extends Component {
 	
@@ -43,6 +44,9 @@ class Sport extends Component {
 		return (
 			  <Layout>
 				<>
+				<Helmet>
+				<title>Book - Australian Sports Camps | Holiday Camps Australia</title>
+			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />

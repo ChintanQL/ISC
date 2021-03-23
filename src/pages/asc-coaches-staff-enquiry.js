@@ -8,6 +8,8 @@ import {Container,Breadcrumb} from 'react-bootstrap'
 import {Row,Col} from 'react-bootstrap'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
+import { Helmet } from "react-helmet"
+
 class ACSE extends Component {
 	
 	constructor(props) {
@@ -47,6 +49,9 @@ class ACSE extends Component {
 		return (
 			<Layout>
             <>
+			<Helmet>
+				<title>ASC Coaches and Staff Enquiry - Australian Sports Camps</title>
+			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />

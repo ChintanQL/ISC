@@ -12,7 +12,7 @@ import ModalSection from "../components/common/ModalSection"
 import IncludedSection from "../components/common/IncludedSection"
 import KidSection from "../components/common/KidSection"
 import LazyLoad from 'react-lazyload';
-
+import { Helmet } from "react-helmet"
 class HomePage extends Component {
 	
 	
@@ -22,6 +22,11 @@ class HomePage extends Component {
 		return (
 			<Layout>
             <>
+			<Helmet>
+				<title>Australian Sports Camps | Sports Camps Australia | Camps Australia</title>
+			</Helmet>
+			
+			
 			<HomeSection5/>
 				
 				<LazyLoad height={200} >

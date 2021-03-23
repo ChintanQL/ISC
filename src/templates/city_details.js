@@ -9,7 +9,7 @@ import PropTypes from "prop-types"
 import playbutton from '../images/play-button.png'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import Iframe from 'react-iframe'
-
+import { Helmet } from "react-helmet"
 class City extends Component {
 	
 	constructor(props) {
@@ -39,7 +39,11 @@ class City extends Component {
 		console.log(page_products);
 		return (
 			<Layout>
+			
 				<>
+				<Helmet>
+				<title>{page.edges[0].node.acf.page_title} - Australian Sports Camps</title>
+			</Helmet>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

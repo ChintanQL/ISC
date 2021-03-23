@@ -5,6 +5,7 @@ import BottomForm from "../components/common/BottomForm"
 import {Container,Row,Col,Image,Button,Breadcrumb} from 'react-bootstrap'
 import { Link } from 'gatsby'
 import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
 class ProdDetails extends Component {
 	constructor(props) {
         super(props);
@@ -31,6 +32,9 @@ class ProdDetails extends Component {
       return (
           <Layout>
             <>
+			<Helmet>
+				<title>{prod.edges[0].node.name} - Australian Sports Camps</title>
+			</Helmet>
               <section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

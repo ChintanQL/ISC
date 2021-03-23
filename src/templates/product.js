@@ -5,12 +5,16 @@ import BottomForm from "../components/common/BottomForm"
 import PropTypes from "prop-types"
 import { graphql,Link } from "gatsby"
 import {Container,Breadcrumb,Row,Col,Card,Image} from 'react-bootstrap'
+import { Helmet } from "react-helmet"
 class Shop extends Component {
   render() {
       const prod = this.props.data.allWcProducts
 	  return (
           <Layout>
             <>
+			<Helmet>
+				<title>Shop - Australian Sports Camps</title>
+			</Helmet>
 				<section className="Banner-Section">
 						<Container>
 							<div className="Banner-Section-data">

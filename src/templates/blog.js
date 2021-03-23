@@ -18,6 +18,7 @@ import { FaSearch } from "react-icons/fa";
 import Main from '../components/Search/Main';
 import Menubannertwo from '../components/common/Menubannertwo'
 import LatestPost from '../components/common/LatestPost'
+import { Helmet } from "react-helmet"
 class demopage extends Component {
   render() {
     const blog = this.props.data.allWordpressPost
@@ -26,6 +27,9 @@ class demopage extends Component {
    
     return (
 		<Layout>
+		<Helmet>
+				<title>Blog - Australian Sports Camps</title>
+			</Helmet>
 			 <section className="Banner-Section">
                 <Container>
                     <div className="Banner-Section-data">

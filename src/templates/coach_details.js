@@ -7,7 +7,7 @@ import {Row,Col,Card,Image,Form,ListGroup,Button} from 'react-bootstrap'
 import { Link,graphql } from 'gatsby'
 import card1 from '../images/blog-card-1.png'
 import PropTypes from "prop-types"
-
+import { Helmet } from "react-helmet"
 
 class CoachDetails extends Component {
 	
@@ -19,6 +19,9 @@ class CoachDetails extends Component {
       return (
           <Layout>
             <>
+			<Helmet>
+				<title>{coach.edges[0].node.title} - Australian Sports Camps</title>
+			</Helmet>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

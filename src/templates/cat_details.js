@@ -6,7 +6,7 @@ import BottomForm from "../components/common/BottomForm"
 import Campbooking from "../components/Camps/Campbooking"
 import { graphql,Link } from "gatsby"
 import PropTypes from "prop-types"
-
+import { Helmet } from "react-helmet"
 
 class Cat extends Component {
 	
@@ -22,6 +22,9 @@ class Cat extends Component {
 		return (
 			<Layout>
 				<>
+				<Helmet>
+				<title>Book - Australian Sports Camps | Holiday Camps Australia</title>
+			</Helmet>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

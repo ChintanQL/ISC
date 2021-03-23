@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import axios from 'axios';
+import { Helmet } from "react-helmet"
 
 class Membership extends Component {
 	constructor(props) {
@@ -89,6 +90,9 @@ class Membership extends Component {
       return (
 			<Layout>
 				<>
+				<Helmet>
+				<title>Membership Pass - Australian Sports Camps</title>
+			</Helmet>
 					<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 						<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 							<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />

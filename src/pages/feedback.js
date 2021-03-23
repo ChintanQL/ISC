@@ -8,6 +8,7 @@ import {Container,Breadcrumb} from 'react-bootstrap'
 import {Row,Col} from 'react-bootstrap'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
+import { Helmet } from "react-helmet"
 class PP extends Component {
 	
 	constructor(props) {
@@ -47,6 +48,9 @@ class PP extends Component {
 		return (
 			<Layout>
             <>
+			<Helmet>
+				<title>Feedback - Australian Sports Camps</title>
+			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />

@@ -18,6 +18,7 @@ import { FaSearch } from "react-icons/fa";
 import Menubannertwo from '../components/common/Menubannertwo'
 import Main from '../components/Search/Main';
 import LatestPost from '../components/common/LatestPost'
+import { Helmet } from "react-helmet"
 class category extends Component {
   render() {
     const blog = this.props.data.allWordpressPost
@@ -27,6 +28,9 @@ class category extends Component {
    	const tags = this.props.data.allWordpressTag
     return (
 		<Layout>
+		<Helmet>
+				<title>Blog Categories - Australian Sports Camps</title>
+			</Helmet>
 			<section className="Banner-Section">
                 <Container>
                     <div className="Banner-Section-data">

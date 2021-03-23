@@ -6,14 +6,18 @@ import BottomForm from "../components/common/BottomForm"
 import Campbooking from "../components/Camps/Campbooking"
 import { graphql,Link } from "gatsby"
 import PropTypes from "prop-types"
-
+import { Helmet } from "react-helmet"
 
 class Camps extends Component {
 	render() {
 		const page = this.props.data.allWordpressWpCpt151986;
 		return (
 			<Layout>
+			
 				<>
+				<Helmet>
+				<title>{page.edges[0].node.title} Kids Sports Camp - Australian Sports Camps</title>
+			</Helmet>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

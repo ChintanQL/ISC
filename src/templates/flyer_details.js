@@ -10,6 +10,7 @@ import sidebaradd1 from '../images/sidebar-add-1.png'
 import sidebaradd2 from '../images/sidebar-add-2.png'
 import PropTypes from "prop-types"
 import { Disqus } from 'gatsby-plugin-disqus'
+import { Helmet } from "react-helmet"
 class BlogDetails extends Component {
   render() {
   
@@ -26,6 +27,9 @@ class BlogDetails extends Component {
       return (
           <Layout>
             <>
+			<Helmet>
+				<title>{blog.edges[0].node.title} - Australian Sports Camps</title>
+			</Helmet>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">

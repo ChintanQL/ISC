@@ -8,6 +8,7 @@ import {Row,Col,Card,Image} from 'react-bootstrap'
 import { Link,graphql } from 'gatsby'
 import PropTypes from "prop-types"
 import { Disqus } from 'gatsby-plugin-disqus'
+import { Helmet } from "react-helmet"
 class BlogDetails extends Component {
   render() {
   
@@ -22,6 +23,9 @@ class BlogDetails extends Component {
       return (
           <Layout>
             <>
+			<Helmet>
+				<title>{blog.edges[0].node.title} - Australian Sports Camps</title>
+			</Helmet>
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">
