@@ -110,7 +110,9 @@ class City extends Component {
 							<div className="title-main mb-0">
 								<h2 className="text-white">{page.edges[0].node.acf.holiday_table.title}</h2>
 							</div>
-							<p className="font-15 font-medium text-center text-white" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.holiday_table.desc}} />
+							<p className="font-15 mb-5 font-medium text-center text-white" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.holiday_table.desc}} />
+							
+							<p className="font-15 font-medium text-center text-white" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.holiday_table.sub_title}} />
 								
 						</div>
 					
@@ -303,6 +305,7 @@ export const pageQuery = graphql`
 				  holiday_table {
 					desc
 					title
+					sub_title
 					table {
 					  dates
 					  length
