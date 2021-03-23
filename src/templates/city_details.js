@@ -141,8 +141,8 @@ class City extends Component {
 				</section>
 				
 				
-				<section className="Modal-section Modal-section2">
-					<Container className="d-none" >
+				<section className="Modal-section">
+					<Container  >
 						<div className="title">
 							<Row className="justify-content-center">
 								<Col xl={9} lg={11}>
