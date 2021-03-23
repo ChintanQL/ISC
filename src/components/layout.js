@@ -11,7 +11,7 @@ import {withPrefix} from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./common/Header"
 import '../components/all.scss'
-import favicon from '../images/cart.png';
+import favicon from '../images/favicon.ico';
 import $ from "jquery";
 
 const TemplateWrapper = ({ children }) => (
