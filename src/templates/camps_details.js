@@ -56,6 +56,7 @@ class Camps extends Component {
 						<Row className="">
 							<Campbooking category={page.edges[0].node.acf.product_category} />
 						</Row>
+						<p className="font-15 font-medium color-3b mb-0" >{page.edges[0].node.acf.disclaimer}</p>
                     </Container>
                 </section>
 				
@@ -95,6 +96,7 @@ export const pageQuery = graphql`
 				slug
 				acf {
 						  product_category
+						  disclaimer
 						}
 				author {
 					name
