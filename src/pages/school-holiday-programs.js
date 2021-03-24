@@ -7,6 +7,8 @@ import Iframe from 'react-iframe'
 import Layout from "../components/layout"
 import cardhover from '../images/card-hover-img.png'
 import { Helmet } from "react-helmet"
+import Footer from "../components/common/Footer"
+import BottomForm from "../components/common/BottomForm"
 
 class SHP extends Component {
     
@@ -273,6 +275,8 @@ class SHP extends Component {
             </section>
 			</>
 			) : ("")} 
+			 <BottomForm/>
+				  <Footer/>
             </>
 			 </Layout>
         );
