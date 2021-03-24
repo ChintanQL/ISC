@@ -24,6 +24,8 @@ class ContactusSection2 extends Component {
                                     <Image src={icon1} fluid alt="" className="" />
                                     <span className="font-regular mb-1">ABN: 34 156 517 412</span>
                                     <a href="tel:1300914368" className="font-bold mb-0">Freecall: 1300 914 368</a>
+									<span className="font-regular mb-1 mt-1">Talk directly with a human 9.00am to 4.30pm AEST </span>
+									
                                 </div>
                             </Col>
                             <Col xl={4} lg={4} md={12} className="lg-mb-4">
@@ -31,6 +33,7 @@ class ContactusSection2 extends Component {
                                     <Image src={icon2} fluid alt="" className=""/>
                                     <span className="font-regular mb-1">Post:</span>
                                     <a href="#" className="font-bold mb-0">PO Box 5332, Clayton VIC 3168</a>
+									<span className="font-regular mb-1 mt-1">&nbsp; </span>
                                 </div>
                             </Col>
                             <Col xl={4} lg={4} md={12}>
@@ -38,6 +41,7 @@ class ContactusSection2 extends Component {
                                     <Image src={icon3} fluid alt="" className=""/>
                                     <span className="font-regular mb-1">Email: </span>
                                     <a href="mailto:admin@australiansportscamps.com.au" className="font-bold mb-0">admin@australiansportscamps.com.au</a>
+									<span className="font-regular mb-1 mt-1"> We’ll reply within one hour 9.00am to 4.30pm AEST </span>
                                 </div>
                             </Col>
                         </Row>
