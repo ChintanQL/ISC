@@ -142,8 +142,8 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className="nav-item dropdown uppercase"><a className="nav-link dropdown-toggle" data-toggle="dropdown"
-												href="/resources" aria-expanded="false">{prop.title}</a>
+										<li className="nav-item dropdown uppercase"><LinkcactiveClassName="active" className="nav-link dropdown-toggle" data-toggle="dropdown"
+												to="/resources" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
@@ -155,8 +155,8 @@ class Header extends Component {
 											</ul>
 										</li>
 									</div>) : (<div>
-										<li className="nav-item dropdown uppercase"><a className="nav-link dropdown-toggle" data-toggle="dropdown"
-												href="javascript:;" aria-expanded="false">{prop.title}</a>
+										<li className="nav-item dropdown uppercase"><Link activeClassName="active" className="nav-link dropdown-toggle" data-toggle="dropdown"
+												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
@@ -178,9 +178,9 @@ class Header extends Component {
 									<>
 										{(prop.title == 'Camps' ? (
 											<div>
-												<li className="nav-item dropdown position-static"><a className="nav-link dropdown-toggle main-menu-toggle"
+												<li className="nav-item dropdown position-static"><Link activeClassName="active" className="nav-link dropdown-toggle main-menu-toggle"
 														href="" onClick={e => e.preventDefault()} id="navbarDropdown" role="button"
-														data-toggle="dropdown">Camps</a>
+														data-toggle="dropdown">Camps</Link>
 													<ul className="dropdown-menu main-menu">
 														<div className="w-100 d-flex main-box d-xl-block">
 															<div className="first-box">
@@ -215,7 +215,7 @@ class Header extends Component {
 											<>{(prop.title == 'Shop' ? (
 												<div>
 													<li className="nav-item">
-														<Link className="nav-link" to={"/product"}>{prop.title}</Link>
+														<Link className="nav-link" activeClassName="active" to={"/product"}>{prop.title}</Link>
 													</li>
 												</div>
 											
@@ -225,13 +225,13 @@ class Header extends Component {
 													(
 														<div>
 															<li className="nav-item">
-															<Link className="nav-link" to={"/"}>{prop.title}</Link>
+															<Link className="nav-link" activeClassName="active" to={"/"}>{prop.title}</Link>
 															</li>
 														</div>
 													) : (
 														<div>
 															<li className="nav-item">
-																<Link className="nav-link" to={"/"+prop.title.toLowerCase().replace(/\s+/g, '-')}>{prop.title}</Link>
+																<Link className="nav-link" activeClassName="active" to={"/"+prop.title.toLowerCase().replace(/\s+/g, '-')}>{prop.title}</Link>
 															</li>
 														</div>
 													))}
