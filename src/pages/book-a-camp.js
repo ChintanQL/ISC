@@ -85,7 +85,7 @@ class Sport extends Component {
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 										{cmp.map((camp) => 
 											 <div className="listed-card mb-0 card">
-												<Link to={"/sport/"+camp.name.replace(/\s+/g, '-').toLowerCase()} className="card-img">
+												<Link to={camp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
 													</div>
