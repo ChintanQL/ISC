@@ -31,11 +31,11 @@ class Header extends Component {
 			}
         });
 		
-		if(window.location.href.indexOf("camps") > -1){
+		if(window.location.href.indexOf("/camps/") > -1){
 			var element = document.getElementById("navbarDropdown");
 			element.classList.add("active");
         }
-		if(window.location.href.indexOf("city") > -1){
+		if(window.location.href.indexOf("/city/") > -1){
             var element = document.getElementById("navbarDropdown");
 			element.classList.add("active");
         }
