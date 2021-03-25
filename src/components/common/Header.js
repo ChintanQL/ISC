@@ -40,6 +40,48 @@ class Header extends Component {
 			element.classList.add("active");
         }
 		
+		if(window.location.href.indexOf("/blog") > -1){
+            var element = document.getElementById("navResources");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/videos") > -1){
+            var element = document.getElementById("navResources");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/guide") > -1){
+            var element = document.getElementById("navResources");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/flyer") > -1){
+            var element = document.getElementById("navResources");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/category/") > -1){
+            var element = document.getElementById("navResources");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/tags") > -1){
+            var element = document.getElementById("navResources");
+			element.classList.add("active");
+        }
+		
+		if(window.location.href.indexOf("/about-us") > -1){
+            var element = document.getElementById("navCont");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/faq") > -1){
+            var element = document.getElementById("navCont");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/how-to-book") > -1){
+            var element = document.getElementById("navCont");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/contact-us") > -1){
+            var element = document.getElementById("navCont");
+			element.classList.add("active");
+        }
+	
       } 
 	
 	
@@ -150,7 +192,7 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className="nav-item dropdown uppercase"><Link activeClassName="active" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase"><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												to="/resources" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
@@ -163,7 +205,7 @@ class Header extends Component {
 											</ul>
 										</li>
 									</div>) : (<div>
-										<li className="nav-item dropdown uppercase"><Link activeClassName="active" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase"><Link activeClassName="active" id="navCont" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
