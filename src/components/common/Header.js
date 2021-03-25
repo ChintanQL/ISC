@@ -142,7 +142,7 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className="nav-item dropdown uppercase"><LinkcactiveClassName="active" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase"><Link activeClassName="active" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												to="/resources" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
@@ -262,7 +262,7 @@ class Header extends Component {
                             
                             <div>
                                 <li className="nav-item">
-                                    <Link className="nav-link uppercase btn-sm btn-orange" to="/book-a-camp">book a camp</Link>
+                                    <Link activeClassName="active" className="nav-link uppercase btn-sm btn-orange" to="/book-a-camp">book a camp</Link>
                                 </li>
                             </div>
 
