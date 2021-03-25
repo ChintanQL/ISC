@@ -25,12 +25,20 @@ class Header extends Component {
     
       componentDidMount() {
         document.addEventListener('scroll', () => {
-          const isTop = window.scrollY < 200;
-          if (isTop !== this.state.isTop) {
-              this.setState({ isTop })
-          }
+			const isTop = window.scrollY < 200;
+			if (isTop !== this.state.isTop) {
+				this.setState({ isTop })
+			}
         });
 		
+		if(window.location.href.indexOf("camps") > -1){
+			var element = document.getElementById("navbarDropdown");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("city") > -1){
+            var element = document.getElementById("navbarDropdown");
+			element.classList.add("active");
+        }
 		
       } 
 	
