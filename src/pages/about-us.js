@@ -81,7 +81,7 @@ class About extends Component {
 						</div>
 						<div className="Blog-Section-2-data">
 							<Row>
-								<iframe height="700" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-about-us/" title="description" />
+								<iframe height="550" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-about-us/" title="description" />
 							</Row>
 						</div>
 					</Container>
