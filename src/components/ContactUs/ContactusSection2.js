@@ -28,6 +28,14 @@ class ContactusSection2 extends Component {
 									
                                 </div>
                             </Col>
+							<Col xl={4} lg={4} md={12}>
+                                <div className="steps-data justify-content-center d-block text-center">
+                                    <Image src={icon3} fluid alt="" className=""/>
+                                    <span className="font-regular mb-1">Email: </span>
+                                    <a href="mailto:admin@australiansportscamps.com.au" className="font-bold mb-0">admin@australiansportscamps.com.au</a>
+									<span className="font-regular mb-1 mt-1"> We’ll reply within one hour 9.00am to 4.30pm AEST </span>
+                                </div>
+                            </Col>
                             <Col xl={4} lg={4} md={12} className="lg-mb-4">
                                 <div className="steps-data justify-content-center d-block text-center">
                                     <Image src={icon2} fluid alt="" className=""/>
@@ -36,14 +44,7 @@ class ContactusSection2 extends Component {
 									<span className="font-regular mb-1 mt-1">&nbsp; </span>
                                 </div>
                             </Col>
-                            <Col xl={4} lg={4} md={12}>
-                                <div className="steps-data justify-content-center d-block text-center">
-                                    <Image src={icon3} fluid alt="" className=""/>
-                                    <span className="font-regular mb-1">Email: </span>
-                                    <a href="mailto:admin@australiansportscamps.com.au" className="font-bold mb-0">admin@australiansportscamps.com.au</a>
-									<span className="font-regular mb-1 mt-1"> We’ll reply within one hour 9.00am to 4.30pm AEST </span>
-                                </div>
-                            </Col>
+                            
                         </Row>
                     </div>
                 </Container>
