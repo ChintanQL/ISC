@@ -239,13 +239,13 @@ class City extends Component {
 									<h2 className="uppercase">{page.edges[0].node.acf.testimonial.title_2}</h2>
 								</div>
 								<div className="text-center">
-									<Link className=" uppercase btn-sm btn-orange-large" to="/book-a-camp">BOOK A CAMP TODAY</Link>
+									<Link id="flyer_form" className=" uppercase btn-sm btn-orange-large" to="/book-a-camp">BOOK A CAMP TODAY</Link>
 								</div>
 							</Container>
 						</div>
 					</section>	
 				) : ("")}
-				<div className="flyer_formbx" id="flyer_form">
+				<div className="flyer_formbx" >
 				<div className="container">
 				<iframe height="700" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-flyer/" title="description" /> 
 				</div>
