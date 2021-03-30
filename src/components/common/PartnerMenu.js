@@ -24,7 +24,7 @@ class PartnerMenu extends Component {
             <div className="inner-menu">
 																<div className="mb-3 menu-heading">
 																	
-																	<a className="partnerprog_menu" href="javascript:;">Partner Programs</a>
+																	<a className="partnerprog_menu" href="/partner-program">Partner Programs</a>
 																</div>
 																<ListGroup as="ul" className="no-br">
 			<StaticQuery

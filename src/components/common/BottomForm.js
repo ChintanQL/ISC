@@ -85,7 +85,7 @@ class BottomForm extends Component {
                         <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2">
                            <SearchLocationInput/>
                         </Col>
-                        <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2">
+                        <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2 seccont">
                            
 							<ReactMultiSelectCheckboxes placeholder="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
                         </Col>
