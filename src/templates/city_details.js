@@ -36,7 +36,7 @@ class City extends Component {
 		const page = this.props.data.allWordpressWpCpt152600;
 		const page_products = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.products.join();
 		
-		console.log(page_products);
+		
 		return (
 			<Layout>
 			

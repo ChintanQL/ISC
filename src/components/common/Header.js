@@ -39,6 +39,18 @@ class Header extends Component {
             var element = document.getElementById("navbarDropdown");
 			element.classList.add("active");
         }
+		if(window.location.href.indexOf("/book-a-camp/") > -1){
+            var element = document.getElementById("navbarDropdown");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/school-holiday-programs/") > -1){
+            var element = document.getElementById("navbarDropdown");
+			element.classList.add("active");
+        }
+		if(window.location.href.indexOf("/partner-program/") > -1){
+            var element = document.getElementById("navbarDropdown");
+			element.classList.add("active");
+        }
 		
 		if(window.location.href.indexOf("/blog") > -1){
             var element = document.getElementById("navResources");

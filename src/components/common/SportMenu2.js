@@ -52,8 +52,7 @@ class SportMenu2 extends Component {
 					data.wordpressMenusMenusItems.items &&
 					data.wordpressMenusMenusItems.items.map(
 						(innerprop,i) => {
-							console.log(i);	
-							console.log(data.wordpressMenusMenusItems.items.length/2);	
+							
 							return (
 								<>
 								{((data.wordpressMenusMenusItems.items.length/2) <= i ) ? (<ListGroup.Item as="li">
