@@ -16,6 +16,25 @@ input:-ms-input-placeholder, select::-ms-input-placeholder, textarea:-ms-input-p
 	padding:0px !important;
 }
 
+section.Home-section-1.Home_section_new .home-form { padding:20px 20px; }
+section.Home-section-1.Home_section_new .home-form .form-control { border:1px solid #fff !important; }
+section.Home-section-1.Home_section_new .second-control button { height: 50px; color: #495057; padding: 0 16px; font-size: 1rem;}
+section.Home-section-1.Home_section_new .home-form > div:last-child { padding-bottom: 0 !important;}
+section.Home-section-4 { padding:35px 0 20px!important}
+section.Home-section-1.Home_section_new .home-form .second-control > div > div { z-index: 99; margin-top: 2px important; width:100%; }
+section.Kid-section .Kid-section-second { padding:60px 0; }
+section.Home-section-4 { padding:35px 0 10px!important }
+ .css-yk16xz-control { border-radius: 0; border-color: #ffff; height: 42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
+section.Home-section-1.Home_section_new .home-form { width: 87%; }
+section.Home-section-1 .home-form .second-control { width:100%; }
+
+section.Kid-section .kids-data:after { content: ""; width: 60px;  height: 62px; background:url('../image/comma_right.png') no-repeat; background-size: 100%; position: absolute; bottom: 0; right: 0; transform: rotate(-179deg); }
+section.Home-section-4 { padding:35px 0 25px !important}
+.camptestimonialsec_logo { position: absolute; top: 100%;  right: 0; }
+a.nav-link.uppercase.btn-sm.btn-orange { text-align: center  }
+a.nav-link.uppercase.btn-sm.btn-orange.active {  color: #fff !important;} 
+
+
 .hwcmp-viewbtn {
     margin: 35px 0;
     display: inline-block;
@@ -1751,6 +1770,41 @@ section.Home-section-1 .slick-dots
 {
   display: none !important;
 }
+
+@media(max-width:575px) { 
+	.kid-image>div img{ width: auto; }
+}
+
+@media(max-width:575px) { 
+	.video-modal .modal-body .close { right: 0; }
+	.kid-image>div img { width: auto; }
+	section.Kid-section .kids-data:before{ left: 10px }
+}
+
+@media(max-width: 475px){
+	.slick-next { right: 0 }
+	.slick-prev { left: 0;}
+}
+ @media(max-width:767px){
+	 	.alignleft, .alignright { width:100% !important; height:auto }
+	 }
+	 @media(max-width:1024px){
+  		#preloader>.icon { height: 35px; width: 35px; }
+  	}
+  	@media(max-width:767px){
+  		#preloader>.icon { height: 25px; width: 25px; }
+  	}
+*menu*/
+.dropdown-menu.main-menu .inner-menu { width:20%}
+
+.line-break-2, .line-break-3 { color:#212529 }
+
+.flyer_formbx { background: #FAFAFA;}
+
+.flyer_formbx iframe body {background :transparent}
+
+
+
 @media (max-width: 1199px) and (min-width: 991px) {
   section.Home-section-1 .slider-inner-data{
     top: 50px !important;}
@@ -1759,7 +1813,7 @@ section.Home-section-1 .slick-dots
   section.Home-section-1 .slider-inner-data{
     position: unset !important;
     background: url('../images/slider-1.png');
-    background-color: #2A74B6;
+  
     padding: 40px 0px !important;
     background-size: cover;
   }
