@@ -1810,7 +1810,19 @@ a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn {
 header .social-header .second-li ul.htmob-displaybx.htmob-displaybx { display: inline-block !important; width: 100%; text-align: center; }
     header .social-header .second-li ul.htmob-displaybx.htmob-displaybx li { display: inline-block !important }
     header .social-header .second-li ul.htmob-displaybx.htmob-displaybx li a{ display: inline-block !important }
-
+.seccont button {
+    width: 100%!important;
+    box-shadow: none;
+    height: 42px;
+    border-radius: 0;
+    font-size: 15px;
+    color: #707070!important;
+    font-weight: 500;
+}
+.Sport-details-section-2 ul.x-ul-icons.mvn {
+    display: table;
+    width: auto;
+}
 
 @media (max-width: 1199px) and (min-width: 991px) {
   section.Home-section-1 .slider-inner-data{
