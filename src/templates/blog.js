@@ -162,7 +162,7 @@ class demopage extends Component {
 										</div>
 										{/*  */}
 										<div className="mb-4 text-center">
-											<Link to="">
+											<Link to="/resources">
 												<Image src={sidebaradd2} fluid />
 											</Link>
 										</div>

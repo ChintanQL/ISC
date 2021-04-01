@@ -58,7 +58,7 @@ class Partner extends Component {
 							<Breadcrumb.Item className="">
 								<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
-							<Breadcrumb.Item active href="" className="">Sport</Breadcrumb.Item>
+							<Breadcrumb.Item active href="" className="">Camps</Breadcrumb.Item>
 						</Breadcrumb>
 						<h2 className="heading-banner">Partner Programs</h2>
 						</div>
