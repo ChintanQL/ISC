@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container,Row,Col,Button,Image } from 'react-bootstrap';
 import { Link,StaticQuery, graphql } from 'gatsby'
-
+import lifes from '../../images/lifes-better-with-sport.png'
 class KidSection extends Component {
     render() {
         return (
@@ -18,7 +18,7 @@ class KidSection extends Component {
                             </Col>
                             <Col xl={6} lg={6} className="text-center kids-data">
                                 <p className="mb-30 font-22 font-semibold text-white" dangerouslySetInnerHTML={{ __html: this.props.data.desc}} />
-                              
+								<div class="camptestimonialsec_logo"><img src={lifes} alt=""></div>
                             </Col>
                         </Row>
                     </Container>
