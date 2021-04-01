@@ -126,7 +126,7 @@ class Tags extends Component {
 										{/*  */}
 										<div className="mb-4">
 											<h3 className="font-20 mb-2 font-medium">About Blog</h3>
-											<p className="font-16 font-medium color-70">Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, pulvinar nunc sapien ornare nisl.</p>
+											<p className="font-16 font-medium color-70">Discover Ideas, trends & insights and get access to handy resources.</p>
 										</div>
 										{/*  */}
 										<div className="mb-4 text-center">

@@ -38,6 +38,12 @@ section.Kid-section .kids-data:after { content: ""; width: 60px;  height: 62px; 
 section.Home-section-4 { padding:35px 0 25px !important}
 a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 
+@media(max-width:767px){
+section.Camp-details-section-5 { padding: 20px 0; }
+section { padding: 20px 0; } 
+}
+
+
  @media(max-width:575px) { 
 	.kid-image>div img{ width: auto; }
 }
