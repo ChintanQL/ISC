@@ -1805,6 +1805,9 @@ section.Home-section-1 .slick-dots
   	@media(max-width:767px){
   		#preloader>.icon { height: 25px; width: 25px; }
   	}
+.camptestimonialsec_logo { position: absolute; top: 100%;  right: 0; }	
+a.nav-link.uppercase.btn-sm.btn-orange { text-align: center  }
+a.nav-link.uppercase.btn-sm.btn-orange.active {  color: #fff !important;}	
 /*menu*/
 .dropdown-menu.main-menu .inner-menu { width:20%}
 

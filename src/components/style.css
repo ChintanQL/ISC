@@ -23,6 +23,9 @@ a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn {
     padding: 0 16px !important;
 }
 
+a.nav-link.uppercase.btn-sm.btn-orange { text-align: center  }
+a.nav-link.uppercase.btn-sm.btn-orange.active {  color: #fff !important;}
+
 section.Home-section-1.Home_section_new .home-form { padding:20px 20px; }
 section.Home-section-1.Home_section_new .home-form .form-control { border:1px solid #fff !important; }
 section.Home-section-1.Home_section_new .second-control button { height: 50px; color: #495057; padding: 0 16px; font-size: 1rem;}
@@ -42,7 +45,7 @@ a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 section.Camp-details-section-5 { padding: 20px 0; }
 section { padding: 20px 0; } 
 }
-
+.camptestimonialsec_logo { position: absolute; top: 100%;  right: 0; }
 
  @media(max-width:575px) { 
 	.kid-image>div img{ width: auto; }
