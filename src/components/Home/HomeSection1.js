@@ -78,7 +78,8 @@ class HomeSection1 extends Component {
 		$.each(multu, function (i,val) {
 			str +=val.value+",";
 		});
-		
+		console.log("loc"+loc);
+		console.log("str"+str);
 		if(loc == '' || str == ''){
 			alert("NULL");
 			return false;

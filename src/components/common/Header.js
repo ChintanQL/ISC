@@ -158,6 +158,7 @@ class Header extends Component {
                         <span>OR</span>
                         <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
                         </ListGroup.Item>
+						
                     </ListGroup>
                 </div>
             </div>
