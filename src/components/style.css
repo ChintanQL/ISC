@@ -41,6 +41,23 @@ section.Kid-section .kids-data:after { content: ""; width: 60px;  height: 62px; 
 section.Home-section-4 { padding:35px 0 25px !important}
 a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 
+
+@media(max-width:1024px){
+	.camptestimonialsec_logo { right: 40px; width: 120px; overflow: hidden; }
+	.Home_section_new .pos-absolute-form { right: 5%; transform: translateX(-5%); }
+}
+@media(max-width:991px){
+.camptestimonialsec_logo {  position: relative; top: 0; right: 0; width: 120px; overflow: hidden; display: table; margin: 0 auto;}
+}
+
+
+@media(max-width:575px){
+
+ul.pl-0.text-left { padding-left: 16px !important;}
+	}
+
+
+
 @media(max-width:767px){
 section.Camp-details-section-5 { padding: 20px 0; }
 section { padding: 20px 0; } 
