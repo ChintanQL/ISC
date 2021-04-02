@@ -78,8 +78,16 @@ class HomeSection1 extends Component {
 		$.each(multu, function (i,val) {
 			str +=val.value+",";
 		});
+		
+		if(loc == '' || str == ''){
+			alert("NULL");
+			return false;
+		}
+		
+		
 		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
-		window.location = URL;
+		//window.location = URL;
+		window.location.replace(URL);
 		
 	}
 
