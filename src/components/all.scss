@@ -30,9 +30,9 @@ section.Kid-section .Kid-section-second { padding:60px 0; }
 section.Home-section-4 { padding:35px 0 10px!important }
  .css-yk16xz-control { border-radius: 0; border-color: #ffff; height: 42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
 section.Home-section-1.Home_section_new .home-form { width: 100%; }
-section.Home-section-1 .home-form .second-control { width:100%; }
+section.Home-section-1 .home-form .second-control { width:100% !important; }
 
-section.Kid-section .kids-data:after { content: ""; width: 60px;  height: 62px; background:url('../images/comma_right.png') no-repeat; background-size: 100%; position: absolute; bottom: 0; right: 0; transform: rotate(-179deg); }
+section.Kid-section .kids-data:after { content: ""; width: 60px;  height: 62px; background:url('../images/comma_right.png') no-repeat; background-size: 100%; position: absolute; bottom: 0; right: 0; }
 section.Home-section-4 { padding:35px 0 25px !important}
 .camptestimonialsec_logo { position: absolute; top: 100%;  right: 0; }
 a.nav-link.uppercase.btn-sm.btn-orange { text-align: center  }
