@@ -23,7 +23,7 @@ class Camps extends Component {
 		
 		
 		const value = queryString.parse(this.props.location.search);
-		const ccode = query.get('coupon-code');
+		const ccode = value.get('coupon-code');
 		if(ccode != null){
 			if(ccode != ""){
 				this.setState({query_code:"?coupon-code="+ccode})

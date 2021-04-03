@@ -23,6 +23,7 @@ class HomeSection5 extends Component {
 	state = {
 		PageData: [],
 		Isbanner: 0,
+		coupon_code: "",
 		showInfo: 0
 	}
 	
@@ -33,6 +34,7 @@ class HomeSection5 extends Component {
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData[0].Image})
 			this.setState({Isbanner: res.data.ResponseData[0].IsBanner})
+			this.setState({coupon_code: res.data.ResponseData[0].coupon_code})
 			this.setState({showInfo: 1})
 		})
 	}
@@ -43,7 +45,7 @@ class HomeSection5 extends Component {
             <>
            <div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
 			<button className="closebtn" onClick={this.handleLoginClick} >x</button>
-			<Link to={"/book-a-camp"} ><Image src={this.state.PageData} alt=""/></Link>
+			<Link to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
 		   </div>
             </>
         );
