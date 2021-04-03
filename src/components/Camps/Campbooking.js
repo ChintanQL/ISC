@@ -2,7 +2,7 @@ import React from "react"
 import axios from "axios"
 import {Container,Image, Row,Col,Card} from 'react-bootstrap'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import queryString from 'query-string'
+
 class Campbooking extends React.Component{
 	constructor(props) {
 		super(props);
@@ -16,31 +16,14 @@ class Campbooking extends React.Component{
     };
 	componentDidMount() {
 		var cat = this.props.category;
+		var code = this.props.code;
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData})
 			this.setState({showInfo: 1})
 		})
 		
-		const value = queryString.parse(this.props.location.search);
-		const ccode = query.get('coupon-code');
-		if(ccode != null){
-			if(ccode != ""){
-				this.setState({query_code:"?coupon-code="+ccode})
-				this.setState({code:ccode})
-				this.setState({shown: "d-block"});
-			}
-			else{
-				this.setState({query_code:""})
-				this.setState({code:""})
-				this.setState({shown: "d-none"});
-			}
-		}
-		else{
-				this.setState({code:""})
-				this.setState({query_code:""})
-				this.setState({shown: "d-none"});
-		}
+		
 		
 		
     }
@@ -75,7 +58,7 @@ class Campbooking extends React.Component{
 									<ul>
 										<li className="main-price">${prop.price}</li>
 									</ul>
-									<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug+'/'+query_code}>More info / Book Now</Link>
+									<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug+'/'+code}>More info / Book Now</Link>
 								</Card.Body>
 							</Card>
 						</Col>

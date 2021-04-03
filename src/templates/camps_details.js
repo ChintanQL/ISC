@@ -7,8 +7,45 @@ import Campbooking from "../components/Camps/Campbooking"
 import { graphql,Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-
+import queryString from 'query-string'
 class Camps extends Component {
+	
+	constructor(props) {
+		super(props);
+	}
+	state = {
+        
+		query_code:"",
+		code:"",
+		shown: "d-none"
+    };
+	componentDidMount() {
+		
+		
+		const value = queryString.parse(this.props.location.search);
+		const ccode = query.get('coupon-code');
+		if(ccode != null){
+			if(ccode != ""){
+				this.setState({query_code:"?coupon-code="+ccode})
+				this.setState({code:ccode})
+				this.setState({shown: "d-block"});
+			}
+			else{
+				this.setState({query_code:""})
+				this.setState({code:""})
+				this.setState({shown: "d-none"});
+			}
+		}
+		else{
+				this.setState({code:""})
+				this.setState({query_code:""})
+				this.setState({shown: "d-none"});
+		}
+		
+		
+    }
+	
+	
 	render() {
 		const page = this.props.data.allWordpressWpCpt151986;
 		return (
@@ -54,7 +91,7 @@ class Camps extends Component {
 							</Col>
 						</Row>
 						<Row className="">
-							<Campbooking category={page.edges[0].node.acf.product_category} />
+							<Campbooking category={page.edges[0].node.acf.product_category} code={this.state.code}  />
 						</Row>
 						<p className="font-15 font-medium color-3b mb-0" >{page.edges[0].node.acf.disclaimer}</p>
                     </Container>
