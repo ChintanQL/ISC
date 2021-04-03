@@ -123,14 +123,14 @@ class Sport extends Component {
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 										{cmp.map((camp) => 
 											 <div className="listed-card mb-0 card">
-												<Link to={camp.slug+'/'+query_code} className="card-img">
+												<Link to={camp.slug+'/'+this.state.query_code} className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
 													</div>
 													<Image variant="top" src={camp.image} fluid alt="card"/>
 												</Link>
 												<Card.Body>
-													<Link to={camp.slug+'/'+query_code}>{camp.name}</Link>
+													<Link to={camp.slug+'/'+this.state.query_code}>{camp.name}</Link>
 												</Card.Body>
 											</div>
 										)}
