@@ -13,7 +13,7 @@ import PartnerMenu from './PartnerMenu'
 import "../../components/style.css"
 import axios from 'axios';
 import Cookies from 'universal-cookie';
-
+import queryString from 'query-string'
 
 
 class Header extends Component {
@@ -24,7 +24,9 @@ class Header extends Component {
         isTop: true,
 		cart: '',
 		show:false,
-		query_code:''
+		query_code:"",
+		code:"",
+		shown: "d-none"
       };
     
       componentDidMount() {
@@ -336,7 +338,7 @@ class Header extends Component {
 
                             <div>
                                 <li className="nav-item pr-0">
-                                    <Link className="nav-link uppercase " to="https://shop.australiansportscamps.com.au/cart/"+{this.state.query_code}><Image src={cart} className="img-fluid" alt="" width=""/>
+                                    <Link className="nav-link uppercase " to="https://shop.australiansportscamps.com.au/cart/"><Image src={cart} className="img-fluid" alt="" width=""/>
 									<span className="badge badge-blue">{cookies.get('CART')}</span>
 									</Link>
                                 </li>
