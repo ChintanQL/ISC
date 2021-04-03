@@ -9,6 +9,8 @@ import card1 from '../images/card1.png'
 import cardhover from '../images/card-hover-img.png'
 import axios from 'axios';
 import { Helmet } from "react-helmet"
+import queryString from 'query-string'
+import Cookies from 'universal-cookie';
 
 class Sport extends Component {
 	
@@ -16,7 +18,10 @@ class Sport extends Component {
 		PageData: [],
 		PageDataOther: [],
 		result: 0,
-		showInfo: 0
+		showInfo: 0,
+		query_code:"",
+		code:"",
+		shown: "d-none"
 	}
 	
 	componentDidMount() {
@@ -37,7 +42,30 @@ class Sport extends Component {
 			this.setState({PageDataOther: res.data.ResponseData.camps_data[0]})
 			this.setState({result: 1})
 			this.setState({showInfo: 1})
+			
 		})
+		
+		const value = queryString.parse(this.props.location.search);
+		const ccode = query.get('coupon-code');
+		if(ccode != null){
+			if(ccode != ""){
+				this.setState({query_code:"?coupon-code="+ccode})
+				this.setState({code:ccode})
+				this.setState({shown: "d-block"});
+			}
+			else{
+				this.setState({query_code:""})
+				this.setState({code:""})
+				this.setState({shown: "d-none"});
+			}
+		}
+		else{
+				this.setState({code:""})
+				this.setState({query_code:""})
+				this.setState({shown: "d-none"});
+		}
+		
+		
 	}
 	
 	render() {
@@ -77,6 +105,16 @@ class Sport extends Component {
 					</Container>
 				</section>
 				<section className="Sport-section-3">
+					{(this.state.code !== "") ? (<>
+					<Container>
+						<Row>
+							<Col xl={12} lg={12} md={12} sm={12} xs={12} >
+								<div className="" ></div>
+								<p  className={"text-success"+this.state.shown} >Coupon code {'"'+this.state.code+'"'} applied successfully. </p>
+							</Col>
+						</Row>
+					</Container>
+					</>) : ("")}
 					<Container>
 						<Row>
 							{(this.state.result === 1) ? (
@@ -85,14 +123,14 @@ class Sport extends Component {
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 										{cmp.map((camp) => 
 											 <div className="listed-card mb-0 card">
-												<Link to={camp.slug} className="card-img">
+												<Link to={camp.slug+'/'+query_code} className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
 													</div>
 													<Image variant="top" src={camp.image} fluid alt="card"/>
 												</Link>
 												<Card.Body>
-													<Link to={camp.slug}>{camp.name}</Link>
+													<Link to={camp.slug+'/'+query_code}>{camp.name}</Link>
 												</Card.Body>
 											</div>
 										)}
