@@ -22,8 +22,8 @@ class Camps extends Component {
 	componentDidMount() {
 		
 		
-		const value = queryString.parse(this.props.location.search);
-		const ccode = value.get('coupon-code');
+		const query = new URLSearchParams(this.props.location.search);
+		const ccode = query.get('coupon-code');
 		if(ccode != null){
 			if(ccode != ""){
 				this.setState({query_code:"?coupon-code="+ccode})
