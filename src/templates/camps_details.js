@@ -91,7 +91,7 @@ class Camps extends Component {
 							</Col>
 						</Row>
 						<Row className="">
-							<Campbooking category={page.edges[0].node.acf.product_category} code={this.state.code}  />
+							<Campbooking category={page.edges[0].node.acf.product_category}   />
 						</Row>
 						<p className="font-15 font-medium color-3b mb-0" >{page.edges[0].node.acf.disclaimer}</p>
                     </Container>

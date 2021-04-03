@@ -16,8 +16,7 @@ class Campbooking extends React.Component{
     };
 	componentDidMount() {
 		var cat = this.props.category;
-		var code = this.props.code;
-		this.setState({code: code});
+		
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData})
@@ -59,7 +58,7 @@ class Campbooking extends React.Component{
 									<ul>
 										<li className="main-price">${prop.price}</li>
 									</ul>
-									<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug+'/'+this.state.code}>More info / Book Now</Link>
+									<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug}>More info / Book Now</Link>
 								</Card.Body>
 							</Card>
 						</Col>

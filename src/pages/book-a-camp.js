@@ -52,6 +52,8 @@ class Sport extends Component {
 				this.setState({query_code:"?coupon-code="+ccode})
 				this.setState({code:ccode})
 				this.setState({shown: "d-block"});
+				const cookies = new Cookies();
+				cookies.set("code", ccode,{ domain: '.australiansportscamps.com.au'});
 			}
 			else{
 				this.setState({query_code:""})
@@ -123,14 +125,14 @@ class Sport extends Component {
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 										{cmp.map((camp) => 
 											 <div className="listed-card mb-0 card">
-												<Link to={camp.slug+'/'+this.state.query_code} className="card-img">
+												<Link to={camp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={cardhover} fluid alt="cardhover"/>
 													</div>
 													<Image variant="top" src={camp.image} fluid alt="card"/>
 												</Link>
 												<Card.Body>
-													<Link to={camp.slug+'/'+this.state.query_code}>{camp.name}</Link>
+													<Link to={camp.slug}>{camp.name}</Link>
 												</Card.Body>
 											</div>
 										)}
