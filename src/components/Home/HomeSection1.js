@@ -41,7 +41,8 @@ class HomeSection1 extends Component {
 			multiValue: [],
 			selectOptions : [],
 			id: "",
-			name: ''
+			name: '',
+			shown: 'd-none'
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);	
@@ -67,6 +68,7 @@ class HomeSection1 extends Component {
 	}
   
 	Campred(){
+		this.setState({shown: "d-none"});
 		const cookies = new Cookies();
 		var lat =  cookies.get('lat');
 		var lng =  cookies.get('lng');
@@ -78,13 +80,26 @@ class HomeSection1 extends Component {
 		$.each(multu, function (i,val) {
 			str +=val.value+",";
 		});
-		console.log("loc"+loc);
-		console.log("str"+str);
-		if(loc == '' || str == ''){
-			alert("NULL");
+		var flg = 0;
+		if(loc == ''){
+			flg = 1;
+		}
+		else{
+			if(str == ''){
+				flg = 1;
+			}
+		}
+		if(flg == 1){
+			this.setState({shown: "d-block"});
+			setTimeout(
+				function() {
+					this.setState({shown: "d-none"});
+				}
+			.bind(this),
+				2000
+			);
 			return false;
 		}
-		
 		
 		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
 		//window.location = URL;
@@ -170,6 +185,7 @@ class HomeSection1 extends Component {
                                   </Button>
                                 </div>
                               </div>
+							  <p  className={"text-danger er-msg "+this.state.shown} >please select atleast one parameter.</p>
                         </Form>
                     </div>
                   </Container>

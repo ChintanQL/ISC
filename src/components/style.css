@@ -22,7 +22,7 @@ header.sticky {
 a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn {
     padding: 0 16px !important;
 }
- {font-weight: 500;
+ p{font-weight: 500;
     line-height: 30px;}
 a.nav-link.uppercase.btn-sm.btn-orange { text-align: center  }
 a.nav-link.uppercase.btn-sm.btn-orange.active {  color: #fff !important;}
