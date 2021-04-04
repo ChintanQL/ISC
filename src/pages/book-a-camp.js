@@ -53,7 +53,7 @@ class Sport extends Component {
 				this.setState({code:ccode})
 				this.setState({shown: "d-block"});
 				const cookies = new Cookies();
-				cookies.set("code", ccode,{ domain: '.australiansportscamps.com.au'});
+				cookies.set("code", ccode,{ domain: '.australiansportscamps.com.au' , path: '/' });
 			}
 			else{
 				this.setState({query_code:""})
