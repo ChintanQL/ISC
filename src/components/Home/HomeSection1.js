@@ -81,6 +81,8 @@ class HomeSection1 extends Component {
 			str +=val.value+",";
 		});
 		var flg = 0;
+		console.log("L"+loc);
+		console.log("S"+str);
 		if(loc == ''){
 			flg = 1;
 		}
