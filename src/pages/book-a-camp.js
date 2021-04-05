@@ -55,13 +55,13 @@ class Sport extends Component {
 				console.log(cookies.get("code"));
 				if(cookies.get("code") !== undefined){
 					console.log("heer");
-					this.setState({shown: "d-block"});
-					this.setState({shown_new: "d-none"});
+					this.setState({shown: "d-none"});
+					this.setState({shown_new: "d-block"});
 				}
 				else{
 					console.log("there");	
-					this.setState({shown_new: "d-block"});
-					this.setState({shown: "d-none"});
+					this.setState({shown_new: "d-none"});
+					this.setState({shown: "d-block"});
 				}
 				
 				this.setState({query_code:"?coupon-code="+ccode})

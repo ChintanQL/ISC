@@ -17,7 +17,7 @@ input:-ms-input-placeholder, select::-ms-input-placeholder, textarea:-ms-input-p
 }
 a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 .camptestimonialsec_logo { right: 40px; margin-top: 35px; }
-p.text-successd-block { color: #008000; font-weight: 600; text-align: center; }
+p.text-success { color: #008000; font-weight: 600; text-align: center; }
 
 @media(max-width:1024px){
 	.camptestimonialsec_logo { right: 40px; width: 120px; overflow: hidden; margin-top:0 }
@@ -27,6 +27,8 @@ p.text-successd-block { color: #008000; font-weight: 600; text-align: center; }
 }
 @media(max-width:991px){
 .camptestimonialsec_logo {  position: relative; top: 0; right: 0; width: 120px; overflow: hidden; display: table; margin: 0 auto;}
+.kid-image.col-xl-6.col-lg-6, .kid-image>div {text-align: center}
+section.Kid-section .Kid-section-first .kid-image img  { height: auto !important; text-align: center; display: table; margin: 0 auto;}
 }
 
 @media(max-width: 767px){
@@ -40,6 +42,11 @@ p.text-successd-block { color: #008000; font-weight: 600; text-align: center; }
 	.alignleft, .alignright { width: 100%!important; height: auto; margin: 0 auto 15px !important; float: none !important; display: table;
 	    text-align: center;}
 	.Blog-Section-2-data .alignleft, .Blog-Section-2-data .alignright {  width: auto !important;} 
+	
+	section.Home-section-1.Home_section_new .home-form .form-control { font-size: 14px; }
+ section.Batman-Section { padding: 20px 0 20px !important; }
+	
+	
 }
 @media(max-width:575px){
 	.accordian-div .accordion .card .card-header button { padding-right: 35px !important; }
@@ -852,7 +859,7 @@ a.uppercase.btn-sm.btn-orange-large {
 // font
 
 @media(max-width:767px){
-section.Sport-details-section-2 img { width: 100%; }
+section.Sport-details-section-2 img { width: 100% !important; }
 }
 .laoder{
 	width:100%;
