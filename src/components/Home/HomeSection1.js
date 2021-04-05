@@ -84,7 +84,7 @@ class HomeSection1 extends Component {
 		console.log("L"+loc);
 		console.log("S"+str);
 		if(loc == ''){
-			if (typeof myVar !== 'undefined'){
+			if (typeof loc !== 'undefined'){
 				flg = 1;
 				console.log("flg1");
 			}	
@@ -114,7 +114,12 @@ class HomeSection1 extends Component {
 	}
 
   componentDidMount(){
-      this.getOptions()
+		this.getOptions()
+		const cookies = new Cookies();
+		cookies.remove('lat', { path: '/' });
+		cookies.remove('lng', { path: '/' });
+		cookies.remove('loc', { path: '/' });
+		cookies.remove('locationName', { path: '/' });	
   }
 	
 	handleMultiChange(option) {
