@@ -17,6 +17,7 @@ input:-ms-input-placeholder, select::-ms-input-placeholder, textarea:-ms-input-p
 }
 a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 .camptestimonialsec_logo { right: 40px; margin-top: 35px; }
+p.text-successd-block { color: #008000; font-weight: 600; text-align: center; }
 
 @media(max-width:1024px){
 	.camptestimonialsec_logo { right: 40px; width: 120px; overflow: hidden; margin-top:0 }
@@ -1848,7 +1849,7 @@ section.Home-section-1 .home-form .second-control {
 	.slick-prev { left: 0;}
 }
  @media(max-width:767px){
-	 	.alignleft, .alignright { width:100% !important; height:auto }
+	 	
 		header .social-header .second-li ul.htmob-displaybx.htmob-displaybx { display: inline-block !important; width: 100%; text-align: center; }
     header .social-header .second-li ul.htmob-displaybx.htmob-displaybx li { display: inline-block !important }
     header .social-header .second-li ul.htmob-displaybx.htmob-displaybx li a{ display: inline-block !important }

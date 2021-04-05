@@ -24,6 +24,7 @@ a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn {
 }
 a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 .camptestimonialsec_logo { right: 40px; margin-top: 35px; }
+p.text-successd-block { color: #008000; font-weight: 600; text-align: center; }
 
 @media(max-width:1024px){
 	.camptestimonialsec_logo { right: 40px; width: 120px; overflow: hidden; margin-top:0 }
