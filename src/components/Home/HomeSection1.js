@@ -83,7 +83,24 @@ class HomeSection1 extends Component {
 		var flg = 0;
 		console.log("L"+loc);
 		console.log("S"+str);
-		if(loc == ''){
+		if(loc == 'undefined'){
+			if(str == ''){
+				flg = 1;
+			}
+			else{
+				flg = 0;
+			}	
+		}
+		else{
+			if(loc == '' && str == ''){
+				if(str == ''){
+					flg = 1;
+				}
+			}
+		}	
+			
+			
+		if(loc == 'undefined'){
 			if (typeof loc !== 'undefined'){
 				flg = 1;
 				console.log("flg1");
