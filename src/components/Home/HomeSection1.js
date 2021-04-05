@@ -129,6 +129,7 @@ class HomeSection1 extends Component {
 		cookies.remove('lng', { path: '/' });
 		cookies.remove('loc', { path: '/' });
 		cookies.remove('locationName', { path: '/' });	
+		cookies.remove('code', { path: '/' });	
   }
 	
 	handleMultiChange(option) {
