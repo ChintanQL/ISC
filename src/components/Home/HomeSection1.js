@@ -84,11 +84,15 @@ class HomeSection1 extends Component {
 		console.log("L"+loc);
 		console.log("S"+str);
 		if(loc == ''){
-			flg = 1;
+			if (typeof myVar !== 'undefined'){
+				flg = 1;
+				console.log("flg1");
+			}	
 		}
 		else{
 			if(str == ''){
 				flg = 1;
+				console.log("flg2");
 			}
 		}
 		if(flg == 1){
