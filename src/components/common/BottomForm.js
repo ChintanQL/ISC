@@ -15,7 +15,8 @@ class BottomForm extends Component {
 			multiValue: [],
 			selectOptions : [],
 			id: "",
-			name: ''
+			name: '',
+			shown: 'd-none'
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		 this.Campred = this.Campred.bind(this);
@@ -47,8 +48,44 @@ class BottomForm extends Component {
 		$.each(multu, function (i,val) {
 			str +=val.value+",";
 		});
+		
+		if(loc == undefined){
+			console.log("if");
+			if(str == ''){
+				flg = 1;
+				console.log("if if");
+			}
+			else{
+				flg = 0;
+				console.log("if else");
+			}	
+		}
+		else{
+			console.log("else");
+			if(loc == '' && str == ''){
+					flg = 1;
+					console.log("else if");
+			}
+			else{
+				console.log("else else");
+			}
+		}	
+			console.log(flg);
+		if(flg == 1){
+			this.setState({shown: "d-block"});
+			setTimeout(
+				function() {
+					this.setState({shown: "d-none"});
+				}
+			.bind(this),
+				2000
+			);
+			return false;
+		}
+		
+		
 		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
-		window.location = URL;
+		window.location.href = URL;
 		
 	}
 	
@@ -96,6 +133,7 @@ class BottomForm extends Component {
                            
                         </Col>
                     </Row>
+					<p  className={"text-danger er-msg "+this.state.shown} >please select atleast one parameter.</p>
                     </Form>
                 </Container>
             </section>
