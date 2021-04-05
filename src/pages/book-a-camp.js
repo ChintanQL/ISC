@@ -22,6 +22,7 @@ class Sport extends Component {
 		query_code:"",
 		code:"",
 		shown: "d-none"
+		shown_new: "d-none"
 	}
 	
 	componentDidMount() {
@@ -49,22 +50,35 @@ class Sport extends Component {
 
 		if(ccode != null){
 			if(ccode != ""){
+				
+				const cookies = new Cookies();
+				if(cookies.get("code") !== 'undefined'){
+					this.setState({shown: "d-block"});
+					this.setState({shown_new: "d-none"});
+				}
+				else{
+					this.setState({shown_new: "d-block"});
+					this.setState({shown: "d-none"});
+				}
+				
 				this.setState({query_code:"?coupon-code="+ccode})
 				this.setState({code:ccode})
-				this.setState({shown: "d-block"});
-				const cookies = new Cookies();
+				
+				
 				cookies.set("code", ccode,{ domain: '.australiansportscamps.com.au' , path: '/' });
 			}
 			else{
 				this.setState({query_code:""})
 				this.setState({code:""})
 				this.setState({shown: "d-none"});
+				this.setState({shown_new: "d-none"});
 			}
 		}
 		else{
 				this.setState({code:""})
 				this.setState({query_code:""})
 				this.setState({shown: "d-none"});
+				this.setState({shown_new: "d-none"});
 		}
 		
 		
@@ -112,7 +126,8 @@ class Sport extends Component {
 						<Row>
 							<Col xl={12} lg={12} md={12} sm={12} xs={12} >
 								<div className="" ></div>
-								<p  className={"text-success"+this.state.shown} >Coupon code {'"'+this.state.code+'"'} applied successfully. </p>
+								<p  className={"text-success "+this.state.shown} > Coupon code applied successfully. </p>
+								<p  className={"text-success "+this.state.shown_new} > Coupon code {'"'+this.state.code+'"'} already applied! Please add some products to the cart to see the discount.  </p>
 							</Col>
 						</Row>
 					</Container>

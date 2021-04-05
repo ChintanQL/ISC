@@ -93,25 +93,10 @@ class HomeSection1 extends Component {
 		}
 		else{
 			if(loc == '' && str == ''){
-				if(str == ''){
 					flg = 1;
-				}
 			}
 		}	
 			
-			
-		if(loc == 'undefined'){
-			if (typeof loc !== 'undefined'){
-				flg = 1;
-				console.log("flg1");
-			}	
-		}
-		else{
-			if(str == ''){
-				flg = 1;
-				console.log("flg2");
-			}
-		}
 		if(flg == 1){
 			this.setState({shown: "d-block"});
 			setTimeout(
