@@ -84,19 +84,27 @@ class HomeSection1 extends Component {
 		console.log("L"+loc);
 		console.log("S"+str);
 		if(loc == 'undefined'){
+			cosnole.log("if");
 			if(str == ''){
 				flg = 1;
+				cosnole.log("if if");
 			}
 			else{
 				flg = 0;
+				cosnole.log("if else");
 			}	
 		}
 		else{
+			cosnole.log("else");
 			if(loc == '' && str == ''){
 					flg = 1;
+					cosnole.log("else if");
+			}
+			else{
+				cosnole.log("else else");
 			}
 		}	
-			
+			cosnole.log(flg);
 		if(flg == 1){
 			this.setState({shown: "d-block"});
 			setTimeout(
@@ -110,7 +118,7 @@ class HomeSection1 extends Component {
 		}
 		
 		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
-		window.location.href = URL;
+		//window.location.href = URL;
 		//window.location.replace(URL);
 		
 	}
