@@ -81,8 +81,7 @@ class HomeSection1 extends Component {
 			str +=val.value+",";
 		});
 		var flg = 0;
-		console.log("L"+loc);
-		console.log("S"+str);
+		
 		if(loc == undefined){
 			console.log("if");
 			if(str == ''){
@@ -118,7 +117,7 @@ class HomeSection1 extends Component {
 		}
 		
 		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
-		//window.location.href = URL;
+		window.location.href = URL;
 		//window.location.replace(URL);
 		
 	}
