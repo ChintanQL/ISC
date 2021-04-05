@@ -197,7 +197,7 @@ class HomeSection1 extends Component {
                                 <div className="second-control">
                                  
 								  
-								<ReactMultiSelectCheckboxes placeholder="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
+								<ReactMultiSelectCheckboxes placeholder="Select Sports" placeholderButtonLabel="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
                                 </div>
 								
                                 <div className="third-control">
