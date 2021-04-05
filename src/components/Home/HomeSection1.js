@@ -84,27 +84,27 @@ class HomeSection1 extends Component {
 		console.log("L"+loc);
 		console.log("S"+str);
 		if(loc == 'undefined'){
-			cosnole.log("if");
+			console.log("if");
 			if(str == ''){
 				flg = 1;
-				cosnole.log("if if");
+				console.log("if if");
 			}
 			else{
 				flg = 0;
-				cosnole.log("if else");
+				console.log("if else");
 			}	
 		}
 		else{
-			cosnole.log("else");
+			console.log("else");
 			if(loc == '' && str == ''){
 					flg = 1;
-					cosnole.log("else if");
+					console.log("else if");
 			}
 			else{
-				cosnole.log("else else");
+				console.log("else else");
 			}
 		}	
-			cosnole.log(flg);
+			console.log(flg);
 		if(flg == 1){
 			this.setState({shown: "d-block"});
 			setTimeout(
