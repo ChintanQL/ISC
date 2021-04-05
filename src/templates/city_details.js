@@ -10,6 +10,7 @@ import playbutton from '../images/play-button.png'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import Iframe from 'react-iframe'
 import { Helmet } from "react-helmet"
+import lifes from '../images/lifes-better-with-sport.png'
 class City extends Component {
 	
 	constructor(props) {
@@ -227,7 +228,7 @@ class City extends Component {
 									</Col>
 									<Col xl={6} lg={6} className="text-center kids-data">
 										<p className="mb-30 font-22 font-semibold text-white" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.testimonial.testimonial}} />
-										
+										<div className="camptestimonialsec_logo"> <Image src={lifes} alt="cardhover" /></div>
 									</Col>
 								</Row>
 							</Container>

@@ -8,6 +8,7 @@ import { graphql,Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import queryString from 'query-string'
+import lifes from '../images/lifes-better-with-sport.png'
 class Camps extends Component {
 	
 	constructor(props) {
