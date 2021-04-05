@@ -110,8 +110,8 @@ class HomeSection1 extends Component {
 		}
 		
 		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
-		//window.location = URL;
-		window.location.replace(URL);
+		window.location.href = URL;
+		//window.location.replace(URL);
 		
 	}
 

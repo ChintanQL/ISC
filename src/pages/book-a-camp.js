@@ -21,7 +21,7 @@ class Sport extends Component {
 		showInfo: 0,
 		query_code:"",
 		code:"",
-		shown: "d-none"
+		shown: "d-none",
 		shown_new: "d-none"
 	}
 	
