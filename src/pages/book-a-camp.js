@@ -52,7 +52,7 @@ class Sport extends Component {
 			if(ccode != ""){
 				
 				const cookies = new Cookies();
-				console.log(ookies.get("code"));
+				console.log(cookies.get("code"));
 				if(cookies.get("code") !== 'undefined'){
 					console.log("heer");
 					this.setState({shown: "d-block"});
