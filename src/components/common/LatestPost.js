@@ -45,7 +45,7 @@ class LatestPost extends Component {
 					{this.state.PageData.map( (propd,i) => {
 															return (
 						<ListGroup.Item as="li" className="d-flex">
-							<Link to={"blog/"+propd.slug+"/"} >
+							<Link to={"/blog/"+propd.slug+"/"} >
 							<div className="img-box-sidebar">
 							<Image src={propd.image} className="img-fluid border-0"/>
 							</div>

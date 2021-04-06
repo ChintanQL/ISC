@@ -74,7 +74,7 @@ module.exports = {
 
       // number (default to 1000); time to wait after scroll or route change
       // To be used when `delayLoad` is set to `true`
-      delayLoadTime: 1000
+      delayLoadTime: 1000,
 
       // Whether to completely skip calling `analytics.load()`.
       // ADVANCED FEATURE: only use if you are calling `analytics.load()` manually
