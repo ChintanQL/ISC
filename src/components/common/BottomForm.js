@@ -48,7 +48,7 @@ class BottomForm extends Component {
 		$.each(multu, function (i,val) {
 			str +=val.value+",";
 		});
-		
+		var flg = 0;
 		if(loc == undefined){
 			console.log("if");
 			if(str == ''){
@@ -124,7 +124,7 @@ class BottomForm extends Component {
                         </Col>
                         <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2 seccont">
                            
-							<ReactMultiSelectCheckboxes placeholder="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
+							<ReactMultiSelectCheckboxes placeholder="Select Sports" placeholderButtonLabel="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
                         </Col>
                         <Col  xs="12" xl={2} lg={2} md={4} sm="4">
                             <Button type="button" onClick={this.Campred} className="uppercase btn-sm btn-orange mb-0">
