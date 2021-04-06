@@ -2,7 +2,7 @@ import React from "react"
 import axios from "axios"
 import {Container,Image, Row,Col,Card} from 'react-bootstrap'
 import { Link, StaticQuery, graphql } from 'gatsby'
-
+import Menubanner from '../common/Menubanner'
 class Campbooking extends React.Component{
 	constructor(props) {
 		super(props);
@@ -12,6 +12,7 @@ class Campbooking extends React.Component{
 		showInfo: 0,
 		query_code:"",
 		code:"",
+		count:0,
 		shown: "d-none"
     };
 	componentDidMount() {
@@ -19,8 +20,9 @@ class Campbooking extends React.Component{
 		
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
 		axios.get(url).then(e => {
-			this.setState({pagedata: e.data.ResponseData})
+			this.setState({pagedata: e.data.ResponseData.Camp})
 			this.setState({showInfo: 1})
+			this.setState({count: e.data.ResponseData.Count})
 		})
 		
 		
@@ -36,35 +38,78 @@ class Campbooking extends React.Component{
 					<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
 				</div>
 			</div>
-			
-			{(this.state.pagedata != "") ? (
+			{(count != 0) ? (
 				<>
-					{this.state.pagedata.map((prop,i) => {return (
-						<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
-							<Card className="book-card">
-								<div className="card-img">
-									<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
-								</div>
-								<Card.Body>
-									<Card.Title as="h5">
-										{prop.Name}
-									</Card.Title>
-									<Card.Text>
-										{prop.Camp_Date}
-									</Card.Text>
-									<Card.Text>
-										{prop.Camp_Venue}
-									</Card.Text>
-									<ul>
-										<li className="main-price">${prop.price}</li>
-									</ul>
-									<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug}>More info / Book Now</Link>
-								</Card.Body>
-							</Card>
-						</Col>
-					)})}
+					{(this.state.pagedata != "") ? (
+						<>
+							{this.state.pagedata.map((prop,i) => {return (
+								<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
+									<Card className="book-card">
+										<div className="card-img">
+											<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
+										</div>
+										<Card.Body>
+											<Card.Title as="h5">
+												{prop.Name}
+											</Card.Title>
+											<Card.Text>
+												{prop.Camp_Date}
+											</Card.Text>
+											<Card.Text>
+												{prop.Camp_Venue}
+											</Card.Text>
+											<ul>
+												<li className="main-price">${prop.price}</li>
+											</ul>
+											<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug}>More info / Book Now</Link>
+										</Card.Body>
+									</Card>
+								</Col>
+							)})}
+						</>
+					) : ("")}	
 				</>
-			) : ("")}	
+			
+			) : (
+				<section className="mapsnotavailsec"  >
+					<section className="No-camp-section-2">
+						<div className="container">
+							<div className="title mb-30">
+								<h2>
+									SELECT A SPORT TO VIEW AND BOOK CAMPS…
+								</h2>
+								<p className="text-center">
+									No camps or programs were found matching your selection.
+								</p>
+							</div>
+							<div className="title">
+								<h2>
+									Notify Me
+								</h2>
+								<p className="text-center">
+									Please fill your email to get notified when similar camps are available again.
+								</p>
+							</div>
+						</div>
+					</section>
+					<section className="No-camp-section-3">
+						<div className="container">
+							<div className="row">
+								<div className="col-xl-8 col-lg-8 col-md-7 md-mb-4">
+									<iframe src="https://shop.australiansportscamps.com.au/gravity-notify/" frameBorder="0" width="100%" height="550" ></iframe>
+								</div>
+								<div className="col-xl-4 col-lg-4 col-md-5">
+									<Menubanner />
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+			
+			)}
+			
+			
+			
 			</>
 		)
 	}	
