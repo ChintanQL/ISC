@@ -206,7 +206,7 @@ class HomeSection1 extends Component {
                                   </Button>
                                 </div>
                               </div>
-							  <p  className={"text-danger er-msg "+this.state.shown} >please select atleast one parameter.</p>
+							  <p  className={"text-danger er-msg "+this.state.shown} >Please select a Location or Sport.</p>
                         </Form>
                     </div>
                   </Container>

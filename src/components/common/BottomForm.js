@@ -133,7 +133,7 @@ class BottomForm extends Component {
                            
                         </Col>
                     </Row>
-					<p  className={"text-danger er-msg "+this.state.shown} >please select atleast one parameter.</p>
+					<p  className={"text-danger er-msg "+this.state.shown} >Please select a Location or Sport.</p>
                     </Form>
                 </Container>
             </section>

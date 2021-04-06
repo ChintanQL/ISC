@@ -9,6 +9,10 @@ header {
 	width:100%;
 }
 
+.secc .aligncenter{
+	width:auto;
+}
+
 .card-text img{
 	width:100%;
 	height:auto;
