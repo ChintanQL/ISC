@@ -43,7 +43,7 @@ module.exports = {
       // boolean (defaults to false) on whether you want
       // to include analytics.page() automatically
       // if false, see below on how to track pageviews manually
-      trackPage: true,
+      trackPage: false,
 
       // number (defaults to 50); time to wait after a route update before it should
       // track the page change, to implement this, make sure your `trackPage` property is set to `true`
