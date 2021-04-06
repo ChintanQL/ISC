@@ -57,13 +57,16 @@ class BottomForm extends Component {
 	CheckModel(){
 		
 		const cookies = new Cookies();
-		if(cookies.get("Popup") === undefined){
-			
+		if(cookies.get("Popup") == undefined){
+			console.log("here");
 			var expires = (new Date(Date.now()+ 86400*1000)).toUTCString();
 			cookies.set('Popup', "1", { domain: '.australiansportscamps.com.au' , path: '/' , expires : expires});
 			this.setState({
 				isOpen:true,
 			})
+		}
+		else{
+			console.log("there");
 		}
 	}
 	Campred(){
