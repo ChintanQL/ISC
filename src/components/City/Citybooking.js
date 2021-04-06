@@ -31,7 +31,7 @@ class Citybooking extends React.Component{
 				</div>
 			</div>
 			
-			{(count != 0) ? (
+			{(this.state.count != 0) ? (
 				<>
 				{(this.state.pagedata != "") ? (
 					<>

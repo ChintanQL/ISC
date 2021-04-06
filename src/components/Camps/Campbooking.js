@@ -38,7 +38,7 @@ class Campbooking extends React.Component{
 					<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
 				</div>
 			</div>
-			{(count != 0) ? (
+			{(this.state.count != 0) ? (
 				<>
 					{(this.state.pagedata != "") ? (
 						<>
