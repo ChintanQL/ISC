@@ -33,7 +33,7 @@ module.exports = {
       // your segment write key for your production environment
       // when process.env.NODE_ENV === 'production'
       // required; non-empty string
-      prodKey: `SEGMENT_PRODUCTION_WRITE_KEY`,
+      prodKey: `fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv`,
 
       // if you have a development env for your segment account, paste that key here
       // when process.env.NODE_ENV === 'development'
@@ -54,7 +54,7 @@ module.exports = {
       // Segment docs:
       //   - https://segment.com/docs/connections/sources/custom-domains
       //   - https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#proxy
-      host: `https://override-segment-endpoint`,
+      host: `https://cdn.segment.io`,
 
       // boolean (defaults to false); whether to delay load Segment
       // ADVANCED FEATURE: only use if you leverage client-side routing (ie, Gatsby <Link>)
