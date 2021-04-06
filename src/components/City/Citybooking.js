@@ -65,7 +65,7 @@ class Citybooking extends React.Component{
 				</>
 			
 			) : (
-				<section className="mapsnotavailsec"  >
+				<section className="col-lg-12"  >
 					<section className="No-camp-section-2">
 						<div className="container">
 							<div className="title mb-30">

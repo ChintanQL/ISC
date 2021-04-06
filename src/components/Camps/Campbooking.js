@@ -71,7 +71,7 @@ class Campbooking extends React.Component{
 				</>
 			
 			) : (
-				<section className="mapsnotavailsec"  >
+				<section className="col-lg-12"  >
 					<section className="No-camp-section-2">
 						<div className="container">
 							<div className="title mb-30">
@@ -98,7 +98,7 @@ class Campbooking extends React.Component{
 								<div className="col-xl-8 col-lg-8 col-md-7 md-mb-4">
 									<iframe src="https://shop.australiansportscamps.com.au/gravity-notify/" frameBorder="0" width="100%" height="550" ></iframe>
 								</div>
-								<div className="col-xl-4 col-lg-4 col-md-5">
+								<div className="col-xl-4 col-lg-4 col-md-5 secc">
 									<Menubanner />
 								</div>
 							</div>
