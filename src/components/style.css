@@ -13,6 +13,27 @@ header {
 	width:auto !important;
 }
 
+.sub_img{
+	text-align: center; 
+	line-height: 0em; 
+	margin: 0 0 15px 0;
+}
+.sub_img img{
+	width: 220px;
+}
+.sub_title{
+	text-transform: uppercase; 
+	font-size: 26px; 
+	text-align: center; 
+	color: #2575b6; 
+	font-weight: 700 !important; 
+	margin: 0 0 15px 0;
+}
+.sub_sub_title{
+	text-align: center; 
+	font-size: 18px; 
+	margin: 0 0 -15px 0;
+}
 .card-text img{
 	width:100%;
 	height:auto;
