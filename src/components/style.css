@@ -10,7 +10,7 @@ header {
 }
 
 .secc .aligncenter{
-	width:auto;
+	width:auto !important;
 }
 
 .card-text img{
