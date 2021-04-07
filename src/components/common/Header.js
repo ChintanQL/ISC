@@ -20,7 +20,7 @@ class Header extends Component {
     constructor(props) {
 		super(props);
 		
-		state = {
+		this.state = {
 			isTop: true,
 			cart: '',
 			show:false,
