@@ -211,11 +211,29 @@ class Header extends Component {
                     </ListGroup>
 
                     <ListGroup horizontal as="ul" className="d-md-none d-flex htmob-displaybx">
-                        <ListGroup.Item as="li">
+                        
+						{(cookies.get('LOGIN') == 1) ? (
+						<li className="userdropdownbox" onClick={()=>{this.setState({show:!this.state.show})}} >
+                            <i className="fa fa-user-circle"></i>{cookies.get('USER')}
+                            <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
+                                <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
+                                <li><a href={atob(cookies.get('L_URL'))}>logout</a></li>
+                            </ul>
+                       
+                        </li>
+						
+						
+						) : (
+						<ListGroup.Item as="li">
                         <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
                         <span>OR</span>
                         <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
                         </ListGroup.Item>
+						
+						)}
+						
+						
+						
 						
                     </ListGroup>
                 </div>
