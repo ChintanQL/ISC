@@ -105,7 +105,6 @@ class BottomForm extends Component {
 
 	componentDidMount(){
 		this.getOptions()
-		this.CheckModel()
 		
 	}
 	
