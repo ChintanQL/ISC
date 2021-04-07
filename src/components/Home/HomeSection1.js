@@ -206,7 +206,7 @@ class HomeSection1 extends Component {
 								<ReactMultiSelectCheckboxes placeholder="Select Sports" placeholderButtonLabel="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
                                 </div>
 								<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
-        value={selectedOption}
+        value={this.state.selectedOption}
         onChange={this.handleChange}
         options={this.state.selectOptions}
       />
