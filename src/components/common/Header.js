@@ -19,16 +19,54 @@ import queryString from 'query-string'
 class Header extends Component {
     constructor(props) {
 		super(props);
+		
+		state = {
+			isTop: true,
+			cart: '',
+			show:false,
+			query_code:"",
+			code:"",
+			shown: "d-none",
+			isOpen:false
+		};
+		
+		
+		
+		this.CheckModel = this.CheckModel.bind(this);
+        this.modalOpen = this.modalOpen.bind(this);
+        this.modalClose = this.modalClose.bind(this);
+		
 	}
-    state = {
-        isTop: true,
-		cart: '',
-		show:false,
-		query_code:"",
-		code:"",
-		shown: "d-none"
-      };
     
+    
+	modalOpen(){
+        this.setState({
+            isOpen:true,
+        })
+    }
+    modalClose(){
+        this.setState({
+            isOpen:false,
+        })
+    }
+	
+	CheckModel(){
+		
+		const cookies = new Cookies();
+		if(cookies.get("Popup") == undefined){
+			console.log("here");
+			var expi = (new Date(Date.now()+ 86400*1000)).toUTCString();
+			cookies.set('Popup', "1", { domain: '.australiansportscamps.com.au' , path: '/' , expires : expi});
+			this.setState({
+				isOpen:true,
+			})
+		}
+		else{
+			console.log("there");
+		}
+	}
+	
+	
       componentDidMount() {
         document.addEventListener('scroll', () => {
 			const isTop = window.scrollY < 200;
@@ -109,7 +147,20 @@ class Header extends Component {
 		const cookies = new Cookies();
         return (
             <>
-            
+            <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered >
+                <Modal.Body className="p-0">
+                    <button type="button" onClick={this.modalClose} class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+					<p className="sub_img" ><img  title="Australian Sports Camps" src="http://shop.australiansportscamps.com.au/wp-content/uploads/2016/05/australian-sports-camps-600x275.png" alt="Australian Sports Camps" /></p>
+					<p className="sub_title" >Subscribe to Updates</p>
+					<p className="sub_sub_title" >Sign up for free to be the first to hear about upcoming camps, special offers and discounts.</p>
+					<iframe height="430" width="100%" frameBorder="0" src=" https://shop.australiansportscamps.com.au/gravity-subscribe/" title="description" />
+					
+                </Modal.Body>
+            </Modal>
     <header>
         <div className="social-header">
             <div className="container d-flex d-small-block justify-content-between">

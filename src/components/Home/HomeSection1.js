@@ -7,6 +7,7 @@ import SearchLocationInput from './SearchLocationInput'
 import axios from 'axios';
 import $ from "jquery";
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
+import Select from 'react-select';
 
 //https://github.com/sethcwhiting/react-native-gravityform
 //https://github.com/reactivestack/cookies/tree/master/packages/universal-cookie
@@ -42,7 +43,8 @@ class HomeSection1 extends Component {
 			selectOptions : [],
 			id: "",
 			name: '',
-			shown: 'd-none'
+			shown: 'd-none',
+			selectedOption: null,
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);	
@@ -63,9 +65,10 @@ class HomeSection1 extends Component {
 
   }
 
-	handleChange(e){
-		this.setState({id:e.value, name:e.label})
-	}
+	handleChange = selectedOption => {
+    this.setState({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
+  };
   
 	Campred(){
 		this.setState({shown: "d-none"});
@@ -202,7 +205,11 @@ class HomeSection1 extends Component {
 								  
 								<ReactMultiSelectCheckboxes placeholder="Select Sports" placeholderButtonLabel="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
                                 </div>
-								
+								<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
+        value={selectedOption}
+        onChange={this.handleChange}
+        options={this.state.selectOptions}
+      />
                                 <div className="third-control">
                                   <Button type="button" onClick={this.Campred} className="uppercase btn-sm btn-orange mb-0">
                                       Find Camps
