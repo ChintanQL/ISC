@@ -7,7 +7,7 @@ import SearchLocationInput from './SearchLocationInput'
 import axios from 'axios';
 import $ from "jquery";
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
-import Select from 'react-select';
+
 
 //https://github.com/sethcwhiting/react-native-gravityform
 //https://github.com/reactivestack/cookies/tree/master/packages/universal-cookie
