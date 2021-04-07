@@ -137,7 +137,7 @@ class Header extends Component {
             var element = document.getElementById("navCont");
 			element.classList.add("active");
         }
-		
+		this.CheckModel()
 		
       } 
 	
