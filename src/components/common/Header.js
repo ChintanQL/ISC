@@ -1,5 +1,5 @@
 import React, { Component  } from 'react';
-import {  Image,ListGroup,Navbar,Container } from 'react-bootstrap'
+import {  Image,ListGroup,Navbar,Container,Modal } from 'react-bootstrap'
 import { Link,StaticQuery, graphql } from 'gatsby'
 import logo from '../../images/logo.png'
 import navimage from '../../images/nav-image.png'
