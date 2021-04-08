@@ -40,6 +40,15 @@ class Campbooking extends React.Component{
 			</div>
 			{(this.state.count != 0) ? (
 				<>
+				<Row className="justify-content-center mb-4">
+							<Col xl={12} lg={12}>
+								<div className="title">
+									<h2>Select your camp below to book online now.</h2>
+								</div>
+							</Col>
+						</Row>
+						<Row className="">
+							
 					{(this.state.pagedata != "") ? (
 						<>
 							{this.state.pagedata.map((prop,i) => {return (
@@ -68,6 +77,7 @@ class Campbooking extends React.Component{
 							)})}
 						</>
 					) : ("")}	
+					</Row>
 				</>
 			
 			) : (

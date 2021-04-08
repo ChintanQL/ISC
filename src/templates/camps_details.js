@@ -84,16 +84,9 @@ class Camps extends Component {
 				</section>
 				<section className="Sport-details-section-3">
 					<Container>
-						<Row className="justify-content-center mb-4">
-							<Col xl={12} lg={12}>
-								<div className="title">
-									<h2>Select your camp below to book online now.</h2>
-								</div>
-							</Col>
-						</Row>
-						<Row className="">
+						
 							<Campbooking category={page.edges[0].node.acf.product_category}   />
-						</Row>
+						
 						<p className="font-15 font-medium color-3b mb-0" >{page.edges[0].node.acf.disclaimer}</p>
                     </Container>
                 </section>
