@@ -77,12 +77,12 @@ class HomeSection1 extends Component {
 		var lng =  cookies.get('lng');
 		var loc =  cookies.get('loc');
 		var locationName =  cookies.get('locationName');
-		var multu =  this.state.multiValue;
-		var str = '';
-		console.log(this.state.multiValue);
-		$.each(multu, function (i,val) {
-			str +=val.value+",";
-		});
+		//var multu =  this.state.multiValue;
+		var str = this.state.selectedOption;
+		//console.log(this.state.multiValue);
+		//$.each(multu, function (i,val) {
+			//str +=val.value+",";
+		//});
 		var flg = 0;
 		
 		if(loc == undefined){
@@ -201,15 +201,15 @@ class HomeSection1 extends Component {
                                   <SearchLocationInput/>
                                 </div>
                                 <div className="second-control">
-                                 
-								  
-								<ReactMultiSelectCheckboxes placeholder="Select Sports" placeholderButtonLabel="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
-                                </div>
-								<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
+									<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
         value={this.state.selectedOption}
         onChange={this.handleChange}
         options={this.state.selectOptions}
       />
+								  
+								  
+                                </div>
+								
                                 <div className="third-control">
                                   <Button type="button" onClick={this.Campred} className="uppercase btn-sm btn-orange mb-0">
                                       Find Camps

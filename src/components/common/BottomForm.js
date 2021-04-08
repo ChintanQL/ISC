@@ -17,6 +17,7 @@ class BottomForm extends Component {
 			id: "",
 			name: '',
 			shown: 'd-none',
+			selectedOption: null,
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);
@@ -50,12 +51,11 @@ class BottomForm extends Component {
 		var lng =  cookies.get('lng');
 		var loc =  cookies.get('loc');
 		var locationName =  cookies.get('locationName');
-		var multu =  this.state.multiValue;
-		var str = '';
-		console.log(this.state.multiValue);
-		$.each(multu, function (i,val) {
-			str +=val.value+",";
-		});
+		//var multu =  this.state.multiValue;
+		var str = this.state.selectedOption;
+		//$.each(multu, function (i,val) {
+			//str +=val.value+",";
+		//});
 		var flg = 0;
 		if(loc == undefined){
 			console.log("if");
@@ -93,15 +93,16 @@ class BottomForm extends Component {
 		
 		
 		var URL = "https://shop.australiansportscamps.com.au/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
-		window.location.href = URL;
+		window.open(URL, "_blank");
 		
 	}
 	
 	
 
-	handleChange(e){
-		this.setState({id:e.value, name:e.label})
-	}
+	handleChange = selectedOption => {
+    this.setState({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
+  };
 
 	componentDidMount(){
 		this.getOptions()
@@ -137,7 +138,11 @@ class BottomForm extends Component {
                         </Col>
                         <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2 seccont">
                            
-							<ReactMultiSelectCheckboxes placeholder="Select Sports" placeholderButtonLabel="Select Sports" value={this.state.multiValue}  options={this.state.selectOptions} onChange={this.handleMultiChange} />  
+							<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
+        value={this.state.selectedOption}
+        onChange={this.handleChange}
+        options={this.state.selectOptions}
+      />
                         </Col>
                         <Col  xs="12" xl={2} lg={2} md={4} sm="4">
                             <Button type="button" onClick={this.Campred} className="uppercase btn-sm btn-orange mb-0">
