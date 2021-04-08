@@ -1288,7 +1288,7 @@ section.Home-section-3
 
 section.Home-section-4
 {
-  padding: 35px 0px 50px !important;
+  padding: 35px 0px 0 !important;
 }
 
 section.Home-section-4 .trainer-main
@@ -3264,7 +3264,7 @@ section.Main-Section-1 .sidebar .nav-pills .nav-link .sidebar-icon img {
     margin-bottom: 15px;
     display: block;
 }
-.card.blog-card .card-body p
+.card.blog-card .card-body p, .card-text
 {
   font-size: 16px;
   line-height: 30px;
@@ -3679,32 +3679,15 @@ section.Home-section-1
     .camptestimonialsec_logo img { width: 100%; }
     .Home_section_new .pos-absolute-form { right: 5%; transform: translateX(-5%); }
     .camptestimonialsec_logo { right: 40px; width: 120px; overflow: hidden; }
-    
+    #preloader>.icon { height: 35px; width: 35px; }
 
 }
-@media all and (max-width:992px)
-{
-  section.Main-Section-1
-  {
-    padding: 30px 0px !important;
-  }
-  .pos-relative
-  {
-    position: relative;
-  }
-  section.Main-Section-1 .sidebar.side-sticky.small  {
-    display: block !important;
-    width: 250px !important;
-    transition: all 1s;
-    position: fixed !important;
-    left: -270px;
-    top: 0px;
-    height: 100vh;
-    background-color: white !important;
-    z-index: 10;
-    transition: all .5s;
-    overflow-y: scroll;
-  }
+@media all and (max-width:992px){
+  section.Main-Section-1  {  padding: 30px 0px !important;  }
+  .pos-relative{  position: relative;  }
+  section.Main-Section-1 .sidebar.side-sticky.small  { display: block !important; width: 250px !important;
+    transition: all 1s; position: fixed !important;  left: -270px; top: 0px;  height: 100vh;  background-color: white !important;
+    z-index: 10;  transition: all .5s;  overflow-y: scroll;  }
   section.Main-Section-1 .sidebar.side-sticky.small.toggle  {
     display: block !important;
     width: 250px !important;
@@ -3783,6 +3766,18 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 24px; li
  section.Camp-details-section-5 { padding: 20px 0; }
 section { padding: 20px 0; } 
 section.Sport-details-section-2 img { width: 100% !important; }
+.p { position: relative; display: inline-block; }
+.n { float: right; position: relative; right: 0}
+
+.dropdown-menu.main-menu .inner-menu{ width: 100%; padding:0;}
+.first-box { padding: 15px 10px; }
+.dropdown-menu.main-menu .inner-menu ul {column-count: 2; display: inline-block; width: 100%;}
+.dropdown-menu.main-menu .inner-menu ul li { display: inline-block }  
+.second-box img { height: auto;}  
+.dropdown-menu.main-menu .inner-menu ul:after{ display: none }
+.menublank_none {display: none}
+.accordian-div .accordion .card .card-header button { padding-right: 35px !important; }
+#preloader>.icon { height: 25px; width: 25px; }
     
 }
 @media all and (max-width: 575px)  {
