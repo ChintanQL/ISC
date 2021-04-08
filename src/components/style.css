@@ -64,10 +64,8 @@ section.Home-section-1.Home_section_new .home-form { padding:20px 20px; }
 section.Home-section-1.Home_section_new .home-form .form-control { border:1px solid #fff !important; }
 section.Home-section-1.Home_section_new .second-control button { height: 50px; color: #495057; padding: 0 16px; font-size: 1rem;}
 section.Home-section-1.Home_section_new .home-form > div:last-child { padding-bottom: 0 !important;}
-section.Home-section-4 { padding:35px 0 0!important}
 section.Home-section-1.Home_section_new .home-form .second-control > div > div { z-index: 99; margin-top: 2px important; width:100%; }
 section.Kid-section .Kid-section-second { padding:60px 0; }
-section.Home-section-4 { padding:35px 0 0!important}
  .css-yk16xz-control { border-radius: 0; border-color: #ffff; height: 42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
 section.Home-section-1.Home_section_new .home-form { width: 87%; }
 section.Home-section-1 .home-form .second-control { width:100% !important }
@@ -577,15 +575,17 @@ a.nav-link.uppercase.btn-sm.btn-orange.active:hover, a.nav-link.uppercase.btn-sm
     background-image: url('../images/blue-tick.svg') !important;
     background-size: 8px 8px !important;
 }
-/*responsive*/
 
-@media all and (max-width:575px) 
-{
-    header .social-header .first-li 
-    {
-        justify-content: center !important;
-    }
-}
+.gform_wrapper input, .gform_wrapper select{ color: #333333  !important; }
+
+
+ul.lisearch {height: 300px; overflow-y: scroll;}
+ul.lisearch::-webkit-scrollbar-track{ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; }
+ul.lisearch::-webkit-scrollbar{ width: 6px; background-color: #F5F5F5;}
+ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
+.stickyicon { margin-bottom: 40px }
+
+/*responsive*/
 
 @media (max-width:1199px) {
 
@@ -727,7 +727,9 @@ a.nav-link.uppercase.btn-sm.btn-orange.active:hover, a.nav-link.uppercase.btn-sm
     .Home_section_new .pos-absolute-form { right: 5%; transform: translateX(-5%); }
     .camptestimonialsec_logo { right: 40px; width: 120px; overflow: hidden; }
     .Home_section_new .pos-absolute-form { right: 5%; transform: translateX(-5%); }
-
+    .stickyicon { margin-bottom: 25px }
+    section.Home-section-4 { padding: 30px 0 !important; }
+    section.Included-section{ padding: 30px 0 !important }
 }
 @media(max-width:991px){
 .camptestimonialsec_logo {  position: relative; top: 0; right: 0; width: 120px; overflow: hidden; display: table; margin: 0 auto;}
@@ -804,7 +806,7 @@ section.Kid-section .Kid-section-first .kid-image img  { height:auto}
     section.Kid-section .Kid-section-first .kid-image img { height: auto; text-align: center; display: table; margin: 0 auto;}
     .slick-next{ right: 0 }
     .slick-prev { left: 0; }
-    .gform_wrapper ul.gfield_radio li label, .gform_wrapper ul.gfield_checkbox li label { width: auto;}
+    .gform_wrapper ul.gfield_radio li label, .gform_wrapper ul.gfield_checkbox li label { width: auto !important;}
     .gform_wrapper ul.gfield_checkbox li input[type=checkbox], .gform_wrapper ul.gfield_radio li input[type=radio] { height: auto !important }
     section.Batman-Section .Batman-Section-data{ text-align: center; }
     .alignleft, .alignright { width: 100%!important; height: auto; margin: 0 auto 15px !important; float: none !important; display: table;
@@ -815,16 +817,33 @@ section.Kid-section .Kid-section-first .kid-image img  { height:auto}
  section.Batman-Section { padding: 20px 0 20px !important; }
 section.Camp-details-section-5 { padding: 20px 0; }
 section { padding: 20px 0; } 
-    
+.p { position: relative;display: inline-block; }
+.n { float: right;     position: relative; right: 0}
+.stickyicon { margin-bottom:15px } 
+.dropdown-menu.main-menu .inner-menu{ width: 100%; padding:0;}
+.first-box { padding: 15px 10px; }
+.dropdown-menu.main-menu .inner-menu ul {column-count: 2; display: inline-block; width: 100%;}
+.dropdown-menu.main-menu .inner-menu ul li { display: inline-block }  
+.second-box img { height: auto;}  
+.dropdown-menu.main-menu .inner-menu ul:after{ display: none }
+.menublank_none {display: none}
+.main-styled-card:last-child .card.styled-card:last-child { margin-bottom: 0 }
+section.Home-section-4 { padding: 20px 0 !important; }
+section.Included-section{ padding: 20px 0 !important }
+.title { margin-bottom: 15px; }
+
+footer { padding: 20px 0; }
+
 }
 @media(max-width:575px){
     .accordian-div .accordion .card .card-header button { padding-right: 35px !important; }
-    .n { right: 15px; }
+    
     .kid-image>div img{ width: auto; }
     .video-modal .modal-body .close { right: 0; }
     section.Kid-section .kids-data:before{ left: 10px }
     .video-modal .modal-body .close { right: 0; }
    ul.pl-0.text-left { padding-left: 16px !important;}
+   header .social-header .first-li  {  justify-content: center !important;  }
 }
 @media(max-width: 475px){
     .slick-next { right: 0 }

@@ -23,7 +23,7 @@ class SportMenu2 extends Component {
 			
 		  <div className="inner-menu">
 			<div className="mb-3 menu-heading">
-				<h3 className="font-16 font-semibold color-333 uppercase mb-3">&nbsp;</h3>
+				<h3 className="font-16 menublank_none font-semibold color-333 uppercase mb-3">&nbsp;</h3>
 			</div>
 			<ListGroup as="ul">
 				<StaticQuery
