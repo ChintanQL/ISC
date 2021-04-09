@@ -16,14 +16,18 @@ export default class Search extends Component {
     return (
       <>
         <input type="text" className="form-control master" placeholder="Search in Blog" value={this.state.query} onChange={this.search} />
-        <ul className="lisearch" >
-          {this.state.results.map(page => (
-            <li key={page.node.id}>
-              <Link to={ page.node.url.replace('https://shop.australiansportscamps.com.au/blog/','https://develop.australiansportscamps.com.au/blog/')} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
-              
-            </li>
-          ))}
-        </ul>
+			{(this.state.results.length > 0) ? (
+				<ul className="lisearch" >
+				  {this.state.results.map(page => (
+					<li key={page.node.id}>
+					  <Link to={ page.node.url.replace('https://shop.australiansportscamps.com.au/blog/','https://develop.australiansportscamps.com.au/blog/')} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
+					  
+					</li>
+				  ))}
+				</ul>
+			) : ("")}
+		
+		
       </>
     )
   }
