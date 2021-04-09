@@ -87,7 +87,7 @@ class Camps extends Component {
 						
 							<Campbooking category={page.edges[0].node.acf.product_category}   />
 						
-						<p className="font-15 font-medium color-3b mb-0" >{page.edges[0].node.acf.disclaimer}</p>
+						<p className="font-15 font-medium color-3b mb-0 disclaimer_bxsec" >{page.edges[0].node.acf.disclaimer}</p>
                     </Container>
                 </section>
 				
