@@ -73,7 +73,7 @@ class CampPricing extends Component {
 							{this.state.PageData.pricing.map((cmp) => 
 								<div className="col-sm-12 col-md-6 col-lg-6">
 									<div className="camppric_twocolbx text-center">
-										<div className="camppricimg mb-2 mb-md-3 mb-lg-5"><img src={cmp.image} alt=""></div>
+										<div className="camppricimg mb-2 mb-md-3 mb-lg-5"><Image src={cmp.image} alt=""/></div>
 										<h2 className="font-bold">{cmp.title}</h2>
 										<p className="font-22 font-medium color-3b mb-2 mb-md-3 mb-lg-4">{cmp.sub_title}</p>
 										<div className="" dangerouslySetInnerHTML={{ __html: cmp.desc}} />
