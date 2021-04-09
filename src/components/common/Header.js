@@ -139,7 +139,7 @@ class Header extends Component {
         }
 		
 		if(window.location.href.indexOf("/membership") > -1){
-            var element = document.getElementById("navCont");
+            var element = document.getElementById("navResources3");
 			element.classList.add("active");
         }
 		
