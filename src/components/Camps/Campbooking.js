@@ -81,8 +81,8 @@ class Campbooking extends React.Component{
 				</>
 			
 			) : (
-				<section className="col-lg-12"  >
-					<section className="No-camp-section-2">
+				<div className=""  >
+					<div className="No-camp-section-2">
 						<div className="container">
 							<div className="title mb-30">
 								<h2>
@@ -101,7 +101,7 @@ class Campbooking extends React.Component{
 								</p>
 							</div>
 						</div>
-					</section>
+					</div>
 					<section className="No-camp-section-3">
 						<div className="container">
 							<div className="row">
@@ -114,7 +114,7 @@ class Campbooking extends React.Component{
 							</div>
 						</div>
 					</section>
-				</section>
+				</div>
 			
 			)}
 			
