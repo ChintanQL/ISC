@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {Container,Breadcrumb,Col,Row,Card,Image} from 'react-bootstrap'
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import { Link } from 'gatsby'
-import Footer from "../components/common/Footer"
-import BottomForm from "../components/common/BottomForm"
-import Campbanner from "../components/common/Campbanner"
-import card1 from '../images/card1.png'
-import cardhover from '../images/card-hover-img.png'
+import Footer from "../../components/common/Footer"
+import BottomForm from "../../components/common/BottomForm"
+import Campbanner from "../../components/common/Campbanner"
+import card1 from '../../images/card1.png'
+import cardhover from '../../images/card-hover-img.png'
 import axios from 'axios';
 import { Helmet } from "react-helmet"
 import queryString from 'query-string'
@@ -24,7 +24,7 @@ class CampPricing extends Component {
 	componentDidMount() {
 		axios({
 			//url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camps',
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_category',
+			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camp_pricing',
 			method: 'get'}).then(res => {
 			this.setState({PageData: res.data.ResponseData.data[0]})
 			

@@ -2813,15 +2813,44 @@ section.Blog-details-Section-2 .social-footer-li ul li, section.Blog-details-Sec
 // {
 //   padding:20px 0px 30px 0px;
 // }
-.comment-section .main-blog-details{  display:inline-block;  width: 100%;  padding: 0 !important;  border: 0 !important;  border-radius: 0 !important;}
-.comment-section .main-blog-details li{  padding: 15px 0px;  border-top: 0 !important;  border-left: 0 !important;  border-right: 0 !important;  border-radius: 0 !important;  border-bottom: 1px solid #CFCFCF !important;}
+.comment-section .main-blog-details
+{
+  display:inline-block;
+  width: 100%;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+.comment-section .main-blog-details li
+{
+  padding: 15px 0px;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #CFCFCF !important;
+}
 .comment-section .main-blog-details li:nth-child(even){  padding-left: 50pxyith-wcbm-badge-126448}
-.comment-section .main-blog-details .main-blog-data{  width: 100%;}
-.comment-section .main-blog-details .main-blog-data button.blue{  padding: 7px 20px !important;}
+.comment-section .main-blog-details .main-blog-data
+{
+  width: 100%;
+}
+.comment-section .main-blog-details .main-blog-data button.blue
+{
+  padding: 7px 20px !important;
+}
 .comment-section .main-blog-details li p,
-.comment-section .main-blog-details li span{  font-size: 14px;  line-height: 28px;}
-.comment-section .main-blog-details li span{  color: #b4b4b4;}
-.comment-section .transparent-button{  color: #3b3b3b !important;}
+.comment-section .main-blog-details li span{
+  font-size: 14px;
+  line-height: 28px;
+}
+.comment-section .main-blog-details li span{
+  color: #b4b4b4;
+}
+.comment-section .transparent-button
+{
+  color: #3b3b3b !important;
+}
 
 // Leave Reply
 
@@ -3000,6 +3029,4 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
     .slick-next { right: 0 }
     .slick-prev { left: 0;}
 }
-a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn {
-    padding: 0 16px !important;
-}
+a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn { padding: 0 16px !important;}
