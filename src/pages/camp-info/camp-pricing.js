@@ -116,7 +116,7 @@ class CampPricing extends Component {
 									</div>
 									<div className="col-lg-4 col-md-4 col-sm-12">
 										<div className="campfriendpricimg">
-										 {(this.state.result === 1) ? (<><img src={this.state.PageData.side_image} alt="" className="img-fluid"></>) : ("")}
+										 {(this.state.result === 1) ? (<><img src={this.state.PageData.side_image} alt="" className="img-fluid" /></>) : ("")}
 										</div>
 									</div>
 								</div>

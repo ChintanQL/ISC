@@ -124,7 +124,7 @@ class demopage extends Component {
 														{category && category.edges.map( (propd,i) => {
 															return (
 																
-																(propd.node.name !== 'Uncategorised') ? (<ListGroup.Item key={i} as="li" className="font-18 justify-content-between d-flex align-items-center">
+																(propd.node.name !== 'Uncategorised') ? (<ListGroup.Item key={i} as="li" className="font-16 justify-content-between d-flex align-items-center">
 																	<Link to={"/category/"+propd.node.slug+"/"} className="mr-1 color-70 font-regular decoration-none">{propd.node.name}</Link> <p className="mb-0 color-70 font-regular">{propd.node.count}</p>
 																</ListGroup.Item>) : ("") 
 															)

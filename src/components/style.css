@@ -555,7 +555,6 @@ header .processMenu ul li:last-child {
 }
 
 
-
 /*placeholdercss*/
 input::-webkit-input-placeholder, select::-webkit-input-placeholder,  textarea::-webkit-input-placeholder { color: #B4B4B4 !important; }
 input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder { color: #B4B4B4 !important; }
@@ -584,15 +583,26 @@ ul.lisearch::-webkit-scrollbar-track{ -webkit-box-shadow: inset 0 0 6px rgba(0,0
 ul.lisearch::-webkit-scrollbar{ width: 6px; background-color: #F5F5F5;}
 ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
 .stickyicon { margin-bottom: 40px }
+.Home_section_new .pos-absolute-form { left: auto; bottom: auto !important; top: 143px; right: 10%; transform: translateX(-10%);}
+.disclaimer_bxsec { border: 1px solid #3b3b3b; padding: 15px; }
+
+
+/*camp pricing page*/
+.camppric_twocolbx  {background:#fafafa; padding:40px 35px; }
+.asccampullist { margin: 0; padding: 0; text-align: left; }
+.asccampullist li { list-style: none; position: relative; font-weight: 500; font-size: 18px; line-height: 25px; margin-bottom: 15px; padding-left: 35px }
+.asccampullist li:before{ content:  "\f00c"; position: absolute; left: 0; top: 0; font-style: normal; font-weight:500; font-family:'FontAwesome'; width: 21px; height: 21px; display: inline-block; vertical-align: middle; border-radius: 100%; background:#b4b4b4; color: #fff; font-size: 13px; text-align: center; line-height: 24px; }
+.campfriendpricimg img { width: 100%; }
+.camppricetxt { color:#2a74b6;margin: 20px 0; }
+.Camp_pricesec2 { padding-bottom: 0 }
+/*end camp pricing page*/
+
 
 /*responsive*/
 
 @media (max-width:1199px) {
 
-    .main-header.sticky
-    {
-        padding: 5px 0px !important;
-    }
+    .main-header.sticky {  padding: 5px 0px !important;    }
     header .navbar-light .navbar-nav {
         padding-top: 0;
         border-top: 2px solid #f7f7f7;
@@ -730,78 +740,44 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
     .stickyicon { margin-bottom: 25px }
     section.Home-section-4 { padding: 30px 0 !important; }
     section.Included-section{ padding: 30px 0 !important }
+    .camppric_twocolbx { padding: 30px; }
+    .camppric_twocolbx { padding: 30px; }
 }
 @media(max-width:991px){
 .camptestimonialsec_logo {  position: relative; top: 0; right: 0; width: 120px; overflow: hidden; display: table; margin: 0 auto;}
 .kid-image.col-xl-6.col-lg-6, .kid-image>div {text-align: center}
 section.Kid-section .Kid-section-first .kid-image img  { height:auto}
 .camptestimonialsec_logo {  position: relative; top: 0; right: 0; width: 120px; overflow: hidden; display: table; margin: 0 auto;}
+
+.camppric_twocolbx { min-height: 710px }
 }
 
 @media (max-width:991px) and (min-width:768px) {
 
-    header .navbar-light .navbar-nav .nav-link {
-        text-transform: capitalize;
-        font-size: 13px;
-        letter-spacing: 1px;
-        padding: 24px 7px;
-    }
+    header .navbar-light .navbar-nav .nav-link { text-transform: capitalize; font-size: 13px; letter-spacing: 1px; padding: 24px 7px; }
+    .navbar-light .navbar-brand {max-width: 100px }
+    header .navbar-light .navbar-nav .nav-link.btn-default {padding: 6px 7px; top: 3px;  font-size: 12px; }
 
-    .navbar-light .navbar-brand {
-        max-width: 100px
-    }
+    header .dropdown-menu {overflow-y: scroll;  max-height: 400px; }
 
-    header .navbar-light .navbar-nav .nav-link.btn-default {
-        padding: 6px 7px;
-        top: 3px;
-        font-size: 12px;
-    }
-
-    header .dropdown-menu {
-        overflow-y: scroll;
-        max-height: 400px;
-    }
-
-    header .dropdown-menu .service-menu {
-        width: 100%;
-        display: block;
-        border-right: none;
-    }
+    header .dropdown-menu .service-menu { width: 100%; display: block;border-right: none; }
 
     header .dropdown-menu .other-menu,
-    header .dropdown-menu .service-menu li {
-        width: 49%;
-        display: inline-block;
-    }
+    header .dropdown-menu .service-menu li { width: 49%; display: inline-block; }
 
-    header .dropdown-menu li ul {
-        padding: 0;
-        display: block;
-    }
+    header .dropdown-menu li ul { padding: 0; display: block; }
 
-    header .dropdown-menu .service-menu.service-menu-full li {
-        width: calc(50% - 2px);
-    }
+    header .dropdown-menu .service-menu.service-menu-full li { width: calc(50% - 2px); }
 
-    header .dropdown-menu .service-menu.service-menu-full li {
-        width: 50% !important;
-        margin-bottom: 0;
-    }
-
-
-    header .dropdown-menu .other-menu {
-        min-height: auto;
-        border-right: none !important;
-    }
-
-    header .processMenu ul li:nth-child(2) {
-        border-right: none;
-    }
+    header .dropdown-menu .service-menu.service-menu-full li { width: 50% !important; margin-bottom: 0; }
+    header .dropdown-menu .other-menu { min-height: auto; border-right: none !important; }
+    header .processMenu ul li:nth-child(2) { border-right: none; }
 }
 
 
 
 @media(max-width: 767px){
+   section { padding: 20px 0; }
     section.Kid-section .kids-data:before {    left: 0;}    
     section.Kid-section .Kid-section-first .kid-image img { height: auto; text-align: center; display: table; margin: 0 auto;}
     .slick-next{ right: 0 !important; }
@@ -812,7 +788,8 @@ section.Kid-section .Kid-section-first .kid-image img  { height:auto}
     .alignleft, .alignright { width: 100%!important; height: auto; margin: 0 auto 15px !important; float: none !important; display: table;
         text-align: center;}
     .Blog-Section-2-data .alignleft, .Blog-Section-2-data .alignright {  width: auto !important;} 
-    
+     .card-text:last-child p { margin-bottom: 0;}
+     .card.blog-details-card { margin-bottom: 10px !important }
     section.Home-section-1.Home_section_new .home-form .form-control { font-size: 14px; }
  section.Batman-Section { padding: 20px 0 20px !important; }
 section.Camp-details-section-5 { padding: 20px 0; }
@@ -831,7 +808,7 @@ section { padding: 20px 0; }
 section.Home-section-4 { padding: 20px 0 !important; }
 section.Included-section{ padding: 20px 0 !important }
 .title { margin-bottom: 15px; }
-
+.camppric_twocolbx { min-height: auto; padding: 20px; margin-bottom: 15px; }
 footer { padding: 20px 0; }
 
 }
