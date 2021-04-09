@@ -137,6 +137,18 @@ class Header extends Component {
             var element = document.getElementById("navCont");
 			element.classList.add("active");
         }
+		
+		if(window.location.href.indexOf("/membership") > -1){
+            var element = document.getElementById("navCont");
+			element.classList.add("active");
+        }
+		
+		if(window.location.href.indexOf("/camp-pricing") > -1){
+            var element = document.getElementById("navResources3");
+			element.classList.add("active");
+        }
+		
+		
 		this.CheckModel()
 		
       } 
@@ -368,11 +380,29 @@ class Header extends Component {
 															</li>
 														</div>
 													) : (
-														<div>
+													<>
+													{(prop.title == 'Membership') ? (<div>
+														<li className="nav-item dropdown uppercase"><a activeClassName="active" id="navResources3" className="nav-link dropdown-toggle" data-toggle="dropdown"
+																href="javascript:;" aria-expanded="false">{prop.title}</a>
+															<ul className="dropdown-menu common-menu">
+																<li  ><Link className="dropdown-item"   to={"/membership"}>Membership</Link></li> 
+																<li  ><Link className="dropdown-item"   to={"/camp-info/camp-pricing/"}>Camp Pricing</Link></li> 
+															</ul>
+														</li>
+													</div>) : (
+													<div>
 															<li className="nav-item">
 																<Link className="nav-link" activeClassName="active" to={"/"+prop.title.toLowerCase().replace(/\s+/g, '-')}>{prop.title}</Link>
 															</li>
 														</div>
+													
+													)}
+													
+													</>
+													
+													
+													
+														
 													))}
 												</>
 											
