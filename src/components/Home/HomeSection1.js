@@ -44,7 +44,7 @@ class HomeSection1 extends Component {
 			id: "",
 			name: '',
 			shown: 'd-none',
-			selectedOption: null,
+			selectedOption: "",
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);	
@@ -85,7 +85,8 @@ class HomeSection1 extends Component {
 			//str +=val.value+",";
 		//});
 		var flg = 0;
-		
+		console.log("L"+loc);
+		console.log("S"+str);
 		if(loc == undefined){
 			console.log("if");
 			if(str == ''){
