@@ -753,7 +753,7 @@ a.uppercase.btn-sm.btn-orange-large {
 }
 
 
-// font
+
 
 
 .laoder{
@@ -932,7 +932,7 @@ a.uppercase.btn-sm.btn-orange-large {
   .font-20{font-size: 18px !important;line-height: 32px !important;}
   .font-22{font-size: 20px !important;line-height: 35px !important;}
 }
-// style
+
 
 .font-light{font-weight: 300 !important;}
 .font-regular{font-weight: 400 !important;}
@@ -940,7 +940,7 @@ a.uppercase.btn-sm.btn-orange-large {
 .font-semibold{font-weight: 600 !important;}
 .font-bold{font-weight: 700 !important;}
 
-// color
+
 
 .color-333{color: #333 !important;}
 .color-3b{color: #3b3b3b !important;}
@@ -990,7 +990,7 @@ p{color: #3b3b3b;}
 .mb-20{margin-bottom: 20px !important;}
 
 
-// body
+
 
 body
 {
@@ -998,14 +998,14 @@ body
   font-family: 'Montserrat', sans-serif !important; font-weight:500; line-height:30px;
 }
 
-// Hack
+
 
 :focus,div:focus,button:focus
 {
   outline: none !important;box-shadow: none !important;
 }
 
-// Header
+
 
 .nav-link.active {
     color: #f60 !important;
@@ -1075,7 +1075,7 @@ body
   font-weight: 600;
 } 
 
-// orange border small
+
 
 .btn-orange-border
 {
@@ -1100,7 +1100,7 @@ body
   line-height: 38px !important;
   font-weight: 600;
 }
-// orange border large
+
 
 .btn-orange-large-border
 {
@@ -1180,7 +1180,7 @@ body
   font-weight: 600;
 }
 
-// footer
+
 footer
 {
   background: #303030;
@@ -1236,7 +1236,7 @@ footer
 }
 
 
-// footer
+
 
 footer .footer-data ul li
 {
@@ -1305,7 +1305,7 @@ footer .social-footer-li ul li a
   }
 }
 
-// margin media
+
 
 @media all and (max-width:1199px)
 {
@@ -1351,7 +1351,7 @@ footer .social-footer-li ul li a
   }
 }
 
-// Section
+
 
 section
 {
@@ -1431,7 +1431,7 @@ select::-ms-expand {
   display: none; /* remove default arrow on ie10 and ie11 */
 }
 
-// home-sectiom-3
+
 
 section.Home-section-3 
 {
@@ -1533,7 +1533,7 @@ section.Home-section-3
   z-index: 2;
 }
 
-// Title
+
 
 .title
 {
@@ -1574,7 +1574,7 @@ section.Home-section-3
 
 }
 
-// Title Main
+
 
 .title-main
 {
@@ -1598,7 +1598,7 @@ section.Home-section-3
   font-weight: 500;
   text-align: left;
 }
-// Home-section-4
+
 
 section.Home-section-4
 {
@@ -1702,7 +1702,7 @@ section.Home-section-4 .trainer-main:hover .trainer-content
 }
 
 
-// Home-section-1
+
 
 section.Home-section-1
 {
@@ -1950,7 +1950,7 @@ section.Home-section-1 .home-form .third-control
   padding: 20px 30px 20px 0px;
   min-width: 145px;
 }
-// Home-section-2 
+
 
 section.Home-section-2 .slick-slide
 {
@@ -1980,7 +1980,7 @@ section.Home-section-2 .slider-data
 }
 
 
-// Modal-section
+
 
 section.Modal-section
 {
@@ -2065,7 +2065,7 @@ section.Modal-section .Modal-section-data img
   section.Modal-section .Modal-section-data{min-height: 350px !important;}
 }
 
-// Batman-Section
+
 
 section.Batman-Section {  padding: 25px 0px 0px 0px;}
 section.Batman-Section .Batman-Section-data{ margin-top: -70px;}
@@ -2076,7 +2076,7 @@ section.Batman-Section .Batman-Section-data{ margin-top: -70px;}
 
 
 
-// Included-section
+
 
 section.Included-section
 {
@@ -2138,7 +2138,7 @@ section.Included-section
 }
 
 
-// .Kid-section
+
 
 section.Kid-section
 {
@@ -2201,10 +2201,7 @@ section.Kid-section .kids-data:before
 
 }
 
-//Camps Listing 
 
-
-// Banner Section
 
 section.Banner-Section
 {
@@ -2286,7 +2283,7 @@ section.Banner-Section .Banner-Section-data .heading-banner
   margin-bottom: 0px !important;
 }
 
-// CampListing Section 3
+
 
 section.Sport-section-3
 {
@@ -2354,7 +2351,7 @@ section.Sport-section-3 .row
   z-index: 2;
 }
 
-// Sport-details-section-2
+
 
 section.Sport-details-section-2
 {
@@ -2379,7 +2376,7 @@ section.Sport-details-section-2 .Sport-details-section-2-content p
   section.Sport-details-section-2 .Sport-details-section-2-content{margin-top: 20px; border-bottom: 1px solid #3b3b3b;}
 }
 
-// Sport-details-section-3
+
 
 section.Sport-details-section-3
 {
@@ -2504,7 +2501,7 @@ section.Sport-details-section-3
   text-decoration: line-through;
 }
 
-// City-section-3
+
 
 section.City-section-3
 {
@@ -2516,7 +2513,7 @@ section.City-section-3 .row
   display: flex;
 }
 
-// City-section-4
+
 
 section.City-section-4
 {
@@ -2525,7 +2522,7 @@ section.City-section-4
   padding: 80px 0px;
 }
 
-// City-details-section-2
+
 
 section.City-details-section-2
 {
@@ -2534,14 +2531,14 @@ section.City-details-section-2
   padding: 80px 0px 0px 0px;
 }
 
-// Sport-details-section-3
+
 
 section.City-details-section-3
 {
   padding-bottom: 0px;
 }
 
-// Sport-details-section-4
+
 
 section.City-details-section-4
 {
@@ -2580,7 +2577,7 @@ section.City-details-section-4 .table th:nth-child(3) {
   min-width: 140px !important;
 }
 
-// Sport-details-section-5
+
 
 section.City-details-section-5
 {
@@ -2592,7 +2589,7 @@ section.City-details-section-5 form
   margin-top: 40px;
 }
 
-// Form-control
+
 
 label.master-label
 {
@@ -2659,14 +2656,14 @@ label.master-label
   color: #3B3B3B;
 }
 
-// No-camp-section-2
+
 
 section.No-camp-section-2
 {
   padding-bottom: 20px !important;
 }
 
-// No-camp-section-3
+
 section.No-camp-section-3 
 {
   padding-top: 0px !important;
@@ -2690,7 +2687,7 @@ section.No-camp-section-3 .call-div
   padding: 8px 15px !important;
 }
 
-// Camp-Section-2
+
 
 section.Camp-section-2
 {
@@ -2785,7 +2782,7 @@ section.Camp-section-2 .row .col-p-0
   section.Camp-section-2 .row .col-p-0{margin: 0px 15px 25px 15px !important;}
 }
 
-// camp-map-details
+
 
 section.Camp-section-2 .camp-map-details
 {
@@ -2817,7 +2814,7 @@ section.Camp-section-2 .camp-listing ul li .book-card.card .card-body p.card-tex
   margin-bottom: 10px !important;
 }
 
-// main-gatsby 15-10-2020
+
 
 section.Membership-section-3 
 {
@@ -2885,11 +2882,11 @@ ul.list-style-none
   list-style: none !important;
 }
 
-// Membership-section-5
+
 
 section.Membership-section-5{padding-top: 0 !important;}
 
-// Membership-section-6
+
 
 section.Membership-section-6{padding-top: 0 !important;}
 section.Membership-section-6 .steps-data
@@ -2921,7 +2918,7 @@ section.Membership-section-6 .steps-data h3
   }
 }
 
-// Membership-section
+
 
 section.Membership-section-7 .Membership-section-7-data h2
 {
@@ -2991,7 +2988,7 @@ section.Membership-section-7 .Membership-section-7-data h2
   width: 100%;
   text-align: left;
 }
-// Resource-section-2
+
 
 section.Resource-section-2 .nav-pills .nav-link
 {
@@ -3061,7 +3058,7 @@ section.Resource-section-2 .nav-pills
   margin-top: 3px;
 }
 
-// pagination
+
 
 .pagination
 {
@@ -3100,7 +3097,7 @@ section.Resource-section-2 .nav-pills
 }
 
 
-// resource componants section
+
 
 section.Resource-videos,
 section.Resource-guides,
@@ -3111,7 +3108,7 @@ section.Resource-flyers
 }
 
 
-// gray-data Common
+
 
 .gray-data
 {
@@ -3120,7 +3117,7 @@ section.Resource-flyers
   padding: 15px !important;
 }
 
-// Resource-details-section-2
+
 
 section.Resource-details-section-2 {
   justify-content: center;
@@ -3142,12 +3139,12 @@ section.Resource-details-section-2 .btn-orange-border{  background-color: transp
 section.Resource-details-section-2  .btn-orange-border:hover{  background-color: #FF6600 !important;}
 
 
-// Hero-section-2
+
 
 section.Hero-section-2 .row {  justify-content: center;  display: flex;}
 
 
-// Feedback-section-2
+
 
 .gray-data.max-padd {
   padding: 30px 25px !important;
@@ -3173,7 +3170,7 @@ section.Hero-section-2 .row {  justify-content: center;  display: flex;}
 }
 
 
-// radio button
+
 
  .blue-radio .custom-control-input:checked ~ .custom-control-label::before
  {
@@ -3189,7 +3186,7 @@ section.Hero-section-2 .row {  justify-content: center;  display: flex;}
    color: #3B3B3B !important;
  }
 .partnerprog_menu { cursor: default; }
-//  Contactus-Section-2
+
 
 section.Contactus-Section-2 .Contactus-Section-2-data .steps-data
 {
@@ -3219,7 +3216,7 @@ section.Contactus-Section-2 .Contactus-Section-2-data .steps-data a
   word-break: break-word;
   margin-bottom: 0 !important;
 }
-// section.Contactus-Section-3
+
 section.Contactus-Section-3
 {
   padding-top: 0 !important;
@@ -3231,7 +3228,7 @@ section.Contactus-Section-3 .Contactus-Section-3-data
   padding: 25px 30px !important;
 }
 
-// blue-checkbox
+
 
 .blue-check.custom-control-inline
 {
@@ -3263,7 +3260,7 @@ section.Contactus-Section-3 .Contactus-Section-3-data
   color: #3B3B3B;
 }
 
-// Product-details-Section-2
+
 
 section.Product-details-Section-2 .Product-details-Section-2-data .gray-data
 {
@@ -3310,18 +3307,18 @@ section.Product-details-Section-2 .Product-details-Section-2-data .quantity-data
   text-align: center;
   cursor: none !important;
 }
-// Product-details-Section-3
+
 
 section.Product-details-Section-3{  padding-top: 0 !important;}
 
 section.Product-details-Section-3 .gray-data{  padding: 25px 25px !important;}
 
-// Login-section
+
 
 section.Login-section .gray-data{ padding: 40px 30px !important;}
 
 
-// gray-checkbox
+
 
 .gray-check.custom-control-inline{  margin-bottom: 10px !important;}
 .gray-check .custom-control-input:checked ~ .custom-control-label::before, 
@@ -3333,7 +3330,7 @@ section.Login-section .gray-data{ padding: 40px 30px !important;}
 {  // background: #fff !important; // background-color: #fff !important;  border: 2px solid #707070 !important;}
 .gray-check.custom-control.custom-checkbox label{  font-size: 15px !important;  font-weight: 500;  color: #3B3B3B;}
 
-// Main-Section-1
+
 
 section.Main-Section-1 .sidebar
 {
@@ -3411,19 +3408,19 @@ section.Main-Section-1 .sidebar .nav-pills .nav-link .sidebar-icon img {
 
 
 
-// gray-small-button
+
  
 .gray-small-button{  padding: 10px 20px;  background: #EEEEEE;  background-color: #EEEEEE;  color: #3B3B3B !important;  font-size: 16px;  border: none !important;  text-decoration: none !important;  transition: 0.3s all ease-in-out;  border-radius: 0 !important;  cursor: pointer;}
 
 .gray-small-button:hover, .gray-small-button:focus{  background: #303030 !important;  background-color: #303030 !important;  color: #fff !important;  border-radius: 0 !important;  border: none !important;  cursor: pointer;}
 
-// gray-border-button
+
  
 .gray-border-button{  padding: 6px 20px;  background: #fff;  background-color: #fff;  color: #707070 !important;  font-size: 16px;  text-decoration: none !important;  transition: 0.3s all ease-in-out;  border: 2px solid #707070 !important;  cursor: pointer;}
 
 .gray-border-button:hover, .gray-border-button:focus{  background: #fff !important;  background-color: #fff !important;  color: #303030 !important;  border: 2px solid #303030 !important;  cursor: pointer;}
 
-// transparent-button
+
  
 .transparent-button
 {
@@ -3545,7 +3542,7 @@ section.Main-Section-1 .sidebar .nav-pills .nav-link .sidebar-icon img {
     font-weight: 500;
     color: #3B3B3B;
 }
-// Blog card
+
 
 .card.blog-card
 {
@@ -3589,7 +3586,7 @@ section.Main-Section-1 .sidebar .nav-pills .nav-link .sidebar-icon img {
   overflow: hidden;
 }
 
-// Blog Sidebar 
+
 
 .inner-media-sidebar .img-box-sidebar
 {
@@ -3619,7 +3616,7 @@ section.Main-Section-1 .sidebar .nav-pills .nav-link .sidebar-icon img {
   border-bottom: none !important;
 }
 
-//  tagsList
+
 
 .tagsList .form-check-label {
   background: #FAFAFA !important;
@@ -3658,7 +3655,7 @@ section.Main-Section-1 .sidebar .nav-pills .nav-link .sidebar-icon img {
   margin-bottom: 0 !important;
 }
 
-// Blog Details Search Input
+
 
 .search .form-control
 {
@@ -3678,7 +3675,7 @@ section.Main-Section-1 .sidebar .nav-pills .nav-link .sidebar-icon img {
   height: 50px !important;
 }
 
-// Blog Details UL
+
 
 ul.categaries li
 {
@@ -3698,7 +3695,7 @@ ul.share-post li:last-child
 }
 
 
-// Blog Details card
+
 
 .card.blog-details-card
 {
@@ -3738,7 +3735,7 @@ ul.share-post li:last-child
 }
 
 
-// thead-back-table
+
 
 .thead-back-table table thead th
 {
@@ -3788,7 +3785,7 @@ ul.share-post li:last-child
     color: #3B3B3B !important;
 }
 
-// table-pagination
+
 
 .table-pagination li.page-item
 {
@@ -3829,7 +3826,7 @@ section.Blog-details-Section-2 .social-footer-li ul li a
     font-size: 18px;
 }
 
-// Next-previous-data
+
 
 .Next-previous-data ul li
 {
@@ -3874,7 +3871,7 @@ section.Blog-details-Section-2 .social-footer-li ul li a
   vertical-align: middle;
 }
 
-// blog details related cards 
+
 
 .related-post-data .card.blog-card .card-body {
   border: none !important;
@@ -3903,12 +3900,7 @@ section.Blog-details-Section-2 .social-footer-li ul li a
 }
 
 
-// comment-section
 
-// .comment-section
-// {
-//   padding:20px 0px 30px 0px;
-// }
 .comment-section .main-blog-details
 {
   display:inline-block;
@@ -3948,7 +3940,7 @@ section.Blog-details-Section-2 .social-footer-li ul li a
   color: #3b3b3b !important;
 }
 
-// Leave Reply
+
 
 .gray-data.leave{
   padding: 25px !important;
