@@ -20,7 +20,8 @@ class Campbanner extends Component {
 	state = {
 		PageData: [],
 		Isbanner: 0,
-		showInfo: 0
+		showInfo: 0,
+		coupon_code: "",
 	}
 	
 	componentDidMount() {
@@ -30,6 +31,7 @@ class Campbanner extends Component {
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData[0].Image})
 			this.setState({Isbanner: res.data.ResponseData[0].IsBanner})
+			this.setState({coupon_code: res.data.ResponseData[0].coupon_code})
 			this.setState({showInfo: 1})
 		})
 	}
@@ -39,7 +41,7 @@ class Campbanner extends Component {
         return (
             <>
            <div className="stickyicon" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
-			<Link to={"/book-a-camp"} ><Image src={this.state.PageData} alt=""/></Link>
+			<a href={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></a>
 		   </div>
             </>
         );
