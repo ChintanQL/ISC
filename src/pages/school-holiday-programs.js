@@ -9,7 +9,7 @@ import cardhover from '../images/card-hover-img.png'
 import { Helmet } from "react-helmet"
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
-
+import lifes from '../images/lifes-better-with-sport.png'
 class SHP extends Component {
     
 	constructor(props) {
@@ -256,7 +256,7 @@ class SHP extends Component {
                             </Col>
                             <Col xl={6} lg={6} className="text-center kids-data">
                                 <p className="mb-30 font-22 font-semibold text-white" dangerouslySetInnerHTML={{ __html: this.state.PageData.bottom_kids_review.desc}} />
-                              
+                                 <div className="camptestimonialsec_logo"> <Image src={lifes} alt="cardhover" /></div>
                             </Col>
                         </Row>
                     </Container>
