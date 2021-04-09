@@ -66,8 +66,9 @@ class HomeSection1 extends Component {
   }
 
 	handleChange = selectedOption => {
-    this.setState({ selectedOption });
+    this.setState({ selectedOption : selectedOption.value });
     console.log(`Option selected:`, selectedOption);
+    console.log(`Option selected:`, selectedOption.value);
   };
   
 	Campred(){
