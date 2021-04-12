@@ -222,7 +222,7 @@ class Header extends Component {
                         
                     </ListGroup>
 
-                    <ListGroup horizontal as="ul" className="d-md-none d-flex htmob-displaybx">
+                    <ul className="d-md-none d-flex htmob-displaybx list-group list-group-horizontal">
                         
 						{(cookies.get('LOGIN') == 1) ? (
 						<li className="userdropdownbox" onClick={()=>{this.setState({show:!this.state.show})}} >
@@ -247,7 +247,7 @@ class Header extends Component {
 						
 						
 						
-                    </ListGroup>
+                    </ul>
                 </div>
             </div>
         </div>

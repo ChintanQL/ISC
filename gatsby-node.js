@@ -483,7 +483,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	const CityTemplate = path.resolve(`./src/templates/city_details.js`);
 	City.data.allWordpressWpCpt152600.edges.forEach((edge,index) => {
 		  createPage({
-		  path: `/city/${edge.node.slug}/`,
+		  path: `/school-holiday-programs/${edge.node.slug}/`,
 		  component: slash(CityTemplate),
 		  context: {
 			id: edge.node.id
