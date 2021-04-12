@@ -179,7 +179,7 @@ class Header extends Component {
                 <div className="first-li align-items-center d-flex">
                     <ListGroup horizontal as="ul">
                         <SocialMenu />
-                        <ListGroup.Item as="li" className="d-md-none d-flex">
+                        <ListGroup.Item as="li" className="d-md-none d-none d-flex">
                             <a href="tel:1300914368" className="nav-link p-0" to="/">
                                 <i className="fa fa-phone"></i>
                             </a>

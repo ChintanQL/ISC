@@ -43,16 +43,8 @@ class Cat extends Component {
 				</section>	 
 				<section className="Sport-details-section-3">
 					<Container>
-						<Row className="justify-content-center mb-4">
-							<Col xl={12} lg={12}>
-								<div className="title">
-									<h2>Select your camp below to book online now.</h2>
-								</div>
-							</Col>
-						</Row>
-						<Row className="">
-							<Campbooking category={this.props.pageContext.id} />
-						</Row>
+						<Campbooking category={this.props.pageContext.id} />
+						
                     </Container>
                 </section>
 				
