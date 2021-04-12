@@ -559,7 +559,7 @@ header .processMenu ul li:last-child {
 input::-webkit-input-placeholder, select::-webkit-input-placeholder,  textarea::-webkit-input-placeholder { color: #B4B4B4 !important; }
 input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder { color: #B4B4B4 !important; }
 input:-ms-input-placeholder, select::-ms-input-placeholder, textarea:-ms-input-placeholder { color:#B4B4B4 !important; }
-.gform_wrapper input,.gform_wrapper select { color: #333333 !important; }
+.gform_wrapper input, .gform_wrapper select { color: #333333 !important; }
 
 a.nav-link.uppercase.btn-sm.btn-orange.active:hover, a.nav-link.uppercase.btn-sm.btn-orange.active:focus { color: #f60!important }
 
@@ -597,7 +597,7 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
 .Camp_pricesec2 { padding-bottom: 0 }
 /*end camp pricing page*/
 
-.text-error{ color: #f00 }
+
 /*responsive*/
 
 @media (max-width:1199px) {
@@ -801,7 +801,7 @@ section { padding: 20px 0; }
 .first-box { padding: 15px 10px; }
 .dropdown-menu.main-menu .inner-menu ul {column-count: 2; display: inline-block; width: 100%;}
 .dropdown-menu.main-menu .inner-menu ul li { display: inline-block }  
-.second-box img { height: auto;}  
+.second-box img { height: auto; width:100%;}  
 .dropdown-menu.main-menu .inner-menu ul:after{ display: none }
 .menublank_none {display: none}
 .main-styled-card:last-child .card.styled-card:last-child { margin-bottom: 0 }

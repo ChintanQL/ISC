@@ -248,7 +248,7 @@ class City extends Component {
 				) : ("")}
 				<div className="flyer_formbx" >
 				<div className="container">
-				<iframe height="700" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-flyer/" title="description" /> 
+				<iframe height="600" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-flyer/" title="description" /> 
 				</div>
 				</div>
 				<BottomForm/>
