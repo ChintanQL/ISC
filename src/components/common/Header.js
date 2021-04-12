@@ -187,7 +187,7 @@ class Header extends Component {
 						<span className="httxt text-white text-uppercase">Australian sports camps ™</span>
                     </ListGroup>
                 </div>
-                <div className="second-li align-items-center d-sm-flex d-none">
+                <div className="second-li align-items-center d-sm-flex">
                     <ListGroup horizontal as="ul" className="d-md-flex d-none">
                         <ListGroup.Item as="li">
                         <a className="nav-link p-0" href="tel:1300914368"><i className="fa fa-phone"/></a><a className="nav-link p-0" href="tel:1300914368"> CALL US: 1300 914 368</a>

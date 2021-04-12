@@ -130,7 +130,7 @@ class Sport extends Component {
 							<Col xl={12} lg={12} md={12} sm={12} xs={12} >
 								<div className="" ></div>
 								<p  className={"text-success "+this.state.shown} > Coupon code applied successfully. </p>
-								<p  className={"text-success "+this.state.shown_new} > Coupon code {'"'+this.state.code+'"'} already applied! Please add some products to the cart to see the discount.  </p>
+								<p  className={"text-error "+this.state.shown_new} > Coupon code {'"'+this.state.code+'"'} already applied! Please add some products to the cart to see the discount.  </p>
 							</Col>
 						</Row>
 					</Container>

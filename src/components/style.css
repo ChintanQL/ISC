@@ -597,7 +597,7 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
 .Camp_pricesec2 { padding-bottom: 0 }
 /*end camp pricing page*/
 
-
+.text-error{ color: #f00 }
 /*responsive*/
 
 @media (max-width:1199px) {

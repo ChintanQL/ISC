@@ -30,14 +30,14 @@ class HomeSection2 extends Component {
              {
                breakpoint: 600,
                settings: {
-                 slidesToShow: 5,
+                 slidesToShow: 2,
                  slidesToScroll: 1
                }
              },
              {
                breakpoint: 480,
                settings: {
-                 slidesToShow: 4,
+                 slidesToShow: 1,
                  slidesToScroll: 1
                }
              }
