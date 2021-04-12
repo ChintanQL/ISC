@@ -4,7 +4,7 @@ import $ from "jquery";
 
 class ContactusSection3 extends Component {
 	constructor(props) {
-      
+      super(props);
         this.resizeIFrameToFitContent = this.resizeIFrameToFitContent.bind(this); 
     }
 	
