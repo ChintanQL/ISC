@@ -4091,6 +4091,8 @@ section.Home-section-1 .slider-inner-data h3 br { display: none }
     section.Home-section-1.Home_section_new .home-form .second-control>div>div{ font-size: 14px; }
     .title-main h2 { font-size:20px; line-height: 30px;}
     .title-main, .title-main h2 { margin-bottom:10px; }
+    header .social-header .second-li ul li i { display:inline}
+    .httxt { font-size:14px; line-height:24px; }
 }
 @media(max-width:575px){
  .video-modal .modal-body .close { right: 0; }
@@ -4117,10 +4119,18 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
   ul.pl-0.text-left { padding-left: 16px !important;}
   .accordian-div .accordion .card .card-header button { padding-right: 35px !important; }
 
+
+
 }
 @media(max-width: 475px){
     
     .slick-next { right: 0 }
     .slick-prev { left: 0;}
+    .httxt {font-size: 11px; line-height: 19px;}
+  header .social-header .first-li ul li{padding:0 5px; line-height:24px}
+  .userdropdownbox:before { transform: translateY(-50%); top: 50%; }
+  header .social-header .second-li ul li.userdropdownbox { padding-right:20px !important; }
+   header .social-header .first-li ul li { padding: 0px 6px; }  
+   .httxt { font-size:13px; line-height:24px; } 
 }
 a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn { padding: 0 16px !important;}
