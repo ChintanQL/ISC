@@ -188,17 +188,17 @@ class Header extends Component {
                     </ListGroup>
                 </div>
                 <div className="second-li align-items-center d-sm-flex">
-                    <ListGroup horizontal as="ul" className="d-md-flex d-none">
-                        <ListGroup.Item as="li">
+                    <ul className="d-md-flex d-none list-group list-group-horizontal">
+                        <li className="list-group-item" >
                         <a className="nav-link p-0" href="tel:1300914368"><i className="fa fa-phone"/></a><a className="nav-link p-0" href="tel:1300914368"> CALL US: 1300 914 368</a>
-                        </ListGroup.Item>
-                        <ListGroup.Item as="li">
+                        </li>
+                        <li>
                             |
-                        </ListGroup.Item>
+                        </li>
 						
 						<>{(cookies.get('LOGIN') == 1) ? (
 							
-							<li className="userdropdownbox" onClick={()=>{this.setState({show:!this.state.show})}} >
+							<li className="userdropdownbox list-group-item" onClick={()=>{this.setState({show:!this.state.show})}} >
                             <i className="fa fa-user-circle"></i>{cookies.get('USER')}
                             <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
                                 <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
@@ -209,23 +209,23 @@ class Header extends Component {
 							
 							
 						) : ( 
-							<ListGroup.Item as="li">
+							<li className="list-group-item">
 								<Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
 									<span>OR</span>
 								<Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
-							</ListGroup.Item>
+							</li>
 						
 						) }</>
 						
 						
 						
                         
-                    </ListGroup>
+                    </ul>
 
                     <ul className="d-md-none d-flex htmob-displaybx list-group list-group-horizontal">
                         
 						{(cookies.get('LOGIN') == 1) ? (
-						<li className="userdropdownbox" onClick={()=>{this.setState({show:!this.state.show})}} >
+						<li className="userdropdownbox list-group-item" onClick={()=>{this.setState({show:!this.state.show})}} >
                             <i className="fa fa-user-circle"></i>{cookies.get('USER')}
                             <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
                                 <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
@@ -236,11 +236,11 @@ class Header extends Component {
 						
 						
 						) : (
-						<ListGroup.Item as="li">
+						<li className="list-group-item">
                         <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
                         <span>OR</span>
                         <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
-                        </ListGroup.Item>
+                        </li>
 						
 						)}
 						
