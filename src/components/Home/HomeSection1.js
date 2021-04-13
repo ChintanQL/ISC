@@ -9,8 +9,6 @@ import $ from "jquery";
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
 
 
-//https://github.com/sethcwhiting/react-native-gravityform
-//https://github.com/reactivestack/cookies/tree/master/packages/universal-cookie
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -35,6 +33,37 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
+
+
+const options = [
+ { value: 'basketball', label: 'Basketball' },
+{ value: 'football', label: 'AFL / AFLW Football' },
+{ value: 'netball', label: 'Netball' },
+{ value: 'cricket', label: 'Cricket' },
+{ value: 'soccer', label: 'Soccer' },
+{ value: 'hockey', label: 'Hockey' },
+{ value: 'tennis', label: 'Tennis' },
+{ value: 'rugby-league', label: 'Rugby League' },
+{ value: 'rugby-union', label: 'Rugby Union' },
+{ value: 'golf', label: 'Golf' },
+{ value: 'rock-climbing-indoor-surfing', label: 'Rock Climbing' },
+{ value: 'sailing', label: 'Sailing' },
+{ value: 'table-tennis', label: 'Table Tennis' },
+{ value: 'baseball', label: 'Baseball' },
+{ value: 'ice-skating', label: 'Ice Staking' },
+{ value: 'futsal', label: 'Futsal' },
+{ value: 'horse-riding', label: 'Horse Riding' },
+{ value: 'rowing', label: 'Rowing' },
+{ value: 'multi-sport', label: 'Multi-Sport' },
+{ value: 'esports', label: 'E-Sports' },
+{ value: 'rock-climbing-indoor-surfing', label: 'Indoor Surfing' },
+{ value: 'gymnastics', label: 'Gymnastics' },
+{ value: 'speed-agility', label: 'Speed & Agility' },
+];
+
+
+
+
 class HomeSection1 extends Component {
 	constructor(props){
 		super(props)
@@ -49,7 +78,7 @@ class HomeSection1 extends Component {
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);	
-  
+		 this.setState({selectOptions: options});
 	}
 	
 	async getOptions(){
@@ -62,7 +91,7 @@ class HomeSection1 extends Component {
 
     }))
 
-    this.setState({selectOptions: options})
+   
 
   }
 
@@ -133,7 +162,7 @@ class HomeSection1 extends Component {
 	}
 
   componentDidMount(){
-		this.getOptions()
+		//this.getOptions()
 		const cookies = new Cookies();	
 		cookies.set('lat', "", { path: '/' });
 		cookies.set('lng', "", { path: '/' });
