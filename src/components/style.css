@@ -141,7 +141,7 @@ header .social-header .second-li ul li i
 {
     font-size: 18px;
     margin-right: 8px;
-    height: 14px;
+    height: 14px; display: inline;
 }
 header .social-header .second-li ul li a
 {
@@ -597,7 +597,12 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
 .Camp_pricesec2 { padding-bottom: 0 }
 /*end camp pricing page*/
 
-
+.callbtnblue { background: #2a74b6; text-align: center; padding: 10px; color: #fff; margin-top: 35px; font-size: 24px; line-height: 30px; }
+.callbtnblue a { color: #fff;}
+.callbtnblue span { color: #fff; display: block; text-transform: uppercase; font-weight: 600; font-size: 21px;}
+.callbtnblue:hover a {text-decoration: none;}
+.callbtnblue:hover { text-decoration: none; background: #f60;}
+.text-error { color: #f00; text-align: center; }
 /*responsive*/
 
 @media (max-width:1199px) {
