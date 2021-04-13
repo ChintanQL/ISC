@@ -45,7 +45,7 @@ class BottomForm extends Component {
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);
-		this.setState({selectOptions: options});
+		
        
 	}
 	
