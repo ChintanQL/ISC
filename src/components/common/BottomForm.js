@@ -7,7 +7,13 @@ import axios from 'axios';
 import SearchLocationInput from '../Home/SearchLocationInput'
 import $ from "jquery";
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
-const options = [
+
+class BottomForm extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			multiValue: [],
+			selectOptions : [
  { value: 'basketball', label: 'Basketball' },
 { value: 'football', label: 'AFL / AFLW Football' },
 { value: 'netball', label: 'Netball' },
@@ -31,13 +37,7 @@ const options = [
 { value: 'rock-climbing-indoor-surfing', label: 'Indoor Surfing' },
 { value: 'gymnastics', label: 'Gymnastics' },
 { value: 'speed-agility', label: 'Speed & Agility' },
-];
-class BottomForm extends Component {
-	constructor(props){
-		super(props)
-		this.state = {
-			multiValue: [],
-			selectOptions : [],
+],
 			id: "",
 			name: '',
 			shown: 'd-none',

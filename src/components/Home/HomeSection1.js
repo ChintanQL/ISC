@@ -35,7 +35,17 @@ function SamplePrevArrow(props) {
 }
 
 
-const options = [
+
+
+
+
+
+class HomeSection1 extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			multiValue: [],
+			selectOptions : [
  { value: 'basketball', label: 'Basketball' },
 { value: 'football', label: 'AFL / AFLW Football' },
 { value: 'netball', label: 'Netball' },
@@ -59,17 +69,7 @@ const options = [
 { value: 'rock-climbing-indoor-surfing', label: 'Indoor Surfing' },
 { value: 'gymnastics', label: 'Gymnastics' },
 { value: 'speed-agility', label: 'Speed & Agility' },
-];
-
-
-
-
-class HomeSection1 extends Component {
-	constructor(props){
-		super(props)
-		this.state = {
-			multiValue: [],
-			selectOptions : [],
+],
 			id: "",
 			name: '',
 			shown: 'd-none',
@@ -78,7 +78,7 @@ class HomeSection1 extends Component {
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);	
-		 this.setState({selectOptions: options});
+		 
 	}
 	
 	async getOptions(){
