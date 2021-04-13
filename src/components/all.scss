@@ -4150,9 +4150,10 @@ header .social-header .second-li ul li ul.htdropdown li a { color: #000; padding
  .css-1okebmr-indicatorSeparator {display:none}
 .camppric_twocolbx .btn-orange-large{ display:inline-block }
 .css-1pahdxg-control { border: none; box-shadow: none; border-radius: 0;}
-.css-tlfecz-indicatorContainer { background: #fff url(../images/bottom-icon.png) right center no-repeat !important;}
+.css-tlfecz-indicatorContainer { background: #fff url(../image/bottom-icon.png) right center no-repeat !important; with:30%}
 .css-tlfecz-indicatorContainer svg { display: none;}
-
+.text-danger { color: #f00!important;text-align: center; margin: 5px 0 0; }
+.blgimg img { width: auto !important; }
 
 /*responsive*/
 
@@ -4261,6 +4262,17 @@ section.Home-section-1 .slider-inner-data h3 br { display: none }
     .No-camp-section-3 .row .md-mb-4 iframe { height:390px}
     .secc .aligncenter { width:100% !important}
     .accordian-div .accordion .card.active .card-header button { padding-right:35px !important}
+    li.d-md-none.d-none.d-flex.list-group-item { display:none !important; }
+    header .social-header .first-li ul li { padding:0 4px}
+    header .social-header .second-li ul li.userdropdownbox{ padding-right:20px!important; }
+    .gfield_checkbox li { width:47%; }
+    ol { padding: 0;}
+    .httxt { font-size: 13px; padding-left: 14px; }
+    header .social-header .first-li ul li { padding: 0px 6px; }
+    header .social-header .second-li ul li.userdropdownbox { padding-right: 20px!important; }
+    header .social-header .first-li ul li a {font-size: 13px;}
+    .blgimg img  { width:100% ;  }
+
 }
 @media(max-width:575px){
  .video-modal .modal-body .close { right: 0; }
@@ -4271,7 +4283,7 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
   section.Banner-Section {min-height: 200px !important;}
   section.Banner-Section .Banner-Section-data .breadcrumb{ margin-bottom: 5px !important;}
   section.Banner-Section .Banner-Section-data .breadcrumb li a {  font-size: 18px !important; line-height: 26px !important;}
-  section.Banner-Section .Banner-Section-data .heading-banner { font-size: 25px !important;  line-height: 35px !important; }
+  section.Banner-Section .Banner-Section-data .heading-banner { font-size: 20px !important;  line-height: 30px !important; }
  section.Login-section .gray-data  { padding: 20px 25px !important;  }
     section.Resource-details-section-2 { padding: 50px 0px !important; }
     .accordian-div .accordion .card .card-header button { padding-right: 35px !important; }
@@ -4285,11 +4297,23 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
     section.Main-Section-1 .sidebar .nav.nav-pills .nav-item { display:block !important; width: 100% !important; }
   section.Main-Section-1 {  padding: 20px 0px !important;}
   ul.pl-0.text-left { padding-left: 16px !important;}
+ .httxt{ font-size: 11px;}
+ header .social-header .first-li ul li a{ font-size:14px}
+ header .social-header .second-li ul li.userdropdownbox { padding-right: 30px!important; }
 
 }
 @media(max-width: 475px){
     
     .slick-next { right: 0 }
     .slick-prev { left: 0;}
+
+}
+@media(max-width:420px){
+ .gfield_checkbox li { width:100%; }
+}
+@media(max-width:375px){
+    header .social-header .first-li ul li { padding: 0px 6px; }
+    header .social-header .first-li ul li a { font-size: 13px; }
+    span.httxt { font-size: 11px; padding-left: 7px; }
 }
 a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn { padding: 0 16px !important;}

@@ -258,7 +258,7 @@ header .navbar-light .navbar-nav
     background-color: #FAFAFA !important;
     background: #FAFAFA !important;
 }
-.second-box p a
+.second-box p a, .second-box a
 {
     color: #2A74B6;
     text-decoration: underline;
