@@ -210,14 +210,16 @@ class HomeSection1 extends Component {
                breakpoint: 480,
                settings: {
                  slidesToShow: 1,
-                 slidesToScroll: 2,
+                 slidesToScroll: 1,
+				 autoplay: false,
 				  autoplaySpeed: 7000000000,
                }
              },{
                breakpoint: 320,
                settings: {
                  slidesToShow: 1,
-                 slidesToScroll: 2,
+                 slidesToScroll: 1,
+				 autoplay: false,
 				  autoplaySpeed: 7000000000,
                }
              }
