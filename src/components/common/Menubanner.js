@@ -38,7 +38,7 @@ class Menubanner extends Component {
 	render() {      
         return (
             <>
-           <div className="second-box" style={{ display: this.state.Isbanner == 0 ? "none" : "inline-block" }} dangerouslySetInnerHTML={{ __html: this.state.PageData}} />
+           <div className="second-box" style={{ display: this.state.Isbanner == 0 ? "none" : "inline-block" }} dangerouslySetInnerHTML={{ __html: this.state.PageData+""+<Link to={"/camp-info/camp-pricing/"}>View our Camp Pricing</Link>}} />
             </>
         );
     }
