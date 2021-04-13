@@ -219,6 +219,7 @@ header .navbar-light .navbar-nav
   font-weight: 400;
   color: #3b3b3b;
   text-decoration: none;
+  line-height: 21px;
 }
 .dropdown-menu.common-menu a
 {
@@ -277,7 +278,7 @@ header .dropdown-toggle {
     position: relative
 }
 
-header .dropdown-menu {
+header .dropdown-menu { 
     border-radius: 0;
     padding: 0;
     position: absolute;
