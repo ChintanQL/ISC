@@ -7,7 +7,31 @@ import axios from 'axios';
 import SearchLocationInput from '../Home/SearchLocationInput'
 import $ from "jquery";
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
-
+const options = [
+ { value: 'basketball', label: 'Basketball' },
+{ value: 'football', label: 'AFL / AFLW Football' },
+{ value: 'netball', label: 'Netball' },
+{ value: 'cricket', label: 'Cricket' },
+{ value: 'soccer', label: 'Soccer' },
+{ value: 'hockey', label: 'Hockey' },
+{ value: 'tennis', label: 'Tennis' },
+{ value: 'rugby-league', label: 'Rugby League' },
+{ value: 'rugby-union', label: 'Rugby Union' },
+{ value: 'golf', label: 'Golf' },
+{ value: 'rock-climbing-indoor-surfing', label: 'Rock Climbing' },
+{ value: 'sailing', label: 'Sailing' },
+{ value: 'table-tennis', label: 'Table Tennis' },
+{ value: 'baseball', label: 'Baseball' },
+{ value: 'ice-skating', label: 'Ice Staking' },
+{ value: 'futsal', label: 'Futsal' },
+{ value: 'horse-riding', label: 'Horse Riding' },
+{ value: 'rowing', label: 'Rowing' },
+{ value: 'multi-sport', label: 'Multi-Sport' },
+{ value: 'esports', label: 'E-Sports' },
+{ value: 'rock-climbing-indoor-surfing', label: 'Indoor Surfing' },
+{ value: 'gymnastics', label: 'Gymnastics' },
+{ value: 'speed-agility', label: 'Speed & Agility' },
+];
 class BottomForm extends Component {
 	constructor(props){
 		super(props)
@@ -21,7 +45,7 @@ class BottomForm extends Component {
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);
-		
+		this.setState({selectOptions: options});
        
 	}
 	
@@ -40,7 +64,7 @@ class BottomForm extends Component {
 
 		}))
 
-		this.setState({selectOptions: options})
+		
 
 	}
 	
@@ -105,7 +129,7 @@ class BottomForm extends Component {
   };
 
 	componentDidMount(){
-		this.getOptions()
+		//this.getOptions()
 		
 	}
 	
