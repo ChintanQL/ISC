@@ -41,7 +41,7 @@ class Guidebanner extends Component {
         return (
             <>
            <div className="stickyicon" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
-			<Link to={"/book-a-camp"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
+			<Link to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
 		   </div>
             </>
         );
