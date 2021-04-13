@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import Main from '../components/Search/Main';
 import Menubannertwo from '../components/common/Menubannertwo'
+import Blogbanner from '../components/common/Blogbanner'
 import sidebaradd1 from '../images/sidebar-add-1.png'
 import sidebaradd2 from '../images/sidebar-add-2.png'
 import LatestPost from '../components/common/LatestPost'
@@ -100,7 +101,7 @@ class BlogDetails extends Component {
 										</div>
 										{/*  */}
 										<div className="mb-4 text-center blgimg">
-											<Menubannertwo />
+											<Blogbanner />
 										</div>
 										{/*  */}
 										<div className="inner-sidebar mb-4">

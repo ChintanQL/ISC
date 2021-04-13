@@ -17,6 +17,7 @@ import sidebaradd2 from '../images/sidebar-add-2.png'
 import { FaSearch } from "react-icons/fa";
 import Main from '../components/Search/Main';
 import Menubannertwo from '../components/common/Menubannertwo'
+import Blogbanner from '../components/common/Blogbanner'
 import LatestPost from '../components/common/LatestPost'
 import { Helmet } from "react-helmet"
 class demopage extends Component {
@@ -139,7 +140,7 @@ class demopage extends Component {
 										</div>
 										{/*  */}
 										<div className="mb-4 text-center">
-											<Menubannertwo />
+											<Blogbanner />
 										</div>
 										{/*  */}
 										<div className="inner-sidebar mb-4">
