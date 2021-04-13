@@ -161,7 +161,38 @@ class HomeSection1 extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />
+            prevArrow: <SamplePrevArrow />,
+			responsive: [
+             {
+               breakpoint: 800,
+               settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 1
+               }
+             },
+             {
+               breakpoint: 600,
+               settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 1
+               }
+             },
+             {
+               breakpoint: 480,
+               settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 2,
+				  autoplaySpeed: 7000000000,
+               }
+             },{
+               breakpoint: 320,
+               settings: {
+                 slidesToShow: 1,
+                 slidesToScroll: 2,
+				  autoplaySpeed: 7000000000,
+               }
+             }
+           ]
           };
 		  
 		
