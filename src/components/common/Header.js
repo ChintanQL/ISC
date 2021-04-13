@@ -357,6 +357,8 @@ class Header extends Component {
 															
 															</div>
 															<Menubanner />
+															
+															<Link className="nav-link"  to={"/camp-info/camp-pricing/"}>View our Camp Pricing</Link>
 														</div>
 													</ul>
 												</li>
