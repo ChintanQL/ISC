@@ -45,6 +45,7 @@ class HomeSection1 extends Component {
 			name: '',
 			shown: 'd-none',
 			selectedOption: "",
+			selectedOption2: "",
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);	
@@ -67,6 +68,7 @@ class HomeSection1 extends Component {
 
 	handleChange = selectedOption => {
     this.setState({ selectedOption : selectedOption.value });
+    this.setState({ selectedOption2 : selectedOption });
     console.log(`Option selected:`, selectedOption);
     console.log(`Option selected:`, selectedOption.value);
   };
@@ -132,12 +134,12 @@ class HomeSection1 extends Component {
 
   componentDidMount(){
 		this.getOptions()
-		const cookies = new Cookies();
-		cookies.remove('lat', { path: '/' });
-		cookies.remove('lng', { path: '/' });
-		cookies.remove('loc', { path: '/' });
-		cookies.remove('locationName', { path: '/' });	
-		cookies.remove('code', { path: '/' });	
+		const cookies = new Cookies();	
+		cookies.set('lat', "", { path: '/' });
+		cookies.set('lng', "", { path: '/' });
+		cookies.set('loc', "", { path: '/' });
+		cookies.set('locationName', "", { path: '/' });
+		cookies.set('code', "", { path: '/' });
   }
 	
 	handleMultiChange(option) {
@@ -204,7 +206,7 @@ class HomeSection1 extends Component {
                                 </div>
                                 <div className="second-control">
 									<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
-        value={this.state.selectedOption}
+        value={this.state.selectedOption2}
         onChange={this.handleChange}
         options={this.state.selectOptions}
       />
