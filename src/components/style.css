@@ -64,9 +64,9 @@ section.Home-section-1.Home_section_new .home-form { padding:20px 20px; }
 section.Home-section-1.Home_section_new .home-form .form-control { border:1px solid #fff !important; }
 section.Home-section-1.Home_section_new .second-control button { height: 50px; color: #495057; padding: 0 16px; font-size: 1rem;}
 section.Home-section-1.Home_section_new .home-form > div:last-child { padding-bottom: 0 !important;}
-section.Home-section-1.Home_section_new .home-form .second-control > div > div { z-index: 99; margin-top: 2px important; width:100%; }
+section.Home-section-1.Home_section_new .home-form .second-control > div > div { z-index: 99; margin-top: 2px !important; width:100%; }
 section.Kid-section .Kid-section-second { padding:60px 0; }
- .css-yk16xz-control { border-radius: 0; border-color: #ffff; height: 42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
+ .css-yk16xz-control { border-radius: 0; border-color: #ffff; min-height:  42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
 section.Home-section-1.Home_section_new .home-form { width: 87%; }
 section.Home-section-1 .home-form .second-control { width:100% !important }
 section.Kid-section .kids-data:after { content: ""; width: 60px;  height: 62px; background:url('../images/comma_right.png') no-repeat; background-size: 100%; position: absolute; bottom: 0; right: 0;  }
@@ -86,7 +86,7 @@ header .main-header.sticky {
     box-shadow: 0 0 26px -13px rgba(0, 0, 0, .6);
     -webkit-animation: scrolldown .5s ease-in;
     animation: scrolldown .5s ease-in;
-    z-index: 11;
+    z-index: 111;
     position: fixed;
     top: 0;
     left: 0;
@@ -604,6 +604,8 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
 .callbtnblue:hover a {text-decoration: none;}
 .callbtnblue:hover { text-decoration: none; background: #f60;}
 .text-error { color: #f00; text-align: center; }
+.side-sticky .second-box { width: 100%; }
+
 /*responsive*/
 
 @media (max-width:1199px) {
@@ -816,6 +818,8 @@ section.Included-section{ padding: 20px 0 !important }
 .title { margin-bottom: 15px; }
 .camppric_twocolbx { min-height: auto; padding: 20px; margin-bottom: 15px; }
 footer { padding: 20px 0; }
+.blog-details-card iframe { width: 100% }
+
 
 }
 @media(max-width:575px){
@@ -827,6 +831,7 @@ footer { padding: 20px 0; }
     .video-modal .modal-body .close { right: 0; }
    ul.pl-0.text-left { padding-left: 16px !important;}
    header .social-header .first-li  {  justify-content: center !important;  }
+   .Home-section-3 .slick-slide img { margin: 0 auto ; }
 }
 @media(max-width: 475px){
     .slick-next { right: 0 }

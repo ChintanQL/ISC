@@ -29,7 +29,7 @@ section.Home-section-1.Home_section_new .home-form > div:last-child { padding-bo
 section.Home-section-1.Home_section_new .home-form .second-control > div > div { z-index: 99; margin-top: 2px important; width:100%; }
 section.Kid-section .Kid-section-second { padding:60px 0; }
 section.Home-section-4 { padding:35px 0 10px!important }
- .css-yk16xz-control { border-radius: 0; border-color: #ffff; height: 42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
+ .css-yk16xz-control { border-radius: 0 !important; border-color:#fff !important; height: 50px !important; color:#495057 !important;   border-radius: 0 !important; font-weight: 500; font-size:15px }
 section.Home-section-1.Home_section_new .home-form { width: 100%; }
 section.Home-section-1 .home-form .second-control { width:100% !important; }
 
@@ -1409,7 +1409,7 @@ section.BottomForm .form-control
   height: 42px !important;
   line-height: 42px !important;
   padding: 0px .75rem !important;
-  color: #333333 !important;
+  color: #495057 !important;
   font-weight: 500;
 }
 section.BottomForm .react-datepicker-wrapper
@@ -1545,6 +1545,7 @@ section.Home-section-3
   color: #3B3B3B;
   font-weight: 700;
   margin-bottom: 5px;
+  font-family: 'Montserrat', sans-serif !important;
 }
 .title p
 {
@@ -1926,7 +1927,7 @@ section.Home-section-1 .home-form
 section.Home-section-1 .home-form div
 {
   /*background: rgba(255,255,255,.4);
-  background-color: rgba(255,255,255,.4);*/ border:none; color: #333;
+  background-color: rgba(255,255,255,.4);*/ border:none; color: #495057;
 }
 section.Home-section-1 .home-form .form-control
 {
@@ -4150,10 +4151,12 @@ header .social-header .second-li ul li ul.htdropdown li a { color: #000; padding
  .css-1okebmr-indicatorSeparator {display:none}
 .camppric_twocolbx .btn-orange-large{ display:inline-block }
 .css-1pahdxg-control { border: none; box-shadow: none; border-radius: 0;}
-.css-tlfecz-indicatorContainer { background: #fff url(../images/bottom-icon.png) right center no-repeat !important; with:30%}
+.css-tlfecz-indicatorContainer { background: #fff url(../images/bottom-icon.png) right center no-repeat !important; width: 30px;}
 .css-tlfecz-indicatorContainer svg { display: none;}
 .text-danger { color: #f00!important;text-align: center; margin: 5px 0 0; }
 .blgimg img { width: auto !important; }
+.css-1wa3eu0-placeholder { font-size:15px; color:#707070}
+.css-1hwfws3 { font-size:15px; color:#333!important}
 
 /*responsive*/
 
@@ -4272,7 +4275,7 @@ section.Home-section-1 .slider-inner-data h3 br { display: none }
     header .social-header .second-li ul li.userdropdownbox { padding-right: 20px!important; }
     header .social-header .first-li ul li a {font-size: 13px;}
     .blgimg img  { width:100% ;  }
-
+   
 }
 @media(max-width:575px){
  .video-modal .modal-body .close { right: 0; }
