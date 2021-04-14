@@ -32,7 +32,7 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
   
   autoComplete.addListener("place_changed", () => {
 	handlePlaceSelect(updateQuery)
-	console.log(document.getElementById("val").value);  
+	
 	  
   });
 }
@@ -78,6 +78,7 @@ function SearchLocationInput() {
   const autoCompleteRef = useRef(null);
 
   useEffect(() => {
+	  console.log(document.getElementById("val").value);  
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=AIzaSyA-w1yIFUC5apNzpwsAGIxmhPQ2enVHfTE&libraries=places`,
       () => handleScriptLoad(setQuery, autoCompleteRef)
