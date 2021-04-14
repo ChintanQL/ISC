@@ -199,7 +199,7 @@ class Header extends Component {
 						<>{(cookies.get('LOGIN') == 1) ? (
 							
 							<li className="userdropdownbox list-group-item" onClick={()=>{this.setState({show:!this.state.show})}} >
-                            <i className="fa fa-user-circle"></i>{cookies.get('USER')}
+                            <i className="fa fa-user-circle"></i>{cookies.get('USER')} <span className="userdropdownbox"></span>
                             <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
                                 <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
                                 <li><a href={atob(cookies.get('L_URL'))}>logout</a></li>
@@ -225,8 +225,8 @@ class Header extends Component {
                     <ul className="d-md-none d-flex htmob-displaybx list-group list-group-horizontal">
                         
 						{(cookies.get('LOGIN') == 1) ? (
-						<li className="userdropdownbox list-group-item" onClick={()=>{this.setState({show:!this.state.show})}} >
-                            <i className="fa fa-user-circle"></i>{cookies.get('USER')}
+						<li className=" list-group-item" onClick={()=>{this.setState({show:!this.state.show})}} >
+                            <i className="fa fa-user-circle"></i>{cookies.get('USER')} <span className="userdropdownbox"></span>
                             <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
                                 <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
                                 <li><a href={atob(cookies.get('L_URL'))}>logout</a></li>
