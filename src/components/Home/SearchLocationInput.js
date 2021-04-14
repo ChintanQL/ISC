@@ -73,7 +73,7 @@ async function handlePlaceSelect(updateQuery) {
   console.log(addressObject);
 }
 
-function handleKeyPress = (event) => {
+function handleKeyPress(){
   console.log("here");
 }
 
