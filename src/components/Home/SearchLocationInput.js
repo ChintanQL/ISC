@@ -73,12 +73,16 @@ async function handlePlaceSelect(updateQuery) {
   console.log(addressObject);
 }
 
+function handleKeyPress = (event) => {
+  console.log("here");
+}
+
 function SearchLocationInput() {
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
 
   useEffect(() => {
-	  console.log(document.getElementById("val").value);  
+	  
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=AIzaSyA-w1yIFUC5apNzpwsAGIxmhPQ2enVHfTE&libraries=places`,
       () => handleScriptLoad(setQuery, autoCompleteRef)
@@ -91,6 +95,7 @@ function SearchLocationInput() {
 	  <Form.Control id="val"
                                       className="mb-0 full"
                                       ref={autoCompleteRef}
+									  onKeyDown={handleKeyPress}
         onChange={event => setQuery(event.target.value)}
                                       placeholder="Enter Suburb / Postcode"
 									  value={query}
