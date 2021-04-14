@@ -162,7 +162,13 @@ class demopage extends Component {
 															return (
 																
 																(propd.node.name !== 'Uncategorised') ? (
-																	<><Link to={"/tags/"+propd.node.slug+"/"} dangerouslySetInnerHTML={{ __html: propd.node.name+"("+propd.node.count+")"}}  className="tags" /> </>
+																	<>
+																	{(propd.node.count > 0) ? (
+																		<>
+																		<Link to={"/tags/"+propd.node.slug+"/"} dangerouslySetInnerHTML={{ __html: propd.node.name+"("+propd.node.count+")"}}  className="tags" /> </>
+																	) : ("")}
+																	</>
+																	
 																) : ("") 
 															)
 														})}

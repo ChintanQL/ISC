@@ -29,7 +29,7 @@ section.Home-section-1.Home_section_new .home-form > div:last-child { padding-bo
 section.Home-section-1.Home_section_new .home-form .second-control > div > div { z-index: 99; margin-top: 2px important; width:100%; }
 section.Kid-section .Kid-section-second { padding:60px 0; }
 section.Home-section-4 { padding:35px 0 10px!important }
- .css-yk16xz-control { border-radius: 0 !important; border-color:#fff !important; height: 50px !important; color:#495057 !important;   border-radius: 0 !important; font-weight: 500; font-size:15px }
+ .css-yk16xz-control { border-radius: 0 !important; border-color:#fff !important; min-height: 50px !important; color:#495057 !important;   border-radius: 0 !important; font-weight: 500; font-size:15px }
 section.Home-section-1.Home_section_new .home-form { width: 100%; }
 section.Home-section-1 .home-form .second-control { width:100% !important; }
 
@@ -891,10 +891,10 @@ a.uppercase.btn-sm.btn-orange-large {
 .tags {
     background: #FAFAFA !important;
     border: 1px solid #CFCFCF !important;
-    padding:10px;
+    padding:7px 9px;
     margin-right: 0px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 9px;
     border-radius: 0px;
     justify-content: center;
     align-items: center;
@@ -4127,7 +4127,7 @@ section.Home-section-1
 .bg-ef{background-color: #efefef !important;}
 /*25/02/2021*/
 .Home_section_new .pos-absolute-form { left: auto; bottom: auto !important; top:143px; right: 10%; transform: translateX(-10%); }
-section.Home-section-1.Home_section_new .home-form { display: inline-block; background: rgba(255,255,255,.4); background-color: rgba(255,255,255,.4); padding: 20px;}
+section.Home-section-1.Home_section_new .home-form { display: inline-block; background: rgba(255,255,255,.4); background-color: rgba(255,255,255,.4); padding: 30px 25px;}
 section.Home-section-1.Home_section_new .home-form .first-control, section.Home-section-1.Home_section_new  .home-form .second-control, section.Home-section-1.Home_section_new .home-form .third-control { padding: 0 0 18px; background: transparent; }
 section.Home-section-1.Home_section_new .home-form .third-control .btn-orange { width: 100%; }
 section.Home-section-1.Home_section_new .home-form .form-control { width: 100%; height: 50px; }
@@ -4136,7 +4136,8 @@ section.Home-section-1 .slider-inner-data h3 { font-size: 52px; line-height: 65p
 header .social-header .second-li ul li.userdropdownbox { position: relative; padding-right: 25px !important;cursor: pointer; }
 header .social-header .second-li ul ul.htdropdown{ position: absolute; left: 0; top: 100%; background: #fff; width: 100%;  z-index: 9; padding: 8px 5px !important}
 header .social-header .second-li ul li ul.htdropdown li { padding: 0; margin: 0;  }
-header .social-header .second-li ul li ul.htdropdown li a { color: #000; padding:6px 6px; text-align: left; width: 100%; }
+header .social-header .second-li ul li ul.htdropdown li a { color: #000; padding:6px 15px; text-align: left; width: 100%; }
+header .social-header .second-li ul li span.userdropdownbox { display: inline-block; width: auto; padding-left: 15px !important;    vertical-align: middle; }
 .userdropdownbox:before { content: "\f078"; position: absolute; right: 0; top: 0; font-style: normal; font-weight: 900; font-family:'FontAwesome' }
 
 .How-to-book-Section-1-data h3 { font-size: 20px; line-height: 32px; font-weight: 700; color: #3b3b3b;  margin-bottom: 1rem; }
@@ -4155,7 +4156,7 @@ header .social-header .second-li ul li ul.htdropdown li a { color: #000; padding
 .css-tlfecz-indicatorContainer svg { display: none;}
 .text-danger { color: #f00!important;text-align: center; margin: 5px 0 0; }
 .blgimg img { width: auto !important; }
-.css-1wa3eu0-placeholder { font-size:15px; color:#707070}
+.css-1wa3eu0-placeholder { font-size:15px; color:#707070 !important; }
 .css-1hwfws3 { font-size:15px; color:#333!important}
 
 /*responsive*/
@@ -4221,6 +4222,8 @@ section.Home-section-1 .slider-inner-data h3 br { display: none }
 .kid-image > div img {  width: auto; }
 .font-22{font-size: 18px !important;line-height: 30px !important;}
 .hero-image img { width: 300px !important;  }
+header .social-header .first-li ul li{ padding: 0px 5px; }
+.httxt  {font-size: 13px; padding-left: 11px;}
 
 }
 
