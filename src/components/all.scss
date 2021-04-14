@@ -4270,12 +4270,12 @@ header .social-header .first-li ul li{ padding: 0px 5px; }
     .accordian-div .accordion .card.active .card-header button { padding-right:35px !important}
     li.d-md-none.d-none.d-flex.list-group-item { display:none !important; }
     header .social-header .first-li ul li { padding:0 4px}
-    header .social-header .second-li ul li.userdropdownbox{ padding-right:20px!important; }
+    header .social-header .second-li ul li.userdropdownbox, header .social-header .second-li ul li:last-child span{ padding-right:20px!important; }
     .gfield_checkbox li { width:47%; }
     ol { padding: 0;}
     .httxt { font-size: 13px; padding-left: 14px; }
     header .social-header .first-li ul li { padding: 0px 6px; }
-    header .social-header .second-li ul li.userdropdownbox { padding-right: 20px!important; }
+    header .social-header .second-li ul li.userdropdownbox, header .social-header .second-li ul li:last-child span { padding-right: 20px!important; }
     header .social-header .first-li ul li a {font-size: 13px;}
     .blgimg img  { width:100% ;  }
    
@@ -4305,7 +4305,7 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
   ul.pl-0.text-left { padding-left: 16px !important;}
  .httxt{ font-size: 11px;}
  header .social-header .first-li ul li a{ font-size:14px}
- header .social-header .second-li ul li.userdropdownbox { padding-right: 30px!important; }
+ header .social-header .second-li ul li.userdropdownbox, header .social-header .second-li ul li:last-child span { padding-right: 30px!important; }
 
 }
 @media(max-width: 475px){
