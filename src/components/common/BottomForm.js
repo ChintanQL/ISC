@@ -135,15 +135,7 @@ class BottomForm extends Component {
 		
 	}
 	
-	const customStyles = {
-		  option: (provided, state) => ({
-			...provided,
-			paddingTop: 0,
-			paddingBottom: 0,
-			marginTop: 0,
-			marginBottom: 0,
-		  })
-		};
+	
 	
 	
 	handleMultiChange(option) {
@@ -154,7 +146,16 @@ class BottomForm extends Component {
 		});
 	}
 	
-    render() {      
+    render() { 
+	const customStyles = {
+		  option: (provided, state) => ({
+			...provided,
+			paddingTop: 0,
+			paddingBottom: 0,
+			marginTop: 0,
+			marginBottom: 0,
+		  })
+		};
         return (
             <>
 			 
