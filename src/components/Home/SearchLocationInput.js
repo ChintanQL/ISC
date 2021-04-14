@@ -30,10 +30,11 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
     { types: ["(regions)"], componentRestrictions: { country: "au" } }
   );
   
-  autoComplete.addListener("place_changed", () =>
-    handlePlaceSelect(updateQuery)
-	console.log(document.getElementById("val").value);
-  );
+  autoComplete.addListener("place_changed", () => {
+	handlePlaceSelect(updateQuery)
+	console.log(document.getElementById("val").value);  
+	  
+  });
 }
 
 async function handlePlaceSelect(updateQuery) {
