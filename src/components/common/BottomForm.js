@@ -135,7 +135,15 @@ class BottomForm extends Component {
 		
 	}
 	
-	
+	const customStyles = {
+		  option: (provided, state) => ({
+			...provided,
+			paddingTop: 0,
+			paddingBottom: 0,
+			marginTop: 0,
+			marginBottom: 0,
+		  })
+		};
 	
 	
 	handleMultiChange(option) {
@@ -168,6 +176,7 @@ class BottomForm extends Component {
         value={this.state.selectedOption2}
         onChange={this.handleChange}
         options={this.state.selectOptions}
+		styles={customStyles}
       />
                         </Col>
                         <Col  xs="12" xl={2} lg={2} md={4} sm="4">
