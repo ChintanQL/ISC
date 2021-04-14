@@ -235,7 +235,8 @@ class HomeSection1 extends Component {
 		const customStyles = {
 		  option: (provided, state) => ({
 			...provided,
-			padding: 3,
+			paddingTop: 5,
+			paddingBottom: 5,
 		  })
 		};
 		  
