@@ -41,7 +41,8 @@ class BottomForm extends Component {
 			id: "",
 			name: '',
 			shown: 'd-none',
-			selectedOption: null,
+			selectedOption: "",
+			selectedOption2: "",
 		}
 		this.handleMultiChange = this.handleMultiChange.bind(this);
 		this.Campred = this.Campred.bind(this);
@@ -124,7 +125,8 @@ class BottomForm extends Component {
 	
 
 	handleChange = selectedOption => {
-    this.setState({ selectedOption });
+    this.setState({ selectedOption : selectedOption.value });
+	 this.setState({ selectedOption2 : selectedOption });
     console.log(`Option selected:`, selectedOption);
   };
 
@@ -163,7 +165,7 @@ class BottomForm extends Component {
                         <Col xs="12" xl={3} lg={3} md={4} sm="4" className="sm-mb-2 seccont">
                            
 							<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
-        value={this.state.selectedOption}
+        value={this.state.selectedOption2}
         onChange={this.handleChange}
         options={this.state.selectOptions}
       />

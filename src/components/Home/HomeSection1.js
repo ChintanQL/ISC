@@ -212,6 +212,9 @@ class HomeSection1 extends Component {
                  slidesToShow: 1,
                  slidesToScroll: 1,
 				 autoplay: false,
+				focusOnSelect: false,
+				accessibility: false,
+				draggable: false,
 				  autoplaySpeed: 7000000000,
                }
              },{
@@ -220,6 +223,9 @@ class HomeSection1 extends Component {
                  slidesToShow: 1,
                  slidesToScroll: 1,
 				 autoplay: false,
+				 focusOnSelect: false,
+				accessibility: false,
+				draggable: false,
 				  autoplaySpeed: 7000000000,
                }
              }
