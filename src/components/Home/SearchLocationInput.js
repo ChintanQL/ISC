@@ -38,6 +38,12 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
 async function handlePlaceSelect(updateQuery) {
   const addressObject = autoComplete.getPlace();
   const query = addressObject.formatted_address;
+  
+  console.log("Update Query: "+updateQuery);
+  if(updateQuery == ""){
+	  console.log("Update Query: null");
+  }
+  
   updateQuery(query);
   var Arr = ["ACT","NSW","QLD","SA","TAS","VIC","WA","NT"];
 			var f_add =  addressObject.formatted_address;

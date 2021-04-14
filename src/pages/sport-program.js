@@ -12,7 +12,7 @@ import { Helmet } from "react-helmet"
 import queryString from 'query-string'
 import Cookies from 'universal-cookie';
 
-class Sport extends Component {
+class Sportprog extends Component {
 	
 	state = {
 		PageData: [],
@@ -28,7 +28,7 @@ class Sport extends Component {
 	componentDidMount() {
 		axios({
 			//url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camps',
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_category2',
+			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_category',
 			method: 'get'}).then(res => {
 			const chunkSize = 10;
 			const arr = res.data.ResponseData.cat;
@@ -180,4 +180,4 @@ class Sport extends Component {
 		)
 	}
 }
-export default Sport
+export default Sportprog
