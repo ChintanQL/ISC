@@ -29,9 +29,10 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
     autoCompleteRef.current,
     { types: ["(regions)"], componentRestrictions: { country: "au" } }
   );
-   console.log("Update");
+  
   autoComplete.addListener("place_changed", () =>
     handlePlaceSelect(updateQuery)
+	console.log(document.getElementById("val").value);
   );
 }
 
@@ -85,7 +86,7 @@ function SearchLocationInput() {
   return (
    
      
-	  <Form.Control
+	  <Form.Control id="val"
                                       className="mb-0 full"
                                       ref={autoCompleteRef}
         onChange={event => setQuery(event.target.value)}
