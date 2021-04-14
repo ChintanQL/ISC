@@ -143,6 +143,19 @@ class demopage extends Component {
 											<Blogbanner />
 										</div>
 										{/*  */}
+										
+										{/*  */}
+										<div className="mb-4">
+											<h3 className="font-20 mb-2 font-medium">About Blog</h3>
+											<p className="font-16 font-medium color-70">Discover Ideas, trends & insights and get access to handy resources.</p>
+										</div>
+										{/*  */}
+										<div className="mb-4 text-center">
+											<Link to="/resources">
+												<Image src={sidebaradd2} fluid />
+											</Link>
+										</div>
+										{/*  */}
 										<div className="inner-sidebar mb-4">
 											<h3 className="font-20 mb-2 font-medium">Browse Tags</h3>
 											{tags && tags.edges.map( (propd,i) => {
@@ -156,18 +169,7 @@ class demopage extends Component {
 											
 											
 										</div>
-										{/*  */}
-										<div className="mb-4">
-											<h3 className="font-20 mb-2 font-medium">About Blog</h3>
-											<p className="font-16 font-medium color-70">Discover Ideas, trends & insights and get access to handy resources.</p>
-										</div>
-										{/*  */}
-										<div className="mb-4 text-center">
-											<Link to="/resources">
-												<Image src={sidebaradd2} fluid />
-											</Link>
-										</div>
-										{/*  */}
+										
 									</Form>
                                 </div>
                             </Col>			
