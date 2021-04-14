@@ -605,6 +605,8 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
 .text-error { color: #f00; text-align: center; }
 .side-sticky .second-box { width: 100%; }
  .BottomForm .css-yk16xz-control { border-radius: 0; border-color: #ffff; min-height:  42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
+ header .social-header .second-li ul li span.userdropdownbox, header .social-header .second-li ul li:last-child span { display: inline-block; width: auto; padding-left: 15px !important; vertical-align: middle; }
+.userdropdownbox:before, header .social-header .second-li ul li:last-child span:before { content: "\f078"; position: absolute; right: 0; top: 0; font-style: normal; font-weight: 900; font-family:'FontAwesome' }
 /*responsive*/
 
 @media (max-width:1199px) {
