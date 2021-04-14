@@ -103,15 +103,35 @@ class CampPricing extends Component {
 						</div>
 						
 					</section>
+					<section className="Camp_pricesec2">
+						<div className="container">
+							<div className="title">
+								{(this.state.result === 1) ? (<><h2 className="mb-3 mb-md-3 mb-lg-5" >{this.state.PageData.title_3}</h2></>) : ("")}
+								{(this.state.result === 1) ? (<><div className="mb-0 text-left" dangerouslySetInnerHTML={{ __html: this.state.PageData.desc_3}} /></>) : ("")}
+								
+							</div>
+						</div>
+						
+					</section>
+					<section className="Camp_pricesec2">
+						<div className="container">
+							<div className="title">
+								{(this.state.result === 1) ? (<><h2 className="mb-3 mb-md-3 mb-lg-5" >{this.state.PageData.title_4}</h2></>) : ("")}
+								{(this.state.result === 1) ? (<><div className="mb-0 text-left" dangerouslySetInnerHTML={{ __html: this.state.PageData.desc_4}} /></>) : ("")}
+								
+							</div>
+						</div>
+						
+					</section>
 					<section className="Camp_pricesec3">
 						<div className="container">
 							<div className="title">
-								{(this.state.result === 1) ? (<><h2 className="mb-3 mb-md-3 mb-lg-5" >{this.state.PageData.title_2}</h2></>) : ("")}
+								{(this.state.result === 1) ? (<><h2 className="mb-3 mb-md-3 mb-lg-5" >{this.state.PageData.title_5}</h2></>) : ("")}
 							</div>
 						   <div className="campfrienddiscountbx">
 								<div className="row">
 									<div className="col-lg-8 col-md-8 col-sm-12">
-									   {(this.state.result === 1) ? (<><div className="font-20 font-medium color-3b" dangerouslySetInnerHTML={{ __html: this.state.PageData.desc_2}} /></>) : ("")}
+									   {(this.state.result === 1) ? (<><div className="font-20 font-medium color-3b" dangerouslySetInnerHTML={{ __html: this.state.PageData.desc_5}} /></>) : ("")}
 									   
 									</div>
 									<div className="col-lg-4 col-md-4 col-sm-12">
