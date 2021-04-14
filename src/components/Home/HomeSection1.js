@@ -232,7 +232,12 @@ class HomeSection1 extends Component {
            ]
           };
 		  
-		
+		const customStyles = {
+		  option: (provided, state) => ({
+			...provided,
+			padding: 10,
+		  })
+		};
 		  
         return (
             <>
@@ -277,6 +282,7 @@ class HomeSection1 extends Component {
         value={this.state.selectedOption2}
         onChange={this.handleChange}
         options={this.state.selectOptions}
+		styles={customStyles}
       />
 								  
 								  
