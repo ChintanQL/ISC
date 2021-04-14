@@ -29,7 +29,7 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
     autoCompleteRef.current,
     { types: ["(regions)"], componentRestrictions: { country: "au" } }
   );
-  
+   console.log("Update");
   autoComplete.addListener("place_changed", () =>
     handlePlaceSelect(updateQuery)
   );
