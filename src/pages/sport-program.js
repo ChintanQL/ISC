@@ -30,7 +30,7 @@ class Sportprog extends Component {
 			//url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camps',
 			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/get_category',
 			method: 'get'}).then(res => {
-			const chunkSize = 5;
+			const chunkSize = 4;
 			const arr = res.data.ResponseData.cat;
 			const groups = arr.map((e, i) => { 
 				 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
