@@ -83,6 +83,10 @@ function handleKeyPress(){
 		cookies.set('locationName', "", { path: '/' });
 	}	
 }
+function KeyPress(val){
+	setQuery(val)
+	console.log("search :"+val);
+}
 
 
 
@@ -105,7 +109,7 @@ function SearchLocationInput() {
                                       className="mb-0 full"
                                       ref={autoCompleteRef}
 									  onKeyDown={handleKeyPress}
-        onChange={event => setQuery(event.target.value)}
+        onChange={event => KeyPress(event.target.value)}
                                       placeholder="Enter Suburb / Postcode"
 									  value={query}
                                   />
