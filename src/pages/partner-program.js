@@ -44,7 +44,7 @@ class Partner extends Component {
 			  <Layout>
 				<>
 				<Helmet>
-				<title>partner Program - Australian Sports Camps</title>
+				<title>partner Programs - Australian Sports Camps</title>
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">

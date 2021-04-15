@@ -76,7 +76,7 @@ async function handlePlaceSelect(updateQuery) {
 function handleKeyPress(){
 	
 	
-	console.log("search :"+this.autoCompleteRef.current.value);
+	console.log("search :"+autoCompleteRef.current.value);
 	//if(search == ""){
 		//cookies.set('lat', "", { path: '/' });
 		////cookies.set('lng', "", { path: '/' });
