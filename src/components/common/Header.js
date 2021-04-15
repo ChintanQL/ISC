@@ -294,8 +294,10 @@ class Header extends Component {
 									<>
 									{(prop.title == 'Resources') ? (<div>
 										<li className="nav-item dropdown uppercase"><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
-												to="/resources" aria-expanded="false">{prop.title}</Link>
+												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
+												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
+											
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
@@ -330,7 +332,7 @@ class Header extends Component {
 										{(prop.title == 'Camps' ? (
 											<div>
 												<li className="nav-item dropdown position-static"><Link activeClassName="active" className="nav-link dropdown-toggle main-menu-toggle"
-														href="" onClick={e => e.preventDefault()} id="navbarDropdown" role="button"
+														href="javascript:;" onClick={e => e.preventDefault()} id="navbarDropdown" role="button"
 														data-toggle="dropdown">Camps</Link>
 													<ul className="dropdown-menu main-menu">
 														<div className="w-100 d-flex main-box d-xl-block">
@@ -384,13 +386,7 @@ class Header extends Component {
 													) : (
 													<>
 													{(prop.title == 'Membership') ? (<div>
-														<li className="nav-item dropdown uppercase"><a activeClassName="active" id="navResources3" className="nav-link dropdown-toggle" data-toggle="dropdown"
-																href="javascript:;" aria-expanded="false">{prop.title}</a>
-															<ul className="dropdown-menu common-menu">
-																<li  ><Link className="dropdown-item"   to={"/membership"}>Membership</Link></li> 
-																<li  ><Link className="dropdown-item"   to={"/camp-info/camp-pricing/"}>Camp Pricing</Link></li> 
-															</ul>
-														</li>
+														<Link className="nav-link" activeClassName="active" to={"/membership"}}>Membership</Link>
 													</div>) : (
 													<div>
 															<li className="nav-item">

@@ -584,7 +584,7 @@ ul.lisearch::-webkit-scrollbar{ width: 6px; background-color: #F5F5F5;}
 ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
 .stickyicon { margin-bottom: 40px }
 .Home_section_new .pos-absolute-form { left: auto; bottom: auto !important; top: 143px; right: 10%; transform: translateX(-10%);}
-.disclaimer_bxsec { border: 1px solid #3b3b3b; padding: 15px; }
+.disclaimer_bxsec {font-style: italic;    margin-top: 10px;}
 
 
 /*camp pricing page*/
