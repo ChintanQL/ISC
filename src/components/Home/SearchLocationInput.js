@@ -77,6 +77,8 @@ function handleKeyPress(){
   console.log("here");
 }
 
+
+
 function SearchLocationInput() {
   const [query, setQuery] = useState("");
   const autoCompleteRef = useRef(null);
