@@ -29,7 +29,8 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
     autoCompleteRef.current,
     { types: ["(regions)"], componentRestrictions: { country: "au" } }
   );
-  
+  var search  = document.getElementById("val").value;
+	console.log("search :"+search);
   autoComplete.addListener("place_changed", () => {
 	handlePlaceSelect(updateQuery)
 	
@@ -40,12 +41,6 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
 async function handlePlaceSelect(updateQuery) {
   const addressObject = autoComplete.getPlace();
   const query = addressObject.formatted_address;
-  
-  console.log("Update Query: "+updateQuery);
-  if(updateQuery == ""){
-	  console.log("Update Query: null");
-  }
-  
   updateQuery(query);
   var Arr = ["ACT","NSW","QLD","SA","TAS","VIC","WA","NT"];
 			var f_add =  addressObject.formatted_address;
@@ -70,19 +65,18 @@ async function handlePlaceSelect(updateQuery) {
 	}	
 	cookies.set('locationName', query, { path: '/' });	
 	
-  console.log(addressObject);
+ 
 }
 
 function handleKeyPress(){
-	
-	const autoCompleteRef = useRef(null);
-	console.log("search :"+autoCompleteRef.current.value);
-	//if(search == ""){
-		//cookies.set('lat', "", { path: '/' });
-		////cookies.set('lng', "", { path: '/' });
-		//cookies.set('loc', "", { path: '/' });
-		//cookies.set('locationName', "", { path: '/' });
-	//}	
+	var search  = document.getElementById("val").value;
+	console.log("search :"+search);
+	if(search == ""){
+		cookies.set('lat', "", { path: '/' });
+		cookies.set('lng', "", { path: '/' });
+		cookies.set('loc', "", { path: '/' });
+		cookies.set('locationName', "", { path: '/' });
+	}	
 }
 
 
