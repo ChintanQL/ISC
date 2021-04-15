@@ -297,7 +297,7 @@ class Header extends Component {
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
-											
+												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
@@ -305,6 +305,7 @@ class Header extends Component {
 														</>
 													)
 												})}
+												</>
 											</ul>
 										</li>
 									</div>) : (<div>
@@ -386,7 +387,9 @@ class Header extends Component {
 													) : (
 													<>
 													{(prop.title == 'Membership') ? (<div>
+													<li className="nav-item">
 														<Link className="nav-link" activeClassName="active" to={"/membership"}}>Membership</Link>
+														</li>
 													</div>) : (
 													<div>
 															<li className="nav-item">
