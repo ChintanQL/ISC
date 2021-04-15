@@ -75,14 +75,14 @@ async function handlePlaceSelect(updateQuery) {
 
 function handleKeyPress(){
 	
-	var search  = document.getElementById("myText").value;
+	
 	console.log("search :"+this.autoCompleteRef.current.value);
-	if(search == ""){
-		cookies.set('lat', "", { path: '/' });
-		cookies.set('lng', "", { path: '/' });
-		cookies.set('loc', "", { path: '/' });
-		cookies.set('locationName', "", { path: '/' });
-	}	
+	//if(search == ""){
+		//cookies.set('lat', "", { path: '/' });
+		////cookies.set('lng', "", { path: '/' });
+		//cookies.set('loc', "", { path: '/' });
+		//cookies.set('locationName', "", { path: '/' });
+	//}	
 }
 
 
