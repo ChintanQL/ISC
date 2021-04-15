@@ -74,18 +74,15 @@ async function handlePlaceSelect(updateQuery) {
 }
 
 function handleKeyPress(){
-	var search  = document.getElementById("val").value;
-	console.log("search :"+search);
+	
+	var search  = document.getElementById("myText").value;
+	console.log("search :"+this.autoCompleteRef.current.value);
 	if(search == ""){
 		cookies.set('lat', "", { path: '/' });
 		cookies.set('lng', "", { path: '/' });
 		cookies.set('loc', "", { path: '/' });
 		cookies.set('locationName', "", { path: '/' });
 	}	
-}
-function KeyPress(val){
-	setQuery(val)
-	console.log("search :"+val);
 }
 
 
@@ -109,7 +106,7 @@ function SearchLocationInput() {
                                       className="mb-0 full"
                                       ref={autoCompleteRef}
 									  onKeyDown={handleKeyPress}
-        onChange={event => KeyPress(event.target.value)}
+        onChange={event => setQuery(event.target.value)}
                                       placeholder="Enter Suburb / Postcode"
 									  value={query}
                                   />
