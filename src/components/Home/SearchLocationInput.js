@@ -74,7 +74,14 @@ async function handlePlaceSelect(updateQuery) {
 }
 
 function handleKeyPress(){
-  console.log("here");
+	var search  = document.getElementById("val");
+	console.log("search :"+search);
+	if(search == ""){
+		cookies.set('lat', "", { path: '/' });
+		cookies.set('lng', "", { path: '/' });
+		cookies.set('loc', "", { path: '/' });
+		cookies.set('locationName', "", { path: '/' });
+	}	
 }
 
 
