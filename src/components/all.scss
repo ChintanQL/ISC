@@ -23,7 +23,7 @@ a.nav-link.uppercase.btn-sm.btn-orange.active:hover, a.nav-link.uppercase.btn-sm
  p{font-weight: 500;
     line-height: 30px;}
 section.Home-section-1.Home_section_new .home-form { padding:20px 20px; }
-section.Home-section-1.Home_section_new .home-form .form-control { border:1px solid #fff !important; }
+section.Home-section-1.Home_section_new .home-form .form-control { border:1px solid #fff !important;font-size:15px; }
 section.Home-section-1.Home_section_new .second-control button { height: 50px; color: #495057; padding: 0 16px; font-size: 1rem;}
 section.Home-section-1.Home_section_new .home-form > div:last-child { padding-bottom: 0 !important;}
 section.Home-section-1.Home_section_new .home-form .second-control > div > div { z-index: 99; margin-top: 2px important; width:100%; }
@@ -4156,8 +4156,12 @@ header .social-header .second-li ul li span.userdropdownbox, header .social-head
 .css-tlfecz-indicatorContainer svg { display: none;}
 .text-danger { color: #f00!important;text-align: center; margin: 5px 0 0; }
 .blgimg img { width: auto !important; }
-.css-1wa3eu0-placeholder { font-size:15px; color:#B4B4B4 !important; }
+.css-1wa3eu0-placeholder { font-size:15px; color:#707070 !important; }
 .css-1hwfws3 { font-size:15px; color:#333!important}
+
+section.Home-section-1.Home_section_new .home-form .form-control::-webkit-input-placeholder { /* Edge */ color: #707070 !important; }
+section.Home-section-1.Home_section_new .home-form .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */color: #707070 !important; }
+section.Home-section-1.Home_section_new .home-form .form-control::placeholder {color: #707070 !important;}
 
 /*responsive*/
 
@@ -4192,7 +4196,7 @@ header .social-header .second-li ul li span.userdropdownbox, header .social-head
 }
 @media(max-width:991px){
 section.Home-section-1 .slider-inner-data{  position: unset !important;  background: url('../images/slider-1.png');  
-    padding: 40px 0px !important;    background-size: cover;  }
+    padding: 40px 0px !important;    background-size: cover; background-position: center center;  }
   section.Home-section-1 .slick-prev,section.Home-section-1 .slick-next  {    display: none !important;  }
   section.Home-section-1 ul li  {  font-size: 18px !important; line-height: 26px !important; }
   .slider-inner-data h3 { font-size: 28px !important;  line-height: 40px !important;  }
