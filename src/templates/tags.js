@@ -107,7 +107,7 @@ class Tags extends Component {
 											
 										</div>
 										{/*  */}
-										<div className="mb-4 text-center blgimg">
+										<div className="mb-4 text-center blgimg memimg">
 											<Blogbanner />
 										</div>
 										{/*  */}

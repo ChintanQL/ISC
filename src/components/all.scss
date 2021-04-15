@@ -4155,7 +4155,7 @@ header .social-header .second-li ul li span.userdropdownbox, header .social-head
 .css-tlfecz-indicatorContainer { background: #fff url(../images/bottom-icon.png) right center no-repeat !important; width: 30px;}
 .css-tlfecz-indicatorContainer svg { display: none;}
 .text-danger { color: #f00!important;text-align: center; margin: 5px 0 0; }
-.blgimg img { width: auto !important; }
+.blgimg img, .memimg img { width: auto !important; }
 .css-1wa3eu0-placeholder { font-size:15px; color:#707070 !important; }
 .css-1hwfws3 { font-size:15px; color:#333!important}
 
@@ -4279,9 +4279,9 @@ header .social-header .first-li ul li{ padding: 0px 5px; }
     ol { padding: 0;}
     .httxt { font-size: 13px; padding-left: 14px; }
     header .social-header .first-li ul li { padding: 0px 6px; }
-    header .social-header .second-li ul li.userdropdownbox, header .social-header .second-li ul li:last-child span { padding-right: 20px!important; }
+    header .social-header .second-li ul li.userdropdownbox{ padding-right: 20px!important; }
     header .social-header .first-li ul li a {font-size: 13px;}
-    .blgimg img  { width:100% ;  }
+    .blgimg img, .memimg img  { width:100% ;  }
    
 }
 @media(max-width:575px){
