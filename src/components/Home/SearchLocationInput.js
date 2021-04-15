@@ -74,7 +74,7 @@ async function handlePlaceSelect(updateQuery) {
 }
 
 function handleKeyPress(){
-	var search  = document.getElementById("val");
+	var search  = document.getElementById("val").value;
 	console.log("search :"+search);
 	if(search == ""){
 		cookies.set('lat', "", { path: '/' });

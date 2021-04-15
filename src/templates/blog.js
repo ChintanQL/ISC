@@ -139,7 +139,7 @@ class demopage extends Component {
 											
 										</div>
 										{/*  */}
-										<div className="mb-4 text-center">
+										<div className="mb-4 text-center memimg">
 											<Blogbanner />
 										</div>
 										{/*  */}
