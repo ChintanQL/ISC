@@ -215,6 +215,9 @@ class HomeSection1 extends Component {
 				focusOnSelect: false,
 				accessibility: false,
 				draggable: false,
+				swipe: false,
+				swipeToSlide: false,
+				touchMove: false,
 				  
                }
              },{
@@ -226,6 +229,9 @@ class HomeSection1 extends Component {
 				 focusOnSelect: false,
 				accessibility: false,
 				draggable: false,
+				swipe: false,
+				swipeToSlide: false,
+				touchMove: false,
 				  
                }
              }
