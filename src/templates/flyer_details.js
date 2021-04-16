@@ -53,7 +53,7 @@ class BlogDetails extends Component {
 								<Col xl={8} lg={8} md={8} className="lg-mb-2">
 									<Card className="blog-details-card mb-30">
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.title}} />
-										
+										<span> by {blog.edges[0].node.author.name} / { blog.edges[0].node.date}</span>
 										<div className="card-img mb-3">
 											<Image src={ blog.edges[0].node.acf.featured_image} fluid />
 										</div>
@@ -142,7 +142,9 @@ export const pageQuery = graphql`
 					footer_image
 					footer_button_text
 				}
-				
+				author {
+					name
+				}
 				date(formatString: "D MMMM, Y")
 				title
 				content
