@@ -7,9 +7,7 @@
 .seccont button {
     width: 100% !important;
 }
-.menulogregi {
-    display: inline-block;
-    vertical-align: middle;}
+.menulogregi {padding: 0 5px; display: inline-block; vertical-align: middle;}
 input::-webkit-input-placeholder, select::-webkit-input-placeholder,  textarea::-webkit-input-placeholder { color: #B4B4B4 !important; }
 input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder { color: #B4B4B4 !important; }
 input:-ms-input-placeholder, select::-ms-input-placeholder, textarea:-ms-input-placeholder { color:#B4B4B4 !important; }
@@ -4184,7 +4182,7 @@ section.Home-section-1.Home_section_new .home-form .form-control::placeholder {c
     .camptestimonialsec_logo img { width: 100%; }
     .Home_section_new .pos-absolute-form { right: 5%; transform: translateX(-5%); top:63px }
     .camptestimonialsec_logo { right: 40px; width: 120px; overflow: hidden; }
-    
+    .main-header .main-box.d-xl-block .second-box img { width: auto !important;}
 
 }
 @media all and (max-width:992px){
@@ -4229,7 +4227,8 @@ section.Home-section-1 .slider-inner-data h3 br { display: none }
 .font-22{font-size: 18px !important;line-height: 30px !important;}
 .hero-image img { width: 300px !important;  }
 header .social-header .first-li ul li{ padding: 0px 5px; }
-.httxt  {font-size: 13px; padding-left: 11px;}
+.httxt  {font-size: 12px; padding-left: 11px;}
+header .social-header .first-li ul li a { font-size:13px;}
 
 }
 
@@ -4284,6 +4283,7 @@ header .social-header .first-li ul li{ padding: 0px 5px; }
     header .social-header .second-li ul li.userdropdownbox{ padding-right: 20px!important; }
     header .social-header .first-li ul li a {font-size: 13px;}
     .blgimg img, .memimg img  { width:100% ;  }
+    .mb-3.menu-heading { display: none; }
    
 }
 @media(max-width:575px){
@@ -4324,8 +4324,11 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
  .gfield_checkbox li { width:100%; }
 }
 @media(max-width:375px){
-    header .social-header .first-li ul li { padding: 0px 6px; }
+    header .social-header .first-li ul li { padding: 0px 4px; }
     header .social-header .first-li ul li a { font-size: 13px; }
     span.httxt { font-size: 11px; padding-left: 7px; }
+    .dropdown-menu.main-menu .inner-menu ul { column-count: 1;}
+    .dropdown-menu.main-menu .inner-menu ul li { margin-bottom:5px; }
 }
+
 a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn { padding: 0 16px !important;}

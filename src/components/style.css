@@ -4,9 +4,7 @@ header {
     background: #fff;
     z-index: 10;
 }
-.menulogregi {
-    display: inline-block;
-    vertical-align: middle;}
+.menulogregi { padding: 0 5px;display: inline-block;  vertical-align: middle;}
 .secc .second-box{
 	width:100%;
 }
@@ -753,6 +751,7 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
     section.Included-section{ padding: 30px 0 !important }
     .camppric_twocolbx { padding: 30px; }
     .camppric_twocolbx { padding: 30px; }
+   .main-header .main-box.d-xl-block .second-box img { width: auto !important;}
 }
 @media(max-width:991px){
 .camptestimonialsec_logo {  position: relative; top: 0; right: 0; width: 120px; overflow: hidden; display: table; margin: 0 auto;}
@@ -765,7 +764,7 @@ section.Kid-section .Kid-section-first .kid-image img  { height:auto}
 
 @media (max-width:991px) and (min-width:768px) {
 
-    header .navbar-light .navbar-nav .nav-link { text-transform: capitalize; font-size: 13px; letter-spacing: 1px; padding: 24px 7px; }
+    header .navbar-light .navbar-nav .nav-link { text-transform: capitalize; font-size: 13px; letter-spacing: 1px; padding: 0; }
     .navbar-light .navbar-brand {max-width: 100px }
     header .navbar-light .navbar-nav .nav-link.btn-default {padding: 6px 7px; top: 3px;  font-size: 12px; }
 
