@@ -4,7 +4,9 @@ header {
     background: #fff;
     z-index: 10;
 }
-
+.menulogregi {
+    display: inline-block;
+    vertical-align: middle;}
 .secc .second-box{
 	width:100%;
 }

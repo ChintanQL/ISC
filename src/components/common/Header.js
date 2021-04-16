@@ -203,7 +203,7 @@ class Header extends Component {
 						) : ( 
 							<li className="list-group-item">
 								<Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
-									<span>OR</span>
+									<div className="menulogregi" >OR</div>
 								<Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
 							</li>
 						
@@ -230,7 +230,7 @@ class Header extends Component {
 						) : (
 						<li className="list-group-item">
                         <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
-                        <span>OR</span>
+                        <div className="menulogregi" >OR</div>
                         <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
                         </li>
 						
