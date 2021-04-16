@@ -138,15 +138,7 @@ class Header extends Component {
 			element.classList.add("active");
         }
 		
-		if(window.location.href.indexOf("/membership") > -1){
-            var element = document.getElementById("navResources3");
-			element.classList.add("active");
-        }
 		
-		if(window.location.href.indexOf("/camp-pricing") > -1){
-            var element = document.getElementById("navResources3");
-			element.classList.add("active");
-        }
 		
 		
 		this.CheckModel()
