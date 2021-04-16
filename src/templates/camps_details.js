@@ -129,9 +129,7 @@ export const pageQuery = graphql`
 						  product_category
 						  disclaimer
 						}
-				author {
-					name
-				}
+				
 				date(formatString: "D MMMM, Y")
 			}
 		}

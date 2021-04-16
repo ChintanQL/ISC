@@ -57,7 +57,7 @@ class BlogDetails extends Component {
 								<Col xl={8} lg={8} md={12} className="lg-mb-2">
 									<Card className="blog-details-card mb-30">
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.title}} />
-										<span>In {blog.edges[0].node.categories[0].name} by {blog.edges[0].node.author.name} / { blog.edges[0].node.date}</span>
+										
 										<div className="card-img mb-3">
 											<Image src={blog.edges[0].node.acf.feature_image2} fluid />
 										</div>
@@ -196,9 +196,7 @@ export const pageQuery = graphql`
 				}
 				wordpress_id
 				slug
-				author {
-					name
-				}
+				
 				categories {
 				  name
 				}

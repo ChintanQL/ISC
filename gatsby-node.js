@@ -233,9 +233,7 @@ exports.createPages = async ({ actions, graphql }) => {
 							featured_image
 						}
 						date(formatString: "D MMMM, Y")
-						author {
-							name
-						}
+						
 						slug
 						title
 						content
@@ -277,9 +275,7 @@ exports.createPages = async ({ actions, graphql }) => {
 							featured_image
 						}
 						date(formatString: "D MMMM, Y")
-						author {
-							name
-						}
+						
 						slug
 						title
 						content

@@ -137,9 +137,7 @@ export const pageQuery = graphql`
 				acf {
 					featured_image
 				}
-				author {
-					name
-				}
+				
 				slug
 				title
 				date(formatString: "D MMMM, Y")
