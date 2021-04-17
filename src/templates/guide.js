@@ -136,6 +136,7 @@ export const pageQuery = graphql`
 				id
 				acf {
 					featured_image
+					author_name
 				}
 				
 				slug

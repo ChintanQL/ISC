@@ -55,12 +55,12 @@ class Tags extends Component {
 									return (
 										<Card className="blog-card mb-30">
 											<div className="card-img">
-												<Image src={card1} fluid />
+												<Image src={ prop.node.acf.feature_image2}  fluid />
 											</div>
 											<Card.Body>
 												<Card.Title dangerouslySetInnerHTML={{ __html: prop.node.title}} as="h5" />
-												
-												<Card.Text as="div" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 500)+"...."}} />
+												<span>In {prop.node.categories[0].name} by {prop.node.acf.author_name} / {prop.node.date}</span>
+												<Card.Text as="div" dangerouslySetInnerHTML={{ __html: prop.node.acf.short_desc.substring(0, 500)+"...."}} />
 												<Link className="btn btn-orange-border uppercase" to={"/blog/"+prop.node.slug}>Read More</Link>
 											</Card.Body>
 										</Card>						
@@ -177,7 +177,11 @@ export const pageQuery = graphql`
 				title
 				date(formatString: "D MMMM, Y")
 				content
-				
+				acf {
+					feature_image2
+					short_desc
+					author_name
+				}
 				tags {
 				  name
 				}

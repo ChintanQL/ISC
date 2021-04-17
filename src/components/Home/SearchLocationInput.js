@@ -45,7 +45,7 @@ async function handlePlaceSelect(updateQuery) {
   var Arr = ["ACT","NSW","QLD","SA","TAS","VIC","WA","NT"];
 			var f_add =  addressObject.formatted_address;
 			var pl = "";
-			jQuery.each(Arr, function( index, value ) {
+			$.each(Arr, function( index, value ) {
 				if (f_add.indexOf(value) > -1) {
 					pl = value;
 				}

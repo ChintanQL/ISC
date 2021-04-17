@@ -193,6 +193,7 @@ export const pageQuery = graphql`
 				content
 				acf {
 					feature_image2
+					author_name
 				}
 				wordpress_id
 				slug
