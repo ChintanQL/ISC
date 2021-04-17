@@ -28,7 +28,7 @@ class Header extends Component {
 			code:"",
 			shown: "d-none",
 			isOpen:false,
-			active:false
+			acti:false
 		};
 		
 		
@@ -53,9 +53,10 @@ class Header extends Component {
     }
 	
 	openmenu(){
-		
-			const currentState = this.state.active;
-			this.setState({ active: !currentState });
+			console.log("im clicked");
+			const currentState = this.state.acti;
+			this.setState({ acti: !currentState });
+			console.log(this.state.acti);
 		
     }
 	
@@ -304,9 +305,9 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className={this.state.active ? 'nav-item dropdown uppercase show': "nav-item dropdown uppercase"} id="one_main" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" onClick={this.openmenu} data-toggle="dropdown"
+										<li className={this.state.acti ? 'nav-item dropdown uppercase show': "nav-item dropdown uppercase"} id="one_main" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" onClick={this.openmenu} data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className={this.state.active ? 'dropdown-menu common-menu active': "dropdown-menu common-menu"} id="one" >
+											<ul className={this.state.acti ? 'dropdown-menu common-menu active': "dropdown-menu common-menu"} id="one" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
