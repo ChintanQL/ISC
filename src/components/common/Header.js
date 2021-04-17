@@ -14,7 +14,7 @@ import "../../components/style.css"
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 import queryString from 'query-string'
-import $ from "jquery";
+
 
 class Header extends Component {
     constructor(props) {
@@ -27,8 +27,7 @@ class Header extends Component {
 			query_code:"",
 			code:"",
 			shown: "d-none",
-			isOpen:false,
-			acti:false
+			isOpen:false
 		};
 		
 		
@@ -36,7 +35,6 @@ class Header extends Component {
 		this.CheckModel = this.CheckModel.bind(this);
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
-        this.openmenu = this.openmenu.bind(this);
 		
 	}
     
@@ -51,15 +49,6 @@ class Header extends Component {
             isOpen:false,
         })
     }
-	
-	openmenu(){
-			console.log("im clicked");
-			const currentState = this.state.acti;
-			this.setState({ acti: !currentState });
-			console.log(this.state.acti);
-		
-    }
-	
 	
 	CheckModel(){
 		
@@ -305,9 +294,9 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className={this.state.acti ? 'nav-item dropdown uppercase show': "nav-item dropdown uppercase"} id="one_main" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" onClick={this.openmenu} data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase"><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className={this.state.acti ? 'dropdown-menu common-menu active': "dropdown-menu common-menu"} id="one" >
+											<ul className="dropdown-menu common-menu">
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
