@@ -52,15 +52,11 @@ class Header extends Component {
         })
     }
 	
-	openmenu(name){
-		if(name == 'one'){
-			
-			
+	openmenu(){
+		
 			const currentState = this.state.active;
 			this.setState({ active: !currentState });
-			
-			
-		}
+		
     }
 	
 	
@@ -308,9 +304,9 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className={"nav-item dropdown uppercase "+this.state.active ? 'show': ""} id="one_main" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" onClick={this.openmenu} data-toggle="dropdown"
+										<li className={this.state.active ? 'nav-item dropdown uppercase show': "nav-item dropdown uppercase"} id="one_main" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" onClick={this.openmenu} data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className={"dropdown-menu common-menu "+this.state.active ? 'active': ""} id="one" >
+											<ul className={this.state.active ? 'dropdown-menu common-menu active': "dropdown-menu common-menu"} id="one" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
