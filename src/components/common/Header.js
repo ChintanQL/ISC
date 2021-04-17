@@ -14,7 +14,7 @@ import "../../components/style.css"
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 import queryString from 'query-string'
-
+import $ from "jquery";
 
 class Header extends Component {
     constructor(props) {
@@ -53,11 +53,12 @@ class Header extends Component {
 	
 	openmenu(name){
 		if(name == 'one'){
-			var element = document.getElementById("one");
-			element.classList.toggle("active");
 			
-			var element2 = document.getElementById("one_main");
-			element2.classList.toggle("show");
+			
+			 $("one").toggleClass('active');
+        $("one_main").('show');
+			
+			
 		}
     }
 	
