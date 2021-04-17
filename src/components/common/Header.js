@@ -56,7 +56,7 @@ class Header extends Component {
 			
 			
 			 $("one").toggleClass('active');
-        $("one_main").('show');
+        $("one_main").toggleClass('show');
 			
 			
 		}
