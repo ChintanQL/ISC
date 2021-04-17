@@ -72,7 +72,7 @@ section.Camp-details-section-1 {
 
 .dropdown-menu.common-menu a {
     text-align: center !important;
-    padding: 10px 15px;
+    padding: 5px ​15px;
     text-transform: none !important;
 }
 
@@ -4162,13 +4162,16 @@ header .social-header .second-li ul li span.userdropdownbox, header .social-head
 section.Home-section-1.Home_section_new .home-form .form-control::-webkit-input-placeholder { /* Edge */ color: #707070 !important; }
 section.Home-section-1.Home_section_new .home-form .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */color: #707070 !important; }
 section.Home-section-1.Home_section_new .home-form .form-control::placeholder {color: #707070 !important;}
-
+.blue_color{ color:#2A74B6}
+ .mobcartbx { display:none}
 /*responsive*/
 
 @media all and (max-width:1199px){
 
   .pos-absolute-form { bottom: 60px !important;  }
   .related-post-data .card.blog-card {  max-width: 350px !important;  }
+  .mobcartbx { display:inline-block}
+  li.mob-toggle-cart { display: none; }
 }
 @media (max-width: 1199px) and (min-width: 991px) {
   section.Home-section-1 .slider-inner-data{
@@ -4265,7 +4268,7 @@ header .social-header .first-li ul li a { font-size:13px;}
      section.Camp-details-section-5 { padding: 20px 0; }
     section { padding: 20px 0; } 
     section.Sport-details-section-2 img { width: 100% !important; }
-    .dropdown-menu.main-menu .inner-menu { width:100%; }
+    .dropdown-menu.main-menu .inner-menu { width:100%; padding:15px 0 0}
     .p { position: relative; display: inline-block; }
     .n { float: right;     position: relative; right: 0}
     header .social-header .second-li ul li ul.htdropdown li a { padding:6px 0 0}
@@ -4283,8 +4286,8 @@ header .social-header .first-li ul li a { font-size:13px;}
     header .social-header .second-li ul li.userdropdownbox{ padding-right: 20px!important; }
     header .social-header .first-li ul li a {font-size: 13px;}
     .blgimg img, .memimg img  { width:100% ;  }
-    .mb-3.menu-heading { display: none; }
-   
+    .mb-3.menu-heading .menublank_none { display: none; }
+   .first-box { padding: 7px 10px; }
 }
 @media(max-width:575px){
  .video-modal .modal-body .close { right: 0; }

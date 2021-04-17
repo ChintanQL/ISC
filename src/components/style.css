@@ -404,7 +404,7 @@ header .dropdown-menu .dropdown-menu-ul-list li a.dropdown-item:hover {
 header .dropdown:hover .dropdown-menu li {
     border: 0;
     align-items: center;
-    display: flex;;
+    display: flex;
 }
 
 header .dropdown-menu {
@@ -810,7 +810,6 @@ section { padding: 20px 0; }
 .dropdown-menu.main-menu .inner-menu{ width: 100%; padding:0;}
 .first-box { padding: 15px 10px; }
 .dropdown-menu.main-menu .inner-menu ul {column-count: 2; display: inline-block; width: 100%;}
-.dropdown-menu.main-menu .inner-menu ul li { display: inline-block }  
 .second-box img { height: auto; width:100%;}  
 .dropdown-menu.main-menu .inner-menu ul:after{ display: none }
 .menublank_none {display: none}
@@ -834,6 +833,11 @@ footer { padding: 20px 0; }
    ul.pl-0.text-left { padding-left: 16px !important;}
    header .social-header .first-li  {  justify-content: center !important;  }
    .Home-section-3 .slick-slide img { margin: 0 auto ; }
+}
+@media(max-width: 480px){
+.insta-gallery-feed[data-feed_layout="masonry"] .insta-gallery-list .insta-gallery-item, .qligg-mfp-wrap[data-feed_layout="masonry"] .insta-gallery-list .insta-gallery-item, .insta-gallery-feed[data-feed_layout="gallery"] .insta-gallery-list .insta-gallery-item, .qligg-mfp-wrap[data-feed_layout="gallery"] .insta-gallery-list .insta-gallery-item {
+  min-width: 50% !important; 
+}
 }
 @media(max-width: 475px){
     .slick-next { right: 0 }
