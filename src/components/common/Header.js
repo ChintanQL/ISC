@@ -14,7 +14,8 @@ import "../../components/style.css"
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 import queryString from 'query-string'
-import $ from "jquery";
+import Helmet from 'react-helmet'
+import {withPrefix} from "gatsby"
 
 class Header extends Component {
     constructor(props) {
@@ -54,10 +55,7 @@ class Header extends Component {
 	openmenu(name){
 		if(name == 'one'){
 			
-			
-			 $("one").toggleClass('active');
-        $("one_main").toggleClass('show');
-			
+		
 			
 		}
     }
@@ -164,6 +162,10 @@ class Header extends Component {
 		const cookies = new Cookies();
         return (
             <>
+			<Helmet>
+		
+        <script src={withPrefix("js/main.js")} ></script>
+    </Helmet>
             <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
             aria-labelledby="contained-modal-title-vcenter"
             centered >
