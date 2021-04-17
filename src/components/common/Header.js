@@ -14,8 +14,7 @@ import "../../components/style.css"
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 import queryString from 'query-string'
-import Helmet from 'react-helmet'
-import {withPrefix} from "gatsby"
+import $ from "jquery";
 
 class Header extends Component {
     constructor(props) {
@@ -28,7 +27,8 @@ class Header extends Component {
 			query_code:"",
 			code:"",
 			shown: "d-none",
-			isOpen:false
+			isOpen:false,
+			active:false
 		};
 		
 		
@@ -55,7 +55,10 @@ class Header extends Component {
 	openmenu(name){
 		if(name == 'one'){
 			
-		
+			
+			const currentState = this.state.active;
+			this.setState({ active: !currentState });
+			
 			
 		}
     }
@@ -162,10 +165,6 @@ class Header extends Component {
 		const cookies = new Cookies();
         return (
             <>
-			<Helmet>
-		
-        <script src={withPrefix("js/main.js")} ></script>
-    </Helmet>
             <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
             aria-labelledby="contained-modal-title-vcenter"
             centered >
@@ -309,9 +308,9 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className="nav-item dropdown uppercase" id="one_main" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" onClick={this.openmenu('one')} data-toggle="dropdown"
+										<li className={"nav-item dropdown uppercase "+this.state.active ? 'show': ""} id="one_main" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" onClick={this.openmenu('one')} data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown-menu common-menu" id="one" >
+											<ul className={"dropdown-menu common-menu "+this.state.active ? 'active': ""} id="one" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
