@@ -145,7 +145,7 @@ class Header extends Component {
 		
       } 
 	
-	
+	function handleClick(e) {    e.preventDefault();    console.log('The link was clicked.');  }
 	  
     render() {
 		const cookies = new Cookies();
@@ -294,7 +294,7 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className="nav-item dropdown uppercase"><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase"><Link onClick={handleClick} activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
