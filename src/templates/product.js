@@ -40,7 +40,7 @@ class Shop extends Component {
 									{(prop.node.status != 'draft') ? (
 										<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
 											<Card className="book-card">
-												<Link to={"/product/"+prop.node.slug} className="card-img">
+												<Link to={"/product-shop/"+prop.node.slug} className="card-img">
 													<Image variant="top" src={prop.node.images[0].src} fluid alt="card"/>
 												</Link>
 												<Card.Body>
@@ -50,7 +50,7 @@ class Shop extends Component {
 													<ul className="pro" >
 														<li className="main-price">${prop.node.price}</li>
 													</ul>
-													<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"/product/"+prop.node.slug}>More info / Buy Now</Link>
+													<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"/product-shop/"+prop.node.slug}>More info / Buy Now</Link>
 												</Card.Body>
 											</Card>
 										</Col>
