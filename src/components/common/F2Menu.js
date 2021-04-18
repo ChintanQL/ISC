@@ -58,8 +58,11 @@ class F2Menu extends Component {
 										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'asc-heroes') ? (<Link to={"/the-asc-heroes"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
 										
 										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'forms-for-coaches-&-staff') ? (<Link to={"/asc-coaches-staff"
-										} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (<Link to={"/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
+										} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
+										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'about-us') ? (<Link to={"/about-asc"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (<Link to={"/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
 										} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}</>
+										
+										)}</>
 										
 										
 										
