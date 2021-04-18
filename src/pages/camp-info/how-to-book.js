@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import {Container,Breadcrumb,Image} from 'react-bootstrap'
 import { Link } from 'gatsby'
-import addbanner from '../images/add-banner.png'
+import addbanner from '../../images/add-banner.png'
 import axios from 'axios';
-import Footer from "../components/common/Footer"
-import Howtobanner from "../components/common/Howtobanner"
-import BottomForm from "../components/common/BottomForm"
+import Footer from "../../components/common/Footer"
+import Howtobanner from "../../components/common/Howtobanner"
+import BottomForm from "../../components/common/BottomForm"
 import { Helmet } from "react-helmet"
 
 class HowToBook extends Component {

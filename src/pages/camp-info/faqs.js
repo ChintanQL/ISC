@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Container,Breadcrumb,Accordion,Card,Button} from 'react-bootstrap'
 import { Link } from 'gatsby'
-import Layout from "../components/layout"
-import Footer from "../components/common/Footer"
-import BottomForm from "../components/common/BottomForm"
+import Layout from "../../components/layout"
+import Footer from "../../components/common/Footer"
+import BottomForm from "../../components/common/BottomForm"
 import axios from 'axios';
 import { Helmet } from "react-helmet"
 class FAQ extends Component {
