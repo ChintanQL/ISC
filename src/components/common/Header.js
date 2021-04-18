@@ -79,7 +79,17 @@ class Header extends Component {
 			document.getElementById("dmenut").classList.toggle("active"); 
 			document.getElementById("dmenu").classList.toggle("show"); 
 		}); 
-		
+			
+		document.getElementById("navbarDropdown").addEventListener("click", function() {
+			document.getElementById("d2menut").classList.toggle("active"); 
+			document.getElementById("d2menu").classList.toggle("show"); 
+		}); 
+
+		document.getElementById("navCont").addEventListener("click", function() {
+			document.getElementById("d3menut").classList.toggle("active"); 
+			document.getElementById("d3menu").classList.toggle("show"); 
+		}); 	
+			
 		
 		if(window.location.href.indexOf("/camps/") > -1){
 			var element = document.getElementById("navbarDropdown");
@@ -316,9 +326,9 @@ class Header extends Component {
 											</ul>
 										</li>
 									</div>) : (<div>
-										<li className="nav-item dropdown uppercase"><Link activeClassName="active" id="navCont" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase" id="d3menut" ><Link activeClassName="active" id="navCont" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown-menu common-menu">
+											<ul className="dropdown-menu common-menu" id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
@@ -339,10 +349,10 @@ class Header extends Component {
 									<>
 										{(prop.title == 'Camps' ? (
 											<div>
-												<li className="nav-item dropdown position-static"><Link activeClassName="active" className="nav-link dropdown-toggle main-menu-toggle"
+												<li className="nav-item dropdown position-static d2menut"><Link activeClassName="active" className="nav-link dropdown-toggle main-menu-toggle"
 														href="javascript:;" onClick={e => e.preventDefault()} id="navbarDropdown" role="button"
 														data-toggle="dropdown">Camps</Link>
-													<ul className="dropdown-menu main-menu">
+													<ul className="dropdown-menu main-menu d2menu">
 														<div className="w-100 d-flex main-box d-xl-block">
 															<div className="first-box">
 																
