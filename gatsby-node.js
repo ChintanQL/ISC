@@ -363,7 +363,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	
 	products.data.allWcProducts.edges.forEach((edge,index) => {
 		  createPage({
-		  path: `/product/${edge.node.slug}/`,
+		  path: `/product-shop/${edge.node.slug}/`,
 		  component: slash(ProductTemplate),
 		  context: {
 			id: edge.node.id
@@ -379,7 +379,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		createPage,
 		items: productsdata,
 		itemsPerPage: 18,
-		pathPrefix: '/product',
+		pathPrefix: '/product-shop',
 		component: ProductList,
 	});
 	

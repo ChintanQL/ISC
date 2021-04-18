@@ -388,7 +388,7 @@ class Header extends Component {
 											<>{(prop.title == 'Shop' ? (
 												<div>
 													<li className="nav-item">
-														<Link className="nav-link" activeClassName="active" to={"/product"}>{prop.title}</Link>
+														<Link className="nav-link" activeClassName="active" to={"/product-shop"}>{prop.title}</Link>
 													</li>
 												</div>
 											
@@ -405,7 +405,7 @@ class Header extends Component {
 													<>
 													{(prop.title == 'Membership') ? (<div>
 													<li className="nav-item">
-														<Link className="nav-link" activeClassName="active" to={"/membership"}>Membership</Link>
+														<Link className="nav-link" activeClassName="active" to={"/memberships"}>Membership</Link>
 														</li>
 													</div>) : (
 													<div>
