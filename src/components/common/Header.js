@@ -76,7 +76,8 @@ class Header extends Component {
         });
 		
 		document.getElementById("navResources").addEventListener("click", function() {
-			console.log("here");
+			document.getElementById("dmenut").classList.toggle("active"); 
+			document.getElementById("dmenu").classList.toggle("show"); 
 		}); 
 		
 		
@@ -299,9 +300,9 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className="nav-item dropdown uppercase"><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase" id="dmenut" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown-menu common-menu">
+											<ul className="dropdown-menu common-menu" id="dmenu" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
