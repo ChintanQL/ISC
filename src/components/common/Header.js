@@ -35,7 +35,7 @@ class Header extends Component {
 		this.CheckModel = this.CheckModel.bind(this);
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
-		
+		this.handleClick = this.handleClick.bind(this);
 	}
     
     
@@ -294,7 +294,7 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<div>
-										<li className="nav-item dropdown uppercase"><Link onClick={handleClick} activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown uppercase"><Link onClick={this.handleClick} activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-menu common-menu">
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
