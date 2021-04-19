@@ -349,10 +349,10 @@ class Header extends Component {
 									<>
 										{(prop.title == 'Camps' ? (
 											<div>
-												<li className="nav-item dropdown position-static d2menut"><Link activeClassName="active" className="nav-link dropdown-toggle main-menu-toggle"
+												<li className="nav-item dropdown position-static" id="d2menut" ><Link activeClassName="active" className="nav-link dropdown-toggle main-menu-toggle"
 														href="javascript:;" onClick={e => e.preventDefault()} id="navbarDropdown" role="button"
 														data-toggle="dropdown">Camps</Link>
-													<ul className="dropdown-menu main-menu d2menu">
+													<ul className="dropdown-menu main-menu" id="d2menu">
 														<div className="w-100 d-flex main-box d-xl-block">
 															<div className="first-box">
 																
