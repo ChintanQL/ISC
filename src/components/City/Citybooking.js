@@ -13,7 +13,7 @@ class Citybooking extends React.Component{
 			count:0	
     };
 	componentDidMount() {
-		var products = this.props.products;
+		var products = (this.props.products) ? this.props.products : "";
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/products";
 		axios.post(url,{ Prod: products}).then(e => {
 			this.setState({pagedata: e.data.ResponseData.City})

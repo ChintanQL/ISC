@@ -1,14 +1,4 @@
-//$(document).ready(function() {
-   // $('.dropdown-toggle').on('click', function () {
-   //     $(this).closest('li').find('.dropdown-menu').toggleClass('active');
-      //  $(this).closest('li').toggleClass('show');
-    //});
-});
-//$(document).on('click','.dropdown-toggle',function(){
-     //$(this).closest('li').find('.dropdown-menu').toggleClass('active');
-      //  $(this).closest('li').toggleClass('show');
-//});
-// Address
+
 
 $(document).ready(function() {
     $('#add_new').on('click', function () {
