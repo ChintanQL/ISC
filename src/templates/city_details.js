@@ -101,7 +101,7 @@ class City extends Component {
 							</Col>
 							<Col xl={8} lg={8} md={12}>
 								<div className="pl-3 pr-2">
-									<p className="font-15 font-medium color-3b" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.school_holiday_program.desc}} />
+									<div className="font-15 font-medium color-3b" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.school_holiday_program.desc}} />
 									<Link className=" uppercase btn-sm btn-orange-large" to="/book-a-camp">BOOK A CAMP TODAY</Link>
 								</div>                        
 							</Col>
@@ -198,7 +198,7 @@ class City extends Component {
 											</div>
 											<Card.Body>
 												<Card.Title as="h5">{prop.title}</Card.Title>
-												<Card.Text className="" dangerouslySetInnerHTML={{ __html: prop.desc}} />	
+												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.desc}} />	
 											</Card.Body>
 										</Card>
 									</Col>
