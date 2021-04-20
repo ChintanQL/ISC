@@ -227,7 +227,7 @@ class City extends Component {
 										</div>
 									</Col>
 									<Col xl={6} lg={6} className="text-center kids-data">
-										<p className="mb-30 font-22 font-semibold text-white" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.testimonial.testimonial}} />
+										<div className="mb-30 font-22 font-semibold text-white" dangerouslySetInnerHTML={{ __html: page.edges[0].node.acf.testimonial.testimonial}} />
 										<div className="camptestimonialsec_logo"> <Image src={lifes} alt="cardhover" /></div>
 									</Col>
 								</Row>
