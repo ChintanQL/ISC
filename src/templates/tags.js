@@ -100,6 +100,7 @@ class Tags extends Component {
 																) : ("")  
 															)
 														})}
+														
 													</ListGroup>
 										</div>
 										{/*  */}
