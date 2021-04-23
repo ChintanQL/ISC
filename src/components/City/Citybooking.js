@@ -71,7 +71,7 @@ class Citybooking extends React.Component{
 						<div className="container">
 							<div className="title mb-30">
 								<h2>
-									SELECT A SPORT TO VIEW AND BOOK CAMPS…
+									SELECT A SPORT TO VIEW AND BOOK CAMPS
 								</h2>
 								<p className="text-center">
 									No camps or programs were found matching your selection.
