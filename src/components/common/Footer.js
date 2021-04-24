@@ -53,15 +53,11 @@ class Footer extends Component {
                         </Col>
                         <Col xl={3} lg={4} md={12}>
                             <div className="footer-data-last">
-                                <h2 className="font-22 font-bold text-white mb-3">FOLLOW US ON SOCIAL MEDIA</h2>
-                                <iframe height="180" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/insta-feed/" title="description" /> 
+                                
+                                <iframe height="380" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/insta-feed/" title="description" /> 
 								
 								
-                                <div className="social-footer-li">
-                                    <ListGroup horizontal as="ul">
-                                        <SocialMenu />
-                                    </ListGroup>
-                                </div>
+                               
                             </div>
                         </Col>
                     </Row>
