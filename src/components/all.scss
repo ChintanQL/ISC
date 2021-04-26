@@ -4,6 +4,23 @@
     position: absolute;
 }
 
+
+@media (min-width:375px)  { 
+	.sub-footer{
+		margin-top: -12% !important;
+		position: absolute !important;
+	}
+	
+}
+@media (min-width:414px)  { 
+	.sub-footer{
+		margin-top: -7% !important;
+		position: absolute !important;
+	}
+	
+}
+
+
 .seccont button {
     width: 100% !important;
 }
