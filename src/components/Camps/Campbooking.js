@@ -3,6 +3,7 @@ import axios from "axios"
 import {Container,Image, Row,Col,Card} from 'react-bootstrap'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Menubanner from '../common/Menubanner'
+import Blogbanner from '../common/Blogbanner'
 class Campbooking extends React.Component{
 	constructor(props) {
 		super(props);
@@ -111,7 +112,7 @@ class Campbooking extends React.Component{
 											<iframe src="https://shop.australiansportscamps.com.au/gravity-notify/" frameBorder="0" width="100%" height="470" ></iframe>
 										</div>
 										<div className="col-xl-4 col-lg-4 col-md-5 secc">
-											<Menubanner />
+											<Blogbanner />
 											<div className="callbtnblue"><a href="tel:1300914368"><span>call on   </span>1300914368</a></div>
 										</div>
 									</div>
