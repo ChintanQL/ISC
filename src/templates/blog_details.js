@@ -33,7 +33,15 @@ class BlogDetails extends Component {
             <>
 			<Helmet>
 				<title>{blog.edges[0].node.title} - Australian Sports Camps</title>
-					{ blog.edges[0].node.yoast_head}
+				<meta name="title" content={blog.edges[0].node.yoast.title}></meta>
+				<meta name="description" content={blog.edges[0].node.yoast.metadesc}></meta>
+				 <meta name="keywords" content={blog.edges[0].node.yoast.metakeywords}></meta>
+				<meta property="og:type" content="website"></meta>
+				<meta property="og:title" content={blog.edges[0].node.yoast.opengraph_title}></meta>
+				<meta property="og:description" content={blog.edges[0].node.yoast.opengraph_description}></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+				<meta property="twitter:title" content={blog.edges[0].node.yoast.title}></meta>
+				<meta property="twitter:description" content={blog.edges[0].node.yoast.twitter_description}></meta>	
 				
 			</Helmet>
 			
@@ -62,6 +70,7 @@ class BlogDetails extends Component {
 								<Col xl={8} lg={8} md={12} className="lg-mb-2">
 									<Card className="blog-details-card mb-30">
 										<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.title}} />
+										
 										
 										<div className="card-img mb-3">
 											<Image src={blog.edges[0].node.acf.feature_image2} fluid />
@@ -196,7 +205,6 @@ export const pageQuery = graphql`
 			}
 			node {
 				id
-				yoast_head
 				title
 				content
 				acf {
@@ -209,6 +217,22 @@ export const pageQuery = graphql`
 				categories {
 				  name
 				}
+				yoast {
+				focuskw
+				linkdex
+				meta_robots_adv
+				meta_robots_nofollow
+				meta_robots_noindex
+				metadesc
+				metakeywords
+				opengraph_description
+				opengraph_image
+				opengraph_title
+				redirect
+				title
+				twitter_description
+				twitter_image
+			  }
 				date(formatString: "D MMMM, Y")
 			}
 		}

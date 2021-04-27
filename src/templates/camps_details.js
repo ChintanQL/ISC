@@ -55,6 +55,15 @@ class Camps extends Component {
 				<>
 				<Helmet>
 				<title>{page.edges[0].node.title} Kids Sports Camp - Australian Sports Camps</title>
+				<meta name="title" content={page.edges[0].node.yoast.title}></meta>
+		<meta name="description" content={page.edges[0].node.yoast.metadesc}></meta>
+		 <meta name="keywords" content={page.edges[0].node.yoast.metakeywords}></meta>
+		<meta property="og:type" content="website"></meta>
+		<meta property="og:title" content={page.edges[0].node.yoast.opengraph_title}></meta>
+		<meta property="og:description" content={page.edges[0].node.yoast.opengraph_description}></meta>
+		<meta property="twitter:card" content="summary_large_image"></meta>
+		<meta property="twitter:title" content={page.edges[0].node.yoast.title}></meta>
+		<meta property="twitter:description" content={page.edges[0].node.yoast.twitter_description}></meta>
 			</Helmet>
 				<section className="Banner-Section">
 					<Container>
@@ -125,6 +134,22 @@ export const pageQuery = graphql`
 				content
 				wordpress_id
 				slug
+				yoast {
+				focuskw
+				linkdex
+				meta_robots_adv
+				meta_robots_nofollow
+				meta_robots_noindex
+				metadesc
+				metakeywords
+				opengraph_description
+				opengraph_image
+				opengraph_title
+				redirect
+				title
+				twitter_description
+				twitter_image
+			  }
 				acf {
 						  product_category
 						  disclaimer
