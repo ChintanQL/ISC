@@ -33,10 +33,10 @@ class BlogDetails extends Component {
             <>
 			<Helmet>
 				<title>{blog.edges[0].node.title} - Australian Sports Camps</title>
-				
+					{ blog.edges[0].node.yoast_head}
 				
 			</Helmet>
-			<Helmet dangerouslySetInnerHTML={{ __html: blog.edges[0].node.yoast_head }} />
+			
 			
 			
 				<section className="Banner-Section">
