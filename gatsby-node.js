@@ -18,23 +18,23 @@ const getData = async () => {
 				  page(id: 76247, idType: DATABASE_ID) {
 					id
 					seo {
-					  focuskw
-					  metaDesc
-					  metaKeywords
-					  opengraphAuthor
-					  opengraphDescription
-					  opengraphModifiedTime
-					  opengraphPublishedTime
-					  opengraphPublisher
-					  opengraphSiteName
-					  opengraphTitle
-					  opengraphType
-					  opengraphUrl
-					  readingTime
-					  title
-					  twitterDescription
-					  twitterTitle
-					}
+      focuskw
+      metaDesc
+      metaKeywords
+      opengraphAuthor
+      opengraphDescription
+      opengraphModifiedTime
+      opengraphPublishedTime
+      opengraphPublisher
+      opengraphSiteName
+      opengraphTitle
+      opengraphType
+      opengraphUrl
+      readingTime
+      title
+      twitterDescription
+      twitterTitle
+    }
 					home {	
 					  fieldGroupName
 					   campsData {

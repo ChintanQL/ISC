@@ -33,6 +33,8 @@ class BlogDetails extends Component {
             <>
 			<Helmet>
 				<title>{blog.edges[0].node.title} - Australian Sports Camps</title>
+				
+				<div dangerouslySetInnerHTML={{ __html: blog.edges[0].node.yoast_head }}></div>
 			</Helmet>
 				<section className="Banner-Section">
 					<Container>
@@ -191,6 +193,7 @@ export const pageQuery = graphql`
 			}
 			node {
 				id
+				yoast_head
 				title
 				content
 				acf {

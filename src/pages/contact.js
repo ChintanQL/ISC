@@ -20,6 +20,17 @@ class ConatctUs extends Component {
             <>
 			<Helmet>
 				<title>Contact Us - Australian Sports Camps</title>
+				<meta name="description" content="ASC have provided kids sports camps in Australia for over 33 years. We look forward to speaking with you and assisting you in any way possible!" />
+				<meta property="og:locale" content="en_US" />
+				<meta property="og:type" content="article" />
+				<meta property="og:title" content="Contact Us - Australian Sports Camps" />
+				<meta property="og:description" content="ASC have provided kids sports camps in Australia for over 33 years. We look forward to speaking with you and assisting you in any way possible!" />
+				<meta property="og:url" content="https://shop.australiansportscamps.com.au/contact/" /><meta property="og:site_name" content="Australian Sports Camps" />
+				<meta property="article:publisher" content="https://facebook.com/AustralianSportsCamps" /><meta property="article:modified_time" content="2016-10-12T05:45:48+00:00" />
+				<meta property="og:image" content="https://shop.australiansportscamps.com.au/wp-content/uploads/2016/05/australian-sports-camps-og.png" />t<meta property="og:image:width" content="1200" />t
+				<meta property="og:image:height" content="1200" />
+				<meta name="twitter:card" content="summary" /><meta name="twitter:creator" content="@austsportscamps" />
+				<meta name="twitter:site" content="@austsportscamps" />
 			</Helmet>
 			
 			

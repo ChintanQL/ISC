@@ -33,7 +33,7 @@ class City extends Component {
             isOpen:false,
         })
     }
-	callbackFunction = (childData) => {      this.setState({message: childData})},
+	callbackFunction = (childData) => {      this.setState({message: childData})}
 	
 	render() {
 		const page = this.props.data.allWordpressWpCpt152600;
