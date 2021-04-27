@@ -34,8 +34,11 @@ class BlogDetails extends Component {
 			<Helmet>
 				<title>{blog.edges[0].node.title} - Australian Sports Camps</title>
 				
-				<div dangerouslySetInnerHTML={{ __html: blog.edges[0].node.yoast_head }}></div>
+				
 			</Helmet>
+			<Helmet dangerouslySetInnerHTML={{ __html: blog.edges[0].node.yoast_head }} />
+			
+			
 				<section className="Banner-Section">
 					<Container>
 						<div className="Banner-Section-data">
