@@ -5,14 +5,14 @@
 }
 
 
-@media (min-width:375px)  { 
+@media (max-width:375px)  { 
 	.sub-footer{
 		margin-top: -12% !important;
 		position: absolute !important;
 	}
 	
 }
-@media (min-width:414px)  { 
+@media (max-width:414px)  { 
 	.sub-footer{
 		margin-top: -7% !important;
 		position: absolute !important;
