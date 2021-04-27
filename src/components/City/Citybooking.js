@@ -96,7 +96,7 @@ class Citybooking extends React.Component{
 								<div className="col-xl-8 col-lg-8 col-md-7 md-mb-4">
 									<iframe src="https://shop.australiansportscamps.com.au/gravity-notify/" frameBorder="0" width="100%" height="550" ></iframe>
 								</div>
-								<div className="col-xl-4 col-lg-4 col-md-5">
+								<div className="col-xl-4 col-lg-4 col-md-5 secc">
 									<Blogbanner />
 								</div>
 							</div>
