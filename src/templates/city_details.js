@@ -21,6 +21,7 @@ class City extends Component {
         }
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
+        this.callbackFunction = this.callbackFunction.bind(this);
     }
     modalOpen(){
         this.setState({
