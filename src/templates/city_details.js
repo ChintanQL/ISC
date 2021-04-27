@@ -17,6 +17,7 @@ class City extends Component {
         super(props);
         this.state={
             isOpen:false,
+            message:"",
         }
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
@@ -31,7 +32,7 @@ class City extends Component {
             isOpen:false,
         })
     }
-	
+	callbackFunction = (childData) => {      this.setState({message: childData})},
 	
 	render() {
 		const page = this.props.data.allWordpressWpCpt152600;
@@ -80,7 +81,8 @@ class City extends Component {
 				<section className="City-details-section-3">
 					<Container>
 						<Row className="main-book-card-row">
-							<Citybooking products={page_products} />
+							<Citybooking parentCallback = {this.callbackFunction} products={page_products} />
+							 <p> {this.state.message} </p>
 						</Row>
 					</Container>
 				</section>

@@ -21,6 +21,7 @@ class Citybooking extends React.Component{
 			this.setState({pagedata: e.data.ResponseData.City})
 			this.setState({showInfo: 1})
 			this.setState({count: e.data.ResponseData.Count})
+			this.props.parentCallback(e.data.ResponseData.Count);
 		})
     }
 
