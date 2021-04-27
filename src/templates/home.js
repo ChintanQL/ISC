@@ -24,6 +24,22 @@ class HomePage extends Component {
             <>
 			<Helmet>
 				<title>Australian Sports Camps | Sports Camps Australia | Camps Australia</title>
+				<>
+				{(this.props.pageContext.HomeData.data.page.seo) ? (
+					<>
+					<meta name="title" content={this.props.pageContext.HomeData.data.page.seo.title}></meta>
+					<meta name="description" content={this.props.pageContext.HomeData.data.page.seo.metaDesc}></meta>
+					<meta name="keywords" content={this.props.pageContext.HomeData.data.page.seo.metaKeywords}></meta>
+					<meta property="og:type" content="website"></meta>
+					<meta property="og:title" content={this.props.pageContext.HomeData.data.page.seo.opengraphTitle}></meta>
+					<meta property="og:description" content={this.props.pageContext.HomeData.data.page.seo.opengraphDescription}></meta>
+					<meta property="twitter:card" content="summary_large_image"></meta>
+					<meta property="twitter:title" content={this.props.pageContext.HomeData.data.page.seo.twitterTitle}></meta>
+					<meta property="twitter:description" content={this.props.pageContext.HomeData.data.page.seo.twitterDescription}></meta>
+					
+					</>
+				) : ("")}
+				</>
 			</Helmet>
 			
 			

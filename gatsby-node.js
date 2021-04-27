@@ -17,7 +17,25 @@ const getData = async () => {
 				query MyQuery {
 				  page(id: 76247, idType: DATABASE_ID) {
 					id
-					home {
+					seo {
+					  focuskw
+					  metaDesc
+					  metaKeywords
+					  opengraphAuthor
+					  opengraphDescription
+					  opengraphModifiedTime
+					  opengraphPublishedTime
+					  opengraphPublisher
+					  opengraphSiteName
+					  opengraphTitle
+					  opengraphType
+					  opengraphUrl
+					  readingTime
+					  title
+					  twitterDescription
+					  twitterTitle
+					}
+					home {	
 					  fieldGroupName
 					   campsData {
 						campDesc
