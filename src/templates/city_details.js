@@ -55,7 +55,7 @@ class City extends Component {
 		const page = this.props.data.allWordpressWpCpt152600;
 		const page_title = this.props.data.allWordpressWpCpt152600.edges[0].node.title;
 		const page_products = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.products.join();
-		
+		var wordpress_id = this.props.data.allWordpressWpCpt152600.edges[0].node.wordpress_id;
 		
 		return (
 			<Layout>
@@ -316,6 +316,7 @@ export const pageQuery = graphql`
 			}
 			node {
 				id
+				wordpress_id
 				yoast {
 				focuskw
 				linkdex
