@@ -489,6 +489,7 @@ exports.createPages = async ({ actions, graphql }) => {
 						id
 						title
 						slug
+						wordpress_id
 					}
 				}
 			}
@@ -500,7 +501,8 @@ exports.createPages = async ({ actions, graphql }) => {
 		  path: `/school-holiday-programs/${edge.node.slug}/`,
 		  component: slash(CityTemplate),
 		  context: {
-			id: edge.node.id
+			id: edge.node.id,
+			wordpress_id: edge.node.wordpress_id
 		  },
 		})			  
 	})

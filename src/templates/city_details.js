@@ -33,6 +33,20 @@ class City extends Component {
             isOpen:false,
         })
     }
+	componentDidMount() {
+		var wordpress_id = this.props.pageContext.wordpress_id;
+		console.log(wordpress_id);
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/city_flyer"+wordpress_id;
+		axios.post(url,{ Prod: products}).then(e => {
+			//this.setState({pagedata: e.data.ResponseData.City})
+			//this.setState({showInfo: 1})
+			//this.setState({count: e.data.ResponseData.Count})
+			//this.props.parentCallback(e.data.ResponseData.Count);
+		})
+    }
+	
+	
+	
 	callbackFunction = (childData) => {      this.setState({message: childData})}
 	
 	render() {
