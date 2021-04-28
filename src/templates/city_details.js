@@ -18,6 +18,7 @@ class City extends Component {
         this.state={
             isOpen:false,
             message:"",
+			showInfo: 0,
         }
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
@@ -38,10 +39,7 @@ class City extends Component {
 		console.log(wordpress_id);
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/city_flyer"+wordpress_id;
 		axios.post(url,{ Prod: products}).then(e => {
-			//this.setState({pagedata: e.data.ResponseData.City})
-			//this.setState({showInfo: 1})
-			//this.setState({count: e.data.ResponseData.Count})
-			//this.props.parentCallback(e.data.ResponseData.Count);
+			this.setState({showInfo: e.data.ResponseData.Display_FORM})
 		})
     }
 	
@@ -95,9 +93,11 @@ class City extends Component {
 									<h2 className="uppercase">{page.edges[0].node.acf.sub_title_1}</h2>
 									<h2 className="uppercase">{page.edges[0].node.acf.sub_title_2}</h2>
 								</div>
-								<div className="text-center">
+								{(this.state.showInfo == 1) ? (<div className="text-center">
 									<Button className="uppercase btn btn-orange-large"  onClick={() => scrollTo('#flyer_form')}>DOWNLOAD FLYER</Button>
-								</div>
+								</div>) : ("")}
+								
+								
 							</Container>
 						</div>
 					</Container>
@@ -272,11 +272,15 @@ class City extends Component {
 						</div>
 					</section>	
 				) : ("")}
-				<div className="flyer_formbx" >
+				
+				
+				{(this.state.showInfo == 1) ? (<div className="flyer_formbx" >
 				<div className="container">
 				<iframe height="560" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-flyer/?form_page=Sports&camp_sports=demo" title="description" /> 
 				</div>
-				</div>
+				</div>) : ("")}
+				
+				
 				<BottomForm/>
 				<Footer/>
 				</>
