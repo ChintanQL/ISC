@@ -56,6 +56,7 @@ class City extends Component {
 		const page = this.props.data.allWordpressWpCpt152600;
 		const page_title = this.props.data.allWordpressWpCpt152600.edges[0].node.title;
 		const page_products = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.products.join();
+		const tags = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.tags.join();
 		var wordpress_id = this.props.data.allWordpressWpCpt152600.edges[0].node.wordpress_id;
 		
 		
@@ -112,7 +113,7 @@ class City extends Component {
 				<section className="City-details-section-3">
 					<Container>
 						<Row className="main-book-card-row">
-							<Citybooking parentCallback = {this.callbackFunction} products={page_products} />
+							<Citybooking parentCallback = {this.callbackFunction} products={page_products} tags={tags} />
 							
 						</Row>
 					</Container>
@@ -340,6 +341,7 @@ export const pageQuery = graphql`
 				  sub_title_1
 				  sub_title_2
 				  products
+				  tags
 				  testimonial {
 					image
 					testimonial

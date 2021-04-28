@@ -12,10 +12,13 @@ class Citybooking extends React.Component{
 	state = {
             pagedata: [],
 			showInfo: 0,
+			tags: "",
 			count:0	
     };
 	componentDidMount() {
 		var products = (this.props.products) ? this.props.products : "";
+		var tags = (this.props.tags) ? this.props.tags : "";
+		this.setState({tags: tags})
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/products";
 		axios.post(url,{ Prod: products}).then(e => {
 			this.setState({pagedata: e.data.ResponseData.City})
@@ -94,7 +97,7 @@ class Citybooking extends React.Component{
 						<div className="container">
 							<div className="row">
 								<div className="col-xl-8 col-lg-8 col-md-7 md-mb-4">
-									<iframe src="https://shop.australiansportscamps.com.au/gravity-notify/" frameBorder="0" width="100%" height="550" ></iframe>
+									<iframe src={"https://shop.australiansportscamps.com.au/gravity-notify/?camp_state="+this.state.tags+"&camp_sports="} frameBorder="0" width="100%" height="550" ></iframe>
 								</div>
 								<div className="col-xl-4 col-lg-4 col-md-5 secc">
 									<Blogbanner />
