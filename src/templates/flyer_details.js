@@ -12,6 +12,20 @@ import PropTypes from "prop-types"
 import { Disqus } from 'gatsby-plugin-disqus'
 import { Helmet } from "react-helmet"
 class BlogDetails extends Component {
+	constructor(props) {
+        super(props);
+        this.state={
+            currentURL:"",
+        }
+       
+    }
+	componentDidMount() {
+		
+		this.setState({currentURL: window.location.href})
+		
+    }
+	
+	
   render() {
   
 	const blog = this.props.data.allWordpressWpCpt150963
@@ -19,7 +33,7 @@ class BlogDetails extends Component {
 	const title = this.props.data.allWordpressWpCpt150963.edges[0].node.title
 	 	const category = this.props.data.allWordpressCategory
    	const tags = this.props.data.allWordpressTag
-	const currentURL = window.location.href;
+	
 	let disqusConfig = {
 		url: "",
 		identifier: id,
@@ -71,7 +85,7 @@ class BlogDetails extends Component {
 									</Card>
 								</Col>
 								<Col xl={4} lg={4} md={4} className="lg-mb-2">
-									<iframe height="450" width="100%" frameBorder="0"  src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page=&id="+id+"&url="+currentURL} title="description" />
+									<iframe height="450" width="100%" frameBorder="0"  src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page=&id="+id+"&url="+this.state.currentURL} title="description" />
 									
 									<Guidebanner />
 								</Col>

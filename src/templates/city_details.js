@@ -20,6 +20,7 @@ class City extends Component {
         this.state={
             isOpen:false,
             message:"",
+            currentURL:"",
 			showInfo: 0,
         }
         this.modalOpen = this.modalOpen.bind(this);
@@ -39,7 +40,7 @@ class City extends Component {
 	componentDidMount() {
 		var wordpress_id = this.props.pageContext.wordpress_id;
 		console.log(wordpress_id);
-		
+		this.setState({currentURL: window.location.href})
 		axios({
 			url: "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/city_flyer/"+wordpress_id,
 			method: 'get'}).then(res => {
@@ -56,7 +57,8 @@ class City extends Component {
 		const page_title = this.props.data.allWordpressWpCpt152600.edges[0].node.title;
 		const page_products = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.products.join();
 		var wordpress_id = this.props.data.allWordpressWpCpt152600.edges[0].node.wordpress_id;
-		const currentURL = window.location.href;
+		
+		
 		return (
 			<Layout>
 			
@@ -281,7 +283,7 @@ class City extends Component {
 				
 				{(this.state.showInfo == 1) ? (<div className="flyer_formbx" >
 				<div className="container">
-				<iframe height="560" width="100%" frameBorder="0"    src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+page_title+"&id="+wordpress_id+"&url="+currentURL} title="description" /> 
+				<iframe height="560" width="100%" frameBorder="0"    src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+page_title+"&id="+wordpress_id+"&url="+this.state.currentURL} title="description" /> 
 				</div>
 				</div>) : ("")}
 				
