@@ -23,6 +23,21 @@ class City extends Component {
         this.modalClose = this.modalClose.bind(this);
         this.callbackFunction = this.callbackFunction.bind(this);
     }
+	
+	componentDidMount() {
+		var products = (this.props.products) ? this.props.products : "";
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/products";
+		axios.post(url,{ Prod: products}).then(e => {
+			this.setState({pagedata: e.data.ResponseData.City})
+			this.setState({showInfo: 1})
+			this.setState({count: e.data.ResponseData.Count})
+			this.props.parentCallback(e.data.ResponseData.Count);
+		})
+    }
+	
+	
+	console.log(this.props.pageContext.HomeData.data.page);
+	
     modalOpen(){
         this.setState({
             isOpen:true,

@@ -48,13 +48,7 @@ class Membership extends Component {
 					query MyQuery {
 						page(id: "123761", idType: DATABASE_ID) {
 						  id
-						  Membership {
-							howItWorks
-							subTitle
-							termsConditions
-							title
-							topDesc
-									seo {
+						  			seo {
 					  focuskw
 					  metaDesc
 					  metaKeywords
@@ -72,6 +66,13 @@ class Membership extends Component {
 					  twitterDescription
 					  twitterTitle
 					}
+						  Membership {
+							howItWorks
+							subTitle
+							termsConditions
+							title
+							topDesc
+						
 							faq {
 							  answers
 							  question
