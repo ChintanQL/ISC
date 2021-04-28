@@ -19,6 +19,7 @@ import { Helmet } from "react-helmet"
 class demopage extends Component {
   render() {
     const blog = this.props.data.allWordpressWpCpt150963
+    const blog_count = this.props.data.allWordpressWpCpt150963.edges.length;
    	const category = this.props.data.allWordpressCategory
    
    
@@ -71,26 +72,34 @@ class demopage extends Component {
 							<Tab.Content className="text-left">
 								<Tab.Pane eventKey="Blog">
 									<section className="Resource-guides">
+									{(blog_count > 0) ? (
 										<Container>
 											<div className="Resource-guides-data">
 												<Row className="">
 													
 													{blog && blog.edges.map( prop => {
 														return (
-															<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
-																<Card className="resource-card mb-0 all">
-																	<Link to={"/flyer/"+prop.node.slug} className="card-img">
-																		<Image src={prop.node.acf.featured_image} fluid alt="" className="" />
-																	</Link>
-																	<Card.Body>
-																		<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title.substring(0, 50)+"...."}}  />
-																		<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 90)+"..."}} />
-																		<Link className="nav-link p-0 d-flex align-items-center" to={"/flyer/"+prop.node.slug}>Read more 
-																			<i className="fa fa-chevron-right ml-2"></i> 
+															<>
+															{(prop.node.acf.active == 1) ? (
+																<Col xl={4} lg={4} md={6} className="mb-30 resource-card-col">
+																	<Card className="resource-card mb-0 all">
+																		<Link to={"/flyer/"+prop.node.slug} className="card-img">
+																			<Image src={prop.node.acf.featured_image} fluid alt="" className="" />
 																		</Link>
-																	</Card.Body>
-																</Card>
-															</Col>	
+																		<Card.Body>
+																			<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.node.title.substring(0, 50)+"...."}}  />
+																			<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.node.content.substring(0, 90)+"..."}} />
+																			<Link className="nav-link p-0 d-flex align-items-center" to={"/flyer/"+prop.node.slug}>Read more 
+																				<i className="fa fa-chevron-right ml-2"></i> 
+																			</Link>
+																		</Card.Body>
+																	</Card>
+																</Col>	
+															
+															) : ("") }
+															</>
+														
+															
 														)
 													})}
 												</Row>
@@ -102,6 +111,18 @@ class demopage extends Component {
 												</Col>
 											</div>
 										</Container>
+									
+									) : (
+									<Container>
+										<div className="Resource-guides-data">
+											<Row className="">
+												<p className="text-success" > No camp flyers found at the moment  </p>
+											</Row>
+										</div>
+									</Container>
+									)}
+										
+										
 									</section>
 								</Tab.Pane>
 							</Tab.Content>
@@ -134,6 +155,7 @@ export const pageQuery = graphql`
 				acf {
 					featured_image
 					author_name
+					active
 				}
 				
 				slug

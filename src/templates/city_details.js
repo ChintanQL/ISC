@@ -11,6 +11,8 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import Iframe from 'react-iframe'
 import { Helmet } from "react-helmet"
 import lifes from '../images/lifes-better-with-sport.png'
+import axios from "axios"
+
 class City extends Component {
 	
 	constructor(props) {

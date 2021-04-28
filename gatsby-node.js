@@ -291,6 +291,7 @@ exports.createPages = async ({ actions, graphql }) => {
 						id
 						acf {
 							featured_image
+							active
 						}
 						date(formatString: "D MMMM, Y")
 						
@@ -305,13 +306,16 @@ exports.createPages = async ({ actions, graphql }) => {
 	const flyerTemplate = path.resolve(`./src/templates/flyer_details.js`);
 	const flyerlistTemplate = path.resolve(`./src/templates/flyer.js`);
 	allWordpressflyer.data.allWordpressWpCpt150963.edges.forEach((edge,index) => {
-		  createPage({
+		if(edge.node.acf.active == 1){
+			createPage({
 		  path: `/flyer/${edge.node.slug}/`,
 		  component: slash(flyerTemplate),
 		  context: {
 			id: edge.node.id
 		  },
-		})			  
+		})	
+		} 
+		 		  
 	})
 	const flyers = allWordpressflyer.data.allWordpressWpCpt150963.edges;
 	paginate({
