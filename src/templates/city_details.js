@@ -53,6 +53,7 @@ class City extends Component {
 	
 	render() {
 		const page = this.props.data.allWordpressWpCpt152600;
+		const page_title = this.props.data.allWordpressWpCpt152600.edges[0].node.title;
 		const page_products = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.products.join();
 		
 		
@@ -280,7 +281,7 @@ class City extends Component {
 				
 				{(this.state.showInfo == 1) ? (<div className="flyer_formbx" >
 				<div className="container">
-				<iframe height="560" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+{page.edges[0].node.title}+"&id="+wordpress_id+"" title="description" /> 
+				<iframe height="560" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+page_title+"&id="+wordpress_id title="description" /> 
 				</div>
 				</div>) : ("")}
 				
