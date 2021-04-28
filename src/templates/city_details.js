@@ -41,7 +41,7 @@ class City extends Component {
 		console.log(wordpress_id);
 		
 		axios({
-			url: "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/city_flyer"+wordpress_id,
+			url: "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/city_flyer/"+wordpress_id,
 			method: 'get'}).then(res => {
 			this.setState({showInfo: res.data.ResponseData.Display_FORM})
 		})
