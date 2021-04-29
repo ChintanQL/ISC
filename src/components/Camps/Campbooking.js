@@ -73,9 +73,20 @@ class Campbooking extends React.Component{
 													<Card.Text>
 														{prop.Camp_Venue}
 													</Card.Text>
-													<ul>
-														<li className="main-price">${prop.price}</li>
-													</ul>
+													
+													{(prop.Flag == 1) ? (
+														<ul>
+															<li className="cross-price">${prop.regular_price}</li>
+															<li className="main-price">${prop.sale_price}</li>
+														</ul>
+													) : (
+														<ul>
+															<li className="main-price">${prop.price}</li>
+														</ul>
+													)}
+													
+													
+													
 													<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug}>More info / Book Now</Link>
 												</Card.Body>
 											</Card>
