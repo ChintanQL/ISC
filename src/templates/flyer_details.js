@@ -30,6 +30,7 @@ class BlogDetails extends Component {
   
 	const blog = this.props.data.allWordpressWpCpt150963
 	const id = this.props.data.allWordpressWpCpt150963.edges[0].node.wordpress_id
+	const city_name = this.props.data.allWordpressWpCpt150963.edges[0].node.acf.city_name
 	const title = this.props.data.allWordpressWpCpt150963.edges[0].node.title
 	 	const category = this.props.data.allWordpressCategory
    	const tags = this.props.data.allWordpressTag
@@ -85,7 +86,7 @@ class BlogDetails extends Component {
 									</Card>
 								</Col>
 								<Col xl={4} lg={4} md={4} className="lg-mb-2">
-									<iframe height="450" width="100%" frameBorder="0"  src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page=&id="+id+"&url="+this.state.currentURL} title="description" />
+									<iframe height="450" width="100%" frameBorder="0"  src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+city_name+"&id="+id+"&url="+this.state.currentURL} title="description" />
 									
 									<Guidebanner />
 								</Col>
@@ -166,6 +167,7 @@ export const pageQuery = graphql`
 					footer_image
 					footer_button_text
 					author_name
+					city_name
 				}
 				yoast {
 				focuskw
