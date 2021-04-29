@@ -4,6 +4,7 @@ import {Container,Image, Row,Col,Card} from 'react-bootstrap'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Menubanner from '../common/Menubanner'
 import Blogbanner from '../common/Blogbanner'
+import LazyLoad from 'react-lazyload';
 
 class Citybooking extends React.Component{
 	constructor(props) {
@@ -45,9 +46,11 @@ class Citybooking extends React.Component{
 						{this.state.pagedata.map((prop,i) => {return (
 							<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
 								<Card className="book-card">
+									<LazyLoad height={200} once >
 									<div className="card-img">
 										<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
 									</div>
+									</LazyLoad>
 									<Card.Body>
 										<Card.Title as="h5">
 											{prop.Name}
