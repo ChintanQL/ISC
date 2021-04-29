@@ -5,13 +5,7 @@
 }
 
 
-@media (max-width:375px)  { 
-	.sub-footer{
-		margin-top: -12% !important;
-		position: absolute !important;
-	}
-	
-}
+
 @media (max-width:414px)  { 
 	.sub-footer{
 		margin-top: -7% !important;
@@ -20,6 +14,20 @@
 	
 }
 
+@media (max-width:375px)  { 
+    .sub-footer{
+        margin-top: -11%!important;
+        position: absolute !important;
+    }
+    
+}
+@media (max-width:320px)  { 
+    .sub-footer{
+        margin-top: -16% !important;
+        position: absolute !important;
+    }
+    
+}
 
 .seccont button {
     width: 100% !important;
