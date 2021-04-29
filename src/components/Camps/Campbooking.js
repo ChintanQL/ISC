@@ -12,12 +12,15 @@ class Campbooking extends React.Component{
         pagedata: [],
 		showInfo: 0,
 		query_code:"",
+		name:"",
 		code:"",
 		count:0,
 		shown: "d-none"
     };
 	componentDidMount() {
 		var cat = this.props.category;
+		var name = this.props.name;
+		this.setState({name: name})
 		
 		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
 		axios.get(url).then(e => {
@@ -109,7 +112,7 @@ class Campbooking extends React.Component{
 								<div className="container">
 									<div className="row">
 										<div className="col-xl-8 col-lg-8 col-md-7 md-mb-4">
-											<iframe src="https://shop.australiansportscamps.com.au/gravity-notify/" frameBorder="0" width="100%" height="470" ></iframe>
+											<iframe src={"https://shop.australiansportscamps.com.au/gravity-notify/?camp_state=""&camp_sports="+this.state.name+"} frameBorder="0" width="100%" height="470" ></iframe>
 										</div>
 										<div className="col-xl-4 col-lg-4 col-md-5 secc">
 											<Blogbanner />

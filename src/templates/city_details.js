@@ -58,7 +58,7 @@ class City extends Component {
 		const page_products = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.products.join();
 		const tags = this.props.data.allWordpressWpCpt152600.edges[0].node.acf.tags.join();
 		var wordpress_id = this.props.data.allWordpressWpCpt152600.edges[0].node.wordpress_id;
-		
+		console.log(this.props.data.allWordpressWpCpt152600.edges[0].node.acf.tags);
 		
 		return (
 			<Layout>
