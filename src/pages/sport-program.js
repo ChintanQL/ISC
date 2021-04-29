@@ -92,7 +92,21 @@ class Sportprog extends Component {
 			  <Layout>
 				<>
 				<Helmet>
-				<title>Book - Australian Sports Camps | Holiday Camps Australia</title>
+				<title>Book - Australian Sports Camps | Holiday Sports Coaching</title>
+				<meta name="title" content="Book - Australian Sports Camps | Holiday Sports Coaching"></meta>
+				<meta property="og:title" content="Book - Australian Sports Camps | Holiday Sports Coaching"></meta>
+				<meta property="twitter:title" content="Book - Australian Sports Camps | Holiday Sports Coaching"></meta>
+
+				<meta name="description" content="Book a holiday sports camp with ASC. Sports school holiday programs for kids between 5-15. Camps in Australia for all major sports. Book a kids camp online."></meta>
+				<meta property="og:description" content="Book a holiday sports camp with ASC. Sports school holiday programs for kids between 5-15. Camps in Australia for all major sports. Book a kids camp online."></meta>
+				<meta property="twitter:description" content="Book a holiday sports camp with ASC. Sports school holiday programs for kids between 5-15. Camps in Australia for all major sports. Book a kids camp online."></meta>
+
+				<meta name="keywords" content="Sports Camps, Australian Sports Camps, Sports Camps Australia, Holiday Sports Camps, Summer Sports Camps, School Holiday Sports Camps, Kids Sports Camps, Sports Camps Near Me, ASC Sports Camps, International Sports Camps"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">

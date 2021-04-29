@@ -26,7 +26,21 @@ class coach extends Component {
     return (
 		<Layout>
 		<Helmet>
-				<title>ASC Heroes - Australian Sports Camps</title>
+				<title>Meet The ASC Heroes & Talents - Australian Sports Camps</title>
+				<meta name="title" content="Meet The ASC Heroes & Talents - Australian Sports Camps"></meta>
+				<meta property="og:title" content="Meet The ASC Heroes & Talents - Australian Sports Camps"></meta>
+				<meta property="twitter:title" content="Meet The ASC Heroes & Talents - Australian Sports Camps"></meta>
+
+				<meta name="description" content="Get coached by your favourite sports celebrity with Australian Sports Camps. Coaching in all major sports in Australia. Kids learn sports at top facilities."></meta>
+				<meta property="og:description" content="Get coached by your favourite sports celebrity with Australian Sports Camps. Coaching in all major sports in Australia. Kids learn sports at top facilities."></meta>
+				<meta property="twitter:description" content="Get coached by your favourite sports celebrity with Australian Sports Camps. Coaching in all major sports in Australia. Kids learn sports at top facilities."></meta>
+
+				<meta name="keywords" content="ASC Heroes, Sports Training, Summer Sports Coaching, Sports Coaching in Australia, Sports Coach, sports coach training courses, Sport Coach Australia, Cricket coach, football coaching for kids"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 			<section className="Banner-Section">
                 <Container>

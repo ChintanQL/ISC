@@ -44,7 +44,21 @@ class Partner extends Component {
 			  <Layout>
 				<>
 				<Helmet>
-				<title>partner Programs - Australian Sports Camps</title>
+				<title>Partner Programs - Australian Sports Camps|Holiday Camps</title>
+				<meta name="title" content="Partner Programs - Australian Sports Camps|Holiday Camps"></meta>
+				<meta property="og:title" content="Partner Programs - Australian Sports Camps|Holiday Camps"></meta>
+				<meta property="twitter:title" content="Partner Programs - Australian Sports Camps|Holiday Camps"></meta>
+
+				<meta name="description" content="Book a holiday partnership program for kids of 5 to 15. Sports camps for all major sports in Australia. We ensure your kids receive coaching at top facilities."></meta>
+				<meta property="og:description" content="Book a holiday partnership program for kids of 5 to 15. Sports camps for all major sports in Australia. We ensure your kids receive coaching at top facilities."></meta>
+				<meta property="twitter:description" content="Book a holiday partnership program for kids of 5 to 15. Sports camps for all major sports in Australia. We ensure your kids receive coaching at top facilities."></meta>
+
+				<meta name="keywords" content="Partner programs, Partnership programs for kids, Partnership programs Australia, Sports Partner programs, Sports programs, Sports Holiday Programs, Partner programs for Children"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">

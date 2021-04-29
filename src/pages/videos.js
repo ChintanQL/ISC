@@ -54,7 +54,21 @@ class TNC extends Component {
 			<Layout>
             <>
 			<Helmet>
-				<title>Videos - Australian Sports Camps</title>
+				<title>Videos - School Hoilday Programs | Australian Sports Camps</title>
+				<meta name="title" content="Videos - School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="og:title" content="Videos - School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="twitter:title" content="Videos - School Hoilday Programs | Australian Sports Camps"></meta>
+
+				<meta name="description" content="Our videos showcase the latest techniques in all sports. Sports camps for all major sports in Australia. We ensure your kids receive coaching at top facilities."></meta>
+				<meta property="og:description" content="Our videos showcase the latest techniques in all sports. Sports camps for all major sports in Australia. We ensure your kids receive coaching at top facilities."></meta>
+				<meta property="twitter:description" content="Our videos showcase the latest techniques in all sports. Sports camps for all major sports in Australia. We ensure your kids receive coaching at top facilities."></meta>
+
+				<meta name="keywords" content="Australian Sports Camps, AFL Home Training, Soccer Home Training, Basketball Home Training, Basket Ball Training, Cricket Training, soccer training for kids, ASC Hocky Camps"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">

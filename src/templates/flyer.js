@@ -26,7 +26,21 @@ class demopage extends Component {
     return (
 		<Layout>
 		<Helmet>
-				<title>Camp flyer - Australian Sports Camps</title>
+				<title>Flyers - School Hoilday Programs | Australian Sports Camps</title>
+				<meta name="title" content="Flyers - School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="og:title" content="Flyers - School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="twitter:title" content="Flyers - School Hoilday Programs | Australian Sports Camps"></meta>
+
+				<meta name="description" content="Get detailed information on all our sports camps planned in major cities. Camps for all major sports in Australia. Kids receive coaching at top facilities."></meta>
+				<meta property="og:description" content="Get detailed information on all our sports camps planned in major cities. Camps for all major sports in Australia. Kids receive coaching at top facilities."></meta>
+				<meta property="twitter:description" content="Get detailed information on all our sports camps planned in major cities. Camps for all major sports in Australia. Kids receive coaching at top facilities."></meta>
+
+				<meta name="keywords" content="Camps Flyer, Sports Camps Flyer, ACT Camps Flyer, Camps Flyer Australia, Summer Camps Flyer, Autumn Camps Flyer, Flyer Camps, Australian Sports Camps, Summer Camps Flyer for schools"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 			<section className="Banner-Section">
                 <Container>

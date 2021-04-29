@@ -29,7 +29,21 @@ class demopage extends Component {
     return (
 		<Layout>
 		<Helmet>
-				<title>Blog - Australian Sports Camps</title>
+				<title>Blog -  School Holiday Programs | Australian Sports Camps</title>
+				<meta name="title" content="Blog -  School Holiday Programs | Australian Sports Camps"></meta>
+				<meta property="og:title" content="Blog -  School Holiday Programs | Australian Sports Camps"></meta>
+				<meta property="twitter:title" content="Blog -  School Holiday Programs | Australian Sports Camps"></meta>
+
+				<meta name="description" content="Read our blogs to discover ideas, trends, insights & get access to handy resources. Improve your game & take it to the next level with school holiday programs"></meta>
+				<meta property="og:description" content="Read our blogs to discover ideas, trends, insights & get access to handy resources. Improve your game & take it to the next level with school holiday programs"></meta>
+				<meta property="twitter:description" content="Read our blogs to discover ideas, trends, insights & get access to handy resources. Improve your game & take it to the next level with school holiday programs"></meta>
+
+				<meta name="keywords" content="Sports Camps, Sports Camps for Kids, Sports for teen girls, Children's sports camps, Basket Ball Camps, Football Camps, Cricket Camps, Netball Camps Australia, Sports Programs"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 			 <section className="Banner-Section">
                 <Container>

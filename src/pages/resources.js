@@ -43,7 +43,21 @@ class resources extends Component {
 			<Layout>
             <>
 			<Helmet>
-				<title>Contact Us - Australian Sports Camps</title>
+				<title>Resources -School Hoilday Programs | Australian Sports Camps</title>
+				<meta name="title" content="Resources -School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="og:title" content="Resources -School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="twitter:title" content="Resources -School Hoilday Programs | Australian Sports Camps"></meta>
+
+				<meta name="description" content="Discover our resources and get access to articles, videos, and guides to learn the latest techniques, tips, drills in all sports. Sports camps across Australia."></meta>
+				<meta property="og:description" content="Discover our resources and get access to articles, videos, and guides to learn the latest techniques, tips, drills in all sports. Sports camps across Australia."></meta>
+				<meta property="twitter:description" content="Discover our resources and get access to articles, videos, and guides to learn the latest techniques, tips, drills in all sports. Sports camps across Australia."></meta>
+
+				<meta name="keywords" content="basket drill, fun netball drills for juniors, netball passing drills for beginners, simple basketball drills, Cricket Drills, net ball drills. netball conditioning drills, drills for kids, Sports resources, AFL Football Drills"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">

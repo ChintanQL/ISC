@@ -70,7 +70,21 @@ class SHP extends Component {
 		<Layout>
             <>
 			<Helmet>
-				<title>School holiday Programs - Australian Sports Camps</title>
+				<title>School Holiday Programs  Australia-Australian Sports Camps</title>
+				<meta name="title" content="School Holiday Programs  Australia-Australian Sports Camps"></meta>
+				<meta property="og:title" content="School Holiday Programs  Australia-Australian Sports Camps"></meta>
+				<meta property="twitter:title" content="School Holiday Programs  Australia-Australian Sports Camps"></meta>
+
+				<meta name="description" content="ASC runs three-day school holiday programs & camps in Australia over school holiday periods. For kids aged 5-15, we offer all major Aussie sports."></meta>
+				<meta property="og:description" content="ASC runs three-day school holiday programs & camps in Australia over school holiday periods. For kids aged 5-15, we offer all major Aussie sports."></meta>
+				<meta property="twitter:description" content="ASC runs three-day school holiday programs & camps in Australia over school holiday periods. For kids aged 5-15, we offer all major Aussie sports."></meta>
+
+				<meta name="keywords" content="School Holiday Program, School Holiday Program Australia, Holiday Program, School Holiday Program for Kids, Table Tennis School Holiday Program, Camp Australia Holiday Program, Golf School Holiday Program, Kids School Holiday Program, Holiday Program for Kids, Sports Holiday Program"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">

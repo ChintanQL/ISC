@@ -24,7 +24,21 @@ class demopage extends Component {
     return (
 		<Layout>
 		<Helmet>
-				<title>Guides - Australian Sports Camps</title>
+				<title>Guides - School Hoilday Programs | Australian Sports Camps</title>
+				<meta name="title" content="Guides - School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="og:title" content="Guides - School Hoilday Programs | Australian Sports Camps"></meta>
+				<meta property="twitter:title" content="Guides - School Hoilday Programs | Australian Sports Camps"></meta>
+
+				<meta name="description" content="Discover our guides for the latest sports techniques, tips, and drills for sports skills development. Sports holiday camps for all major sports in Australia."></meta>
+				<meta property="og:description" content="Discover our guides for the latest sports techniques, tips, and drills for sports skills development. Sports holiday camps for all major sports in Australia."></meta>
+				<meta property="twitter:description" content="Discover our guides for the latest sports techniques, tips, and drills for sports skills development. Sports holiday camps for all major sports in Australia."></meta>
+
+				<meta name="keywords" content="Sports Guides, Sports Guides for kids, Sports Guides for beginners, Sports techniques, Cricket skills, cricket rules, Netball skills, Sports Holiday camps Australia, Sports Skills & Development"></meta>
+
+				<meta property="og:type" content="website"></meta>
+				<meta property="twitter:card" content="summary_large_image"></meta>
+
+
 			</Helmet>
 			<section className="Banner-Section">
                 <Container>
