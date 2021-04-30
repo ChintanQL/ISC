@@ -151,9 +151,7 @@ class Membership extends Component {
 								<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
-								<Breadcrumb.Item className="">
-									<Link className="nav-link p-0" to="/City">Pricing</Link>
-								</Breadcrumb.Item>
+							
 								<Breadcrumb.Item active href="#"className="">Membership pass</Breadcrumb.Item>
 							</Breadcrumb>
 							<h2 className="heading-banner">Membership pass</h2>
