@@ -85,7 +85,7 @@ class City extends Component {
 								<Link className="nav-link p-0" to="/">Home</Link>
 							</Breadcrumb.Item>
 							<Breadcrumb.Item className="">
-								<Link className="nav-link p-0" to="/City">City</Link>
+								<Link className="nav-link p-0" to="/school-holiday-programs/">City</Link>
 							</Breadcrumb.Item>
 							<Breadcrumb.Item active href=""className="">{page.edges[0].node.title}</Breadcrumb.Item>
 						</Breadcrumb>
