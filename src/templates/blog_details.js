@@ -55,7 +55,7 @@ class BlogDetails extends Component {
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item className="">
-									<Link className="nav-link p-0" to="/Blog">Blog</Link>
+									<Link className="nav-link p-0" to="/blog">Blog</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href="" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.title}} className="" />
 							</Breadcrumb>
