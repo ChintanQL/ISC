@@ -147,7 +147,7 @@ class FAQ extends Component {
 												</Accordion.Toggle>
 											</Card.Header>
 											<Accordion.Collapse eventKey={'"'+i+'"'}>
-												<Card.Body className="font-16 font-regular" dangerouslySetInnerHTML={{ __html: str.answer}} />
+												<Card.Body className="font-16" dangerouslySetInnerHTML={{ __html: str.answer}} />
 											</Accordion.Collapse>
 										</Card>
 										</>
