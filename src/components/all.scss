@@ -4195,6 +4195,7 @@ section.Home-section-1.Home_section_new .home-form .form-control::placeholder {c
 .blue_color{ color:#2A74B6}
  .mobcartbx { display:none}
  .blue_color { color:#2a74b6}
+.smallimg img { width:auto; }
 /*responsive*/
 
 @media all and (max-width:1199px){
@@ -4322,6 +4323,7 @@ header .social-header .first-li ul li a { font-size:13px;}
    .first-box { padding: 7px 10px; }
   
 .main-header .main-box.d-xl-block .second-box img { width: 100% !important; height: auto; }
+.smallimg img { width:100%}
 }
 @media(max-width:575px){
  .video-modal .modal-body .close { right: 0; }
@@ -4349,7 +4351,6 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
  .httxt{ font-size: 11px;}
  header .social-header .first-li ul li a{ font-size:14px}
  header .social-header .second-li ul li.userdropdownbox { padding-right: 30px!important; }
-
 }
 @media(max-width: 475px){
     

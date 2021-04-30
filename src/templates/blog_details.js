@@ -75,7 +75,7 @@ class BlogDetails extends Component {
 										<div className="card-img mb-3">
 											<Image src={blog.edges[0].node.acf.feature_image2} fluid />
 										</div>
-										<Card.Text as="div" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.content}} />
+										<Card.Text as="div" className="smallimg" dangerouslySetInnerHTML={{ __html: blog.edges[0].node.content}} />
 									</Card>
 								</Col>
 								<Col xl={4} lg={4} md={12}>
