@@ -214,9 +214,7 @@ export const pageQuery = graphql`
 				wordpress_id
 				slug
 				
-				categories {
-				  name
-				}
+				
 				yoast {
 				focuskw
 				linkdex
