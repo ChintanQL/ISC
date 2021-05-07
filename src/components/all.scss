@@ -4323,7 +4323,12 @@ header .social-header .first-li ul li a { font-size:13px;}
    .first-box { padding: 7px 10px; }
   
 .main-header .main-box.d-xl-block .second-box img { width: 100% !important; height: auto; }
-.smallimg img { width:100%}
+.smallimg img { width:100%; margin-bottom:15px; }
+section.City-details-section-2 { padding:30px 0 0}
+.blog-details-card .card-text:last-child p { margin-bottom: 15px; }
+.blog-details-card .smallimg.card-text h4 { margin-bottom: 20px; }
+
+
 }
 @media(max-width:575px){
  .video-modal .modal-body .close { right: 0; }

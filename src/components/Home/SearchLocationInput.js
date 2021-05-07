@@ -29,8 +29,7 @@ function handleScriptLoad(updateQuery, autoCompleteRef) {
     autoCompleteRef.current,
     { types: ["(regions)"], componentRestrictions: { country: "au" } }
   );
-  var search  = document.getElementById("val").value;
-	console.log("search :"+search);
+ 
   autoComplete.addListener("place_changed", () => {
 	handlePlaceSelect(updateQuery)
 	
@@ -50,6 +49,7 @@ async function handlePlaceSelect(updateQuery) {
 					pl = value;
 				}
 			});
+	cookies.set('selected', 1, { path: '/' });		
 	var latitude = addressObject.geometry.location.lat();
 	var longitude = addressObject.geometry.location.lng();
 	cookies.set('lat', latitude, { path: '/' });
@@ -68,15 +68,16 @@ async function handlePlaceSelect(updateQuery) {
  
 }
 
-function handleKeyPress(){
-	var search  = document.getElementById("val").value;
-	console.log("search :"+search);
-	if(search == ""){
+function handleKeyPress(v){
+	console.log(v);
+	if(v == ""){
 		cookies.set('lat', "", { path: '/' });
 		cookies.set('lng', "", { path: '/' });
 		cookies.set('loc', "", { path: '/' });
 		cookies.set('locationName', "", { path: '/' });
-	}	
+		
+		
+	}
 }
 
 
@@ -99,7 +100,7 @@ function SearchLocationInput() {
 	  <Form.Control id="val"
                                       className="mb-0 full"
                                       ref={autoCompleteRef}
-									  onKeyDown={handleKeyPress}
+									  onKeyDown={handleKeyPress(query)}
         onChange={event => setQuery(event.target.value)}
                                       placeholder="Enter Suburb / Postcode"
 									  value={query}

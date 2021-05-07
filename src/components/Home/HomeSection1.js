@@ -7,7 +7,7 @@ import SearchLocationInput from './SearchLocationInput'
 import axios from 'axios';
 import $ from "jquery";
 import ReactMultiSelectCheckboxes from 'react-multiselect-checkboxes';
-
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 
 function SampleNextArrow(props) {

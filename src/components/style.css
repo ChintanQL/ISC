@@ -607,7 +607,7 @@ ul.lisearch::-webkit-scrollbar-thumb{ background-color: #000000; }
  .BottomForm .css-yk16xz-control { border-radius: 0; border-color: #ffff; min-height:  42px!important; color: #707070!important;   border-radius: 0 !important; font-weight: 500; }
  header .social-header .second-li ul li span.userdropdownbox, header .social-header .second-li ul li:last-child span { display: inline-block; width: auto; padding-left: 15px !important; vertical-align: middle; }
 .userdropdownbox:before, header .social-header .second-li ul li:last-child span:before { content: "\f078"; position: absolute; right: 0; top: 0; font-style: normal; font-weight: 900; font-family:'FontAwesome' }
-.Sport-details-section-2 .row > div > div > h4 { line-height: 36px }
+.Sport-details-section-2 .row > div > div > h4 { line-height: 40px; }
 
 /*responsive*/
 
@@ -822,6 +822,8 @@ section.Included-section{ padding: 20px 0 !important }
 .camppric_twocolbx { min-height: auto; padding: 20px; margin-bottom: 15px; }
 footer { padding: 20px 0; }
 .blog-details-card iframe { width: 100% }
+.Sport-details-section-2 .row>div>div>h4 { line-height: 33px; font-size: 19px; }
+
 
 
 }
