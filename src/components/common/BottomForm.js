@@ -37,6 +37,7 @@ class BottomForm extends Component {
 { value: 'rock-climbing-indoor-surfing', label: 'Indoor Surfing' },
 { value: 'gymnastics', label: 'Gymnastics' },
 { value: 'speed-agility', label: 'Speed & Agility' },
+{ value: 'softball', label: 'Softball' },
 ],
 			id: "",
 			name: '',
