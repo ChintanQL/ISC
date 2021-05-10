@@ -42,7 +42,7 @@ class HomeSection3 extends Component {
 							<Card  className="styled-card">
                                 <Link to={"/camps/"+camp.campUrl} className="card-img">
                                     <div className="inner-card ">
-                                        <Image src={cardhover} fluid alt="cardhover"/>
+                                        <Image src={camp.campHoverImage.sourceUrl} fluid alt="cardhover"/>
                                     </div>
                                     <Image className="lazyload" variant="top" src={camp.campImage.sourceUrl} fluid alt="card"/>
                                 </Link>

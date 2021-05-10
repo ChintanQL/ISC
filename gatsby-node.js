@@ -45,6 +45,9 @@ const getData = async () => {
 						  link
 						  sourceUrl
 						}
+						campHoverImage {
+							sourceUrl
+						}
 					  }
 					  homeSlider {
 						title
