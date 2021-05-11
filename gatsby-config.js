@@ -3,6 +3,7 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+	siteUrl: `https://australiansportscamps.com.au`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -135,6 +136,19 @@ module.exports = {
       options: {
         shortname: 'asc'
       }
+    },
+	{
+		resolve: `gatsby-plugin-sitemap`,
+		options: {
+		output: `/sitemap.xml`,
+		}
+	},
+	{
+		resolve: 'gatsby-plugin-robots-txt',
+		options: {
+			sitemap: 'https://australiansportscamps.com.au/sitemap.xml',
+			policy: [{ userAgent: '*', disallow: ['/404/','/cgi-bin/'] }]
+		}
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
