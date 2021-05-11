@@ -8,7 +8,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
-	`gatsby-plugin-advanced-sitemap`,
+	{
+        resolve: `gatsby-plugin-advanced-sitemap`,
+        options: {
+           
+            // The filepath and name to Index Sitemap. Defaults to '/sitemap.xml'.
+            output: "/sitemap.xml",
+            
+        }
+    },
     `gatsby-plugin-smoothscroll`,
 	{
       resolve: 'gatsby-source-wordpress',
