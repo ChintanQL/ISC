@@ -57,9 +57,9 @@ class Header extends Component {
 			console.log("here");
 			var expi = (new Date(Date.now()+ 86400*1000)).toUTCString();
 			cookies.set('Popup', "1", { domain: '.australiansportscamps.com.au' , path: '/' , maxAge: 1000000});
-			//this.setState({
-				//isOpen:true,
-			//})
+			this.setState({
+				isOpen:true,
+			})
 		}
 		else{
 			

@@ -29,12 +29,6 @@ module.exports = {
       },
     },
 	{
-		resolve: `gatsby-plugin-sitemap`,
-		options: {
-		output: `/sitemap.xml`,
-		}
-	},
-	{
       resolve: "gatsby-plugin-segment-analytics",
       options: {
         writeKey: "fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv",
@@ -103,6 +97,12 @@ module.exports = {
       defaultDataLayer: { platform: "gatsby" },
     },
   },
+  {
+		resolve: `gatsby-plugin-sitemap`,
+		options: {
+		output: `/sitemap.xml`,
+		}
+	},
 	{
     resolve: `gatsby-transformer-remark`,
     options: {
