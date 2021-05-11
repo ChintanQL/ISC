@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-sass',
+	`gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-smoothscroll`,
 	{
       resolve: 'gatsby-source-wordpress',
@@ -97,7 +98,6 @@ module.exports = {
       defaultDataLayer: { platform: "gatsby" },
     },
   },
-  "gatsby-plugin-sitemap",
 	{
     resolve: `gatsby-transformer-remark`,
     options: {
