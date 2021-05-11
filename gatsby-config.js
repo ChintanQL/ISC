@@ -29,6 +29,12 @@ module.exports = {
       },
     },
 	{
+		resolve: `gatsby-plugin-sitemap`,
+		options: {
+		output: `/sitemap.xml`,
+		}
+	},
+	{
       resolve: "gatsby-plugin-segment-analytics",
       options: {
         writeKey: "fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv",
@@ -137,19 +143,14 @@ module.exports = {
         shortname: 'asc'
       }
     },
-	{
-		resolve: `gatsby-plugin-sitemap`,
-		options: {
-		output: `/sitemap.xml`,
-		}
-	},
-	{
+
+	/*{
 		resolve: 'gatsby-plugin-robots-txt',
 		options: {
 			sitemap: 'https://australiansportscamps.com.au/sitemap.xml',
 			policy: [{ userAgent: '*', disallow: ['/404/','/cgi-bin/'] }]
 		}
-    },
+    },*/
 	{
 		resolve: 'gatsby-plugin-react-helmet-canonical-urls',
 		options: {
