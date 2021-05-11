@@ -150,6 +150,12 @@ module.exports = {
 			policy: [{ userAgent: '*', disallow: ['/404/','/cgi-bin/'] }]
 		}
     },
+	{
+		resolve: 'gatsby-plugin-react-helmet-canonical-urls',
+		options: {
+		  siteUrl: 'https://australiansportscamps.com.au',
+		},
+	},
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
