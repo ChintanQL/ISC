@@ -97,12 +97,7 @@ module.exports = {
       defaultDataLayer: { platform: "gatsby" },
     },
   },
-  {
-		resolve: `gatsby-plugin-sitemap`,
-		options: {
-		output: `/sitemap.xml`,
-		}
-	},
+  "gatsby-plugin-sitemap",
 	{
     resolve: `gatsby-transformer-remark`,
     options: {
@@ -144,13 +139,7 @@ module.exports = {
       }
     },
 
-	/*{
-		resolve: 'gatsby-plugin-robots-txt',
-		options: {
-			sitemap: 'https://australiansportscamps.com.au/sitemap.xml',
-			policy: [{ userAgent: '*', disallow: ['/404/','/cgi-bin/'] }]
-		}
-    },*/
+	
 	{
 		resolve: 'gatsby-plugin-react-helmet-canonical-urls',
 		options: {
