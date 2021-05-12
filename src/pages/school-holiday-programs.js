@@ -6,6 +6,7 @@ import playbutton from '../images/play-button.png'
 import Iframe from 'react-iframe'
 import Layout from "../components/layout"
 import cardhover from '../images/card-hover-img.png'
+import hover from '../images/Hover_Img.png'
 import { Helmet } from "react-helmet"
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
@@ -119,9 +120,9 @@ class SHP extends Component {
 											 <div className="listed-card mb-0 card">
 												<Link to={"/school-holiday-programs/"+camp.slug} className="card-img">
 													<div className="inner-card ">
-														<Image src={cardhover} fluid alt="cardhover"/>
+														<Image src={hover} fluid alt="cardhover"/>
 													</div>
-													<Image variant="top" src={camp.img} fluid alt="card"/>
+													<Image variant="top" src={camp.img} fluid alt={camp.title}/>
 												</Link>
 												<Card.Body>
 													<Link to={"/school-holiday-programs/"+camp.slug}>{camp.title}</Link>

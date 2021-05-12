@@ -7,6 +7,7 @@ import BottomForm from "../components/common/BottomForm"
 import Campbanner from "../components/common/Campbanner"
 import card1 from '../images/card1.png'
 import cardhover from '../images/card-hover-img.png'
+import hover from '../images/Hover_Img.png'
 import axios from 'axios';
 import { Helmet } from "react-helmet"
 import queryString from 'query-string'
@@ -145,9 +146,9 @@ class Sport extends Component {
 											 <div className="listed-card mb-0 card">
 												<Link to={camp.slug} className="card-img">
 													<div className="inner-card ">
-														<Image src={cardhover} fluid alt="cardhover"/>
+														<Image src={hover} fluid alt="cardhover"/>
 													</div>
-													<Image variant="top" src={camp.image} fluid alt="card"/>
+													<Image variant="top" src={camp.image} fluid alt={camp.name}/>
 												</Link>
 												<Card.Body>
 													<Link to={camp.slug}>{camp.name}</Link>
