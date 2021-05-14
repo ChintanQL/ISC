@@ -35,6 +35,7 @@ function SamplePrevArrow(props) {
 }
 
 
+Basketball, AFL, Netball, Soccer, Hockey, Rugby Union, Rugby League, Tennis, Golf, Rock Climbing, Softball, Badminton, Futsal, Table Tennis, Sailing, Ice Skating, Baseball, Horse Riding, Multi-Sport, Rowing, Gymnastics, E-Sports, Horse Riding, Speed & Agility
 
 
 
@@ -46,30 +47,31 @@ class HomeSection1 extends Component {
 		this.state = {
 			multiValue: [],
 			selectOptions : [
- { value: 'basketball', label: 'Basketball' },
+{ value: 'basketball', label: 'Basketball' },
 { value: 'football', label: 'AFL / AFLW Football' },
 { value: 'netball', label: 'Netball' },
-{ value: 'cricket', label: 'Cricket' },
 { value: 'soccer', label: 'Soccer' },
 { value: 'hockey', label: 'Hockey' },
-{ value: 'tennis', label: 'Tennis' },
-{ value: 'rugby-league', label: 'Rugby League' },
 { value: 'rugby-union', label: 'Rugby Union' },
+{ value: 'rugby-league', label: 'Rugby League' },
+{ value: 'tennis', label: 'Tennis' },
 { value: 'golf', label: 'Golf' },
 { value: 'rock-climbing-indoor-surfing', label: 'Rock Climbing' },
-{ value: 'sailing', label: 'Sailing' },
-{ value: 'table-tennis', label: 'Table Tennis' },
-{ value: 'baseball', label: 'Baseball' },
-{ value: 'ice-skating', label: 'Ice Staking' },
-{ value: 'futsal', label: 'Futsal' },
-{ value: 'horse-riding', label: 'Horse Riding' },
-{ value: 'rowing', label: 'Rowing' },
-{ value: 'multi-sport', label: 'Multi-Sport' },
-{ value: 'esports', label: 'E-Sports' },
-{ value: 'rock-climbing-indoor-surfing', label: 'Indoor Surfing' },
-{ value: 'gymnastics', label: 'Gymnastics' },
-{ value: 'speed-agility', label: 'Speed & Agility' },
 { value: 'softball', label: 'Softball' },
+{ value: 'badminton', label: 'Badminton' },
+{ value: 'futsal', label: 'Futsal' },
+{ value: 'table-tennis', label: 'Table Tennis' },
+{ value: 'sailing', label: 'Sailing' },
+{ value: 'ice-skating', label: 'Ice Staking' },
+{ value: 'baseball', label: 'Baseball' },
+{ value: 'horse-riding', label: 'Horse Riding' },
+{ value: 'multi-sport', label: 'Multi-Sport' },
+{ value: 'rowing', label: 'Rowing' },
+{ value: 'gymnastics', label: 'Gymnastics' },
+{ value: 'esports', label: 'E-Sports' },
+{ value: 'speed-agility', label: 'Speed & Agility' },
+{ value: 'cricket', label: 'Cricket' },
+{ value: 'rock-climbing-indoor-surfing', label: 'Indoor Surfing' },
 ],
 			id: "",
 			name: '',
