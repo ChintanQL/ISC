@@ -20,7 +20,7 @@ class CoachDetails extends Component {
           <Layout>
             <>
 			<Helmet>
-				<title>{coach.edges[0].node.title} - Australian Sports Camps</title>
+				<title>{coach.edges[0].node.yoast.title}</title>
 				<meta name="title" content={coach.edges[0].node.yoast.title}></meta>
 		<meta name="description" content={coach.edges[0].node.yoast.metadesc}></meta>
 		 <meta name="keywords" content={coach.edges[0].node.yoast.metakeywords}></meta>

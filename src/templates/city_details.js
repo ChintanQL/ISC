@@ -66,7 +66,7 @@ class City extends Component {
 			
 				<>
 				<Helmet>
-				<title>{page.edges[0].node.acf.page_title} - Australian Sports Camps</title>
+				<title>{page.edges[0].node.yoast.title}</title>
 				<meta name="title" content={page.edges[0].node.yoast.title}></meta>
 		<meta name="description" content={page.edges[0].node.yoast.metadesc}></meta>
 		 <meta name="keywords" content={page.edges[0].node.yoast.metakeywords}></meta>
