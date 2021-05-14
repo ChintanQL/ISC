@@ -35,7 +35,6 @@ function SamplePrevArrow(props) {
 }
 
 
-Basketball, AFL, Netball, Soccer, Hockey, Rugby Union, Rugby League, Tennis, Golf, Rock Climbing, Softball, Badminton, Futsal, Table Tennis, Sailing, Ice Skating, Baseball, Horse Riding, Multi-Sport, Rowing, Gymnastics, E-Sports, Horse Riding, Speed & Agility
 
 
 
