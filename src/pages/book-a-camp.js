@@ -33,14 +33,14 @@ class Sport extends Component {
 			method: 'get'}).then(res => {
 			const chunkSize = 10;
 			const arr = res.data.ResponseData.cat;
-			const groups = arr.map((e, i) => { 
+			/*const groups = arr.map((e, i) => { 
 				 return i % chunkSize === 0 ? arr.slice(i, i + chunkSize) : null; 
 			}).filter(e => { return e; });
-			console.log({arr, groups});	
+			console.log({arr, groups});	*/
 				
 				
 				
-			this.setState({PageData: groups})
+			this.setState({PageData: arr})
 			this.setState({PageDataOther: res.data.ResponseData.camps_data[0]})
 			this.setState({result: 1})
 			this.setState({showInfo: 1})
@@ -141,21 +141,23 @@ class Sport extends Component {
 							{(this.state.result === 1) ? (
 									<>
 									{this.state.PageData.map((cmp) => 
-										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
-										{cmp.map((camp) => 
+										 
+										
+											<Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
 											 <div className="listed-card mb-0 card">
-												<Link to={camp.slug} className="card-img">
+												<Link to={cmp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={hover} fluid alt="cardhover"/>
 													</div>
-													<Image variant="top" src={camp.image} fluid alt={camp.name}/>
+													<Image variant="top" src={cmp.image} fluid alt={cmp.name}/>
 												</Link>
 												<Card.Body>
-													<Link to={camp.slug}>{camp.name}</Link>
+													<Link to={cmp.slug}>{cmp.name}</Link>
 												</Card.Body>
 											</div>
-										)}
-										</Col>		
+											</Col>
+										
+												
 									)} 
 									</>
 								) : ("")}
