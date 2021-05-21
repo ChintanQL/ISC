@@ -33,7 +33,7 @@ class Partner extends Component {
 				
 				
 				
-			this.setState({PageData: groups})
+			this.setState({PageData: arr})
 			this.setState({PageDataOther: res.data.ResponseData.camps_data[0]})
 			this.setState({result: 1})
 			this.setState({showInfo: 1})
@@ -96,19 +96,19 @@ class Partner extends Component {
 									<>
 									{this.state.PageData.map((cmp) => 
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
-										{cmp.map((camp) => 
+										
 											 <Card  className="listed-card mb-0">
-												<Link  to={camp.slug} className="card-img">
+												<Link  to={cmp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={hover} fluid alt="cardhover"/>
 													</div>
-													<Image variant="top" src={camp.image} fluid alt={camp.title}/>
+													<Image variant="top" src={cmp.image} fluid alt={cmp.title}/>
 												</Link>
 												<Card.Body>
-													<Link to={camp.slug}>{camp.title}</Link>
+													<Link to={cmp.slug}>{cmp.title}</Link>
 												</Card.Body>
 											</Card>
-										)}
+										
 										</Col>		
 									)} 
 									</>

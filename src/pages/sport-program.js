@@ -40,7 +40,7 @@ class Sportprog extends Component {
 				
 				
 				
-			this.setState({PageData: groups})
+			this.setState({PageData: arr})
 			this.setState({PageDataOther: res.data.ResponseData.camps_data[0]})
 			this.setState({result: 1})
 			this.setState({showInfo: 1})
@@ -156,19 +156,19 @@ class Sportprog extends Component {
 									<>
 									{this.state.PageData.map((cmp) => 
 										 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
-										{cmp.map((camp) => 
+										
 											 <div className="listed-card mb-0 card">
-												<Link to={camp.slug} className="card-img">
+												<Link to={cmp.slug} className="card-img">
 													<div className="inner-card ">
 														<Image src={hover} fluid alt="cardhover"/>
 													</div>
-													<Image variant="top" src={camp.image} fluid alt={camp.name}/>
+													<Image variant="top" src={cmp.image} fluid alt={cmp.name}/>
 												</Link>
 												<Card.Body>
-													<Link to={camp.slug}>{camp.name}</Link>
+													<Link to={cmp.slug}>{cmp.name}</Link>
 												</Card.Body>
 											</div>
-										)}
+										
 										</Col>		
 									)} 
 									</>
