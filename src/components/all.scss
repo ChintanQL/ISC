@@ -3,7 +3,16 @@
 .p{
     position: absolute;
 }
-
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
 
 
 @media (max-width:414px)  { 
