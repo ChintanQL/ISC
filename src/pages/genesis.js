@@ -20,6 +20,7 @@ class PP extends Component {
 		PageData: [],
 		showInfo: 0,
 			title:"",
+			main_title:"",
 		description:"",
 		keywords:"",
 		og_type:"",
@@ -67,6 +68,7 @@ class PP extends Component {
 		}).then(res => {
 			this.setState({PageData: res.data.data.page})
 			this.setState({showInfo: 1})
+			this.setState({main_title: res.data.data.page.title})
 			this.setState({title: res.data.data.page.seo.title})
 			this.setState({description: res.data.data.page.seo.metaDesc})
 			this.setState({keywords: res.data.data.page.seo.metaKeywords})
@@ -108,9 +110,9 @@ class PP extends Component {
 								<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
-								<Breadcrumb.Item active href=""className="">Camp Feedback</Breadcrumb.Item>
+								<Breadcrumb.Item active href=""className="">{this.state.main_title}</Breadcrumb.Item>
 							</Breadcrumb>
-							<h2 className="heading-banner">Camp Feedback</h2>
+							<h2 className="heading-banner">{this.state.main_title}</h2>
 						</div>
 					</Container>
 				</section>
