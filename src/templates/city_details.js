@@ -103,7 +103,7 @@ class City extends Component {
 									<h2 className="uppercase">{page.edges[0].node.acf.sub_title_2}</h2>
 								</div>
 								{(this.state.showInfo == 1) ? (<div className="text-center">
-									<Button className="uppercase btn btn-orange-large"  onClick={() => scrollTo('#flyer_form')}>DOWNLOAD FLYER</Button>
+									<Button className="uppercase btn btn-orange-large"  onClick={() => scrollTo('#formishere')}>DOWNLOAD FLYER</Button>
 								</div>) : ("")}
 								
 								
@@ -283,7 +283,7 @@ class City extends Component {
 				) : ("")}
 				
 				
-				{(this.state.showInfo == 1) ? (<div className="flyer_formbx" >
+				{(this.state.showInfo == 1) ? (<div id="formishere" className="flyer_formbx" >
 				<div className="container">
 				<iframe height="560" width="100%" frameBorder="0"    src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+page_title+"&id="+wordpress_id+"&url="+this.state.currentURL} title="description" /> 
 				</div>
