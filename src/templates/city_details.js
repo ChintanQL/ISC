@@ -12,6 +12,7 @@ import Iframe from 'react-iframe'
 import { Helmet } from "react-helmet"
 import lifes from '../images/lifes-better-with-sport.png'
 import axios from "axios"
+import $ from 'jquery'
 
 class City extends Component {
 	
@@ -30,8 +31,9 @@ class City extends Component {
         this.callbackFunction = this.callbackFunction.bind(this);
     }
 	scrollBy(){
-        var elem = document.getElementById("formishere");
-        elem.scrollIntoView();
+       // var elem = document.getElementById("formishere");
+       // elem.scrollIntoView();
+		 $('html, body').animate({ scrollTop: $('#formishere').offset().top }, 'slow');
     }
     modalOpen(){
         this.setState({
