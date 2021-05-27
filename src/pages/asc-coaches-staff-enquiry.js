@@ -21,6 +21,7 @@ class ACSE extends Component {
 		PageData: [],
 		showInfo: 0,
 		title:"",
+		ptitle:"",
 		description:"",
 		keywords:"",
 		og_type:"",
@@ -68,6 +69,7 @@ class ACSE extends Component {
 		}).then(res => {
 			this.setState({PageData: res.data.data.page})
 			this.setState({showInfo: 1})
+				this.setState({ptitle: res.data.data.page.title})
 				this.setState({title: res.data.data.page.seo.title})
 			this.setState({description: res.data.data.page.seo.metaDesc})
 			this.setState({keywords: res.data.data.page.seo.metaKeywords})
@@ -109,9 +111,9 @@ class ACSE extends Component {
 								<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
-								<Breadcrumb.Item active href=""className="">ASC Coaches and Staff Enquiry</Breadcrumb.Item>
+								<Breadcrumb.Item active href=""className="">{this.state.ptitle}</Breadcrumb.Item>
 							</Breadcrumb>
-							<h2 className="heading-banner">ASC Coaches and Staff Enquiry</h2>
+							<h2 className="heading-banner"{this.state.ptitle}</h2>
 						</div>
 					</Container>
 				</section>
@@ -126,7 +128,7 @@ class ACSE extends Component {
 						</div>
 						<div className="Blog-Section-2-data">
 							<Row>
-								<iframe height="1250" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-coaches-and-staff-inquiry/" title="description" />
+								<iframe height="1350" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-coaches-and-staff-inquiry/" title="description" />
 							</Row>
 						</div>
 					</Container>
