@@ -31,11 +31,9 @@ class City extends Component {
         this.callbackFunction = this.callbackFunction.bind(this);
     }
 	scrollBy(){
-       // var elem = document.getElementById("formishere");
-       // elem.scrollIntoView();
-		var h = $("header").height();
-		var height = (h-200);
-		 $('html, body').animate({ scrollTop: $('#formishere').offset().top +  height }, 2000);
+      
+		
+		 $('html, body').animate({ scrollTop: $('#flyer_form').offset().top}, 2000);
     }
     modalOpen(){
         this.setState({
@@ -292,7 +290,7 @@ class City extends Component {
 					</section>	
 				) : ("")}
 				
-				<div id="formishere"  ></div>
+				
 				{(this.state.showInfo == 1) ? (<div  className="flyer_formbx" >
 				<div className="container">
 				<iframe height="560" width="100%" frameBorder="0"    src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+page_title+"&id="+wordpress_id+"&url="+this.state.currentURL} title="description" /> 
