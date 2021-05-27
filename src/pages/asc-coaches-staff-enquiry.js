@@ -113,7 +113,8 @@ class ACSE extends Component {
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href=""className="">{this.state.ptitle}</Breadcrumb.Item>
 							</Breadcrumb>
-							<h2 className="heading-banner"{this.state.ptitle}</h2>
+							<h2 className="heading-banner">{this.state.ptitle}</h2>
+
 						</div>
 					</Container>
 				</section>
