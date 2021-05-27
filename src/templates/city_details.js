@@ -33,7 +33,9 @@ class City extends Component {
 	scrollBy(){
        // var elem = document.getElementById("formishere");
        // elem.scrollIntoView();
-		 $('html, body').animate({ scrollTop: $('#formishere').offset().top }, 'slow');
+		var h = $("header").height();
+		height = (h-200);
+		 $('html, body').animate({ scrollTop: $('#formishere').offset().top +  height }, 2000);
     }
     modalOpen(){
         this.setState({
