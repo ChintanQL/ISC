@@ -24,9 +24,14 @@ class City extends Component {
 			showInfo: 0,
         }
 		this.scrollDiv = createRef();
+        this.scrollBy = this.scrollBy.bind(this);
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
         this.callbackFunction = this.callbackFunction.bind(this);
+    }
+	scrollBy(){
+        var elem = document.getElementById("formishere");
+        elem.scrollIntoView();
     }
     modalOpen(){
         this.setState({
@@ -104,9 +109,7 @@ class City extends Component {
 									<h2 className="uppercase">{page.edges[0].node.acf.sub_title_2}</h2>
 								</div>
 								{(this.state.showInfo == 1) ? (<div className="text-center">
-									<Button className="uppercase btn btn-orange-large" onClick={() => {
-            this.scrollDiv.current.scrollIntoView({ behavior: 'smooth' });
-          }}>DOWNLOAD FLYER</Button>
+									<Button className="uppercase btn btn-orange-large" onClick={this.scrollBy}>DOWNLOAD FLYER</Button>
 								</div>) : ("")}
 								
 								
@@ -285,7 +288,7 @@ class City extends Component {
 					</section>	
 				) : ("")}
 				
-				<div id="formishere" ref={this.scrollDiv} ></div>
+				<div id="formishere"  ></div>
 				{(this.state.showInfo == 1) ? (<div  className="flyer_formbx" >
 				<div className="container">
 				<iframe height="560" width="100%" frameBorder="0"    src={"https://shop.australiansportscamps.com.au/gravity-flyer/?form_page="+page_title+"&id="+wordpress_id+"&url="+this.state.currentURL} title="description" /> 
