@@ -33,7 +33,7 @@ class City extends Component {
 	scrollBy(){
       
 		
-		 $('html, body').animate({ scrollTop: $('#flyer_form').offset().top}, 2000);
+		 $('html, body').animate({ scrollTop: $('#flyer_form').offset().top}, 'fast');
     }
     modalOpen(){
         this.setState({
