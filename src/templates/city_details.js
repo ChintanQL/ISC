@@ -55,7 +55,7 @@ class City extends Component {
 				
 			setTimeout(function() {
 				this.setState({showInfo: res.data.ResponseData.Display_FORM});
-			}.bind(this),2000);
+			}.bind(this),3000);
 				
 				
 			//this.setState({showInfo: res.data.ResponseData.Display_FORM})
