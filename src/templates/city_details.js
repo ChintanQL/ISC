@@ -34,6 +34,10 @@ class City extends Component {
       
 		
 		 $('html, body').animate({ scrollTop: $('#flyer_form').offset().top}, 'fast');
+		 setTimeout(function() {
+				 $('html, body').animate({ scrollTop: $('#flyer_form').offset().top}, 'fast');
+			},4000);
+		
     }
     modalOpen(){
         this.setState({
