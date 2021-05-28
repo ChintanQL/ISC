@@ -289,13 +289,13 @@ class City extends Component {
 									<h2 className="uppercase">{page.edges[0].node.acf.testimonial.title_2}</h2>
 								</div>
 								<div className="text-center">
-									<Link id="flyer_form" className=" uppercase btn-sm btn-orange-large" to="/book-a-camp">BOOK A CAMP TODAY</Link>
+									<Link  className=" uppercase btn-sm btn-orange-large" to="/book-a-camp">BOOK A CAMP TODAY</Link>
 								</div>
 							</Container>
 						</div>
 					</section>	
 				) : ("")}
-				
+				<span id="flyer_form" >&nbsp;</span>
 				
 				{(this.state.showInfo == 1) ? (<div  className="flyer_formbx" >
 				<div className="container">
