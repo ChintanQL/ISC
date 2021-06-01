@@ -13,6 +13,8 @@ import { Helmet } from "react-helmet"
 import lifes from '../images/lifes-better-with-sport.png'
 import axios from "axios"
 import $ from 'jquery'
+import * as Scroll from 'react-scroll';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 class City extends Component {
 	
@@ -33,10 +35,12 @@ class City extends Component {
 	scrollBy(){
       
 		
-		 $('html, body').animate({ scrollTop: $('#flyer_form').offset().top}, 'fast');
-		 setTimeout(function() {
-				 $('html, body').animate({ scrollTop: $('#flyer_form').offset().top}, 'fast');
-			},3000);
+		scroller.scrollTo('flyer_form', {
+			duration: 1500,
+			delay: 100,
+			smooth: true,
+  
+		})
 		
     }
     modalOpen(){
