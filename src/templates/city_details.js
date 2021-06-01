@@ -14,7 +14,7 @@ import lifes from '../images/lifes-better-with-sport.png'
 import axios from "axios"
 import $ from 'jquery'
 import * as Scroll from 'react-scroll';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 class City extends Component {
 	
@@ -40,7 +40,7 @@ class City extends Component {
 			delay: 100,
 			smooth: true,
   
-		})
+		});
 		
     }
     modalOpen(){
