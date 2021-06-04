@@ -54,7 +54,7 @@ class Sport extends Component {
 				
 				const cookies = new Cookies();
 				console.log(cookies.get("code"));
-				if(cookies.get("code") !== ""){
+				if(cookies.get("code") !== undefined){
 					console.log("heer");
 					this.setState({shown: "d-none"});
 					this.setState({shown_new: "d-block"});
@@ -63,14 +63,13 @@ class Sport extends Component {
 					console.log("there");	
 					this.setState({shown_new: "d-none"});
 					this.setState({shown: "d-block"});
-					cookies.set("code", ccode,{ domain: '.australiansportscamps.com.au' , path: '/' });
 				}
 				
 				this.setState({query_code:"?coupon-code="+ccode})
 				this.setState({code:ccode})
 				
 				
-				
+				cookies.set("code", ccode,{ domain: '.australiansportscamps.com.au' , path: '/' });
 			}
 			else{
 				this.setState({query_code:""})
