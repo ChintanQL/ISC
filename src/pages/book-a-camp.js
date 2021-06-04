@@ -54,7 +54,7 @@ class Sport extends Component {
 				
 				const cookies = new Cookies();
 				console.log(cookies.get("code"));
-				if(cookies.get("code") !== undefined || cookies.get("code") !== null){
+				if(cookies.get("code") !== ""){
 					console.log("heer");
 					this.setState({shown: "d-none"});
 					this.setState({shown_new: "d-block"});
