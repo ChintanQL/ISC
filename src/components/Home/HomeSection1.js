@@ -169,7 +169,7 @@ class HomeSection1 extends Component {
 		cookies.set('lng', "", { path: '/' });
 		cookies.set('loc', "", { path: '/' });
 		cookies.set('locationName', "", { path: '/' });
-		cookies.set('code', "", { path: '/' });
+		
   }
 	
 	handleMultiChange(option) {
