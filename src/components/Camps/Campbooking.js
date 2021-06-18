@@ -22,9 +22,10 @@ class Campbooking extends React.Component{
 	componentDidMount() {
 		var cat = this.props.category;
 		var name = this.props.name;
+		var wid = this.props.wid;
 		this.setState({name: name})
 		
-		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat;
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/cat-products/"+cat+"?id="+wid;
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData.Camp})
 			this.setState({showInfo: 1})
