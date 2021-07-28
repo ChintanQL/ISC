@@ -37,12 +37,19 @@ module.exports = {
 		],
       },
     },
-	{
-      resolve: "gatsby-plugin-segment-analytics",
-      options: {
-        writeKey: "fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv",
-      },
-    },
+  {
+    resolve: `gatsby-plugin-segment-js`,
+    options: {
+     
+      prodKey: "fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv",
+      devKey: "fPn6Nx2v4ACoy3pEa5yTv2uFiTXE6HGv",
+      trackPage: true,
+      trackPageDelay: 50,
+      delayLoad: false,
+      delayLoadTime: 1000,
+      manualLoad: false
+    }
+  },	  
 	 {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
