@@ -4384,3 +4384,36 @@ section.Membership-section-7 .Membership-section-7-data h2 { font-size: 20px; li
 }
 
 a.uppercase.btn-sm.btn-orange-large.hwcmp-viewbtn { padding: 0 16px !important;}
+
+
+.popupimage { text-align: center; margin: 0 auto; width: 100%; }
+.popupimage img { width: auto; }
+.popup_cntbx {
+    padding: 10px;
+position: relative;
+width: 94%;
+margin: 0 auto;
+z-index: 10000;
+top: 50%;
+transform: translateY(-50%);   }
+.popupcenter_open {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+
+.popup_cntbx .closebtn {
+    right: 15%;
+  top: 24%;
+  }
+.popup_cntbx button.close { position: absolute; right: 30px;
+top: 1px; background:#2a74b6; opacity: 1; color: #fff; width: 20px; height: 20px; border-radius: 100%; font-size: 17px;line-height: 18px; z-index: 99; padding: 0; display: inline-block; vertical-align: middle; margin: 0;    text-shadow: none; }
+@media (min-width:575px) and (max-width:767px){
+  .popup_cntbx { height: 340px; overflow-y: scroll;overflow-x: hidden;}
+  .popup_cntbx button.close{ right: -3px; top: -3px; }
+}
