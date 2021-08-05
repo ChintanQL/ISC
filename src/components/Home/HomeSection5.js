@@ -51,6 +51,7 @@ handleLoginClick2() {
 	}
 	
 	renderContent = () => {
+		console.log(isMobile);
     if (!isMobile) {
         return  <>
            <div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
@@ -61,8 +62,8 @@ handleLoginClick2() {
     }
 	else{
     return  <>
-            <div className="popupcenter_open">
-		   <div className="popup_cntbx" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
+            <div className="popupcenter_open" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
+		   <div className="popup_cntbx"  >
    
     <div className="popupimage"> <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button><Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><img src={this.state.MPageData} alt="" className="img-fluid"/></Link></div></div>
   </div>
