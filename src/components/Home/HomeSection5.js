@@ -62,11 +62,15 @@ handleLoginClick2() {
     }
 	else{
     return  <>
-            <div className="popupcenter_open" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
-		   <div className="popup_cntbx"  >
+            
+		   <div className="popup_cntbx" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
    
-    <div className="popupimage"> <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button><Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><img src={this.state.MPageData} alt="" className="img-fluid"/></Link></div></div>
-  </div>
+    <div className="popupimage"> 
+	    <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button>
+<Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><Image src={this.state.MPageData} alt="" className="img-fluid"/></Link>
+</div>
+</div>
+ 
             </>
 }
 }
