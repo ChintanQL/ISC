@@ -66,7 +66,7 @@ class HomeSection5 extends Component {
 	renderContent = () => {
     if (!isMobile) {
         return  <>
-           <div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
+           <div className="sticky-footer edb" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
 			<button className="closebtn" onClick={this.handleLoginClick} >x</button>
 			<Link to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
 		   </div>
@@ -74,7 +74,7 @@ class HomeSection5 extends Component {
     }
 	else{
     return  <>
-            <div className="popupcenteropen" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
+            <div className="popupcenteropen dfg" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
 		   <div className="popup_cntbx"  >
    
     <div className="popupimage"> <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button><Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><img src={this.state.MPageData} alt="" className="img-fluid"/></Link></div></div>
