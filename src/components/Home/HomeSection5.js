@@ -44,7 +44,8 @@ class HomeSection5 extends Component {
 		MPageData: [],
 		MIsbanner: 0,
 		Mcoupon_code: "",
-		MshowInfo: 0
+		MshowInfo: 0,
+		IsMobileCheck: 0
 	}
 	
 	componentDidMount() {
@@ -60,34 +61,35 @@ class HomeSection5 extends Component {
 			this.setState({MIsbanner: res.data.ResponseData[1].IsBanner})
 			this.setState({Mcoupon_code: res.data.ResponseData[1].coupon_code})
 			this.setState({MshowInfo: 1})
+			this.setState({MshowInfo: 1})
+			this.setState({IsMobileCheck: (!isMobile) ? 0 : 1})
 		})
 	}
 	
-	renderContent = () => {
-    if (!isMobile) {
-        return  <>
-           <div className="sticky-footer edb" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
-			<button className="closebtn" onClick={this.handleLoginClick} >x</button>
-			<Link to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
-		   </div>
-            </>
-    }
-	else{
-    return  <>
-            <div className="popupcenteropen dfg" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
-		   <div className="popup_cntbx"  >
-   
-    <div className="popupimage"> <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button><Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><img src={this.state.MPageData} alt="" className="img-fluid"/></Link></div></div>
-  </div>
-            </>
-}
-}
+
 
 	
 	
 	render() {    
 
-		return this.renderContent();
+		return (
+            <>
+            {(this.state.IsMobileCheck == 0) ? (
+			<>
+				<div className="sticky-footer edb" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
+				<button className="closebtn" onClick={this.handleLoginClick} >x</button>
+				<Link to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
+				</div>
+			</>
+			) : (
+			<div className="popupcenteropen dfg" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
+		   <div className="popup_cntbx"  >
+   
+    <div className="popupimage"> <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button><Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><img src={this.state.MPageData} alt="" className="img-fluid"/></Link></div></div>
+  </div>
+			)}
+			</>
+		);	
         
     }
 }
