@@ -54,16 +54,19 @@ handleLoginClick2() {
 		console.log(isMobile);
 		if (!isMobile) {
 			return 	
+				<>
 				<div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
 					<button className="closebtn" onClick={this.handleLoginClick} >x</button>
 					<Link to={"/book-a-camp/"+this.state.coupon_code} >
 						<Image src={this.state.PageData} alt=""/>
 					</Link>
 			   </div>
+				</>
 				
 		}
 		else{
 			return
+				<>
 				<div className="popupcenter_open">
 					<div className="popup_cntbx" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
 						<div className="popupimage"> 
@@ -74,6 +77,7 @@ handleLoginClick2() {
 						</div>
 					</div>
 				</div>
+				</>
 		}
 	}
 	
