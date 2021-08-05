@@ -1,6 +1,6 @@
 import React, { Component  } from 'react';
 import { Link } from 'gatsby'
-import {  Container,Col,Row,Image } from 'react-bootstrap'
+import {  Container,Col,Row,Image,Modal } from 'react-bootstrap'
 import trainer1 from '../../images/trainer1.png'
 import trainer3 from '../../images/trainer3.png'
 import trainer4 from '../../images/trainer4.png'
@@ -10,18 +10,31 @@ import {isMobile} from 'react-device-detect';
 class HomeSection5 extends Component {
     
 	constructor(props) {
-    		super(props);
-    		this.handleLoginClick = this.handleLoginClick.bind(this);
-		this.handleLoginClick2 = this.handleLoginClick2.bind(this);
+    super(props);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleLoginClick2 = this.handleLoginClick2.bind(this);
+	
+        this.MmodalOpen = this.MmodalOpen.bind(this);
+        this.MmodalClose = this.MmodalClose.bind(this);
    
-  	}
+  }
 
 	handleLoginClick() {
     this.setState({Isbanner: 0});
   }
-handleLoginClick2() {
+  handleLoginClick2() {
     this.setState({MIsbanner: 0});
-  }	
+  }
+	MmodalOpen(){
+        this.setState({
+            isOpen:true,
+        })
+    }
+    MmodalClose(){
+        this.setState({
+            isOpen:false,
+        })
+    }
 	
 	state = {
 		PageData: [],
@@ -36,7 +49,7 @@ handleLoginClick2() {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/home_banner',
+			url: 'https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/home_banner',
 			method: 'get'
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData[0].Image})
@@ -51,38 +64,29 @@ handleLoginClick2() {
 	}
 	
 	renderContent = () => {
-		console.log(isMobile);
-		if (!isMobile) {
-			return 	
-				<>
-				<div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
-					<button className="closebtn" onClick={this.handleLoginClick} >x</button>
-					<Link to={"/book-a-camp/"+this.state.coupon_code} >
-						<Image src={this.state.PageData} alt=""/>
-					</Link>
-			   </div>
-				</>
-				
-		}
-		else{
-			return
-				<>
-				<div className="popupcenter_open">
-					<div className="popup_cntbx" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
-						<div className="popupimage"> 
-							<button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button>
-								<Link to={"/book-a-camp/"+this.state.Mcoupon_code} >
-									<Image src={this.state.MPageData} alt="" className="img-fluid"/>
-								</Link>
-						</div>
-					</div>
-				</div>
-				</>
-		}
-	}
+    if (!isMobile) {
+        return  <>
+           <div className="sticky-footer" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
+			<button className="closebtn" onClick={this.handleLoginClick} >x</button>
+			<Link to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
+		   </div>
+            </>
+    }
+    return  <>
+            <div className="popupcenter_open">
+		   <div className="popup_cntbx" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
+   
+    <div className="popupimage"> <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button><Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><img src={this.state.MPageData} alt="" className="img-fluid"/></Link></div></div>
+  </div>
+            </>
+}
+
 	
-	render() {      
-        return this.renderContent();
+	
+	render() {    
+
+		return this.renderContent();
+        
     }
 }
 
