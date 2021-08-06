@@ -4418,14 +4418,14 @@ top: 1px; background:#2a74b6; opacity: 1; color: #fff; width: 20px; height: 20px
   .popup_cntbx button.close{ right: -3px; top: -3px; }
 }
 
-@media screen and (max-width: 410px) and (min-width: 415px) {
+@media (max-width: 410px) and (min-width: 415px) {
 
 	.popup_cntbx button.close {
 		right: 17% !important;
 		top: 0.2% !important;
 	}
 }
-@media screen and (max-width: 373px) and (min-width: 390px) {
+@media (max-width: 373px) and (min-width: 390px) {
 
 	.popup_cntbx button.close {
 		right: 14% !important;
