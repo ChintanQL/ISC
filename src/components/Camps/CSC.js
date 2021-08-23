@@ -25,7 +25,7 @@ class CampSC extends React.Component{
 		var name = this.props.name;
 		this.setState({name: name})
 		
-		var url = "https://shop.australiansportscamps.com.au/csc";
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/csc";
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData.Camp})
 			this.setState({showInfo: 1})
