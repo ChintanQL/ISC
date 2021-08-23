@@ -27,14 +27,17 @@ class Header extends Component {
 			query_code:"",
 			code:"",
 			shown: "d-none",
-			isOpen:false
+			isOpen:false,
+			iscookie:0
 		};
 		
 		
 		
 		this.CheckModel = this.CheckModel.bind(this);
+	    this.CheckCModel = this.CheckCModel.bind(this);
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
+	    this.CmodalClose = this.CmodalClose.bind(this);
 		
 	}
     
@@ -49,6 +52,29 @@ class Header extends Component {
             isOpen:false,
         })
     }
+	 CmodalClose(){
+        const cookies = new Cookies();
+		this.setState({
+				iscookie:0,
+			})
+		var expi = (new Date(Date.now()+ 86400*1000*5)).toUTCString();
+		cookies.set('CovidBanner', "1", { domain: '.australiansportscamps.com.au' , path: '/' , maxAge: 1000000});
+    }
+	CheckCModel(){
+		const cookies = new Cookies();	
+		if(cookies.get("CovidBanner") == undefined){
+			this.setState({
+				iscookie:1,
+			})
+		}
+		else{
+			if(cookies.get("CovidBanner") == 0){
+				this.setState({
+					iscookie:1,
+				})
+			}
+		}
+	}
 	
 	CheckModel(){
 		
@@ -161,7 +187,7 @@ class Header extends Component {
 		
 		
 		this.CheckModel()
-		
+		this.CheckCModel()
       } 
 	
 	
@@ -185,6 +211,12 @@ class Header extends Component {
                 </Modal.Body>
             </Modal>
     <header>
+						<div className="CovidBanner" style={{ display: this.state.iscookie == 0 ? "none" : "block" }} >
+			<p>Coronavirus (COVID-19) - <a target="_blank" href="/covid-info/">Latest Information</a></p>
+			<button type="button" onClick={this.CmodalClose} className="close">
+                        <span aria-hidden="true">&times;</span><span className="sr-only">Close</span>
+                    </button>
+		</div>
         <div className="social-header">
             <div className="container d-flex d-small-block justify-content-between">
                 <div className="first-li align-items-center d-flex">
