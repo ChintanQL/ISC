@@ -87,7 +87,7 @@ class CI extends Component {
 			<Layout>
             <>
 			<Helmet>
-				<title>Privacy Policy - Australian Sports Camps</title>
+				<title>Covid Information - Australian Sports Camps</title>
 				<meta name="title" content={this.state.title}></meta>
 					<meta name="description" content={this.state.description}></meta>
 					<meta name="keywords" content={this.state.keywords}></meta>
