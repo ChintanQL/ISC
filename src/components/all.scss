@@ -4433,4 +4433,26 @@ top: 1px; background:#2a74b6; opacity: 1; color: #fff; width: 20px; height: 20px
 	}
 }
 
+.CovidBanner{
+background: #2A74B6;
+}
+.CovidBanner p{
+	margin-bottom: 0px !important;
+font-size: 14px;
+text-align: center;
+padding: 3px;
+color: #fff;
+}
+.CovidBanner a{
+	color: #fff;
+	text-decoration:underline;
+}
+
+.CovidBanner .close{
+	margin-top: -30px;
+margin-right: 10px;
+color:#fff;
+opacity: 1;
+text-shadow:none !important;
+}
 
