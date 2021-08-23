@@ -58,7 +58,7 @@ class Header extends Component {
 				iscookie:0,
 			})
 		var expi = (new Date(Date.now()+ 86400*1000*5)).toUTCString();
-		cookies.set('CovidBanner', "1", { domain: '.australiansportscamps.com.au' , path: '/' , maxAge: 1000000});
+		cookies.set('CovidBanner', "1", { domain: '.australiansportscamps.com.au' , path: '/' ,expires: expi, maxAge: 1000000});
     }
 	CheckCModel(){
 		const cookies = new Cookies();	
