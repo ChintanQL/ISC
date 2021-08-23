@@ -55,7 +55,7 @@ class SportMenu2 extends Component {
 							
 							return (
 								<>
-								{((data.wordpressMenusMenusItems.items.length/2) <= i ) ? (<ListGroup.Item as="li">
+								{((data.wordpressMenusMenusItems.items.length/2) > i ) ? (<ListGroup.Item as="li">
 									<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.slug}  dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
 									</ListGroup.Item>) : ("") }
 										
