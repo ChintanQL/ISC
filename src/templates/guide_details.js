@@ -84,7 +84,7 @@ class BlogDetails extends Component {
                             </Link>) : ('')}
 							
                         </div>
-						<Disqus config={disqusConfig} />
+						
 					</Container>
 				</section>
 				{(blog.edges[0].node.acf.footer_title != "") ? (
