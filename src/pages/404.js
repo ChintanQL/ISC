@@ -23,18 +23,18 @@ const NotFoundPage = () => (
 			</div>
 		</Container>
 	</section>
-	<section class="thank-you-Section-1">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-xl-8 col-lg-8 lg-mb-8">
-                    <div class="thank-you-data-one text-center">
+	<section className="thank-you-Section-1">
+        <div className="container">
+            <div className="row align-items-center justify-content-center">
+                <div className="col-xl-8 col-lg-8 lg-mb-8">
+                    <div className="thank-you-data-one text-center">
 						
-						 <h2 class="font-bold color-blue uppercase">Whoops!</h2>
-						 <p class="font-20 font-medium">We couldn’t find the page you’re looking for</p>
-                        <div class="thankyoumain_img"><img src={fri_image} alt=""/></div>
+						 <h2 className="font-bold color-blue uppercase">Whoops!</h2>
+						 <p className="font-18 mb-5 font-medium">We couldn’t find the page you’re looking for</p>
+                        <div className="thankyoumain_img"><img src={fri_image} alt=""/></div>
                        
-                        <p class="font-20 font-medium">Looks like this page went to attend one of our camps
-Try our homepage or resources instead</p>
+                        <p className="font-18 mt-5 font-medium">Looks like this page went to attend one of our camps.</p>
+			<p className="font-18 mt-5 font-medium"> Try our <Link to={"/"}> homepage </Link> or <Link to={"/resources"}>resources </Link> instead</p>
                         
 
                         
