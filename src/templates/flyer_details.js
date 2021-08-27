@@ -104,7 +104,7 @@ class BlogDetails extends Component {
                             </Link>) : ('')}
 							
                         </div>
-							<Disqus config={disqusConfig} />
+							
 	  
 					</Container>
 				</section>
