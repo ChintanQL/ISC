@@ -33,8 +33,8 @@ const NotFoundPage = () => (
 						 <p className="font-18 mb-5 font-medium">We couldn’t find the page you’re looking for</p>
                         <div className="thankyoumain_img"><img src={fri_image} alt=""/></div>
                        
-                        <p className="font-18 mt-5 font-medium">Looks like this page went to attend one of our camps.</p>
-			<p className="font-18 mt-5 font-medium"> Try our <Link to={"/"}> homepage </Link> or <Link to={"/resources"}>resources </Link> instead</p>
+                        <p className="font-18 mt-5 font-medium">Looks like this page went to attend one of our camps.<br/>
+			Try our <Link to={"/"}> homepage </Link> or <Link to={"/resources"}>resources </Link> instead</p>
                         
 
                         
