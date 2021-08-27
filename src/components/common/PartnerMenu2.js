@@ -56,7 +56,7 @@ class PartnerMenu2 extends Component {
 								{((data.wordpressMenusMenusItems.items.length/2) > i) <= i ) ? (
 <>
 {(innerprop.attr_title == "Community Sports Camps") ? (<ListGroup.Item as="li">
-										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/communitysportscamps/} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
+										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/communitysportscamps/"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
 									</ListGroup.Item>) : (<ListGroup.Item as="li">
 										<Image src={innerprop.attr_title} fluid className="icon" /><Link to={"/camps/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} className="" />
 									</ListGroup.Item>)}
