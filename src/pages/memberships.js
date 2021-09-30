@@ -161,7 +161,7 @@ class Membership extends Component {
 					<section className="Membership-section-2">
 						<Container>
 							<div className="Membership-section-2-data">
-								<div className="title mb-0">
+								<div className="title ">
 									
 									{(this.state.PageData) ? (<h2 className="uppercase">{this.state.PageData.title}</h2>) : ("")}
 								</div>
@@ -224,7 +224,7 @@ class Membership extends Component {
 					<section className="Membership-section-5">
 						<Container>
 							<div className="Membership-section-5-data">
-								<div className="title mb-0">
+								<div className="title ">
 									<h2 className="uppercase">How It Works</h2>
 								</div>
 								{(this.state.PageData) ? (<div className="text-center list-style-disc font-18 font-medium mb-30" dangerouslySetInnerHTML={{ __html: this.state.PageData.howItWorks}} ></div>) : ("")}
