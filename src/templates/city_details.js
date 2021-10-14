@@ -98,6 +98,11 @@ class City extends Component {
 		<meta property="twitter:card" content="summary_large_image"></meta>
 		<meta property="twitter:title" content={page.edges[0].node.yoast.title}></meta>
 		<meta property="twitter:description" content={page.edges[0].node.yoast.twitter_description}></meta>
+		<meta name="geo.region" content={page.edges[0].node.acf.geo_region} />
+<meta name="geo.placename" content={page.edges[0].node.acf.geo_placename} />
+<meta name="geo.position" content={page.edges[0].node.acf.geo_position} />
+<meta name="ICBM" content={page.edges[0].node.acf.geo_icbm} />
+
 			</Helmet>
 				<section className="Banner-Section">
 					<Container>
@@ -360,6 +365,10 @@ export const pageQuery = graphql`
 				twitter_image
 			  }
 				acf {
+						 geo_region
+		geo_placename
+		geo_position
+		geo_icbm
 				  page_title
 				  sub_title_1
 				  sub_title_2
