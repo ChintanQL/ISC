@@ -31,6 +31,11 @@ class ConatctUs extends Component {
 				<meta property="og:image:height" content="1200" />
 				<meta name="twitter:card" content="summary" /><meta name="twitter:creator" content="@austsportscamps" />
 				<meta name="twitter:site" content="@austsportscamps" />
+	      <meta name="geo.region" content="AU-VIC" />
+<meta name="geo.placename" content="Clayton" />
+<meta name="geo.position" content="-37.917321;145.130424" />
+<meta name="ICBM" content="-37.917321, 145.130424" />
+
 			</Helmet>
 			
 			
