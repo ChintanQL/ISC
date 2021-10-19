@@ -211,7 +211,7 @@ class Membership extends Component {
 							</div>
 						</Container>
 					</section>
-					<section className="Membership-section-4">
+					<section className="Membership-section-4 sec25">
 						<Container>
 							<div className="Membership-section-4-data">
 							<div className="title">
