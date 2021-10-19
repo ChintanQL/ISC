@@ -74,7 +74,9 @@ a.nav-link.uppercase.btn-sm.btn-orange.active { color: #fff !important; }
 
 .camptestimonialsec_logo { position: absolute; top: 100%;  right: 0; }
 
- 
+ .sec25{
+	padding-bottom:25px !important;
+}
 
 header .main-header {
     -webkit-box-shadow: 0 0 26px -13px rgba(0, 0, 0, .6);
