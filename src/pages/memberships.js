@@ -6,11 +6,15 @@ import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import axios from 'axios';
 import { Helmet } from "react-helmet"
+import Cookies from 'universal-cookie';
 
 class Membership extends Component {
 	constructor(props) {
 		super(props);
 		console.log(this.props);
+		this.modalOpen = this.modalOpen.bind(this);
+        this.modalClose = this.modalClose.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 	
 	state = {
@@ -25,8 +29,27 @@ class Membership extends Component {
 		og_description:"",
 		twitter_card:"",
 		twitter_title:"",
-		twitter_description:""
+		twitter_description:"",
+		isOpen:false
 	}
+	
+	modalOpen(){
+        this.setState({
+            isOpen:true,
+        })
+    }
+    modalClose(){
+        this.setState({
+            isOpen:false,
+        })
+    }
+	
+	handleClick() { 
+		this.setState({
+            isOpen:true,
+        })
+	}
+	
 	handleToggle = (id) => {
         document.querySelectorAll('.card:not(.id'+id+')').forEach(function(button) {	
 			if(!button.classList.contains(".id"+id)){
@@ -127,6 +150,20 @@ class Membership extends Component {
       return (
 			<Layout>
 				<>
+	      <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered >
+                <Modal.Body className="p-0">
+                    <button type="button" onClick={this.modalClose} class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+					
+					
+					
+					<iframe height="420" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-membership/" title="description" />
+					
+                </Modal.Body>
+            </Modal>
 				<Helmet>
 				<title>Membership Pass - Australian Sports Camps</title>
 				<meta name="title" content={this.state.title}></meta>
@@ -209,6 +246,18 @@ class Membership extends Component {
 									) : ("")}
 								</Row>
 							</div>
+						</Container>
+					</section>
+					<section className="Membership-section-4">
+						<Container>
+							<Row className="justify-content-center align-items-center">
+							<Col xl={8} lg={8} md={12}>
+								<div className="pl-3 pr-2 text-center">
+									<Button onClick={this.handleClick} className=" uppercase btn-sm btn-orange-large">Download Brochure</Button>
+									
+								</div>                        
+							</Col>
+							</Row>	
 						</Container>
 					</section>
 					<section className="Membership-section-4 sec25">
