@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container,Breadcrumb,Row,Col,Card,Image,Button,Accordion} from 'react-bootstrap'
+import {Container,Breadcrumb,Row,Col,Card,Image,Button,Accordion,Modal} from 'react-bootstrap'
 import { Link } from 'gatsby'
 import Layout from "../components/layout"
 import Footer from "../components/common/Footer"
