@@ -102,7 +102,7 @@ header .social-header {
     padding: 10px 0px;
     display: block
 }
-
+footer .footer-data ul li{ display: inherit;}
 header .social-header .first-li ul li
 {
     background: transparent !important;
