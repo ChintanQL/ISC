@@ -117,7 +117,7 @@ class resources extends Component {
 											</Link>
 											<Card.Body>
 												<Card.Title as="h5" dangerouslySetInnerHTML={{ __html: prop.title}} />
-												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.replace(/<[^>]+>/g, '').substring(0, 250)+"...."}} />
+												<Card.Text as="div" className="" dangerouslySetInnerHTML={{ __html: prop.Desc.replace(/<[^>]+>/g, '').substring(0, 240)+"...."}} />
 													
 												<Link className="nav-link p-0 d-flex align-items-center" to={"/blog/"+prop.slug}>Read more 
 													<i className="fa fa-chevron-right ml-2"></i> 
