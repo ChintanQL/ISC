@@ -71,7 +71,7 @@ class demopage extends Component {
 							<div className="p-0 border-0 justify-content-center d-flex mb-30">
 								<Nav variant="pills" className="">
 									<Nav.Item>
-										<Nav.Link  href="/resources" className="uppercase font-bold">All</Nav.Link>
+										<Nav.Link  href="/resources" className="uppercase font-bold">New</Nav.Link>
 									</Nav.Item>
 									 <Nav.Item>
 										<Nav.Link  href="/blog" className="uppercase font-bold nav-link active">Blogs</Nav.Link>
