@@ -85,7 +85,7 @@ class resources extends Component {
 							<Nav variant="pills" className="">
 							
 								<Nav.Item>
-									<Nav.Link  href="/resources" className="uppercase font-bold nav-link active">All</Nav.Link>
+									<Nav.Link  href="/resources" className="uppercase font-bold nav-link active">New</Nav.Link>
 								</Nav.Item>
 								<Nav.Item>
 									<Nav.Link  href="/blog" className="uppercase font-bold">Blogs</Nav.Link>
