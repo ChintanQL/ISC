@@ -94,6 +94,20 @@ class Header extends Component {
 	
 	
       componentDidMount() {
+	      
+	       var url_action = window.location.href;
+	       const cookies = new Cookies();
+		if(cookies.get('LOGIN') == 1){
+			var login_name = cookies.get('EMAIL');
+		}
+		else{
+			var login_name = "";
+		}
+		 var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/asc_page_view";
+		axios.post(url,{login_name:login_name,url:url_action}).then(e => {
+			console.log("done");
+		})
+	      
         document.addEventListener('scroll', () => {
 			const isTop = window.scrollY < 200;
 			if (isTop !== this.state.isTop) {
