@@ -9,6 +9,7 @@ import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Footer from "../components/common/Footer"
 import BottomForm from "../components/common/BottomForm"
 import { Helmet } from "react-helmet"
+import Cookies from 'universal-cookie';
 class TNC extends Component {
 	
 	constructor(props) {
@@ -46,6 +47,26 @@ class TNC extends Component {
 			this.setState({Done: 1})
 			this.setState({showInfo: 1})
 		})
+		
+		/*after page load segment hook*/
+		const cookies = new Cookies();
+		var page_name  = 'Viewed Membership Page';
+		var res  = '';
+		var path  = '/videos/';
+		var url_v  = 'https://australiansportscamps.com.au/videos/';
+		if(cookies.get('LOGIN') == 1){
+			var login_name = cookies.get('EMAIL');
+		}
+		else{
+			var login_name = "";
+		}
+		
+		
+		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/page_view_res";
+		axios.post(url,{path:path,url:url_v,user:login_name,page_name:page_name,res:res,resourceType:"Videos"}).then(e => {
+			console.log("done");
+		})
+		
 	}
 	
 	
