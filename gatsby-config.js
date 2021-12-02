@@ -38,7 +38,7 @@ module.exports = {
 		],
       },
     },
-  {
+  /*{
     resolve: `gatsby-plugin-segment-js`,
     options: {
      
@@ -50,7 +50,7 @@ module.exports = {
       delayLoadTime: 1000,
       manualLoad: false
     }
-  },	  
+  },*/	  
 	 {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
