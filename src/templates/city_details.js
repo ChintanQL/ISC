@@ -141,7 +141,7 @@ class City extends Component {
 				<section className="City-details-section-3">
 					<Container>
 						<Row className="main-book-card-row">
-							<Citybooking parentCallback = {this.callbackFunction} products={page_products} tags={state} />
+							<Citybooking parentCallback = {this.callbackFunction} cityname={page.edges[0].node.title} products={page_products} tags={state} />
 							
 						</Row>
 					</Container>
