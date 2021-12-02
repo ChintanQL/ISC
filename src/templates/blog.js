@@ -20,7 +20,29 @@ import Menubannertwo from '../components/common/Menubannertwo'
 import Blogbanner from '../components/common/Blogbanner'
 import LatestPost from '../components/common/LatestPost'
 import { Helmet } from "react-helmet"
+import Cookies from 'universal-cookie';
+import axios from 'axios';
 class demopage extends Component {
+	componentDidMount() {
+	  
+	/*after page load segment hook*/ 
+	var resourceType = 'Blog';
+	var path  = '/blog/';
+	var url_v  = 'https://australiansportscamps.com.au//blog/';
+	var source = '';
+	var userId = '';
+	const cookies = new Cookies();
+	if(cookies.get('LOGIN') == 1){
+		var login_name = cookies.get('EMAIL');
+	}
+	else{
+		var login_name = "";
+	}
+	 var url = "https://staging-ascstaging.kinsta.cloud/wp-json/newasc/v1/page_view_res";
+		axios.post(url,{resourceType:resourceType,url:url_v,path:path,source:source,userId:login_name}).then(e => {
+			console.log("done");
+		})
+  }
   render() {
     const blog = this.props.data.allWordpressPost
    	const category = this.props.data.allWordpressCategory
