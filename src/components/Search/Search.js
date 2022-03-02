@@ -20,7 +20,7 @@ export default class Search extends Component {
 				<ul className="lisearch" >
 				  {this.state.results.map(page => (
 					<li key={page.node.id}>
-					  <Link to={ page.node.url.replace('https://shop.australiansportscamps.com.au/blog/','https://develop.australiansportscamps.com.au/blog/')} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
+					  <Link to={ page.node.url.replace('https://shop.australiansportscamps.com.au/blog/','https://australiansportscamps.com.au/blog/')} dangerouslySetInnerHTML={{ __html: page.node.title}} ></Link>
 					  
 					</li>
 				  ))}
