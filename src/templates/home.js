@@ -13,9 +13,31 @@ import IncludedSection from "../components/common/IncludedSection"
 import KidSection from "../components/common/KidSection"
 import LazyLoad from 'react-lazyload';
 import { Helmet } from "react-helmet"
+import Cookies from 'universal-cookie';
 class HomePage extends Component {
+	constructor(props){
+		super(props)
+		this.create_UUID = this.create_UUID.bind(this);	
+	}	
 	
+	create_UUID(){
+    		var dt = new Date().getTime();
+    		var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        		var r = (dt + Math.random()*16)%16 | 0;
+        		dt = Math.floor(dt/16);
+        		return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+    		});
+    		return uuid;
+	}
 	
+	 componentDidMount(){
+	 const cookies = new Cookies();
+		var aid =  cookies.get('aid');
+		 if(aid == undefined){
+			 var code = this.create_UUID();
+		 	cookies.set("aid",code,{ domain: '.australiansportscamps.com.au' , path: '/' });
+		 }
+	 }
 	
 	render() {
 		console.log(this.props.pageContext.HomeData.data.page);
