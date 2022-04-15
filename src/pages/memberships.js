@@ -64,7 +64,7 @@ class Membership extends Component {
     } 
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/graphql',
+			url: 'https://shop.spinhouse4u.com/graphql',
 			method: 'post',
 			data: {
 				query: `
@@ -160,7 +160,7 @@ class Membership extends Component {
 					
 					
 					
-					<iframe height="420" width="100%" frameBorder="0" src="https://shop.australiansportscamps.com.au/gravity-membership/" title="description" />
+					<iframe height="420" width="100%" frameBorder="0" src="https://shop.spinhouse4u.com/gravity-membership/" title="description" />
 					
                 </Modal.Body>
             </Modal>
@@ -178,7 +178,7 @@ class Membership extends Component {
 			</Helmet>
 					<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 						<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-							<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+							<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 						</div>
 					</div>
 					<section className="Banner-Section">

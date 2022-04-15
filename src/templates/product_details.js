@@ -92,7 +92,7 @@ class ProdDetails extends Component {
 
 
                                    
-                                    <Link className=" uppercase btn-sm btn-orange btnpadding" to={"https://shop.australiansportscamps.com.au/cart/?add-to-cart="+id+"&quantity="+this.state.clicks}>BUY Now</Link>
+                                    <Link className=" uppercase btn-sm btn-orange btnpadding" to={"https://shop.spinhouse4u.com/cart/?add-to-cart="+id+"&quantity="+this.state.clicks}>BUY Now</Link>
                                 </div>
                             </Col>
                         </Row>

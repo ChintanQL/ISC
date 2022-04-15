@@ -32,7 +32,7 @@ class CI extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/graphql',
+			url: 'https://shop.spinhouse4u.com/graphql',
 			method: 'post',
 			data: {
 				query: `

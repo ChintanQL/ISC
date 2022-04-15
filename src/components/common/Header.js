@@ -103,7 +103,7 @@ class Header extends Component {
 		else{
 			var login_name = "";
 		}
-		 var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/asc_page_view";
+		 var url = "https://shop.spinhouse4u.com/wp-json/newasc/v1/asc_page_view";
 		axios.post(url,{login_name:login_name,url:url_action}).then(e => {
 			console.log("done");
 		})
@@ -217,10 +217,10 @@ class Header extends Component {
                     <button type="button" onClick={this.modalClose} class="close">
                         <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                     </button>
-					<p className="sub_img" ><img  title="Australian Sports Camps" src="http://shop.australiansportscamps.com.au/wp-content/uploads/2016/05/australian-sports-camps-600x275.png" alt="Australian Sports Camps" /></p>
+					<p className="sub_img" ><img  title="Australian Sports Camps" src="http://shop.spinhouse4u.com/wp-content/uploads/2016/05/australian-sports-camps-600x275.png" alt="Australian Sports Camps" /></p>
 					<p className="sub_title" >Subscribe to Updates</p>
 					<p className="sub_sub_title" >Sign up for free to be the first to hear about upcoming camps, special offers and discounts.</p>
-					<iframe height="420" width="100%" frameBorder="0" src=" https://shop.australiansportscamps.com.au/gravity-subscribe/" title="description" />
+					<iframe height="420" width="100%" frameBorder="0" src=" https://shop.spinhouse4u.com/gravity-subscribe/" title="description" />
 					
                 </Modal.Body>
             </Modal>
@@ -258,7 +258,7 @@ class Header extends Component {
 							<li className="userdropdownbox list-group-item" onClick={()=>{this.setState({show:!this.state.show})}} >
                             <i className="fa fa-user-circle"></i>{cookies.get('USER')} <span className="userdropdownbox"></span>
                             <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
-                                <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
+                                <li><a href="https://shop.spinhouse4u.com/my-account/">Profile</a></li>
                                 <li><a href={atob(cookies.get('L_URL'))}>logout</a></li>
                             </ul>
                        
@@ -267,9 +267,9 @@ class Header extends Component {
 							
 						) : ( 
 							<li className="list-group-item">
-								<Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
+								<Link to="https://shop.spinhouse4u.com/my-account/">LOGIN</Link>
 									<div className="menulogregi" >OR</div>
-								<Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
+								<Link to="https://shop.spinhouse4u.com/register/">REGISTER</Link>
 							</li>
 						
 						) }</>
@@ -285,7 +285,7 @@ class Header extends Component {
 						<li className=" list-group-item" onClick={()=>{this.setState({show:!this.state.show})}} >
                             <i className="fa fa-user-circle"></i>{cookies.get('USER')} <span className="userdropdownbox"></span>
                             <ul className="htdropdown" style={{ display: this.state.show ? "block" : "none" }}  >
-                                <li><a href="https://shop.australiansportscamps.com.au/my-account/">Profile</a></li>
+                                <li><a href="https://shop.spinhouse4u.com/my-account/">Profile</a></li>
                                 <li><a href={atob(cookies.get('L_URL'))}>logout</a></li>
                             </ul>
                        
@@ -294,9 +294,9 @@ class Header extends Component {
 						
 						) : (
 						<li className="list-group-item">
-                        <Link to="https://shop.australiansportscamps.com.au/my-account/">LOGIN</Link>
+                        <Link to="https://shop.spinhouse4u.com/my-account/">LOGIN</Link>
                         <div className="menulogregi" >OR</div>
-                        <Link to="https://shop.australiansportscamps.com.au/register/">REGISTER</Link>
+                        <Link to="https://shop.spinhouse4u.com/register/">REGISTER</Link>
                         </li>
 						
 						)}
@@ -318,7 +318,7 @@ class Header extends Component {
                 </Navbar.Brand>
 				<div clas="htright">
 					<div className="mobcartbx">
-						<a href="https://shop.australiansportscamps.com.au/cart/" className="nav-link uppercase "><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABHNCSVQICAgIfAhkiAAAAqtJREFUSEu9l8F12kAQhmelE/hgXIFJBcY3sTrEqSCkA6eCQAdyBcYV2KkgdBDnsItuERWEDswFoYs0eb+8+54iJISI5X2PxwOk+bT/zvwzCN/3IyK6ote1YeZFHMezKIo25rtO3oTneTeO49yY6AMiuhVCLJRSt50QTVBRDi6lBPgxTdMPYRiuu4LvgUej0eDs7OyFiGZKqfm7gQGSUi6EEJ+LUGZeCyH+WwFmRh497+3YgHO5ieg7gEfuekREyJGmNcQFleAu5ZZSPqN6KsFWbiK61FpfN22hze++7zPy5xD4zbMbpeu67k9mvq4FdyG3lDIgoqnWelAL7kJue75a60kT+E3lllLChuda6+Ag2MrNzF+11k9tkqh87Xg8njiO8wPnq7WODoILchPkaQvGg/d6vSvHcVC7c2b+ZeMcA87l3m63F8WOJaUcMfM5gjLzqykIkTcbfBZC5N/ZxcwPcRwHNkYjuCA32ieCw6Gq1gp2CHMgovzaLMtgFpQkSVRus41gz/OGruv+ISIEXhjiOsuyteM4G5xX2yOotcxiIN/3p0R0X5b6FFjxnsYd2/787mCccb/fR4eC1Z3Un3e73ar1GUMeMx6hR5+fKPFKKfVPUjZKXQThAU4Er8tjVCvwidDK2w6CjcSPMANMIsw8Wy6XtqQqA5ryw/QCdTDmwJvvyhfXgk2A38y8IiL49ARzWJqmn8IwzI2hapk5He6FRBwJIb5VDY61YNQvMwdxHA9tRiIoBjWtNWp7bxUbvTUWKSUe4GN5kjk0gQR4WqXUhSWY3UR1w74FF2dygOHhR2e1tUpmfsILNwshgizLvtSds6l5WOgLM08LXekBPfho54JroZ3Z+mXmu3KAst7oWkSEmr/Eb+hKVUdzVDkhWNtmAMWSJNnU/fn7C5TsizPzBN7/AAAAAElFTkSuQmCC" alt="" width="" className="img-fluid"/><span className="badge blue_color">{cookies.get('CART')}</span></a>
+						<a href="https://shop.spinhouse4u.com/cart/" className="nav-link uppercase "><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABHNCSVQICAgIfAhkiAAAAqtJREFUSEu9l8F12kAQhmelE/hgXIFJBcY3sTrEqSCkA6eCQAdyBcYV2KkgdBDnsItuERWEDswFoYs0eb+8+54iJISI5X2PxwOk+bT/zvwzCN/3IyK6ote1YeZFHMezKIo25rtO3oTneTeO49yY6AMiuhVCLJRSt50QTVBRDi6lBPgxTdMPYRiuu4LvgUej0eDs7OyFiGZKqfm7gQGSUi6EEJ+LUGZeCyH+WwFmRh497+3YgHO5ieg7gEfuekREyJGmNcQFleAu5ZZSPqN6KsFWbiK61FpfN22hze++7zPy5xD4zbMbpeu67k9mvq4FdyG3lDIgoqnWelAL7kJue75a60kT+E3lllLChuda6+Ag2MrNzF+11k9tkqh87Xg8njiO8wPnq7WODoILchPkaQvGg/d6vSvHcVC7c2b+ZeMcA87l3m63F8WOJaUcMfM5gjLzqykIkTcbfBZC5N/ZxcwPcRwHNkYjuCA32ieCw6Gq1gp2CHMgovzaLMtgFpQkSVRus41gz/OGruv+ISIEXhjiOsuyteM4G5xX2yOotcxiIN/3p0R0X5b6FFjxnsYd2/787mCccb/fR4eC1Z3Un3e73ar1GUMeMx6hR5+fKPFKKfVPUjZKXQThAU4Er8tjVCvwidDK2w6CjcSPMANMIsw8Wy6XtqQqA5ryw/QCdTDmwJvvyhfXgk2A38y8IiL49ARzWJqmn8IwzI2hapk5He6FRBwJIb5VDY61YNQvMwdxHA9tRiIoBjWtNWp7bxUbvTUWKSUe4GN5kjk0gQR4WqXUhSWY3UR1w74FF2dygOHhR2e1tUpmfsILNwshgizLvtSds6l5WOgLM08LXekBPfho54JroZ3Z+mXmu3KAst7oWkSEmr/Eb+hKVUdzVDkhWNtmAMWSJNnU/fn7C5TsizPzBN7/AAAAAElFTkSuQmCC" alt="" width="" className="img-fluid"/><span className="badge blue_color">{cookies.get('CART')}</span></a>
 						
 					</div>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -504,7 +504,7 @@ class Header extends Component {
 
                             <div>
                                 <li className="nav-item pr-0 mob-toggle-cart">
-                                    <Link className="nav-link uppercase " to="https://shop.australiansportscamps.com.au/cart/"><Image src={cart} className="img-fluid" alt="" width=""/>
+                                    <Link className="nav-link uppercase " to="https://shop.spinhouse4u.com/cart/"><Image src={cart} className="img-fluid" alt="" width=""/>
 									<span className="badge badge-blue">{cookies.get('CART')}</span>
 									</Link>
                                 </li>

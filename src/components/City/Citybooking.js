@@ -22,7 +22,7 @@ class Citybooking extends React.Component{
 		var cityname = (this.props.cityname) ? this.props.cityname : "";
 		
 		this.setState({tags: tags})
-		var url = "https://shop.australiansportscamps.com.au/wp-json/newasc/v1/products";
+		var url = "https://shop.spinhouse4u.com/wp-json/newasc/v1/products";
 		axios.post(url,{ Prod: products,cityname:cityname}).then(e => {
 			this.setState({pagedata: e.data.ResponseData.City})
 			this.setState({showInfo: 1})
@@ -36,7 +36,7 @@ class Citybooking extends React.Component{
 			<>
 			<div className="laoder2" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 				<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-					<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+					<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 				</div>
 			</div>
 			{(this.state.showInfo == 1) ? (
@@ -73,7 +73,7 @@ class Citybooking extends React.Component{
 													<li className="main-price">${prop.price}</li>
 												</ul>
 										)}
-										<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.australiansportscamps.com.au/book/"+prop.Slug}>More info / Book Now</Link>
+										<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.spinhouse4u.com/book/"+prop.Slug}>More info / Book Now</Link>
 									</Card.Body>
 								</Card>
 							</Col>
@@ -109,7 +109,7 @@ class Citybooking extends React.Component{
 						<div className="container">
 							<div className="row">
 								<div className="col-xl-8 col-lg-8 col-md-7 md-mb-4">
-									<iframe src={"https://shop.australiansportscamps.com.au/gravity-notify/?camp_state="+this.state.tags+"&camp_sports="} frameBorder="0" width="100%" height="550" ></iframe>
+									<iframe src={"https://shop.spinhouse4u.com/gravity-notify/?camp_state="+this.state.tags+"&camp_sports="} frameBorder="0" width="100%" height="550" ></iframe>
 								</div>
 								<div className="col-xl-4 col-lg-4 col-md-5 secc">
 									<Blogbanner />

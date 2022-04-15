@@ -66,7 +66,7 @@ class BlogDetails extends Component {
 									</Card>
 								</Col>
 								<Col xl={4} lg={4} md={4} className="lg-mb-2">
-  <iframe height="450" width="100%" frameBorder="0" src={"https://shop.australiansportscamps.com.au/gravity-guide/?id="+id} title="description" />
+  <iframe height="450" width="100%" frameBorder="0" src={"https://shop.spinhouse4u.com/gravity-guide/?id="+id} title="description" />
 									
 									<Guidebanner />
 								</Col>

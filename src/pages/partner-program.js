@@ -22,7 +22,7 @@ class Partner extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/camp_partner',
+			url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/camp_partner',
 			method: 'get'}).then(res => {
 			const chunkSize = 3;
 			const arr = res.data.ResponseData.camps;
@@ -63,7 +63,7 @@ class Partner extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.australiansportscamps.com.au/demo.svg" />
+						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 					</div>
 				</div>
 				<section className="Banner-Section">

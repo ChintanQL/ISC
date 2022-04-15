@@ -23,7 +23,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'shop.australiansportscamps.com.au',
+        baseUrl: 'shop.spinhouse4u.com',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
@@ -74,14 +74,14 @@ module.exports = {
       resolve: 'gatsby-plugin-global-context',
       options: {
         context: {
-          BACK_URL: "https://shop.australiansportscamps.com.au"
+          BACK_URL: "https://shop.spinhouse4u.com"
         }
       }
     },
 	{       
 		resolve: '@pasdo501/gatsby-source-woocommerce',
 		options: {
-			api: 'shop.australiansportscamps.com.au',
+			api: 'shop.spinhouse4u.com',
 			verbose: true,
 			https: true,
 			api_keys: {

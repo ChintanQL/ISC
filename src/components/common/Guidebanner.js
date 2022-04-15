@@ -26,7 +26,7 @@ class Guidebanner extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.australiansportscamps.com.au/wp-json/newasc/v1/guide_banner',
+			url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/guide_banner',
 			method: 'get'
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData[0].Image})
