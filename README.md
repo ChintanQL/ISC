@@ -1,14 +1,11 @@
 
 <h1 align="center">
-  ASC Mordern Site
+  Indian Sports Camps
 </h1>
+<h4 align="center">
+  ISC Mordern Site
+</h4>
 
-git init
-git add README.md
-git commit -m "commit 15-01"git commit -m "commit 15-01"
-git branch -M main
-git remote add origin https://github.com/parasqltech/newasc.git
-git push -u origin main
 
 
 
