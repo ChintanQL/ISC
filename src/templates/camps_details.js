@@ -9,6 +9,15 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import queryString from 'query-string'
 import lifes from '../images/lifes-better-with-sport.png'
+
+import Background from '../images/breadcumb1.png';
+
+var sectionStyle = {
+  
+  backgroundImage: "url(" + { Background } + ")"
+};
+
+
 class Camps extends Component {
 	
 	constructor(props) {
@@ -65,10 +74,13 @@ class Camps extends Component {
 		<meta property="twitter:title" content={page.edges[0].node.yoast.title}></meta>
 		<meta property="twitter:description" content={page.edges[0].node.yoast.twitter_description}></meta>
 			</Helmet>
-				<section className="Banner-Section">
-					<Container>
-						<div className="Banner-Section-data">
-						<Breadcrumb>
+				
+				<section class="breadcumb" style={ sectionStyle } >
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="breadcumb_wrpaeer">
+								<Breadcrumb>
 							<Breadcrumb.Item className="">
 								<Link className="nav-link p-0" to="/">Home</Link>
 							</Breadcrumb.Item>
@@ -77,30 +89,29 @@ class Camps extends Component {
 							</Breadcrumb.Item>
 							<Breadcrumb.Item active href=""className="" dangerouslySetInnerHTML={{ __html: page.edges[0].node.title}} />
 						</Breadcrumb>
-						<h2 className="heading-banner" dangerouslySetInnerHTML={{ __html: page.edges[0].node.title}} />
+								<h2 class="tile_head" dangerouslySetInnerHTML={{ __html: page.edges[0].node.title}} />
+							</div>
 						</div>
-					</Container>
-				</section>	
-                <section className="Sport-details-section-2">
-					<Container>
-						<Row className="mb-30">
-							<Col xl={12}>
-									<div className="font-15 font-medium color-3b mb-0" dangerouslySetInnerHTML={{ __html: page.edges[0].node.content}}  />
-							</Col>
-						</Row>
+					</div>
+				</div>
+			</section>
+			<section className="details_list pt pb">
+				<div className="container" dangerouslySetInnerHTML={{ __html: page.edges[0].node.content}}  />
 					
-					</Container>
-				</section>
-				<section className="Sport-details-section-3">
+				
+			</section>	
+				
+               
+				<section className="Sport-details-section-3 d-none">
 					<Container>
 						
 							<Campbooking camptitle={page.edges[0].node.title} wid={page.edges[0].node.wordpress_id} category={page.edges[0].node.acf.product_category} name={page.edges[0].node.title}   />
 						
-						<p className="font-italic font-medium mb-0 disclaimer_bxsec" >{page.edges[0].node.acf.disclaimer}</p>
+						
                     </Container>
                 </section>
 				
-				<BottomForm/>
+				
 				<Footer/>
 				</>
 			</Layout>

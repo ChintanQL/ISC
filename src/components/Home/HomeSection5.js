@@ -76,9 +76,9 @@ class HomeSection5 extends Component {
             <>
             {(this.state.IsMobileCheck == 0) ? (
 			<>
-				<div className="sticky-footer edb" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
+				<div className="sticky-footer d-none edb" style={{ display: this.state.Isbanner == 0 ? "none" : "block" }} >
 				<button className="closebtn" onClick={this.handleLoginClick} >x</button>
-				<Link to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
+				<Link className="d-none" to={"/book-a-camp/"+this.state.coupon_code} ><Image src={this.state.PageData} alt=""/></Link>
 				</div>
 			</>
 			) : (

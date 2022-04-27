@@ -11,6 +11,10 @@ import {withPrefix} from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./common/Header"
 import '../components/all.scss'
+import '../css/all.min.css'
+import '../css/menu.css'
+import '../css/style.css'
+import '../css/responsive.css'
 import favicon from '../images/favicon.ico';
 import $ from "jquery";
 

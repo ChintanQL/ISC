@@ -46,22 +46,27 @@ class HomeSection2 extends Component {
 		  
         return (
             <>
-            <section className="Home-section-3">
+            <section className="section02 pt pb">
                 <Container>
-				<div className="title">
-					<div className="justify-content-center row">
-						<div className="col-xl-9 col-lg-11">
-							<h2>As seen on</h2>
-						</div>
+				<div className="row">
+					<div className="col-md-12">
+						<h2 className="tile_head">As Seen On</h2>
 					</div>
 				</div>
-                <Slider {...settings}  >
+				<div className="row">
+                
 					{this.props.data.map((str) => 
 						
+						<div className="col-md-2">
+							<div className="seen_1">
 							<Link className="slider-data" to={str.url}><Image src={str.image.sourceUrl} className="img-fluid lazyload" /></Link>
+							</div>
+							</div>
+							
 						
 					)}
-				</Slider>
+				
+				</div>
                 </Container>
             </section>
 

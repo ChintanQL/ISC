@@ -330,26 +330,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	});
 	
 	
-	const products = await graphql(`
-		{
-			allWcProducts(filter: {categories: {elemMatch: {name: {eq: "Shop"}}}}) {
-				edges {
-					node {
-						id
-						wordpress_id
-						sale_price
-						price
-						status
-						name
-						images {
-						  src
-						}
-						slug
-					}
-				}
-			}
-		}
-	`)
+	
 	
 	
 	const productcat = await graphql(`
@@ -383,30 +364,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	
 	
 	
-	const ProductTemplate = path.resolve(`./src/templates/product_details.js`);
-	const ProductList = path.resolve(`./src/templates/product.js`);
 	
-	products.data.allWcProducts.edges.forEach((edge,index) => {
-		  createPage({
-		  path: `/product-shop/${edge.node.slug}/`,
-		  component: slash(ProductTemplate),
-		  context: {
-			id: edge.node.id
-		  },
-		})			  
-	})
-	
-
-	
-	
-	const productsdata = products.data.allWcProducts.edges;
-	paginate({
-		createPage,
-		items: productsdata,
-		itemsPerPage: 18,
-		pathPrefix: '/product-shop',
-		component: ProductList,
-	});
 	
 	
 	const Category = await graphql(`

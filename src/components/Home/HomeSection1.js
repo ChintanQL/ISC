@@ -251,66 +251,54 @@ class HomeSection1 extends Component {
 		  
         return (
             <>
-            
-            <section className="Home-section-1 main-padding-header Home_section_new">
-                <Slider {...settings1}>
-                    {this.props.data.map((str) => 
-						<div className="slider-data">
-							<Image src={str.sliderImage.sourceUrl} className="img-fluid d-lg-inline d-none" />
-							<div className="slider-inner-data">
-							<Container>
-								<Row className="">
-									<Col xl={7} lg={7} md={12} sm={12}>
-										<h3 className="font-bold text-white">{str.title}</h3>
-										<div className="text-left" dangerouslySetInnerHTML={{ __html: str.content}} />
-											
-										
-									</Col>
-								</Row>
-							</Container>
+            <section className="section01 pt pb" id="section01">
+		<div className="container">
+			<div className="row align-items-end">
+				<div className="col-md-6">
+					<div className="main_head">
+						<h1>World's Favourite Sports Holiday Camps for Kids</h1>
+						<div className="list_tab">
+							<ul>
+								<li>Expert coaches for training kids of all ages</li>
+								<li>Best for beginner to medium players</li>
+								<li>Have fun with your friends playing the sport<br/> that you love</li>
+								<li>Safe environment for kids to learn sports</li>
+								<li>Top of the line equipment for a wide range<br/> of games</li>
+							</ul>
 						</div>
-                    </div>
-					)}
-                    
-                    
-                
-                    
-                </Slider>
-				
-				
-				<div className="bg-ef">
-                  <Container>
-                    <div className="pos-absolute-form">
-                        <Form className="align-items-center justify-content-center">
-                             
-							  <div className="home-form">
-                                <div className="first-control">
-                                  <SearchLocationInput/>
-                                </div>
-                                <div className="second-control">
-									<Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
+					</div>
+
+				</div>
+				<div className="col-md-6">
+					<div className="form_site">
+						<div className="form_wrap">
+							  <form className="row g-3">
+								  <div className="col-md-12">
+								   
+								    <SearchLocationInput/>
+								  </div>
+								  <div className="col-md-12">
+								    <Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
         value={this.state.selectedOption2}
         onChange={this.handleChange}
         options={this.state.selectOptions}
 		styles={customStyles}
       />
+								  </div>
 								  
 								  
-                                </div>
-								
-                                <div className="third-control">
-                                  <Button type="button" onClick={this.Campred} className="uppercase btn-sm btn-orange mb-0">
-                                      Find Camps
-                                  </Button>
-                                </div>
-                              </div>
-							  <p  className={"text-danger er-msg "+this.state.shown} >Please select a Location or Sport.</p>
-                        </Form>
-                    </div>
-                  </Container>
-                </div>
-				
-            </section>
+								  <div className="col-12 text-center">
+								    <button type="button" onClick={this.Campred} className="btn btn-primary camp_find">Find Camps</button>
+								  </div>
+								  <p  className={"text-danger er-msg "+this.state.shown} >Please select a Location or Sport.</p>
+								</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+           
             </>
         );
     }

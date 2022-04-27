@@ -86,7 +86,7 @@ class About extends Component {
 			<Layout>
             <>
 			<Helmet>
-				<title>About Us - Australian Sports Camps</title>
+				<title>About Us - National Sports Camps</title>
 				<meta name="title" content={this.state.title}></meta>
 					<meta name="description" content={this.state.description}></meta>
 					<meta name="keywords" content={this.state.keywords}></meta>
@@ -102,36 +102,47 @@ class About extends Component {
 						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 					</div>
 				</div>
-				<section className="Banner-Section">
-					<Container>
-						<div className="Banner-Section-data">
+				
+				<section class="breadcumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="breadcumb_wrpaeer">
+						<div class="breadcumb_tf">
 							<Breadcrumb>
 								<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href=""className="">About Us</Breadcrumb.Item>
 							</Breadcrumb>
-							<h2 className="heading-banner">About Us</h2>
 						</div>
-					</Container>
-				</section>
-				<section className="Blog-Section-2">
+						<h2 class="tile_head">About Us</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+				
+				
+				
+				<section class="our_about_us">
 					<Container>
-						<div className="Blog-Section-2-data">
-							<Row>
-								<Col xl={10} lg={10} md={12} className="lg-mb-2">
+						
+							
+								
 								{(this.state.PageData) ? (<div dangerouslySetInnerHTML={{ __html: this.state.PageData.content}} ></div>) : ("")}
-								</Col>
-							</Row>
-						</div>
+						</Container>
+				</section>		
+				 <section class="cont_form">
+					<Container>			
 						<div className="Blog-Section-2-data">
 							<Row>
-								<iframe height="550" width="100%" frameBorder="0" src="https://shop.spinhouse4u.com/gravity-about-us/" title="description" />
+								<iframe height="600" width="100%" frameBorder="0" src="https://shop.spinhouse4u.com/gravity-about-us/" title="description" />
 							</Row>
 						</div>
 					</Container>
 				</section>
-				<BottomForm/>
+				
 				<Footer/>
 			</>
 			</Layout>

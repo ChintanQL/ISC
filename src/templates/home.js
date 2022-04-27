@@ -81,27 +81,8 @@ class HomePage extends Component {
 				</LazyLoad>
 				
 				<LazyLoad height={200} >
-				{(this.props.pageContext.HomeData.data.page.home) ? (<HomeSection4 data = {this.props.pageContext.HomeData.data.page.home.panels[3]} />) : ("")}
-				</LazyLoad>
-				
-				<LazyLoad height={200} >
-		
-				{(this.props.pageContext.HomeData.data.page.home) ? (<ModalSection data = {this.props.pageContext.HomeData.data.page.home.howDoesItWork} />) : ("")}
-				</LazyLoad>
-				
-				<LazyLoad height={200} >
 				{(this.props.pageContext.HomeData.data.page.home) ? (<IncludedSection data = {this.props.pageContext.HomeData.data.page.home.panels[6]} />) : ("")}
 				</LazyLoad>
-				
-				<LazyLoad height={200} >
-				
-				{(this.props.pageContext.HomeData.data.page.home) ? (<KidSection data = {this.props.pageContext.HomeData.data.page.home.bottomKidsReview} />) : ("")}
-				</LazyLoad>
-				
-				<LazyLoad height={200} >
-				<BottomForm/>
-				</LazyLoad>
-				
 				<LazyLoad height={200} >
 				<Footer/>
 				</LazyLoad>

@@ -26,38 +26,40 @@ class HomeSection3 extends Component {
 		console.log({arr, groups});
         return (
             <>
-            <section className="Home-section-3">
+            <section className="section03 pb">
                 <Container>
-                    <div className="title">
-                        <Row className="justify-content-center">
-                            <Col xl={9} lg={11}>
-                                <h2>Find a camp</h2>
-                            </Col>
-                        </Row>
-                    </div>
+                    <div className="row">
+						<div className="col-md-12">
+							<h2 className="tile_head">Camps Near You</h2>
+						</div>
+					</div>
 					 <Row>
-					{groups.map((cmp) => 
-						 <Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
-						{cmp.map((camp) => 
-							<Card  className="styled-card">
-                                <Link to={"/camps/"+camp.campUrl} className="card-img">
-                                    <div className="inner-card ">
-                                        <Image src={camp.campHoverImage.sourceUrl} fluid alt="cardhover"/>
-                                    </div>
-                                    <Image className="lazyload" variant="top" src={camp.campImage.sourceUrl} fluid alt="card"/>
-                                </Link>
-                                <Card.Body>
-                                    <Card.Title as="h5">{camp.campTitle}</Card.Title>
-                                    <Card.Text>
-										{camp.campDesc}
-                                    </Card.Text>
-                                    
-                                    <Link className="" to={"/camps/"+camp.campUrl}>Read More</Link>
-                                </Card.Body>
-                            </Card>
+					
+						 
+						{arr.map((camp) => 
+							<>
+							<Col xl={4} lg={4} md={4} sm={9} xs={10} className="main-styled-card">
+							<div className="main_near">
+								<div className="our_img">
+									<div className="sport_g">
+										<img className="lazyload" variant="top" src={camp.campImage.sourceUrl} alt="nearyou1"/>
+									</div>
+									<div className="text_head">
+										<div className="our_contenct">
+											<h4>{camp.campTitle}</h4>
+											<div className="cont_rd">
+												<p>{camp.campDesc}</p>
+												<div className="read_more"><Link className="" to={"/camps/"+camp.campUrl}>Read More</Link></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+</Col>								
+							</>							
 						)}
-						</Col>		
-					)} 
+							
+					
 					 </Row>
                    
                     

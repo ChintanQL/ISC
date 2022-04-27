@@ -48,8 +48,8 @@ class F2Menu extends Component {
 						(innerprop,i) => {	
 							return (
 								<>
-									<ListGroup.Item as="li">
-									<i className="fa fa-angle-right"></i>
+									<li>
+									
 									{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'sponsors') ? 
 									(<Link to={"/about-asc/sponsors-and-partners"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
 									(
@@ -75,7 +75,7 @@ class F2Menu extends Component {
 										
 									
 										
-                                    </ListGroup.Item>	
+                                    </li>	
 								</>
 								)}
 							)	

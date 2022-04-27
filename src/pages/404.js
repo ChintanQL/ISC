@@ -2,7 +2,7 @@ import React from "react"
 import {Container,Breadcrumb,Row,Col} from 'react-bootstrap'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import fri_image from "../images/cricket-camp-friends.jpg.jpg"
+import fri_image from "../images/kids.png"
 import { Link } from 'gatsby'
 import { Helmet } from "react-helmet"
 const NotFoundPage = () => (

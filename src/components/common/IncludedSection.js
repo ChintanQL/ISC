@@ -6,38 +6,36 @@ class IncludedSection extends Component {
         return (
             <>
             
-            <section className="Included-section">
+           <section class="section05 pt pb">
                 <Container>
-                    <div className="title">
-                        <Row className="justify-content-center">
-                            <Col xl={9} lg={11}>
-                                <h2>WHAT'S INCLUDED</h2>
-                            </Col>
-                        </Row>
-                    </div>
-                    <Row>
+                    <div class="row">
+				<div class="col-md-12">
+					<h2 class="tile_head">What Differentiates Us From The Rest</h2>
+				</div>
+			</div>
+                    <div class="row justify-content-center">
 					
 						{this.props.data.inclusion.map((inc) => 
-							<Col xl={4} lg={4} md={6} className="mb-30">
-								<Card className="icon-card">
-									<div className="card-img">
-										<Image src={inc.image.sourceUrl} fluid alt="cardhover" width="100" height="100" />
+							<div class="col-md-6">
+								<div class="mainimg">
+									<div class="img_icon">
+										<img src={inc.image.sourceUrl} />
 									</div>
-									<Card.Body>
-										<Card.Title as="h5">{inc.title}</Card.Title>
-										<Card.Text className="" dangerouslySetInnerHTML={{ __html: inc.desc}} />
-									</Card.Body>
-								</Card>
-							</Col>
+									<div class="our_thd">
+										<h5>{inc.title}</h5>
+										<p dangerouslySetInnerHTML={{ __html: inc.desc}} />
+									</div>
+								</div>
+							</div>
+							
+							
 						)}    
 					
                         
                         
-                    </Row>
+                  </div>
 
-                    <div className="text-center">
-                        <Link className=" uppercase btn-sm btn-orange-large" to="/book-a-camp">BOOK A CAMP TODAY</Link>
-                    </div>
+                   
                 </Container>
             </section>
 
