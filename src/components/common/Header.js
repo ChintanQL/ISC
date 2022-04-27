@@ -189,9 +189,9 @@ class Header extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<>
-										<li className="nav-item dropdown uppercase" id="dmenut" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="nav-item dropdown d-none uppercase" id="dmenut" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown-submenu dropdown-hover" id="dmenu" >
+											<ul className="dropdown-submenu d-none dropdown-hover" id="dmenu" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
@@ -205,7 +205,7 @@ class Header extends Component {
 											</ul>
 										</li>
 									</>) : (<>
-										<li className="nav-item dropdown uppercase" id="d3menut" ><Link activeClassName="active" id="navCont" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className={(prop.title == 'Contact') ? ("nav-item dropdown uppercase d-none") : ("nav-item dropdown uppercase")}    id="d3menut" ><Link activeClassName="active" id="navCont" className="nav-link dropdown-toggle" data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className="dropdown-submenu dropdown-hover" id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
