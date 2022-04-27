@@ -45,7 +45,7 @@ class HomePage extends Component {
 			<Layout>
             <>
 			<Helmet>
-				<title>Australian Sports Camps | Sports Camps Australia | Camps Australia</title>
+				<title>National Sport Camps | Sports Camps India | Camps India</title>
 				
 				
 					<meta name="title" content={this.props.pageContext.HomeData.data.page.seo.title}></meta>
