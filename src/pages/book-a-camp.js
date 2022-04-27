@@ -176,7 +176,7 @@ class Sport extends Component {
 					</Container>
 				</section>	
 				 
-				  <BottomForm/>
+				  
 				  <Footer/>
 				</>
 			  </Layout>
