@@ -54,7 +54,7 @@ class F1Menu extends Component {
 									
 									{(innerprop.slug == 'my-account') ? 
 									(<Link to={"https://shop.spinhouse4u.com/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
-									(<Link to={"/school-holiday-programs/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
+									(<Link to={"/camps/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
 									} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}
 										
 										
