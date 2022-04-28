@@ -103,20 +103,25 @@ class PP extends Component {
 						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 					</div>
 				</div>
-				<section className="Banner-Section">
-					<Container>
-						<div className="Banner-Section-data">
-							<Breadcrumb>
+				
+				<section class="breadcumb">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="breadcumb_wrpaeer">
+									<Breadcrumb>
 								<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href=""className="">Privacy Policy</Breadcrumb.Item>
 							</Breadcrumb>
-							<h2 className="heading-banner">Privacy Policy</h2>
+									<h2 class="tile_head">Privacy Policy</h2>
+								</div>
+							</div>
 						</div>
-					</Container>
+					</div>
 				</section>
-				<section className="Blog-Section-2">
+				<section class="our_about_us">
 					<Container>
 						<div className="Blog-Section-2-data">
 							<Row>

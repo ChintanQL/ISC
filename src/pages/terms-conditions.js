@@ -99,20 +99,25 @@ class TNC extends Component {
 						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 					</div>
 				</div>
-				<section className="Banner-Section">
-					<Container>
-						<div className="Banner-Section-data">
-							<Breadcrumb>
-								<Breadcrumb.Item className="">
-									<Link className="nav-link p-0" to="/">Home</Link>
-								</Breadcrumb.Item>
-								<Breadcrumb.Item active href=""className="">Terms & Conditions</Breadcrumb.Item>
-							</Breadcrumb>
-							<h2 className="heading-banner">Terms & Conditions</h2>
+				
+				<section class="breadcumb">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="breadcumb_wrpaeer">
+									<Breadcrumb>
+											<Breadcrumb.Item className="">
+												<Link className="nav-link p-0" to="/">Home</Link>
+											</Breadcrumb.Item>
+											<Breadcrumb.Item active href=""className="">Terms & Conditions</Breadcrumb.Item>
+										</Breadcrumb>
+									<h2 class="tile_head">Terms & Conditions</h2>
+								</div>
+							</div>
 						</div>
-					</Container>
+					</div>
 				</section>
-				<section className="Blog-Section-2">
+				<section class="our_about_us">
 					<Container>
 						<div className="Blog-Section-2-data">
 							<Row>
