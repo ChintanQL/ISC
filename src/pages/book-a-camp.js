@@ -93,68 +93,72 @@ class Sport extends Component {
 			  <Layout>
 				<>
 				<Helmet>
-				<title>Book - Australian Sports Camps | Holiday Camps Australia</title>
+				<title>Book - National Sports Camps | Holiday Camps India</title>
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
 						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 					</div>
 				</div>
-				<section className="Banner-Section">
-					<Container>
-						<div className="Banner-Section-data">
-						<Breadcrumb>
-							<Breadcrumb.Item className="">
-								<Link className="nav-link p-0" to="/">Home</Link>
-								</Breadcrumb.Item>
-							<Breadcrumb.Item active href=""className="">Book a camp</Breadcrumb.Item>
-						</Breadcrumb>
-						<h2 className="heading-banner">Sport</h2>
+				
+				<section class="breadcumb">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="breadcumb_wrpaeer">
+									<Breadcrumb>
+										<Breadcrumb.Item className="">
+											<Link className="nav-link p-0" to="/">Home</Link>
+											</Breadcrumb.Item>
+										<Breadcrumb.Item active href=""className="">Book a camp</Breadcrumb.Item>
+									</Breadcrumb>
+									<h2 class="tile_head">Camp</h2>
+								</div>
+							</div>
 						</div>
-					</Container>
+					</div>
 				</section>
-				<Campbanner/>
-				<section className="Sport-section-2">
-					<Container>
-						<div className="title-main mb-0">
-							{(this.state.result === 1) ? (<><h2>{this.state.PageDataOther.camp.top_title}</h2></>) : ("")}
-							
-							{(this.state.result === 1) ? (<><p className="mb-2" dangerouslySetInnerHTML={{ __html: this.state.PageDataOther.camp.top_desc}} /></>) : ("")}
+				<section class="dfgfg pb pt">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="ouc_text ">
+									
+									{(this.state.result === 1) ? (<><p className="mb-2 details_head" dangerouslySetInnerHTML={{ __html: this.state.PageDataOther.camp.top_desc}} /></>) : ("")}
 								
+								
+									{(this.state.result === 1) ? (<><h2 class="tile_head">{this.state.PageDataOther.camp.top_title}</h2></>) : ("")}
+								</div>
+							</div>
 						</div>
-					</Container>
-				</section>
-				<section className="Sport-section-3">
-					{(this.state.code !== "") ? (<>
-					<Container>
-						<Row>
-							<Col xl={12} lg={12} md={12} sm={12} xs={12} >
-								<div className="" ></div>
-								<p  className={"text-success "+this.state.shown} > Coupon code applied successfully. </p>
-								<p  className={"text-error "+this.state.shown_new} > Coupon code {'"'+this.state.code+'"'} already applied! Please add some products to the cart to see the discount.  </p>
-							</Col>
-						</Row>
-					</Container>
-					</>) : ("")}
-					<Container>
-						<Row>
+					
+				
+				
+				
+					
+					<Row>
 							{(this.state.result === 1) ? (
 									<>
 									{this.state.PageData.map((cmp) => 
 										 
 										
-											<Col xl={4} lg={4} md={7} sm={9} xs={10} className="main-styled-card">
-											 <div className="listed-card mb-0 card">
-												<Link to={cmp.slug} className="card-img">
-													<div className="inner-card ">
-														<Image src={hover} fluid alt="cardhover"/>
-													</div>
-													<Image variant="top" src={cmp.image} fluid alt={cmp.name}/>
-												</Link>
-												<Card.Body>
-													<Link to={cmp.slug}>{cmp.name}</Link>
-												</Card.Body>
-											</div>
+											<Col xl={4} lg={4} md={4} sm={9} xs={10} className="main-styled-card">
+											 
+											 <div class="main_near">
+							<div class="our_img">
+								<div class="sport_g">
+									<img src={cmp.image} alt="nearyou1" />
+								</div>
+								<div class="text_head">
+									<div class="our_contenct">
+										<h4> <Link to={cmp.slug}>{cmp.name}</Link> </h4>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+											 
+											
 											</Col>
 										
 												
@@ -164,14 +168,28 @@ class Sport extends Component {
 						
 							
 						</Row>	
-					</Container>	
+					
+					
+				
+				</div>
 				</section>
-				<section className="Sport-section-4">
+				
+				<section class="about_d pb">
 					<Container>
-						<div className="title-main mb-0">
-							{(this.state.result === 1) ? (<><h2>{this.state.PageDataOther.camp.bottom_title}</h2></>) : ("")}
+					<div class="row text-center">
+						<div class="col-md-12">
+							<div class="our_con_book">
+								
+								{(this.state.result === 1) ? (<><h5 class="hrad_how">{this.state.PageDataOther.camp.bottom_title}</h5></>) : ("")}
+								{(this.state.result === 1) ? (<><p class="not_how" dangerouslySetInnerHTML={{ __html: this.state.PageDataOther.camp.bottom_desc}} /></>) : ("")}
+
+							  
+							</div>
 						</div>
-						{(this.state.result === 1) ? (<><p className="font-15 font-medium color-3b" dangerouslySetInnerHTML={{ __html: this.state.PageDataOther.camp.bottom_desc}} /></>) : ("")}
+					</div>
+					
+					
+						
 						
 					</Container>
 				</section>	
