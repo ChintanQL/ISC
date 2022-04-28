@@ -119,28 +119,36 @@ class FAQ extends Component {
 						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 					</div>
 				</div>
-				<section className="Banner-Section">
-					<Container>
-						<div className="Banner-Section-data">
-							<Breadcrumb>
+				
+				<section class="breadcumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="breadcumb_wrpaeer">
+						<Breadcrumb>
 								<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href=""className="">FAQ</Breadcrumb.Item>
 							</Breadcrumb>
-							<h2 className="heading-banner">FAQS (FREQUENTLY ASKED QUESTIONS)</h2>
-						</div>
-					</Container>
-				</section>
-				<section className="Faq-Section-2">
-					<Container>
+						<h2 class="tile_head">FAQS (FREQUENTLY ASKED QUESTIONS)</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+				 <section class="faq_tag pb pt">
+					<Container>	
+					<div class="row">
+                <div class="col-md-12">
+                    <div class="our_t">
 						<div className="Faq-Section-2-data accordian-div">
 							<Accordion defaultActiveKey="1">
 								{(this.state.result === 1) ? (
 									<>
 									{this.state.PageData.faq.map((str,i) => 
 										<>
-										<Card  className={"p-0 mb-4 id"+i}>
+										<Card  className={" mb-4 id"+i}>
 											<Card.Header>
 												<Accordion.Toggle className="font-18 font-medium p-0" as={Button} onClick={() => {this.handleToggle(i)}} variant="link" eventKey={'"'+i+'"'}>
 													{str.question}
@@ -159,9 +167,12 @@ class FAQ extends Component {
 								
 							</Accordion>
 						</div>		
+						</div>		
+						</div>		
+						</div>		
 					</Container>		
 				</section>		
-				<BottomForm/>
+				
 				<Footer/>
             </>
 			</Layout>

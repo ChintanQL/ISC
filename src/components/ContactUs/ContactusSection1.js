@@ -7,19 +7,24 @@ class ContactusSection1 extends Component {
     render() {      
         return (
             <>
-            <section className="Banner-Section">
-                <Container>
-                    <div className="Banner-Section-data">
-                    <Breadcrumb>
+           
+			<section className="breadcumb">
+		<div className="container">
+			<div className="row">
+				<div className="col-md-12">
+					<div className="breadcumb_wrpaeer">
+						<Breadcrumb>
                         <Breadcrumb.Item className="">
                             <Link className="nav-link p-0" to="/">Home</Link>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item active href=""className="">Contact us</Breadcrumb.Item>
                     </Breadcrumb>
-                    <h2 className="heading-banner">Contact us</h2>
-                    </div>
-                </Container>
-            </section>
+						<h2 className="tile_head">Contact Us</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
             </>
         );
     }

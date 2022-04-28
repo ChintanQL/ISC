@@ -104,30 +104,35 @@ class HowToBook extends Component {
 						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
 					</div>
 				</div>
-				<section className="Banner-Section">
-					<Container>
-						<div className="Banner-Section-data">
-							<Breadcrumb>
+				
+				<section className="breadcumb">
+				<div className="container">
+					<div className="row">
+						<div className="col-md-12">
+							<div className="breadcumb_wrpaeer">
+								<Breadcrumb>
 								<Breadcrumb.Item className="">
 									<Link className="nav-link p-0" to="/">Home</Link>
 								</Breadcrumb.Item>
 								<Breadcrumb.Item active href=""className="">How to book</Breadcrumb.Item>
-							</Breadcrumb>
-							<h2 className="heading-banner">How to book</h2>
-						</div>
-					</Container>
-				</section>
-				<Howtobanner />
-				<section className="How-to-book-Section-1">
-					<Container>
-						<div className="How-to-book-Section-1-data text-left">
-							<div className="mb-30">
-								{(this.state.PageData !== "") ? (<div dangerouslySetInnerHTML={{ __html: this.state.PageData.content}} />) : ("")}
+								</Breadcrumb>
+								<h2 className="tile_head">How To Book</h2>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+				
+				<section className="how_to_book pb pt">
+					<Container>
+						
+							<div className="row mb-30">
+								{(this.state.PageData !== "") ? (<div dangerouslySetInnerHTML={{ __html: this.state.PageData.content}} />) : ("")}
+							</div>
+						
 					</Container>
 				</section>
-				<BottomForm/>
+				
 				<Footer/>
             </>
 			</Layout>
