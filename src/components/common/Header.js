@@ -273,7 +273,8 @@ class Header extends Component {
                                 <li className="minicart-wrap">
                                     <a href="#" className="minicart-btn toolbar-btn">
                                         <img src={cartimg} alt="cart"/>
-                                        <span className="cart-item_count">{cookies.get('CART')}</span>
+											{(cookies.get('CART') > 0) ? (<><span className="cart-item_count">{cookies.get('CART')}</span></>) : ("")}
+                                       
                                     </a>
                                
                                 </li>
