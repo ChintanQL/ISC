@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet"
 import queryString from 'query-string'
 import lifes from '../images/lifes-better-with-sport.png'
 
-import Background from '../images/breadcumb1.png';
+
 
 
 
