@@ -15,7 +15,7 @@ import '../css/all.min.css'
 import '../css/menu.css'
 import '../css/style.css'
 import '../css/responsive.css'
-import favicon from '../images/favicon.ico';
+import favicon from '../images/ficon-04.png';
 import $ from "jquery";
 
 const TemplateWrapper = ({ children }) => (
