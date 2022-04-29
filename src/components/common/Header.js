@@ -285,7 +285,7 @@ class Header extends Component {
                                 </li>
                                
                                 <li className="mobile-menu-btn d-lg-none">
-                                    <a className="off-canvas-btn" onClick={activateLasers} href="#">
+                                    <a className="off-canvas-btn" onClick={this.activateLasers} href="#">
                                         <i className="fa fa-bars"></i>
                                     </a>
                                 </li>
