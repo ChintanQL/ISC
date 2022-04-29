@@ -12,10 +12,7 @@ import lifes from '../images/lifes-better-with-sport.png'
 
 import Background from '../images/breadcumb1.png';
 
-var sectionStyle = {
-  
-  backgroundImage: "url(" + { Background } + ")"
-};
+
 
 
 class Camps extends Component {
@@ -58,6 +55,14 @@ class Camps extends Component {
 	
 	render() {
 		const page = this.props.data.allWordpressWpCpt151986;
+		const Background = this.props.data.allWordpressWpCpt151986.edges[0].node.acf.hero_image;
+		
+		var sectionStyle = {
+  
+		  backgroundImage: "url(" + { Background } + ")"
+		};
+		
+		
 		return (
 			<Layout>
 			
@@ -164,6 +169,7 @@ export const pageQuery = graphql`
 				acf {
 						  product_category
 						  disclaimer
+						  hero_image
 						}
 				
 				date(formatString: "D MMMM, Y")
