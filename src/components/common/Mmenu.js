@@ -16,6 +16,33 @@ class Mmenu extends Component {
               this.setState({ isTop })
           }
         });
+		
+		
+		
+		Array.from(document.getElementsByClassName('mm')).forEach((button) => {
+			 button.addEventListener('click', (e)=>{
+				   e.preventDefault();
+				   console.log(e.target.getAttribute('id'));
+				   var elems = document.querySelectorAll("drr");
+					[].forEach.call(elems, function(el) {
+						el.classList.add("d-none");
+					});
+				   
+				   var idd = "dr"+e.target.getAttribute('id');
+				   var elemss = document.querySelectorAll(idd);
+					[].forEach.call(elemss, function(el) {
+						el.classList.remove("d-none");
+					});
+				   
+			 })
+		});
+		
+		
+		
+		
+		
+		
+		
       } 
     render() {
 
@@ -52,9 +79,9 @@ class Mmenu extends Component {
 									{(prop.title == 'Resources') ? (<>
 										<li className="menu-item-has-children d-none" id="dmenut" >
 										<span class="menu-expand"><i></i></span>
-										<Link  id={prop.id} data-toggle="dropdown"
+										<Link className="mm" id={prop.id} data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown d-none" id="dmenu" >
+											<ul className={"dropdown drr d-none dr"+prop.id} id="dmenu" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
@@ -70,9 +97,9 @@ class Mmenu extends Component {
 									</>) : (<>
 										<li className={(prop.title == 'Contact') ? ("menu-item-has-children") : ("menu-item-has-children")}    id="d3menut" >
 										<span class="menu-expand"><i></i></span>
-										<Link  id={prop.id}  data-toggle="dropdown"
+										<Link className="mm"  id={prop.id}  data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown d-none" id="d3menu">
+											<ul {"dropdown drr d-none dr"+prop.id} id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
