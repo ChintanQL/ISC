@@ -50,9 +50,11 @@ class Mmenu extends Component {
 								{(prop.child_items ? (
 									<>
 									{(prop.title == 'Resources') ? (<>
-										<li className="menu-item-has-children " id="dmenut" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className="menu-item-has-children d-none" id="dmenut" >
+										<span class="menu-expand"><i></i></span>
+										<Link  id={prop.id} data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown" id="dmenu" >
+											<ul className="dropdown d-none" id="dmenu" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
@@ -66,9 +68,11 @@ class Mmenu extends Component {
 											</ul>
 										</li>
 									</>) : (<>
-										<li className={(prop.title == 'Contact') ? ("menu-item-has-children") : ("menu-item-has-children")}    id="d3menut" ><Link activeClassName="active" id="navCont" className="nav-link dropdown-toggle" data-toggle="dropdown"
+										<li className={(prop.title == 'Contact') ? ("menu-item-has-children") : ("menu-item-has-children")}    id="d3menut" >
+										<span class="menu-expand"><i></i></span>
+										<Link  id={prop.id}  data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className="dropdown" id="d3menu">
+											<ul className="dropdown d-none" id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
