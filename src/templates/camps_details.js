@@ -57,10 +57,6 @@ class Camps extends Component {
 		const page = this.props.data.allWordpressWpCpt151986;
 		const Background = this.props.data.allWordpressWpCpt151986.edges[0].node.acf.hero_image;
 		
-		var sectionStyle = {
-  
-		  backgroundImage: "url(" + { Background } + ")"
-		};
 		
 		
 		return (
@@ -80,7 +76,7 @@ class Camps extends Component {
 		<meta property="twitter:description" content={page.edges[0].node.yoast.twitter_description}></meta>
 			</Helmet>
 				
-				<section class="breadcumb" style={ sectionStyle } >
+				<section class="breadcumb" style={{backgroundImage: `url(${Background})` }} >
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
