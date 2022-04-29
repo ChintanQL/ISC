@@ -47,7 +47,7 @@ class Header extends Component {
 		
 		for(var i = 0; i < element.length; i++)
 		{
-			testarray[i].className += "open";
+			element[i].className += "open";
 		}
 	}
     
