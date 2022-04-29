@@ -330,7 +330,7 @@ class Header extends Component {
 							
 							<StaticQuery
 					query={graphql`
-						query MyQuery {
+						query MyMQuery {
 							wordpressMenusMenusItems(slug: {eq: "gatsby-header-menu"}) {
 								id
 								items {
