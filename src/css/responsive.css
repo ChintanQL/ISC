@@ -191,7 +191,12 @@ padding-top:25px;
 }
 .main-header .col-lg-2.col-xl-2.col-md-6.col-6.col-custom {max-width: 100px;}
 
-.main-header .col-lg-3.col-md-6.col-6.col-custom {width: calc(100% - 100px);}
+.main-header .col-lg-3.col-md-6.col-6.col-custom {
+	width: calc(100% - 100px) !important;
+	flex: 0 0 auto !important;
+max-width: 100%;
+	
+}
 
     
 }
