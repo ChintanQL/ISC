@@ -316,7 +316,7 @@ class Header extends Component {
         </div>
        
         <aside className="off-canvas-wrapper" id="mobileMenu">
-            <div className="off-canvas-overlay"></div>
+            <div className="off-canvas-overlay" onClick={this.activateLaserss} ></div>
             <div className="off-canvas-inner-content">
                 <div className="btn-close-off-canvas" onClick={this.activateLaserss} >
                     <i className="fa fa-times"></i>
