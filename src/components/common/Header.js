@@ -38,9 +38,14 @@ class Header extends Component {
         this.modalOpen = this.modalOpen.bind(this);
         this.modalClose = this.modalClose.bind(this);
 	    this.CmodalClose = this.CmodalClose.bind(this);
+	    this.activateLasers = this.activateLasers.bind(this);
 		
 	}
-    
+    activateLasers(){
+		document.body.classList.add("fix");
+		var element = document.getElementsByClassName("off-canvas-wrapper");
+		element.classList.add("open");
+	}
     
 	modalOpen(){
         this.setState({
@@ -280,7 +285,7 @@ class Header extends Component {
                                 </li>
                                
                                 <li className="mobile-menu-btn d-lg-none">
-                                    <a className="off-canvas-btn" href="#">
+                                    <a className="off-canvas-btn" onClick={activateLasers} href="#">
                                         <i className="fa fa-bars"></i>
                                     </a>
                                 </li>
