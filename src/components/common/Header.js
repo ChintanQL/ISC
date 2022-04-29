@@ -39,6 +39,7 @@ class Header extends Component {
         this.modalClose = this.modalClose.bind(this);
 	    this.CmodalClose = this.CmodalClose.bind(this);
 	    this.activateLasers = this.activateLasers.bind(this);
+	    this.activateLaserss = this.activateLaserss.bind(this);
 		
 	}
     activateLasers(){
@@ -47,9 +48,21 @@ class Header extends Component {
 		
 		for(var i = 0; i < element.length; i++)
 		{
-			element[i].className += "open";
+			element[i].className += " open";
 		}
 	}
+	activateLaserss(){	
+		document.body.classList.remove("fix");
+		var element = document.getElementsByClassName("off-canvas-wrapper");
+		
+		var elems = document.querySelectorAll(".off-canvas-wrapper");
+
+		[].forEach.call(elems, function(el) {
+			el.classList.remove("open");
+		});
+	}
+	
+	
     
 	modalOpen(){
         this.setState({
@@ -304,7 +317,7 @@ class Header extends Component {
         <aside className="off-canvas-wrapper" id="mobileMenu">
             <div className="off-canvas-overlay"></div>
             <div className="off-canvas-inner-content">
-                <div className="btn-close-off-canvas">
+                <div className="btn-close-off-canvas" onClick={this.activateLaserss} >
                     <i className="fa fa-times"></i>
                 </div>
                 <div className="off-canvas-inner">
@@ -314,34 +327,101 @@ class Header extends Component {
                         
                         <nav>
                             <ul className="mobile-menu">
-                                <li className="menu-item-has-children"><a href="#">Home</a>
-                            
+							
+							<StaticQuery
+					query={graphql`
+						query MyQuery {
+							wordpressMenusMenusItems(slug: {eq: "gatsby-header-menu"}) {
+								id
+								items {
+									title
+									child_items {
+										title
+										url
+									}
+									url
+								}
+							}
+						}
+					`}
+			render={data => (
+				<>
+				{
+					data &&
+					data.wordpressMenusMenusItems &&
+					data.wordpressMenusMenusItems.items &&
+					data.wordpressMenusMenusItems.items.map(
+						(prop,i) => {	
+							return (
+								<>
+								{(prop.child_items ? (
+									<>
+									{(prop.title == 'Resources') ? (<>
+										<li className="menu-item-has-children " id="dmenut" ><Link activeClassName="active" id="navResources" className="nav-link dropdown-toggle" data-toggle="dropdown"
+												href="javascript:;" aria-expanded="false">{prop.title}</Link>
+											<ul className="dropdown" id="dmenu" >
+												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
+												<>
+												{prop && prop.child_items && prop.child_items.map((child, i) => {
+													return (
+														<>
+														{(child.title == 'Home' ? (<li  key={i} ><Link className="dropdown-item"   to={"/"}>{child.title}</Link></li>) : (<li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("http://", '')}>{child.title}</Link></li>) )}
+														</>
+													)
+												})}
+												</>
+											</ul>
+										</li>
+									</>) : (<>
+										<li className={(prop.title == 'Contact') ? ("menu-item-has-children") : ("menu-item-has-children")}    id="d3menut" ><Link activeClassName="active" id="navCont" className="nav-link dropdown-toggle" data-toggle="dropdown"
+												href="javascript:;" aria-expanded="false">{prop.title}</Link>
+											<ul className="dropdown" id="d3menu">
+												{prop && prop.child_items && prop.child_items.map((child, i) => {
+													return (
+														<>
+														{(child.title == 'Home' ? (<li  key={i} ><Link className="dropdown-item"   to={"/"}>{child.title}</Link></li>) : (
+														<>
+														{(prop.title == 'Contact') ? (<><li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("http://", '')}>{child.title}</Link></li></>) : (<><li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("https://shop.spinhouse4u.com/", '')}>{child.title}</Link></li></>)}
+														</>
+														
+														
+														
+														
+														) )}
+														</>
+													)
+												})}
+											</ul>
+										</li>
+									</>) }
+									</>
+									
+								
+									
+								
+								) : 
+								(
+									<>
+									<li className="menu-item-has-children" >
+									{( prop.title == 'Home') ? (<> <Link to={"/"} >
+                                        <span className="menu-text"> {prop.title}</span>
+                                        
+                                    </Link></>) : (<></>)}
+									
+                                   
                                 </li>
-                               
-                                <li className="menu-item-has-children "><a href="#">Camps</a>
-                                    <ul className="dropdown">
-                                        <li><a href="blog.html">Cricket</a></li>
-                                        <li><a href="blog-list-right-sidebar.html">BasketBall</a></li>
-                                        <li><a href="blog-list-fullwidth.html">Badminton</a></li>
-                                    </ul>
-                                </li>
-                                <li className="menu-item-has-children "><a href="#">Resources</a>
-                                    <ul className="dropdown">
-                                        <li><a href="frequently-questions.html">All</a></li>
-                                        <li><a href="my-account.html">Blog</a></li>
-                                        <li><a href="login-register.html">Videos</a></li>
-                                        <li><a href="blog-grid.html">Guide</a></li>
-                                        <li><a href="blog-grid-right-sidebar.html">Flyer</a></li>
-                                    </ul>
-                                </li>
-                                <li className="menu-item-has-children "><a href="#">Contact</a>
-                                    <ul className="dropdown">
-                                        <li><a href="contact-us.html">About Us</a></li>
-                                        <li><a href="my-account.html">FAQ's</a></li>
-                                        <li><a href="frequently-questions.html">How  To  Book</a></li>
-                                        <li><a href="login.html">Contact Us</a></li>
-                                    </ul>
-                                </li>
+									</>
+									
+								))}
+								</>
+							)
+						})
+				}
+				</>
+			)}
+		  />
+							
+							
                             </ul>
                         </nav>
                         
