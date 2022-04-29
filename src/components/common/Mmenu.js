@@ -99,7 +99,7 @@ class Mmenu extends Component {
 										<span class="menu-expand"><i></i></span>
 										<Link className="mm"  id={prop.id}  data-toggle="dropdown"
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul {"dropdown drr d-none dr"+prop.id} id="d3menu">
+											<ul className={"dropdown drr d-none dr"+prop.id} id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
