@@ -82,7 +82,7 @@ class HomeSection5 extends Component {
 				</div>
 			</>
 			) : (
-			<div className="popupcenteropen dfg" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
+			<div className="popupcenteropen dfg d-none" style={{ display: this.state.MIsbanner == 0 ? "none" : "block" }} >
 		   <div className="popup_cntbx"  >
    
     <div className="popupimage"> <button type="button" className="close" onClick={this.handleLoginClick2}>&times;</button><Link to={"/book-a-camp/"+this.state.Mcoupon_code} ><img src={this.state.MPageData} alt="" className="img-fluid"/></Link></div></div>
