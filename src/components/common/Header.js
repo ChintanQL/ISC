@@ -44,7 +44,11 @@ class Header extends Component {
     activateLasers(){
 		document.body.classList.add("fix");
 		var element = document.getElementsByClassName("off-canvas-wrapper");
-		element.classList.add("open");
+		
+		for(var i = 0; i < element.length; i++)
+		{
+			testarray[i].className += "open";
+		}
 	}
     
 	modalOpen(){
