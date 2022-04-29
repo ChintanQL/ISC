@@ -22,13 +22,13 @@ class Mmenu extends Component {
 		Array.from(document.getElementsByClassName('mm')).forEach((button) => {
 			 button.addEventListener('click', (e)=>{
 				   e.preventDefault();
-				   console.log(e.target.getAttribute('dataid'));
+				   console.log(e.target.getAttribute('data-toggle'));
 				   var elems = document.querySelectorAll("drr");
 					[].forEach.call(elems, function(el) {
 						el.classList.add("d-none");
 					});
 				   
-				   var idd = "dr"+e.target.getAttribute('dataid');
+				   var idd = "dr"+e.target.getAttribute('data-toggle');
 				   var elemss = document.querySelectorAll(idd);
 					[].forEach.call(elemss, function(el) {
 						el.classList.remove("d-none");
@@ -79,7 +79,7 @@ class Mmenu extends Component {
 									{(prop.title == 'Resources') ? (<>
 										<li className="menu-item-has-children d-none" id="dmenut" >
 										<span class="menu-expand"><i></i></span>
-										<Link className="mm" dataid={prop.id} data-toggle="dropdown"
+										<Link className="mm" dataid={prop.id} data-toggle={prop.id}
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className={"dropdown drr d-none dr"+prop.id} id="dmenu" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
@@ -97,7 +97,7 @@ class Mmenu extends Component {
 									</>) : (<>
 										<li className={(prop.title == 'Contact') ? ("menu-item-has-children") : ("menu-item-has-children")}    id="d3menut" >
 										<span class="menu-expand"><i></i></span>
-										<Link className="mm"  dataid={prop.id}  data-toggle="dropdown"
+										<Link className="mm"  dataid={prop.id}  data-toggle={prop.id}
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
 											<ul className={"dropdown drr d-none dr"+prop.id} id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
