@@ -23,7 +23,7 @@ class Mmenu extends Component {
 			 button.addEventListener('click', (e)=>{
 				   e.preventDefault();
 				   console.log(e.target.getAttribute('data-toggle'));
-				   var elems = document.querySelectorAll("drr");
+				   var elems = document.querySelectorAll(".drr");
 					[].forEach.call(elems, function(el) {
 						el.classList.add("d-none");
 					});
