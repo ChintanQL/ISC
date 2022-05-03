@@ -29,7 +29,7 @@ class Mmenu extends Component {
 					});
 				   
 				   var idd = e.target.getAttribute('data-toggle');
-				   var elemss = document.querySelectorAll(idd);
+				   var elemss = document.querySelectorAll("."+idd);
 					[].forEach.call(elemss, function(el) {
 						el.classList.remove("d-none");
 					});
