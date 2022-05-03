@@ -79,9 +79,9 @@ class Mmenu extends Component {
 									{(prop.title == 'Resources') ? (<>
 										<li className="menu-item-has-children d-none" id="dmenut" >
 										<span class="menu-expand"><i></i></span>
-										<Link className="mm" dataid={prop.id} data-toggle={"tab"+prop.id}
+										<Link className="mm" dataid={prop.id} data-toggle={"tab"+i}
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className={"dropdown drr d-none tab"+prop.id} id="dmenu" >
+											<ul className={"dropdown drr d-none tab"+i} id="dmenu" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
@@ -97,9 +97,9 @@ class Mmenu extends Component {
 									</>) : (<>
 										<li className={(prop.title == 'Contact') ? ("menu-item-has-children") : ("menu-item-has-children")}    id="d3menut" >
 										<span class="menu-expand"><i></i></span>
-										<Link className="mm"  dataid={prop.id}  data-toggle={"tab"+prop.id}
+										<Link className="mm"  dataid={prop.id}  data-toggle={"tab"+i}
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className={"dropdown drr d-none tab"+prop.id} id="d3menu">
+											<ul className={"dropdown drr d-none tab"+i} id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
