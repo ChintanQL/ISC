@@ -28,7 +28,7 @@ class Mmenu extends Component {
 						el.classList.add("d-none");
 					});
 				   
-				   var idd = "dr"+e.target.getAttribute('data-toggle');
+				   var idd = e.target.getAttribute('data-toggle');
 				   var elemss = document.querySelectorAll(idd);
 					[].forEach.call(elemss, function(el) {
 						el.classList.remove("d-none");
@@ -81,7 +81,7 @@ class Mmenu extends Component {
 										<span class="menu-expand"><i></i></span>
 										<Link className="mm" dataid={prop.id} data-toggle={"tab"+prop.id}
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className={"dropdown drr d-none dr"+prop.id} id="dmenu" >
+											<ul className={"dropdown drr d-none tab"+prop.id} id="dmenu" >
 												<li  key={i} ><Link className="dropdown-item"   to={"/resources"}>All</Link></li>
 												<>
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
@@ -99,7 +99,7 @@ class Mmenu extends Component {
 										<span class="menu-expand"><i></i></span>
 										<Link className="mm"  dataid={prop.id}  data-toggle={"tab"+prop.id}
 												href="javascript:;" aria-expanded="false">{prop.title}</Link>
-											<ul className={"dropdown drr d-none dr"+prop.id} id="d3menu">
+											<ul className={"dropdown drr d-none tab"+prop.id} id="d3menu">
 												{prop && prop.child_items && prop.child_items.map((child, i) => {
 													return (
 														<>
