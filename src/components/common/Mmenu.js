@@ -27,13 +27,22 @@ class Mmenu extends Component {
 					[].forEach.call(elems, function(el) {
 						el.classList.add("d-none");
 					});
-				   
-				   var idd = e.target.getAttribute('data-toggle');
-				   var elemss = document.querySelectorAll("."+idd);
+				  var idd = e.target.getAttribute('data-toggle');
+				 const check = document.querySelector("."+idd);
+				 
+				   if(check.classList.contains('d-none')){
+					   var elemss = document.querySelectorAll("."+idd);
 					[].forEach.call(elemss, function(el) {
 						el.classList.remove("d-none");
 					});
-				   
+				   }
+				   else{
+				   var elemss = document.querySelectorAll("."+idd);
+					[].forEach.call(elemss, function(el) {
+						el.classList.add("d-none");
+					});
+				   }
+				  
 			 })
 		});
 		
