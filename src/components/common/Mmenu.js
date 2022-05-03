@@ -31,12 +31,14 @@ class Mmenu extends Component {
 				 const check = document.querySelector("."+idd);
 				 
 				   if(check.classList.contains('d-none')){
+					   console.log("here");
 					   var elemss = document.querySelectorAll("."+idd);
 					[].forEach.call(elemss, function(el) {
 						el.classList.remove("d-none");
 					});
 				   }
 				   else{
+					   console.log("there");
 				   var elemss = document.querySelectorAll("."+idd);
 					[].forEach.call(elemss, function(el) {
 						el.classList.add("d-none");
