@@ -99,7 +99,7 @@ module.exports = {
 			}
 		}
 	},
-	{
+	/*{
     resolve: "gatsby-plugin-google-tagmanager",
     options: {
       id: "GTM-PRK5WQ",
@@ -113,7 +113,7 @@ module.exports = {
       // Defaults to null
       defaultDataLayer: { platform: "gatsby" },
     },
-  },
+  },*/
 	{
     resolve: `gatsby-transformer-remark`,
     options: {
