@@ -25,7 +25,7 @@ class CampSC extends React.Component{
 		var name = this.props.name;
 		this.setState({name: name})
 		
-		var url = "https://shop.spinhouse4u.com/wp-json/newasc/v1/csc";
+		var url = "https://shop.nationalsportscamps.in/wp-json/newasc/v1/csc";
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData.Camp})
 			this.setState({showInfo: 1})
@@ -42,7 +42,7 @@ class CampSC extends React.Component{
 			<>
 			<div className="laoder2" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 				<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-					<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
+					<img alt="" className="icon" src="https://shop.nationalsportscamps.in/demo.svg" />
 				</div>
 			</div>
 			{(this.state.showInfo == 1) ? (
@@ -92,7 +92,7 @@ class CampSC extends React.Component{
 													
 													
 													
-													<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.spinhouse4u.com/book/"+prop.Slug}>More info / Book Now</Link>
+													<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.nationalsportscamps.in/book/"+prop.Slug}>More info / Book Now</Link>
 												</Card.Body>
 											</Card>
 										</Col>
@@ -128,7 +128,7 @@ class CampSC extends React.Component{
 								<div className="container">
 									<div className="row">
 										<div className="col-xl-8 col-lg-8 col-md-7 md-mb-4">
-											<iframe src={"https://shop.spinhouse4u.com/gravity-notify/?camp_state=&camp_sports="+this.state.name} frameBorder="0" width="100%" height="470" ></iframe>
+											<iframe src={"https://shop.nationalsportscamps.in/gravity-notify/?camp_state=&camp_sports="+this.state.name} frameBorder="0" width="100%" height="470" ></iframe>
 										</div>
 										<div className="col-xl-4 col-lg-4 col-md-5 secc">
 											<Blogbanner />

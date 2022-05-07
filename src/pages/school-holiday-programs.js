@@ -47,7 +47,7 @@ class SHP extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/get_data_program',
+			url: 'https://shop.nationalsportscamps.in/wp-json/newasc/v1/get_data_program',
 			method: 'get'
 		}).then(res => {
 			
@@ -89,7 +89,7 @@ class SHP extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
+						<img alt="" className="icon" src="https://shop.nationalsportscamps.in/demo.svg" />
 					</div>
 				</div>
 			

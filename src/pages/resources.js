@@ -27,7 +27,7 @@ class resources extends Component {
 	}
 	
 	componentDidMount() {
-		var url = "https://shop.spinhouse4u.com/wp-json/newasc/v1/latest";
+		var url = "https://shop.nationalsportscamps.in/wp-json/newasc/v1/latest";
 		axios.get(url).then(e => {
 			this.setState({pagedata: e.data.ResponseData})
 			this.setState({blog: e.data.ResponseData.Blog})
@@ -61,7 +61,7 @@ class resources extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
+						<img alt="" className="icon" src="https://shop.nationalsportscamps.in/demo.svg" />
 					</div>
 				</div>
 				<section className="Banner-Section">

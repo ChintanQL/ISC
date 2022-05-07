@@ -126,7 +126,7 @@ class Header extends Component {
 		else{
 			var login_name = "";
 		}
-		 //var url = "https://shop.spinhouse4u.com/wp-json/newasc/v1/asc_page_view";
+		 //var url = "https://shop.nationalsportscamps.in/wp-json/newasc/v1/asc_page_view";
 		//axios.post(url,{login_name:login_name,url:url_action}).then(e => {
 			//console.log("done");
 		//})
@@ -160,10 +160,10 @@ class Header extends Component {
                     <button type="button" onClick={this.modalClose} class="close">
                         <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                     </button>
-					<p className="sub_img" ><img  title="Australian Sports Camps" src="http://shop.spinhouse4u.com/wp-content/uploads/2016/05/australian-sports-camps-600x275.png" alt="Australian Sports Camps" /></p>
+					<p className="sub_img" ><img  title="Australian Sports Camps" src="http://shop.nationalsportscamps.in/wp-content/uploads/2016/05/australian-sports-camps-600x275.png" alt="Australian Sports Camps" /></p>
 					<p className="sub_title" >Subscribe to Updates</p>
 					<p className="sub_sub_title" >Sign up for free to be the first to hear about upcoming camps, special offers and discounts.</p>
-					<iframe height="420" width="100%" frameBorder="0" src=" https://shop.spinhouse4u.com/gravity-subscribe/" title="description" />
+					<iframe height="420" width="100%" frameBorder="0" src=" https://shop.nationalsportscamps.in/gravity-subscribe/" title="description" />
 					
                 </Modal.Body>
             </Modal>
@@ -236,7 +236,7 @@ class Header extends Component {
 														<>
 														{(child.title == 'Home' ? (<li  key={i} ><Link className="dropdown-item"   to={"/"}>{child.title}</Link></li>) : (
 														<>
-														{(prop.title == 'Contact') ? (<><li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("http://", '')}>{child.title}</Link></li></>) : (<><li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("https://shop.spinhouse4u.com/", '')}>{child.title}</Link></li></>)}
+														{(prop.title == 'Contact') ? (<><li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("http://", '')}>{child.title}</Link></li></>) : (<><li  key={i} ><Link className="dropdown-item"   to={"/"+child.url.toLowerCase().replace("https://shop.nationalsportscamps.in/", '')}>{child.title}</Link></li></>)}
 														</>
 														
 														

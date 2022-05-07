@@ -25,7 +25,7 @@ class Blogbanner extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/blog_banner',
+			url: 'https://shop.nationalsportscamps.in/wp-json/newasc/v1/blog_banner',
 			method: 'get'
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData[0].Desc})

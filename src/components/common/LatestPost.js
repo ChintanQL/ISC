@@ -24,7 +24,7 @@ class LatestPost extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/top_latest_post',
+			url: 'https://shop.nationalsportscamps.in/wp-json/newasc/v1/top_latest_post',
 			method: 'get'
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData})

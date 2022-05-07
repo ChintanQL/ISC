@@ -57,7 +57,7 @@ class BottomForm extends Component {
 	
 	
 	async getOptions(){
-		const res = await axios.get('https://shop.spinhouse4u.com/wp-json/newasc/v1/all-cat')
+		const res = await axios.get('https://shop.nationalsportscamps.in/wp-json/newasc/v1/all-cat')
 		const data = res.data.ResponseData
 
 		const options = data.map(d => ({
@@ -118,7 +118,7 @@ class BottomForm extends Component {
 		}
 		
 		
-		var URL = "https://shop.spinhouse4u.com/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
+		var URL = "https://shop.nationalsportscamps.in/location/?q="+str+"&l="+loc+"&f="+locationName+"&lat="+lat+"&lng="+lng;
 		window.open(URL, "_blank");
 		
 	}

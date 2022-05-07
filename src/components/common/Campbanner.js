@@ -26,7 +26,7 @@ class Campbanner extends Component {
 	
 	componentDidMount() {
 		axios({
-			url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/camp_banner',
+			url: 'https://shop.nationalsportscamps.in/wp-json/newasc/v1/camp_banner',
 			method: 'get'
 		}).then(res => {
 			this.setState({PageData: res.data.ResponseData[0].Image})

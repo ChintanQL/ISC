@@ -53,7 +53,7 @@ class F1Menu extends Component {
 									<li>
 									
 									{(innerprop.slug == 'my-account') ? 
-									(<Link to={"https://shop.spinhouse4u.com/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
+									(<Link to={"https://shop.nationalsportscamps.in/"+innerprop.slug} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
 									(<Link to={"/camps/"+innerprop.title.replace(/\s+/g, '-').toLowerCase()
 									} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />)}
 										

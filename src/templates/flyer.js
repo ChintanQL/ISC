@@ -34,7 +34,7 @@ class demopage extends Component {
 	else{
 		var login_name = "";
 	}
-	 var url = "https://shop.spinhouse4u.com/wp-json/newasc/v1/page_view_res";
+	 var url = "https://shop.nationalsportscamps.in/wp-json/newasc/v1/page_view_res";
 		axios.post(url,{resourceType:resourceType,url:url_v,path:path,source:source,userId:login_name}).then(e => {
 			console.log("done");
 		})

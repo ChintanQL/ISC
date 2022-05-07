@@ -23,8 +23,8 @@ class CampPricing extends Component {
 	
 	componentDidMount() {
 		axios({
-			//url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/camps',
-			url: 'https://shop.spinhouse4u.com/wp-json/newasc/v1/camp_pricing',
+			//url: 'https://shop.nationalsportscamps.in/wp-json/newasc/v1/camps',
+			url: 'https://shop.nationalsportscamps.in/wp-json/newasc/v1/camp_pricing',
 			method: 'get'}).then(res => {
 			this.setState({PageData: res.data.ResponseData.data[0]})
 			
@@ -46,7 +46,7 @@ class CampPricing extends Component {
 			</Helmet>
 				<div className="laoder" style={{ display: this.state.showInfo == 0 ? "block" : "none" }} >
 					<div id="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
-						<img alt="" className="icon" src="https://shop.spinhouse4u.com/demo.svg" />
+						<img alt="" className="icon" src="https://shop.nationalsportscamps.in/demo.svg" />
 					</div>
 				</div>
 				<section className="Banner-Section">
