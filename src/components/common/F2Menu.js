@@ -54,7 +54,7 @@ class F2Menu extends Component {
 									(<Link to={"/about-asc/sponsors-and-partners"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : 
 									(
 										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'work-with-us') ? (<Link to={"/asc-coaches-staff-enquiry"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
-										<>{(innerprop.title.toLowerCase() == 'terms & conditions') ? (<Link to={"/'terms-condition"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
+										<>{(innerprop.title.toLowerCase() == 'terms & conditions') ? (<Link to={"/'terms-conditions"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
 										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'asc-heroes') ? (<Link to={"/the-asc-heroes"} className="" dangerouslySetInnerHTML={{ __html: innerprop.title}} />) : (
 										
 										<>{(innerprop.title.replace(/\s+/g, '-').toLowerCase() == 'forms-for-coaches-&-staff') ? (<Link to={"/asc-coaches-staff"
