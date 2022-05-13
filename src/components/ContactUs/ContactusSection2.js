@@ -38,7 +38,7 @@ class ContactusSection2 extends Component {
 								<img src={phone} alt="phone"/>
 							</div>
 							<div className="icon_gdet">
-								<h6 className="num_g">ABN: 34 156 517 412</h6>
+								<h6 className="num_g">Call us</h6>
 								<p><b>Freecall: 1300 914 368</b></p>
 								<p>Talk directly with a human<br/>9.00am to 4.30pm IST</p>
 							</div>
