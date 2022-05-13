@@ -39,7 +39,7 @@ class ContactusSection2 extends Component {
 							</div>
 							<div className="icon_gdet">
 								<h6 className="num_g">Call us</h6>
-								<p><b>Freecall: 1300 914 368</b></p>
+								<p><b> 07405216516</b></p>
 								<p>Talk directly with a human<br/>9.00am to 4.30pm IST</p>
 							</div>
 						</div>
@@ -63,7 +63,7 @@ class ContactusSection2 extends Component {
 							</div>
 							<div className="icon_gdet">
 								<h6 className="num_g">Post:</h6>
-								<p><b>PO Box 5332, Clayton VIC 3168</b></p>
+								<p><b>137, Taranga Hill, Society, Near Arjun Ashram Road, Nirnay Nagar, Ahmedabad 382481</b></p>
 								<p>Talk directly with a human<br/>9.00am to 4.30pm IST</p>
 							</div>
 						</div>
