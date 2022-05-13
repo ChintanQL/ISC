@@ -40,7 +40,7 @@ class ContactusSection2 extends Component {
 							<div className="icon_gdet">
 								<h6 className="num_g">ABN: 34 156 517 412</h6>
 								<p><b>Freecall: 1300 914 368</b></p>
-								<p>Talk directly with a human<br/>9.00am to 4.30pm AEST</p>
+								<p>Talk directly with a human<br/>9.00am to 4.30pm IST</p>
 							</div>
 						</div>
 					</div>
@@ -52,7 +52,7 @@ class ContactusSection2 extends Component {
 							<div className="icon_gdet">
 								<h6 className="num_g">Email</h6>
 								<p><b>admin@nationalsportscamp.in</b></p>
-								<p>We’ll reply within one hour <br/>9.00am to 4.30pm AEST</p>
+								<p>We’ll reply within one hour <br/>9.00am to 4.30pm IST</p>
 							</div>
 						</div>
 					</div>
@@ -64,7 +64,7 @@ class ContactusSection2 extends Component {
 							<div className="icon_gdet">
 								<h6 className="num_g">Post:</h6>
 								<p><b>PO Box 5332, Clayton VIC 3168</b></p>
-								<p>Talk directly with a human<br/>9.00am to 4.30pm AEST</p>
+								<p>Talk directly with a human<br/>9.00am to 4.30pm IST</p>
 							</div>
 						</div>
 					</div>
