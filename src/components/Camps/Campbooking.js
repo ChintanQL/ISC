@@ -51,54 +51,56 @@ class Campbooking extends React.Component{
 				<>
 					{(this.state.count != 0) ? (
 						<>
-						<Row className="justify-content-center mb-4">
+						<Row className="justify-content-center">
 									<Col xl={12} lg={12}>
 										<div className="title">
 											<h2>Select your camp below to book online now.</h2>
 										</div>
 									</Col>
 								</Row>
-								<Row className="">
+								<Row className="pbf">
 									
 							{(this.state.pagedata != "") ? (
 								<>
 									{this.state.pagedata.map((prop,i) => {return (
-										<Col xl={4} lg={4} md={6} sm={9} xs={12} className="main-book-card">
-											<Card className="book-card">
-												<LazyLoad height={200} once >
-												<div className="card-img">
-													<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
-												</div>
-												</LazyLoad>
-												<Card.Body>
-													<Card.Title as="h5">
-														{prop.Name}
-													</Card.Title>
-													<Card.Text>
-														{prop.Camp_Date}
-													</Card.Text>
-													<Card.Text>
-														{prop.Camp_Venue}
-													</Card.Text>
-													
-													{(prop.Flag == 1) ? (
+										
+								<div class="col-md-4">
+					<div class="coach_sem">
+						<div class="coact_inner_inmg">
+							<div class="img_wrap">
+								<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
+							</div>
+							
+						</div>
+						<div class="tag_name">
+							<div class="our_yg">
+							<h6>{prop.Name}</h6>
+							<p class="date_h">{prop.Camp_Date}</p>
+							<p class="htfed">{prop.Camp_Venue}</p>
+						</div>
+						<div class="cart_g">
+							{(prop.Flag == 1) ? (
 														<ul>
 															<li className="cross-price">${prop.regular_price}</li>
 															<li className="main-price">${prop.sale_price}</li>
 														</ul>
 													) : (
-														<ul>
-															<li className="main-price">${prop.price}</li>
-														</ul>
+														<>
+															<div class="rate">${prop.price}</div>
+														</>
 													)}
-													
-													
-													
-													<Link className="nav-link uppercase btn-sm btn-orange text-center" to={"https://shop.nationalsportscamps.in/book/"+prop.Slug}>More info / Book Now</Link>
-												</Card.Body>
-											</Card>
-										</Col>
-									)})}
+							
+							<div class="btn_tdf">
+								<Link className="" to={"https://shop.nationalsportscamps.in/book/"+prop.Slug}>More info / Book Now</Link>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+								
+								
+								
+																)})}
 								</>
 							) : ("")}	
 							</Row>
