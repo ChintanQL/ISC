@@ -3,3 +3,11 @@ from = "https://australiansportscamps.com.au/book/"
 to = "https://australiansportscamps.com.au/book-a-camp/"
 status = 301
 force = false
+
+[[redirects]]
+  from = "/"
+  to = "/sorry"
+  status = 301
+  force = false
+  query = {path = ":path"}
+  conditions = {Country = ["AU"]}
