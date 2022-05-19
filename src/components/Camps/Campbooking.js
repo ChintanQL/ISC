@@ -80,13 +80,20 @@ class Campbooking extends React.Component{
 						</div>
 						<div class="cart_g">
 							{(prop.Flag == 1) ? (
-														<ul>
-															<li className="cross-price">${prop.regular_price}</li>
-															<li className="main-price">${prop.sale_price}</li>
-														</ul>
+							
+							<div class="cart_g yhg_stice">
+							<div class="rate delet_price"><del>₹{prop.regular_price}</del> </div>
+							<div class="rate">₹{prop.sale_price}</div>
+						</div>
+														
 													) : (
 														<>
-															<div class="rate">${prop.price}</div>
+														<div class="cart_g yhg_stice">
+														
+															<div class="rate">₹{prop.price}</div>
+														</div>
+														
+															
 														</>
 													)}
 							
