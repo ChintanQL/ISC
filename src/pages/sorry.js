@@ -6,7 +6,7 @@ import fri_image from "../images/kids.png"
 import { Link } from 'gatsby'
 import { Helmet } from "react-helmet"
 const FoundPage = () => (
-  
+  <>
   <Helmet>
 				<title>Sorry</title>
 			</Helmet>
@@ -28,7 +28,7 @@ const FoundPage = () => (
                 </div>
                 </section>
 	
-	
+	</>
    
 
 )
