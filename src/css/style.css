@@ -6,20 +6,49 @@
     font-family: 'Poppins', sans-serif;
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 body{
     padding:0;
     margin: 0;
     box-sizing: border-box;   
     font-family: 'Poppins', sans-serif;
-    font-family: 14px;
+    font-family: 16px;
     color: #000;
     background: #FFF4E4;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
 }
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+h2{
+ font-size: 25px;
+    font-weight: 700;   
+}
+h3{
+    
+}
+h4{
+  font-size: 18px;
+    font-weight: 600;  
+}
+h5{
+font-size: 18px;
+    font-weight: 700;
+}
+h6{
+font-size: 20px;
+font-weight: 700;
+}
 p{
-    font-size: 13px;
+    font-size: 16px;
 }
 
 a{
@@ -37,10 +66,10 @@ ul{
 }
 li{
     list-style: none;
-    font-size: 13px;
+    font-size: 16px;
 }
 span{
-    font-size: 13px;
+    font-size: 16px;
 }
 .logo{
     max-width: 120px;
@@ -79,7 +108,7 @@ header{
 
 /*section01 */
 .section01{
-    background: url('../images/banner01.png');
+    background: url('../img/banner01.png');
     background-size: cover;
 
 }
@@ -100,7 +129,7 @@ header{
 .list_tab ul li {
     list-style: outside;
     line-height: 23px;
-    font-size: 14px;
+    font-size: 16px;
     padding-bottom: 10px;
 }
 .form_site {
@@ -122,7 +151,7 @@ header{
     color: #F39200;
     margin: auto;
     display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 20px;
 }
 .camp_find:hover{
@@ -140,8 +169,9 @@ header{
 
 .form_wrap  select {
     height: 50px;
-    font-size: 14px;
+    font-size: 16px;
     color: #000;
+    border-radius: 10px;
 }
 .main_head h1::after {
     content: "";
@@ -249,6 +279,7 @@ header{
 }
 .read_more a {
     color: #F39200;
+    font-size: 16px;
 }
 .section04{
     background: linear-gradient(107.04deg, rgba(243, 146, 0, 0.55) 0.38%, rgba(255, 255, 255, 0.55) 45.06%, rgba(0, 141, 54, 0.55) 97.86%);
@@ -267,7 +298,7 @@ header{
     box-sizing: border-box;
 }
 .lis_gfs ul li {
-    font-size: 14px;
+    font-size: 16px;
     list-style: disc;
     margin-bottom: 10px;
     box-sizing: border-box;
@@ -279,7 +310,7 @@ header{
     box-sizing: border-box;
     border-radius: 9px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
 }
 .mainimg {
     display: flex;
@@ -298,12 +329,8 @@ header{
 
 .our_thd h5 {
     color: #008D36;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 0;
-}
-
-.our_thd p {
     margin-bottom: 0;
 }
 
@@ -312,6 +339,7 @@ header{
 }
 .our_thd p {
     min-height: 62px;
+    margin-bottom: 0;
 }
 
 .our_coach {
@@ -391,6 +419,7 @@ footer{
     border: solid  1px #F39200;
     max-width: 150px;width: 100%;
     display: inline-block;text-align: center;
+    font-size: 16px;
 }
 
 .btn_c {float: right;}
@@ -401,14 +430,14 @@ footer{
 }
 
 .list_col h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #F39200;
 }
 
 .list_col li a {
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 26px;
     display: block;
 }
@@ -422,7 +451,7 @@ footer{
 }
 .our_f ul li {
     display: inline-block;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .our_f ul li a {
@@ -483,14 +512,20 @@ max-width: 70%;margin: auto;}
     left: 50%;
     font-size: 50px;
     transform: translate(-50%, -50%);
+    border: solid 1px white;
+    padding: 20px;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
 }
 .our_trs i {
     color: #fff;
     border-radius: 100%;
-    font-size: 80px;
+    font-size: 60px;
     line-height: 50px;
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
+    width: 100%;
 }
 .tf_k img {width: 100%;}
 .top_footer .container {
@@ -509,7 +544,7 @@ max-width: 70%;margin: auto;}
 
 .btn_book a {
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
 }
 header {
     z-index: 9999;
@@ -522,7 +557,7 @@ header {
 }
 .section08::after {
     content: "";
-    background-image: url(../images/svg2.svg);
+    background-image: url(../img/svg2.svg);
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -543,7 +578,7 @@ header {
 }
 .section07::after {
     content: "";
-    background-image: url(../images/svg1.svg);
+    background-image: url(../img/svg1.svg);
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -569,7 +604,7 @@ header {
 }
 
 .breadcumb {
-    background: url(../images/breadcumb1.png);
+    background: url(../img/breadcumb1.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0px;
@@ -613,7 +648,7 @@ header {
 }
 .um_hg::after {
     content: "";
-    background: url(../images/flag1.svg);
+    background: url(../img/flag1.svg);
     width: 100%;
     height: 100px;
     position: absolute;
@@ -633,7 +668,7 @@ header {
     margin-left: auto;
 }
 .cont_rf li {
-    font-size: 13px;
+    font-size: 16px;
     list-style: circle;
 }
 
@@ -654,7 +689,7 @@ header {
     box-sizing: border-box;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    font-size: 12px;
+    font-size: 16px;
 }
 .our_yg h6 {
     font-size: 20px;
@@ -709,8 +744,17 @@ header {
 
 .cart_g {
     display: flex;
-    justify-content: space-between;
+    justify-content: normal;
     align-items: center;
+}
+
+.cart_g .rate.delet_price del {
+    color: #ccc;
+    margin-right: 10px;
+}
+.btn_tdf {
+    margin-top: 10px;
+    text-align: center;
 }
 
 .details_headc{
@@ -790,7 +834,7 @@ display: inline-block;height: auto;}
   display: block;
   position: relative;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 16px;
   padding: 0px 10px 0px 50px;
   margin: 0 auto;
   z-index: 9;
@@ -942,7 +986,7 @@ by the way it is so weird when you look at your code a couple of years after you
     border: 1px solid transparent;
     background: rgba(255, 255, 255, 0.33);
     border-radius: 10px;
-    font-size: 14px;   
+    font-size: 16px;   
 }
 .text_ad {
     background: rgba(255, 255, 255, 0.33);
@@ -1052,6 +1096,8 @@ by the way it is so weird when you look at your code a couple of years after you
 }
 .nav_tabs_table .nav-tabs{
 border-color:transparent;
+justify-content: center;
+column-gap: 15px;
 }
 .nav_tabs_table .nav-tabs .nav-item.show .nav-link, .nav_tabs_table .nav-tabs .nav-link.active {
     color: #ffffff;
@@ -1073,10 +1119,10 @@ border-color:transparent;
     display: block;
 }
 .play_img::after{
-    background: url(../images/flag1.svg);
+    background: url(../img/flag1.svg);
     content: "";
     position: absolute;
-    right: 0;
+    right: 30px;
     bottom: 0;
     width: 100%;
     height:100%;
@@ -1091,7 +1137,7 @@ z-index: -1;
 
 .our_list ul li {
     list-style: disc;
-    font-size: 13px;
+    font-size: 16px;
     padding: 10px 0;
     box-sizing: border-box;
 }
@@ -1110,15 +1156,13 @@ width: 100%;
 }
 
 .cont_reso_list h5 {
-    font-weight: 700;
     padding-bottom: 10px;
-    font-size: 16px;
 }
 
 .btn_more a {
     font-weight: 600;
     color: #1D3D91;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .cont_reso_list p {
@@ -1241,3 +1285,291 @@ border-color: transparent;
     background: rgba(255, 255, 255, 0.33);
     border-color: transparent;
 }
+
+.form_site input{
+    background: #fff;
+    font-size: 16px;
+}
+.form_site select{
+    background: #fff;
+}
+.y_yug {
+    position: relative;
+}
+.y_yug::after {
+    content: "";
+    background: linear-gradient(90.66deg, rgba(243, 146, 0, 0.9) 0.57%, rgba(243, 146, 0, 0) 110.06%);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+}
+.text_t {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 999;
+    color: #fff;
+    transform: translate(0%, -50%);
+    font-weight: 800;
+}
+
+.text_t h2 {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+button.btn.btn-primary.ggsr {
+    background: linear-gradient(114.53deg, rgba(0, 141, 54, 0.78) -11.6%, #FFFFFF 47.74%, #F39200 115.51%);
+    color: #000;
+    border: 0;
+}
+.serch_list {
+    background: white;
+    text-align: end;
+    width: 70%;
+    float: right;
+}
+.serch_list .input-group {
+    justify-content: end;
+    padding: 10px;
+}
+.serch_list .input-group .form-outline {
+    width: 89%;
+}
+.fr_desj{
+    display: block;
+    position: relative;
+}
+
+.fr_desj::after, .fr_desj::before {
+    content: "";
+    position: relative;
+    clear: both;
+    display: block;
+}
+.our_catero {
+    max-width: 70%;
+    background: #fff;
+    margin-top: 20px;
+    float: right;
+    position: relative;
+    width: 100%;
+}
+.our_catero ul {
+    width: 100%;
+    display: block;
+}
+.our_catero ul li {
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 50px;
+}
+.our_catero ul li a {
+    color: #000;
+    display: block;
+}
+.our_catero ul li:hover {
+    background: #F39200;
+}
+.our_catero ul li:hover a {
+    color: #fff;
+}
+.p_bot20{
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    } 
+.p_top20{
+    padding-top:20px;
+    box-sizing: border-box; 
+}
+.list_reso.img_vdcf .ihgrd {
+    width: 100%;
+    max-width: 100%;
+}
+.list_reso.img_vdcf .tf_k img {
+    border-radius: 30px;
+}
+.fon_hgn {
+    margin-bottom: 20px;
+}
+
+button.btn.btn-primary.btndr.fullGt {
+    margin: unset;width: 100%;
+}
+.our_blohg img {
+    border-radius: 20px;
+}
+.our_fdg {
+    position: relative;
+}
+
+.delet_product {
+    position: absolute;
+    right: 0;
+    top:-5px;
+}
+
+.delet_product a {
+    color: #F39200;
+    font-size: 20px;
+}
+.oyr_yg p {
+    margin-bottom: 0;
+}
+.our_image{
+    margin-right: 10px;
+}
+.our_shet .table>tbody {
+    vertical-align: middle;
+}
+.our_shet p {
+    margin-bottom: 0;
+}
+.btn_or a {
+    background: #F39200;
+    border: solid 1px #F39200;
+    display: block;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 15px 25px;
+    font-size: 1rem;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.btn_or.white_tr a {
+    background: #fff;
+    color: #F39200;
+}
+.sub_tatal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.title_g {
+    font-size: 25px;
+    font-weight: 600;
+}
+.price_rate {
+    display: flex;
+    background: #F3920014;
+    padding: 15px 10px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #008D36;
+    align-items: center;
+}
+
+.price_rate p {
+    margin-bottom: 0;
+}
+
+.price_rate .totla_Gt p {
+    font-size: 16px;
+    font-weight: 600;
+}
+.totla_Gbt p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.our_shet .table {
+    border-color: transparent;
+}
+
+.our_shet .table thead {
+    background: #F3920014;
+    height: 60px;
+    vertical-align: middle;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-color: transparent;
+}
+
+.our_shet .table tbody {
+    border-color: transparent;
+}
+
+.our_shet .table tbody tr {
+    border-color: transparent;
+}
+
+.our_shet .table thead tr 
+{border-color: transparent;
+}
+.img_icon.jhtg img{
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.conts_profile_details .fomr_cong{
+        max-width: 100%;
+        width: 100%;
+}
+.our_prodct_gisto {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 15px;
+    
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.our_pr1 {
+    text-align: right;
+}
+.red_clr{
+  background: rgba(243, 146, 0, 0.08);  
+}
+.fomr_cong {
+    width: 100%;
+    max-width: 100%;
+}
+.form-check-input:checked {
+    background-color: #f39200;
+    border-color: #f39200;
+}
+
+label.form-check-label {
+    font-size: 13px;
+    text-align: right;
+}
+.form-check-input:focus{
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+.custom-control-label::before {
+    background-color: #6C757D;
+}
+
+/*extra Css*/
+.for_desktop{
+    display: flex;
+}
+.for_mobile{
+    display: none;
+}
+.conta_details_g.cart_htg .icon_gdet p {
+    min-height: 100px;
+}
+.our_prodct_gisto.red_clr {
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.hide_after .details_head::after {
+    display: none;
+}
+.list_reso .cont_reso_list h5 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
