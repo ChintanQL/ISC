@@ -103,7 +103,7 @@ class Camps extends Component {
 			</section>	
 				
                
-				<section className="Sport-details-section-3 d-none">
+				<section className="Sport-details-section-3 ">
 					<Container>
 						
 							<Campbooking camptitle={page.edges[0].node.title} wid={page.edges[0].node.wordpress_id} category={page.edges[0].node.acf.product_category} name={page.edges[0].node.title}   />
