@@ -108,7 +108,7 @@ header{
 
 /*section01 */
 .section01{
-    background: url('../img/banner01.png');
+    background: url('../images/banner01.png');
     background-size: cover;
 
 }
@@ -557,7 +557,7 @@ header {
 }
 .section08::after {
     content: "";
-    background-image: url(../img/svg2.svg);
+    background-image: url(../images/svg2.svg);
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -578,7 +578,7 @@ header {
 }
 .section07::after {
     content: "";
-    background-image: url(../img/svg1.svg);
+    background-image: url(../images/svg1.svg);
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -604,7 +604,7 @@ header {
 }
 
 .breadcumb {
-    background: url(../img/breadcumb1.png);
+    background: url(../images/breadcumb1.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0px;
@@ -648,7 +648,7 @@ header {
 }
 .um_hg::after {
     content: "";
-    background: url(../img/flag1.svg);
+    background: url(../images/flag1.svg);
     width: 100%;
     height: 100px;
     position: absolute;
@@ -1119,7 +1119,7 @@ column-gap: 15px;
     display: block;
 }
 .play_img::after{
-    background: url(../img/flag1.svg);
+    background: url(../images/flag1.svg);
     content: "";
     position: absolute;
     right: 30px;
