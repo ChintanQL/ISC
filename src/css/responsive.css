@@ -21,6 +21,23 @@
 .btn_tdf a{
 	font-size: 12px;
 }
+.our_thd p {
+    min-height: 100px;
+    margin-bottom: 0;
+}
+.delet_product{
+ right: -15px;
+    top: -5px;   
+}
+h6.num_g{
+    font-size: 16px;
+}
+.icon_gdet p {
+    min-height: 150px;
+}
+.contact_det .conta_details_g .icon_gdet p {
+    min-height: unset;
+}
 }
 @media(min-width: 768px) and (max-width: 991px){
 li.mobile-menu-btn.d-lg-none {
@@ -62,13 +79,64 @@ li.mobile-menu-btn.d-lg-none {
 font-size: 20px
 }
 .our_yg h6{
-	font-size: 14px;
+	font-size: 16px;
 }
 .conta_details_g {
     margin-bottom: 25px;
 }
 .img_icon {
     margin: auto;
+}
+.play_img::after{
+    background-size: contain;  
+}
+.title_g {
+    font-size: 16px;
+}
+.btn_or a{
+    padding: 15px 10px;
+    font-size: 13px;
+    margin-bottom: 10px;  
+    box-sizing: border-box;
+}
+.our_trs i {
+    font-size: 30px;
+    line-height: 30px;
+    width: 100%;
+    position: relative;
+    top: 1px;
+    right: -3px;
+}
+.our_trs {
+    font-size: 30px;
+    padding: 0;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+.our_catero ul li{
+     padding: 0 15px;
+     box-sizing: border-box;   
+}
+button.btn.btn-primary.ggsr{
+  position: absolute;  
+}
+.section05 .our_thd h5{
+ min-height: 45px;   
+}
+.section05 .our_thd p {
+    min-height: 170px;
+}
+.list_tab ul li br {
+    display: none;
+}
+.delet_product {
+    position: absolute;
+    right: -25px;
+    top: -5px;
+}
+.our_product_price p {
+    text-align: center;
 }
 }
 
@@ -168,6 +236,134 @@ padding-top:25px;
 .btn.btn-primary.btndr{
     margin-left: unset;	
 }
+.our_about_us ul li {
+    padding-bottom: 20px;
+}
+.for_desktop{
+    display: none;
+}
+.for_mobile{
+    display: flex;
+}
+.tile_head br {
+    display: none;
+}
+.play_img::after{
+     background-size: contain;   
+}
+.details_head br {
+    display: none;
+}
+.list_capm_book_details .button{
+      margin-right: 0;  
+}
+.fomr_cong.pb .pb20{
+padding-bottom: 0;
+}
+.our_select label.form-label {
+    display: block;
+}
+.our_camp_book_img {
+    padding-top: 20px;
+}
+
+.our_camp_book_img .play_img::after{
+       bottom: 30px; 
+}
+.needs-validation .our_select select {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.details_head br {
+    display: none;
+}
+.our_shet tbody tr .d-flex {
+    display: block !important;
+}
+.delet_product{
+      top: -25px;  
+}
+.accordion__button{
+ font-size: 14px;   
+}
+.btn_hg .btn_tdf a {
+    font-size: 14px;
+}
+.nav_tabs_table .nav-tabs li.nav-item button {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.nav_tabs_table .nav-tabs{
+ column-gap: 2px;   
+}
+.our_catero {
+    max-width: 100%;
+    float: none;
+    width: 100%;
+}
+.serch_list {
+    position: relative;
+}
+.serch_list {
+    width: 100%;
+    float: none;
+}
+button.btn.btn-primary.ggsr{
+ position: absolute;
+    top: 0;
+    right: 0;   
+}
+.serch_list .input-group {
+    justify-content: end;
+    padding: 0;
+}
+.serch_list .input-group .form-outline {
+    width: 100%;
+}
+.our_catero ul li{
+ padding: 0 15px 0px 15px;   
+}
+.our_trs i {
+    
+    font-size: 30px;
+    line-height: 30px;
+    width: 100%;
+    position: relative;
+    top: 1px;
+    right: -3px;
+}
+.our_trs {
+    font-size: 30px;
+    padding: 0;
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+.play_img::after{
+    right: 30px;
+}
+.section05 .our_thd{
+text-align: center;
+}
+.section05 .our_thd h5{
+text-align: center;
+}
+.play_img::after{
+ right: 40px;   
+}
+.our_camp_book_img .play_img::after{
+ bottom: 60px;
+ right: 41px;   
+}
+.delet_product{
+    top: -5px;
+    right: -15px;
+}
+.our_product_price p {
+    text-align: center;
+}
 }
 
 
@@ -191,12 +387,7 @@ padding-top:25px;
 }
 .main-header .col-lg-2.col-xl-2.col-md-6.col-6.col-custom {max-width: 100px;}
 
-.main-header .col-lg-3.col-md-6.col-6.col-custom {
-	width: calc(100% - 100px) !important;
-	flex: 0 0 auto !important;
-max-width: 100%;
-	
-}
+.main-header .col-lg-3.col-md-6.col-6.col-custom {width: calc(100% - 100px);}
 
     
 }
@@ -211,5 +402,8 @@ max-width: 100%;
     padding: 3px 7px;
     margin-right: 5px;
     border-radius: 10px;
+}
+.btn_tdf a {
+    font-size: 13px;
 }
 }
