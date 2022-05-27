@@ -51,59 +51,51 @@ class Campbooking extends React.Component{
 				<>
 					{(this.state.count != 0) ? (
 						<>
-						<Row className="justify-content-center">
-									<Col xl={12} lg={12}>
-										<div className="title">
-											<h2>Select your camp below to book online now.</h2>
-										</div>
-									</Col>
-								</Row>
-								<Row className="pbf">
-									
+						<Row className="pbf">
+							<Col xl={12} lg={12}>
+								<h2 class="tile_head">Select your coaching camp and book online </h2>
+							</Col>
+						</Row>
+						<Row className="pbf">		
 							{(this.state.pagedata != "") ? (
 								<>
-									{this.state.pagedata.map((prop,i) => {return (
-										
+									{this.state.pagedata.map((prop,i) => {return (		
 								<div class="col-md-4">
-					<div class="coach_sem">
-						<div class="coact_inner_inmg">
-							<div class="img_wrap">
-								<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
+									<div class="coach_sem">
+										<div class="coact_inner_inmg">
+											<div class="img_wrap">
+												<div dangerouslySetInnerHTML={{ __html: prop.Html}} />
+											</div>
+										</div>
+										<div class="tag_name">
+											<div class="our_yg">
+											<h6>{prop.Name}</h6>
+											<p class="date_h">{prop.Camp_Date}</p>
+											<p class="htfed">{prop.Camp_Venue}</p>
+										</div>
+										<div class="cart_g">
+											{(prop.Flag == 1) ? (
+											
+											<div class="cart_g yhg_stice">
+												<div class="rate delet_price"><del>₹{prop.regular_price}</del> </div>
+												<div class="rate">₹{prop.sale_price}</div>
+											</div>
+														
+											) : (
+												<>
+												<div class="cart_g yhg_stice">
+													<div class="rate">₹{prop.price}</div>
+												</div>
+												</>
+												)}
+										</div>	
+											<div class="btn_tdf">
+												<Link className="" to={"https://shop.nationalsportscamps.in/book/"+prop.Slug}>More info / Book Now</Link>
+											</div>
+										
+									</div>
+								</div>
 							</div>
-							
-						</div>
-						<div class="tag_name">
-							<div class="our_yg">
-							<h6>{prop.Name}</h6>
-							<p class="date_h">{prop.Camp_Date}</p>
-							<p class="htfed">{prop.Camp_Venue}</p>
-						</div>
-						<div class="cart_g">
-							{(prop.Flag == 1) ? (
-							
-							<div class="cart_g yhg_stice">
-							<div class="rate delet_price"><del>₹{prop.regular_price}</del> </div>
-							<div class="rate">₹{prop.sale_price}</div>
-						</div>
-														
-													) : (
-														<>
-														<div class="cart_g yhg_stice">
-														
-															<div class="rate">₹{prop.price}</div>
-														</div>
-														
-															
-														</>
-													)}
-							
-							<div class="btn_tdf">
-								<Link className="" to={"https://shop.nationalsportscamps.in/book/"+prop.Slug}>More info / Book Now</Link>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
 								
 								
 								
