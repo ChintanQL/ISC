@@ -88,6 +88,405 @@ span{
     max-width: 120px;
 }
 
+.container-image-and-badge img {
+  height: auto;
+}
+.wp-post-image, body.yith-wcbm-theme-basel .container-image-and-badge :not(.yith-wcbm-badge) img, body.yith-wcbm-theme-basel .container-image-and-badge > img {
+  width: 100%;
+}
+
+.yith-wcbm-badge-109554{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109554 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109554 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #666666;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+        }
+        .yith-wcbm-badge-185434{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-185434 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-185434 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #3475b6;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-109560{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109560 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109560 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #3475b6;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-136153{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-136153 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-136153 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #e2164d;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+        }
+        .yith-wcbm-badge-178255{ top: 0px;bottom: auto;left: calc(50% - 125.497px);right: auto; opacity: 1; }.yith-wcbm-badge-178255 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-178255 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #ea021d;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-190547{ top: 0px;bottom: auto;left: calc(50% - 100px);right: auto; opacity: 1; }.yith-wcbm-badge-190547 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-190547 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #f39200;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 20px;
+        }
+        .yith-wcbm-badge-109556{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109556 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109556 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #3475b6;
+        width: 250px;
+        height: 60px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-109561{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109561 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109561 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #ff6600;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-109559{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109559 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109559 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #3475b6;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-109431{ top: 0px;bottom: auto;left: calc(50% - 150px);right: auto; opacity: 1; }.yith-wcbm-badge-109431 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109431 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #dd8f1a;
+        width: 300px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-109558{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109558 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109558 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #ff6600;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-126448{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-126448 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-126448 .yith-wcbm-badge__wrap
+        {
+                color: #000000;
+        background-color: #eeee22;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 18px;
+        }
+        .yith-wcbm-badge-109557{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109557 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109557 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #81d742;
+        width: 250px;
+        height: 60px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-115878{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-115878 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-115878 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #666666;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-109555{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-109555 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-109555 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #dd3333;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
+        .yith-wcbm-badge-129691{ top: 0px;bottom: auto;left: -7px;right: auto; opacity: 1; }.yith-wcbm-badge-129691 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(344deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(344deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(344deg); }        .yith-wcbm-on-sale-badge-129691 {
+        color: #FFFFFF;
+        font-family: "Open Sans",sans-serif;
+        width:65px;
+        height:71px;
+        position:absolute;
+        box-sizing: border-box;
+        position: absolute;
+        background: transparent;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-shape1{
+        width:0;
+        height:70px;
+        border-left: 25px solid #7f3300;
+        border-bottom: 10px solid transparent;
+        position:relative;
+        box-sizing: border-box;
+        position: absolute;
+        top:0px;
+        left: 8px;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-shape1:before{
+        content:' ';
+        width:0;
+        height:70px;
+        border-right: 25px solid #7f3300;
+        border-bottom: 10px solid transparent;
+        position:relative;
+        box-sizing: border-box;
+        position: absolute;
+        top:0;
+        right:-25px;
+        }
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-shape1:after{
+
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-shape2{
+        width: 100%;
+        position:absolute;
+        top:32px;
+        left:0px;
+        color:white;
+        border-top: 8px solid #ff6600;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        box-sizing: border-box;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-shape2:before{
+        content: '';
+        width: 100%;
+        position:absolute;
+        top:0;
+        left:-6px;
+        color:white;
+        border-bottom: 8px solid #ff6600;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        box-sizing: content-box;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-shape2:after{
+        content: "DISCOUNT";
+        color: #FFFFFF;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 10px;
+        position: absolute;
+        left:2px;
+        top:-5px;
+        line-height:10px;
+                }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-sale-percent{
+        position: absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 0px;
+        top:17px;
+        right:28px;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-simbol-percent{
+        position: absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 0px;
+        top:18px;
+        right:16px;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-simbol-off{
+        display: none;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-save{
+        position: absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 9px;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        top: 55px;
+        line-height: 0px;
+        white-space: nowrap;
+        }
+
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-simbol-sale,
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-saved-money,
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-saved-money-value,
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-saved-money-currency,
+        .yith-wcbm-on-sale-badge-129691 .yith-wcbm-simbol-sale-exclamation{
+        display: none;
+        }
+        @media only screen and (max-width: 768px) {
+        .yith-wcbm-badge-129691{ -ms-transform: scale(1.9); -webkit-transform: scale(1.9); transform: scale(1.9);transform-origin: left top; }
+    }.yith-wcbm-badge-128973{ top: 0px;bottom: auto;left: calc(50% - 125px);right: auto; opacity: 1; }.yith-wcbm-badge-128973 .yith-wcbm-badge__wrap{ -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }        .yith-wcbm-badge-128973 .yith-wcbm-badge__wrap
+        {
+                color: #ffffff;
+        background-color: #3475b6;
+        width: 250px;
+        height: 50px;
+        line-height: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+        }
 
 .main_header .navbar-light .navbar-nav .nav-link {
     color: #fff;
