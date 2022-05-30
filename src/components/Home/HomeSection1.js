@@ -257,7 +257,7 @@ class HomeSection1 extends Component {
 								   
 								    <SearchLocationInput/>
 								  </div>
-								  <div className="col-md-12">
+								  <div className="col-md-12 mt3">
 								    <Select placeholder="Select Sports" placeholderButtonLabel="Select Sports"
         value={this.state.selectedOption2}
         onChange={this.handleChange}
