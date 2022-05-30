@@ -28,6 +28,9 @@ h1 {
     font-size: 2.5rem;
     font-weight: 600;
 }
+.text-end {
+  text-align: right !important;
+}
 h2{
  font-size: 25px;
     font-weight: 700;   
