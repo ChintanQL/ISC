@@ -48,7 +48,7 @@ margin-top: 15px;
     margin-bottom: 15px;
 }
 .css-yk16xz-control{
-border-radius: 15px;
+border-radius: 15px !important;
 }
 h6{
 font-size: 20px;
