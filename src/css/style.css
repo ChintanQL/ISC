@@ -12,7 +12,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+.camp_find:focus {
+    box-shadow: 0 0 0 0.2rem #f3920080 !important;
+}
 @media(max-width: 576px){
 		.subnavbar .resource-menu .nav-item .nav-link{
 			padding: 8px 10px!important;
