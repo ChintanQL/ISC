@@ -15,7 +15,23 @@
 .camp_find:focus {
     box-shadow: 0 0 0 0.2rem #f3920080 !important;
 }
-
+.icon_gdet p {
+    margin-bottom: 0;
+    min-height: 120px;
+}
+h6.num_g {
+    color: #008D36;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.conta_details_g {
+    background: #FFFFFF;
+    box-shadow: 0px 16px 42px #7090b01a;
+    border-radius: 20px;
+    text-align: center;
+    padding: 25px 15px;
+    box-sizing: border-box;
+}
 .our_shet .table tbody tr td {
     position: relative;
 }
