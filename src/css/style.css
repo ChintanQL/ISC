@@ -20,6 +20,10 @@
     padding: 0 !important;
     box-sizing: border-box !important;
 }
+section.car_t.pt.pb {
+    padding-top: 50px !important;
+    box-sizing: border-box !important;
+}
 .yith-wcbm-badge-190547 .yith-wcbm-badge__wrap {
     border: 0 !important;
     border-bottom-left-radius: 0 !important;
