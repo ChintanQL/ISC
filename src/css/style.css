@@ -12,6 +12,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.details_head:after {
+    bottom: -15px !important;
+    height: 5px !important;
+}
+.cont_rf li {
+    list-style: revert !important;
+}
 .camp_find:focus {
     box-shadow: 0 0 0 0.2rem #f3920080 !important;
 }
