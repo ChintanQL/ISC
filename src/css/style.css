@@ -16,7 +16,10 @@
     left: 0 !important;
     top: 20px !important;
 }
-
+.breadcrumb {
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
 .yith-wcbm-badge-190547 .yith-wcbm-badge__wrap {
     border: 0 !important;
     border-bottom-left-radius: 0 !important;
