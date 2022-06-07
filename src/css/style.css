@@ -12,6 +12,26 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.yith-wcbm-badge-190547 {
+    left: 0 !important;
+    top: 20px !important;
+}
+
+.yith-wcbm-badge-190547 .yith-wcbm-badge__wrap {
+    border: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    width: auto !important;
+    padding: 5px 15px !important;
+    box-sizing: border-box !important;
+    line-height: normal !important;
+    height: auto !important;
+}
+
+.yith-wcbm-badge-text {
+    font-size: 16px !important;
+}
 .details_head:after {
     bottom: -15px !important;
     height: 5px !important;
