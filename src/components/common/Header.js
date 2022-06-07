@@ -174,9 +174,9 @@ class Header extends Component {
                 <div className="row align-items-center">
                     <div className="col-lg-2 col-xl-2 col-md-6 col-6 col-custom">
                         <div className="header-logo d-flex align-items-center">
-                            <a href="index.html">
+                            <Link  to="/" >
                                 <img className="img-full" src={logo} alt="Header Logo"/>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-lg-7 d-none d-lg-flex justify-content-center col-custom">
