@@ -31,9 +31,9 @@ class Footer extends Component {
 			<div className="row">
 				<div className="col-md-6 col-sm-6 col-6">
 					<div className="footer_logo">
-						<a href="#">
+						<Link to="/" >
 							<img src={logonsc} />
-						</a>
+						</Link>
 					</div>
 				</div>
 				<div className="col-md-6 col-sm-6 col-6">
