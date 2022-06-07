@@ -12,6 +12,32 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+h6.num_g {
+    font-size: 18px !important;
+    padding: 15px 0px !important;
+}
+section.car_t.pt.pb {
+    padding-top: 50px !important;
+    box-sizing: border-box !important;
+    padding-bottom: 10px !important;
+}
+Contactus-Section-2-data .icon_gdet p b {
+    min-height: 80px !important;
+}
+
+.Contactus-Section-2-data .icon_gdet p {
+    min-height: auto !important;
+} 
+.our_shet .table thead tr th {
+    border: 0 !important;
+}
+.Blog-details-Section-2-data .container.mt-5.woocom-suc {
+    margin-top: 20px !important;
+}
+
+.Blog-details-Section-2-data .container.mt-5.woocom-suc .woocommerce-message {
+    margin-bottom: 0 !important;
+} 
 .yith-wcbm-badge-190547 {
     left: 0 !important;
     top: 20px !important;
