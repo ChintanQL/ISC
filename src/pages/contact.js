@@ -42,7 +42,7 @@ class ConatctUs extends Component {
               <ContactusSection1/>
               <ContactusSection2/>
               <ContactusSection3/>
-              <BottomForm/>
+              
               <Footer/>
             </>
           </Layout>
