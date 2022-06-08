@@ -15,7 +15,11 @@
 section03 .our_img .text_head {
     background: transparent !important;
 }
-
+.section03 .our_img .text_head {
+    background: transparent !important;
+    position: unset !important;
+    padding: 0 !important;
+}
 .sport_g {position: relative !important;}
 
 .sport_g::after {
