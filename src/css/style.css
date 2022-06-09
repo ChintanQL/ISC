@@ -13,6 +13,13 @@
     font-family: 'Poppins', sans-serif;
 }
 .our_img {
+    border-radius: 15px  !important;
+    overflow: hidden  !important;
+}
+.text_head {
+    background: transparent !important;
+}
+.our_img {
     border-radius: 15px;
     overflow: hidden;
 }
