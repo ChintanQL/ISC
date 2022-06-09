@@ -7,6 +7,107 @@
 
 
 }
+@media (max-width: 499px){
+.main-header .col-lg-3.col-md-6.col-6.col-custom {
+    width: calc(100% - 100px) !important;
+    max-width: 100% !important;
+    flex: 0 0 auto !important;
+}
+}
+
+@media(max-width: 767px){
+    .main-styled-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+}
+.tile_head {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+}
+.font-15 .bold_con br {
+    display: none !important;
+}
+.btn_c a{
+    font-size: 14px !important;
+}
+.details_head:after{
+ bottom: -10px !important;   
+}
+.ginput_container.ginput_container_date {
+    width: 100% !important;
+    margin-right: 0 !important;
+}
+.ginput_container.ginput_container_date:last-child{
+      width: 100% !important;
+}
+.gform_legacy_markup_wrapper .clear-multi {
+    display: block !important;
+}
+#field_4_43 {
+    display: block !important;
+    width: 100% !important;
+}
+#field_4_16 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_18 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_20 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_17 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_19 {
+    width: 100% !important;
+    float: none !important;
+}
+}
+
+@media(max-width: 991px){
+    
+.ginput_container.ginput_container_date {
+    width: 100% !important;
+    margin-right: 0 !important;
+}
+.ginput_container.ginput_container_date:last-child{
+      width: 100% !important;
+}
+.gform_legacy_markup_wrapper .clear-multi {
+    display: block !important;
+}
+#field_4_43 {
+    display: block !important;
+    width: 100% !important;
+}
+#field_4_16 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_18 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_20 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_17 {
+    width: 100% !important;
+    float: none !important;
+}
+#field_4_19 {
+    width: 100% !important;
+    float: none !important;
+}
+}
 @media(min-width: 992px) and (max-width: 1199px){
  .list_col.social_y li {
     margin-right: 4px;
