@@ -12,6 +12,13 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.our_img {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.text_head {
+    background: transparent !important;
+}
 .our_fomr select {
     -webkit-appearance: none;
     -moz-appearance: none;
