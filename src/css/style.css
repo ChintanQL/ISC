@@ -12,6 +12,41 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    border: 1px solid transparent !important;
+    background: #ffffff54 !important;
+}
+.btn-link.focus, .btn-link:focus, .btn-link:hover{
+    outline: 0 !important;
+    box-shadow: unset !important;
+}
+.css-1wy0on6 {
+    display: none !important;
+}
+
+.css-1hwfws3 {
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+.css-1hwfws3 {
+    height: 50px !important;
+    border-radius: 10px !important;
+}
+@media (max-width: 991px){
+    .Contactus-Section-2-data .icon_gdet p b {
+    min-height: auto !important;
+}
+    
+}
+
+@media(min-width: 768px) and (max-width: 991px){
+    .btn_tdf a{
+            font-size: 14px !important;
+            padding: 10px 10px !important;
+            box-sizing: border-box !important;
+    }
+}
 .our_img {
     border-radius: 15px  !important;
     overflow: hidden  !important;
