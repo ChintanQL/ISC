@@ -95,8 +95,8 @@ class Footer extends Component {
 				<div className="col-md-6 col-sm-12">
 					<div className="our_f text-end">
 						<ul>
-							<li><Link to={"/"} className="uppercase">TERMS & CONDITIONS</Link></li>
-							<li><Link to={"/"} className="uppercase">PRIVACY POLICY</Link></li>
+							<li><Link to={"/terms-conditions"} className="uppercase">TERMS & CONDITIONS</Link></li>
+							<li><Link to={"/privacy-policy"} className="uppercase">PRIVACY POLICY</Link></li>
 						</ul>
 					</div>
 				</div>
