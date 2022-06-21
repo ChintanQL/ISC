@@ -112,7 +112,17 @@ class Camps extends Component {
                     </Container>
                 </section>
 				
-				
+				<div class="row">
+				<div class="col-md-12">
+					<div class="our_desc_wrapc">
+		                   <p class="details_headc">
+									<b>Disclaimer: </b>
+								</p>
+									<p>{page.edges[0].node.acf.disclaimer}</p>
+					 </div>
+				</div>
+
+			 </div>
 				<Footer/>
 				</>
 			</Layout>
