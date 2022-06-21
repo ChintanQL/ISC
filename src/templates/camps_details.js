@@ -112,6 +112,7 @@ class Camps extends Component {
                     </Container>
                 </section>
 				
+				<div class="container">
 				<div class="row">
 				<div class="col-md-12">
 					<div class="our_desc_wrapc">
@@ -122,6 +123,7 @@ class Camps extends Component {
 					 </div>
 				</div>
 
+			 </div>
 			 </div>
 				<Footer/>
 				</>
