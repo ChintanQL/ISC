@@ -112,7 +112,7 @@ class Sport extends Component {
 											</Breadcrumb.Item>
 										<Breadcrumb.Item active href=""className="">Book a camp</Breadcrumb.Item>
 									</Breadcrumb>
-									<h2 class="tile_head">Camp</h2>
+									<h2 class="tile_head">Sport</h2>
 								</div>
 							</div>
 						</div>
