@@ -154,8 +154,7 @@ class Header extends Component {
 	    let timeout
 let scroll = 0
 
-const Header = () => {
-  useEffect(() => {
+useEffect(() => {
     window.onscroll = () => {
       if (timeout) {
         clearTimeout(timeout)
@@ -172,7 +171,6 @@ const Header = () => {
       }, 10)
     }
   }, [])
-}
         return (
             <>
             <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
