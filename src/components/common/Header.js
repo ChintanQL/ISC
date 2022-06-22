@@ -137,23 +137,19 @@ class Header extends Component {
 				this.setState({ isTop })
 			}
         });
-	let timeout
-let scroll = 0	
 	window.onscroll = () => {
-      if (timeout) {
-        clearTimeout(timeout)
-      }
+      
 
-      timeout = setTimeout(() => {
-        if (scroll >= window.scrollY && window.scrollY > 300) {
+      
+        if (window.scrollY > 300) {
           document.getElementById('header').classList.add('sticky')
         } else {
           document.getElementById('header').classList.remove('sticky')
         }
 
-        scroll = window.scrollY
-      }, 10)
-    }	
+       
+      
+    }
 		
 		
 		
