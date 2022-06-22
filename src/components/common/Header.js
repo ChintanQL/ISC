@@ -137,25 +137,9 @@ class Header extends Component {
 				this.setState({ isTop })
 			}
         });
-		
-		
-		
-		
-		
-		
-		this.CheckModel()
-		this.CheckCModel()
-      } 
-	
-	
-	  
-    render() {
-		const cookies = new Cookies();
-	    let timeout
-let scroll = 0
-
-useEffect(() => {
-    window.onscroll = () => {
+	let timeout
+let scroll = 0	
+	window.onscroll = () => {
       if (timeout) {
         clearTimeout(timeout)
       }
@@ -169,8 +153,22 @@ useEffect(() => {
 
         scroll = window.scrollY
       }, 10)
-    }
-  }, [])
+    }	
+		
+		
+		
+		
+		this.CheckModel()
+		this.CheckCModel()
+      } 
+	
+	
+	  
+    render() {
+		const cookies = new Cookies();
+	    
+
+
         return (
             <>
             <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
