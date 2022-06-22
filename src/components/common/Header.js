@@ -1,4 +1,4 @@
-import React, { Component  } from 'react';
+import React, { Component, useState, useEffect  } from 'react';
 import {  Image,ListGroup,Navbar,Container,Modal } from 'react-bootstrap'
 import { Link,StaticQuery, graphql } from 'gatsby'
 import logo from '../../images/logonsc.png'
@@ -151,6 +151,28 @@ class Header extends Component {
 	  
     render() {
 		const cookies = new Cookies();
+	    let timeout
+let scroll = 0
+
+const Header = () => {
+  useEffect(() => {
+    window.onscroll = () => {
+      if (timeout) {
+        clearTimeout(timeout)
+      }
+
+      timeout = setTimeout(() => {
+        if (scroll >= window.scrollY && window.scrollY > 300) {
+          document.getElementById('header').classList.add('sticky')
+        } else {
+          document.getElementById('header').classList.remove('sticky')
+        }
+
+        scroll = window.scrollY
+      }, 10)
+    }
+  }, [])
+}
         return (
             <>
             <Modal show={this.state.isOpen} onHide={this.modalClose} size="lg" className="video-modal"
@@ -169,7 +191,7 @@ class Header extends Component {
             </Modal>
 			<header className="main-header-area">
         <div className="our_head">
-        	<div className="main-header header-sticky">
+        	<div className="main-header header-sticky" id="header">
             <div className="container custom-area">
                 <div className="row align-items-center">
                     <div className="col-lg-2 col-xl-2 col-md-6 col-6 col-custom">
