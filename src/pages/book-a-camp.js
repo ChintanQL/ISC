@@ -41,7 +41,7 @@ class Sport extends Component {
 				
 				
 			this.setState({PageData: arr})
-			this.setState({PageDataOther: res.data.ResponseData.camps_data[0]})
+			this.setState({PageDataOther: res.data.ResponseData.cat})
 			this.setState({result: 1})
 			this.setState({showInfo: 1})
 			
