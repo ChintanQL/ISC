@@ -3,7 +3,7 @@ module.exports = {
     title: `Australian Sports Camps`,
     description: `ASC provides the best sports coaching for Australian children and has done so for over 38 years. We run structured skill-improvement sport camps in Australia ensuring that participants have fun whilst developing a deeper love and enthusiasm for their chosen sport.`,
     author: `@australiansportscamps`,
-	siteUrl: 'https://australiansportscamps.com.au',
+	siteUrl: 'https://nationalsportscamps.in',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,7 +23,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'shop.spinhouse4u.com',
+        baseUrl: 'shop.nationalsportscamps.in',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
