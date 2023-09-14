@@ -74,14 +74,14 @@ module.exports = {
       resolve: 'gatsby-plugin-global-context',
       options: {
         context: {
-          BACK_URL: "https://shop.spinhouse4u.com"
+          BACK_URL: "https://nationalsportscamps.in"
         }
       }
     },
 	{       
 		resolve: '@pasdo501/gatsby-source-woocommerce',
 		options: {
-			api: 'shop.spinhouse4u.com',
+			api: 'shop.nationalsportscamps.in',
 			verbose: true,
 			https: true,
 			api_keys: {
