@@ -10,7 +10,7 @@ const getOnlyPublished = edges =>
 
 const getData = async () => {
   var a =  axios({
-		url: 'https://shop.spinhouse4u.com/graphql',
+		url: 'https://shop.nationalsportscamps.in/graphql',
 		method: 'post',
 		data: {
 			query: `
