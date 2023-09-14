@@ -78,7 +78,7 @@ module.exports = {
         }
       }
     },
-	{       
+	/*{       
 		resolve: '@pasdo501/gatsby-source-woocommerce',
 		options: {
 			api: 'shop.nationalsportscamps.in',
@@ -99,7 +99,7 @@ module.exports = {
 			}
 		}
 	},
-	/*{
+	{
     resolve: "gatsby-plugin-google-tagmanager",
     options: {
       id: "GTM-PRK5WQ",
