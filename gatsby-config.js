@@ -50,7 +50,7 @@ module.exports = {
       delayLoadTime: 1000,
       manualLoad: false
     }
-  },*/	  
+  },  
 	 {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
@@ -69,7 +69,7 @@ module.exports = {
         filter: (node, getNode) =>
           node.frontmatter.tags !== 'exempt',
       },
-    },
+    },*/	
 	{
       resolve: 'gatsby-plugin-global-context',
       options: {
